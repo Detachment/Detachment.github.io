@@ -4,6 +4,12 @@
   
     
     <entry>
+      <title><![CDATA[postName]]></title>
+      <url>http://yoursite.com/2016/06/22/postName/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://yoursite.com/2016/06/01/Hello-World-0/</url>
       <content type="html"><![CDATA[<p>这才是正式测试的部分，好的！！！</p>
