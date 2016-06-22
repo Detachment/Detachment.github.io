@@ -4,12 +4,6 @@
   
     
     <entry>
-      <title><![CDATA[Page]]></title>
-      <url>http://yoursite.com/2016/06/22/Page/</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[testing]]></title>
       <url>http://yoursite.com/2016/06/22/testing/</url>
       <content type="html"><![CDATA[<h2 id="上午时间"><a href="#上午时间" class="headerlink" title="上午时间"></a>上午时间</h2><ul>
