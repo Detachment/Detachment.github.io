@@ -4,9 +4,32 @@
   
     
     <entry>
-      <title></title>
-      <url>http://yoursite.com/2016/06/22/ok/</url>
-      <content type="html"></content>
+      <title><![CDATA[testing]]></title>
+      <url>http://yoursite.com/2016/06/22/testing/</url>
+      <content type="html"><![CDATA[<h2 id="上午时间"><a href="#上午时间" class="headerlink" title="上午时间"></a>上午时间</h2><ul>
+<li>07:40-08:00 早起；</li>
+<li>08:00-08:30  晨练；</li>
+<li>08:30-09:00 早餐；</li>
+<li>09:00-11:30 学习了面向对象编程，没学明白；</li>
+</ul>
+<h6 id="上午学习时间：150min；"><a href="#上午学习时间：150min；" class="headerlink" title="上午学习时间：150min；"></a>上午学习时间：150min；</h6><hr>
+<h2 id="下午时间"><a href="#下午时间" class="headerlink" title="下午时间"></a>下午时间</h2><ul>
+<li>11:30-12:30 中饭；</li>
+<li>12:30-14:30 午休；  <strong>注意，明天开始一定不要超过两点!</strong></li>
+<li>14:30-18:00 在FCC中做js任务，效率不是很高；</li>
+<li>18:00-19:00 健身；</li>
+</ul>
+<h6 id="下午学习时间：210min；"><a href="#下午学习时间：210min；" class="headerlink" title="下午学习时间：210min；"></a>下午学习时间：210min；</h6><hr>
+<h2 id="晚上时间"><a href="#晚上时间" class="headerlink" title="晚上时间"></a>晚上时间</h2><ul>
+<li>19:00-20:30  买菜，做饭；</li>
+<li>20:30-21:00  洗漱；</li>
+<li>21:00-22:30  练习面向对象编程，并没搞懂。。。</li>
+<li>22:30-23:30  完善博客，总结；</li>
+</ul>
+<h6 id="晚上学习时间：150min；"><a href="#晚上学习时间：150min；" class="headerlink" title="晚上学习时间：150min；"></a>晚上学习时间：150min；</h6><h2 id="总计完成时间：510min-达标！"><a href="#总计完成时间：510min-达标！" class="headerlink" title="总计完成时间：510min  达标！"></a>总计完成时间：510min  达标！</h2><blockquote>
+<p>总结：还是感觉有很多的东西不懂，基础太不牢固了，需要制定一个靠谱的学习计划，然后在这个月底，下个月初进行一个测试，希望自己不要让自己失望。<br>一不小心，部署博客直接干到现在（1:44），加油啊！</p>
+</blockquote>
+]]></content>
     </entry>
     
   
