@@ -44,8 +44,7 @@
 <li>Otherwise, if ‘position’ has the value ‘absolute’ or ‘fixed’, the box is absolutely positioned, the computed value of ‘float’ is ‘none’, and display is set according to the table below. The position of the box will be determined by the ‘top’, ‘right’, ‘bottom’ and ‘left’ properties and the box’s containing block.</li>
 <li>Otherwise, if ‘float’ has a value other than ‘none’, the box is floated and ‘display’ is set according to the table below.</li>
 <li>Otherwise, if the element is the root element, ‘display’ is set according to the table below, except that it is undefined in CSS 2.1 whether a specified value of ‘list-item’ becomes a computed value of ‘block’ or ‘list-item’.</li>
-<li>Otherwise, the remaining ‘display’ property values apply as specified.<br>specified value | Computed value<pre><code>---|---
-</code></pre>inline-table | table<br>inline, table-row-group, table-column, table-column-group, table-header-group, table-footer-group, table-row, table-cell, table-caption, inline-block | block<br>others | same as specified</li>
+<li>Otherwise, the remaining ‘display’ property values apply as specified.</li>
 </ol>
 </blockquote>
 </li>
@@ -58,6 +57,62 @@
 <li>更多特点见<a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-float" target="_blank" rel="external">Float说明。</a></li>
 </ol>
 <h2 id="定位（Position）"><a href="#定位（Position）" class="headerlink" title="定位（Position）"></a>定位（Position）</h2><p>定位属性比较好理解，其值有 inhert, static, relative, absolute, fixed 这五种。其中static为默认值，表示没有定位，根据位置出现在文档的普通流中；inhert 为继承父元素的position属性；relative 为相对定位，相对的是其本身在普通流中的位置，而且设定为相对浮动后，元素仍然占据原来普通流中的位置；absolute 为绝对定位，定位基准是最靠近的定位属性不为static的祖先元素，当设置为未绝对定位后，元素的位置就与普通流无关了，同时也不占据文档流空间，而且在设置为绝对定位后，元素会形成一个新的块级格式化上下文（BFC），原来是行内元素的会变成块级元素，而块级元素的宽度则由其本身的内容决定，而不再是默认的100%了；fixed可以说是absolute的特殊类，它也是固定定位，但是它的定位基准为视窗（viewport），除此之外，与决定定位没有区别。</p>
+<h2 id="显示类（Display）"><a href="#显示类（Display）" class="headerlink" title="显示类（Display）"></a>显示类（Display）</h2><p>Display属性主要决定元素是块级元素还是行间元素。属性值主要有block、inline-block、inline、list-item和none。块级元素为垂直排列，块级元素会自动换行，可设置块的宽高信息；行间元素为水平排列，宽高由内容决定，外部设置对其无效。</p>
+<h2 id="Float、Position-和-Display-之间的关系："><a href="#Float、Position-和-Display-之间的关系：" class="headerlink" title="Float、Position 和 Display 之间的关系："></a>Float、Position 和 Display 之间的关系：</h2><ol>
+<li>如果display的值为none，那么后两者就不会产生作用，也不会有任何的盒子产生；</li>
+<li>除此之外，如果元素为absolute或者fixed定位，那么浮动的属性值相当于‘none’，display的属性如下面的表格所示。元素的位置就由设定决定定位时的值以及所包含容器来决定；</li>
+<li>除此之外，如果float属性的值为不是none，那么元素将会浮动，元素的display属性将如下表所示；</li>
+<li>除此之外，如果元素是根元素，那么元素的属性如下表所示；</li>
+<li>除此之外，元素的display属性则根据设定来取值。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">specified value</th>
+<th style="text-align:left">computed value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">inline-table</td>
+<td style="text-align:left">table</td>
+</tr>
+<tr>
+<td style="text-align:left">inline, table-x, inline-block</td>
+<td style="text-align:left">block</td>
+</tr>
+<tr>
+<td style="text-align:left">others</td>
+<td style="text-align:left">same as specified</td>
+</tr>
+</tbody>
+</table>
+<h2 id="清除浮动（Clearfix）"><a href="#清除浮动（Clearfix）" class="headerlink" title="清除浮动（Clearfix）"></a>清除浮动（Clearfix）</h2><p>容器内如果只存在浮动元素，那么则会因为浮动元素不在普通流中而造成父级容器高度塌陷且无法获取浮动元素高度的情况，为了解决这个问题，除了了各种各样的清除浮动的方法，下面简单介绍几种：</p>
+<ol>
+<li><p>利用伪类及伪元素来清除，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">    <span class="attribute">display</span>:block;</span><br><span class="line">    <span class="attribute">clear</span>:both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>利用overflow属性，代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden; <span class="comment">/* 或者是auto */</span></span><br><span class="line">    <span class="attribute">display</span>: inline-block; <span class="comment">/* Necessary to trigger "hasLayout" in IE */</span></span><br><span class="line">    <span class="attribute">display</span>: block; <span class="comment">/* Sets element back to block */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>或者是：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden; <span class="comment">/* Clearfix! */</span></span><br><span class="line">    <span class="attribute">zoom</span>: <span class="number">1</span>;  <span class="comment">/* Triggering "hasLayout" in IE */</span></span><br><span class="line">    <span class="attribute">display</span>: block; <span class="comment">/* Element must be a block to wrap around contents. Unnecessary if only using block-level elements. */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>利用clear属性，代码如下：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">br</span> <span class="attr">style</span>=<span class="string">"clear:both"</span> /&gt;</span> <span class="comment">&lt;!-- So dirty! --&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这种增加<br>同时结合clear属性的方法虽然看起来非常简单，但非常不推荐使用。主要原因有：如果后期有更好的清除方式，你不想有<br>元素存在那么将存在很大的问题；而且这种增加也不是语义上的增加。</p>
+<blockquote>
+<h4 id="由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！"><a href="#由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！" class="headerlink" title="由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！"></a><strong>由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！</strong></h4></blockquote>
+<h4 id="参考文章-Reference-："><a href="#参考文章-Reference-：" class="headerlink" title="参考文章(Reference)："></a>参考文章(Reference)：</h4><ul>
+<li><a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170" target="_blank" rel="external">Stackoverflow–What methods of ‘clearfix’ can I use?</a></li>
+<li><a href="http://www.quirksmode.org/css/clearing.html#top" target="_blank" rel="external">Blog–Clearing floats</a></li>
+<li><a href="http://yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/" target="_blank" rel="external">Blog–CSS 101: Block Formatting Contexts</a></li>
+<li><a href="https://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo" target="_blank" rel="external">W3C–Relationships between ‘display’, ‘position’, and ‘float’</a></li>
+<li><a href="http://www.jianshu.com/p/07eb19957991#" target="_blank" rel="external">Blog–CSS浮动float详解</a></li>
+<li><a href="http://www.cnblogs.com/dolphinX/archive/2012/10/13/2722501.html" target="_blank" rel="external">Blog–CSS布局 ——从display，position， float属性谈起</a></li>
+<li><a href="http://www.cnblogs.com/coffeedeveloper/p/3145790.html" target="_blank" rel="external">Blog–对CSS中的Position、Float属性的一些深入探讨</a></li>
+</ul>
 ]]></content>
     </entry>
     
