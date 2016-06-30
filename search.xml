@@ -33,7 +33,7 @@
 <h3 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h3><ul>
 <li><strong>派生选择器</strong>：也被称为上下文选择器（contextual selector），根据元素在其位置的上下文关系来定义样式，是的标记更简洁；</li>
 <li><strong>id选择器</strong>：用“#”来定义 （注意：id属性只能在每个HTML文档中出现一次）</li>
-<li><em>类选择器*</em>：以一个“.”显示；</li>
+<li><strong>类选择器</strong>：以一个“.”显示；</li>
 <li><strong>属性选择器</strong>：以“[属性]”的方式显示；（还有属性和值选择器）– 对于属性值有多重不同的选择方式，具体可参照w3school上的说明；</li>
 <li><strong>背景</strong>：背景色；背景图像（不能继承）；背景重复（background-repeat）；背景定位（background-position–主要是针对当背景是图像的时候使用，如果只出现一个位置信息，则另一个默认为center）；背景关联（background-attachment，可将背景图像固定在可视区域）；</li>
 <li><strong>文本</strong>：缩进文本（text-indent：一般来说，可以为所有块级元素应用text-indent，但无法将该属性应用于行内元素，图像之类的替换元素上也无法应用 text-indent 属性。不过，如果一个块级元素（比如段落）的首行中有一个图像，它会随该行的其余文本移动。如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果。它的值可为<strong>负数或者百分比</strong>。此属性可继承。）；水平对齐（text-align：justify可实现两端对齐——谨慎使用，因为各浏览器增加空间的方式不同造成效果各异；文字间隔（word-spacing）；字母间隔（letter-spacing）；字符转换（text-transform：uppercase、lowercase、capitalize）；文本装饰（text-decoration：underline、overline、line-through及blink；）；空白字符（white-space：pre、nowrap、pre-wrap及pre-line）；文本方向（direction：ltr、ltr；）</li>
