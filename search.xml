@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[基于《精通JavaScript开发》课程的复习与总结]]></title>
       <url>http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习，所有测试的题目都来自视频课程。本文内容适合所有正在学习此课程的同学。</p>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。</p>
 <a id="more"></a>
 <h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="《初探JavaScript魅力01》"><a href="#《初探JavaScript魅力01》" class="headerlink" title="《初探JavaScript魅力01》"></a>《初探JavaScript魅力01》</h3><h4 id="关键词：JS、事件、属性、函数、重用、变量"><a href="#关键词：JS、事件、属性、函数、重用、变量" class="headerlink" title="关键词：JS、事件、属性、函数、重用、变量"></a>关键词：JS、事件、属性、函数、重用、变量</h4><ul>
 <li>JavaScript：交互、功能；</li>
@@ -26,7 +26,7 @@
 <li>鼠标移出区块大小及颜色变成初始状态。</li>
 </ol>
 </blockquote>
-<p><br></p>
+<hr>
 <h3 id="《初探JavaScript魅力02》"><a href="#《初探JavaScript魅力02》" class="headerlink" title="《初探JavaScript魅力02》"></a>《初探JavaScript魅力02》</h3><h4 id="关键词：变量、函数的定义及调用、ID、if判断、双等号、className"><a href="#关键词：变量、函数的定义及调用、ID、if判断、双等号、className" class="headerlink" title="关键词：变量、函数的定义及调用、ID、if判断、双等号、className"></a>关键词：变量、函数的定义及调用、ID、if判断、双等号、className</h4><ul>
 <li>函数定义及调用：定义时只是告诉系统有这个函数，但不会执行；调用的时候函数执行；</li>
 <li>ID：任何标签都可以加ID，包括link。任何标签的任何属性都可以改，而且html上怎么写，js里就怎么写（除了className）；</li>
@@ -47,6 +47,7 @@
 <li>必须通过更改div的类来达到上面的效果；</li>
 </ol>
 </blockquote>
+<hr>
 <h3 id="《初探JavaScript魅力03》"><a href="#《初探JavaScript魅力03》" class="headerlink" title="《初探JavaScript魅力03》"></a>《初探JavaScript魅力03》</h3><h4 id="关键词：函数传参、操作属性方法、字符串及参数"><a href="#关键词：函数传参、操作属性方法、字符串及参数" class="headerlink" title="关键词：函数传参、操作属性方法、字符串及参数"></a>关键词：函数传参、操作属性方法、字符串及参数</h4><ul>
 <li>函数传参：当函数中有参数有多个值时使用传参，参数就是占位符；</li>
 <li>操作属性方法：最常用的为通过“.”，但是当属性作为参数的时候，需要用”[]”的形式来改变参数，否则无法被识别；所有用.的地方都能用[]替换，但反过来不成立；</li>
