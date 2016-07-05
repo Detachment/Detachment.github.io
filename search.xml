@@ -8,7 +8,7 @@
       <url>http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习，所有测试的题目都来自视频课程。本文内容适合所有正在学习此课程的同学。</p>
 <a id="more"></a>
-<h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="初探JavaScript魅力01"><a href="#初探JavaScript魅力01" class="headerlink" title="初探JavaScript魅力01"></a>初探JavaScript魅力01</h3><h4 id="关键词：JS、事件、属性、函数、重用、变量"><a href="#关键词：JS、事件、属性、函数、重用、变量" class="headerlink" title="关键词：JS、事件、属性、函数、重用、变量"></a>关键词：JS、事件、属性、函数、重用、变量</h4><ul>
+<h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="《初探JavaScript魅力01》"><a href="#《初探JavaScript魅力01》" class="headerlink" title="《初探JavaScript魅力01》"></a>《初探JavaScript魅力01》</h3><h4 id="关键词：JS、事件、属性、函数、重用、变量"><a href="#关键词：JS、事件、属性、函数、重用、变量" class="headerlink" title="关键词：JS、事件、属性、函数、重用、变量"></a>关键词：JS、事件、属性、函数、重用、变量</h4><ul>
 <li>JavaScript：交互、功能；</li>
 <li>事件：用户操作或者其他改变；</li>
 <li>属性：属性是与对象相关的值；</li>
@@ -16,8 +16,53 @@
 <li>重用：使开发效率更高，布局更简洁；</li>
 <li>变量：存储信息的容器；</li>
 </ul>
-<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="277" scrolling="no" src="//codepen.io/Leon-Zhao/embed/kXwLYb/?height=277&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/kXwLYb/" target="_blank" rel="external">JavaScript-01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"></span><br><span class="line"><span class="selector-id">#div1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">250px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#div2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>:<span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: gray;</span><br><span class="line">  <span class="attribute">color</span>: white;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line"><span class="built_in">window</span>.onload=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> oDiv=<span class="built_in">document</span>.getElementById(<span class="string">'div1'</span>);   <span class="comment">// 获取ID，便于重用；  </span></span><br><span class="line">  <span class="keyword">var</span> oDiv2=<span class="built_in">document</span>.getElementById(<span class="string">'div2'</span>);  <span class="comment">// 而且兼容低版本浏览器；</span></span><br><span class="line">  oDiv.onmouseover=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;               <span class="comment">// 事件加函数实现功能；</span></span><br><span class="line">    oDiv2.style.display=<span class="string">'block'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  oDiv.onmouseout=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    oDiv2.style.display=<span class="string">'none'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'div1'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">'check'</span> <span class="attr">type</span>=<span class="string">'checkbox'</span> /&gt;</span> 两周内免登陆</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">'div2'</span>&gt;</span></span><br><span class="line">  为了您的信息安全，不要在网吧或者公共电脑上使用此功能哦</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h4>]]></content>
+<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="277" scrolling="no" src="//codepen.io/Leon-Zhao/embed/kXwLYb/?height=277&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/kXwLYb/" target="_blank" rel="external">JavaScript-01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题"><a href="#测试题" class="headerlink" title="测试题"></a>测试题</h4><p>请利用这节课的知识，完成具有下面功能的区块：</p>
+<blockquote>
+<ol>
+<li>区块大小200px*200px；背景颜色为红色；</li>
+<li>鼠标移入区块大小变成300px*300px，背景颜色变成蓝色；</li>
+<li>鼠标移出区块大小及颜色变成初始状态。</li>
+</ol>
+</blockquote>
+<p><br></p>
+<h3 id="《初探JavaScript魅力02》"><a href="#《初探JavaScript魅力02》" class="headerlink" title="《初探JavaScript魅力02》"></a>《初探JavaScript魅力02》</h3><h4 id="关键词：变量、函数的定义及调用、ID、if判断、双等号、className"><a href="#关键词：变量、函数的定义及调用、ID、if判断、双等号、className" class="headerlink" title="关键词：变量、函数的定义及调用、ID、if判断、双等号、className"></a>关键词：变量、函数的定义及调用、ID、if判断、双等号、className</h4><ul>
+<li>函数定义及调用：定义时只是告诉系统有这个函数，但不会执行；调用的时候函数执行；</li>
+<li>ID：任何标签都可以加ID，包括link。任何标签的任何属性都可以改，而且html上怎么写，js里就怎么写（除了className）；</li>
+<li>if：条件判断；</li>
+<li>双等号：用于判断双等号两边是否相等；</li>
+<li>className： 列别名，为js中的保留字，唯一一个在html及js中写法不同的属性；</li>
+</ul>
+<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/zBzpjv/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/zBzpjv/" target="_blank" rel="external">JavaScript-02-01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/XKgVoX/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/XKgVoX/" target="_blank" rel="external">JavaScript-02-02</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+
+<h4 id="测试题-1"><a href="#测试题-1" class="headerlink" title="测试题"></a>测试题</h4><p>请根据本节所学的知识，完成下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>新建一个按钮及div；</li>
+<li>点击按钮更改div的样式（可以是背景颜色、大小或者其他）；</li>
+<li>必须通过更改div的类来达到上面的效果；</li>
+</ol>
+</blockquote>
+<h3 id="《初探JavaScript魅力03》"><a href="#《初探JavaScript魅力03》" class="headerlink" title="《初探JavaScript魅力03》"></a>《初探JavaScript魅力03》</h3><h4 id="关键词：函数传参、操作属性方法、字符串及参数"><a href="#关键词：函数传参、操作属性方法、字符串及参数" class="headerlink" title="关键词：函数传参、操作属性方法、字符串及参数"></a>关键词：函数传参、操作属性方法、字符串及参数</h4><ul>
+<li>函数传参：当函数中有参数有多个值时使用传参，参数就是占位符；</li>
+<li>操作属性方法：最常用的为通过“.”，但是当属性作为参数的时候，需要用”[]”的形式来改变参数，否则无法被识别；所有用.的地方都能用[]替换，但反过来不成立；</li>
+<li>字符串为常量，设定后即为定值；参数则为变量，传入时才确定；传入字符串时需要加双引号，而后者不需要；</li>
+</ul>
+<h4 id="实例及代码-2"><a href="#实例及代码-2" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/grRZBL/?height=265&theme-id=0&default-tab=html,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/grRZBL/" target="_blank" rel="external">JavaScript-03</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-2"><a href="#测试题-2" class="headerlink" title="测试题"></a>测试题</h4><p>请根据本节所学的知识，完成下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>新建三个按钮及一个有字体内容的div；</li>
+<li>分别点击按钮改变div中字体的大小、颜色及样式；</li>
+<li>通过函数传参的方式达到上面所要求的效果。</li>
+</ol>
+</blockquote>
+]]></content>
     </entry>
     
     <entry>
