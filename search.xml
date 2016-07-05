@@ -81,9 +81,11 @@
 </ol>
 </blockquote>
 <hr>
-<h3 id="《初探JavaScript魅力05》"><a href="#《初探JavaScript魅力05》" class="headerlink" title="《初探JavaScript魅力05》"></a>《初探JavaScript魅力05》</h3><h4 id="关键词：This、innerHTML、"><a href="#关键词：This、innerHTML、" class="headerlink" title="关键词：This、innerHTML、"></a>关键词：This、innerHTML、</h4><ul>
+<h3 id="《初探JavaScript魅力05》"><a href="#《初探JavaScript魅力05》" class="headerlink" title="《初探JavaScript魅力05》"></a>《初探JavaScript魅力05》</h3><h4 id="关键词：This、innerHTML、字符串连接、数组"><a href="#关键词：This、innerHTML、字符串连接、数组" class="headerlink" title="关键词：This、innerHTML、字符串连接、数组"></a>关键词：This、innerHTML、字符串连接、数组</h4><ul>
 <li>This：当前发生事件的元素（目前这么理解就行了，更多的用法后面会涉及到）；</li>
 <li>innerHTML：写入到html页面中，写入的内容本身可以包含html标签；</li>
+<li>字符串连接：通过了解符 <code>+</code> 来实现，注意有优先级的问题；</li>
+<li>数组：一系列值的组合；</li>
 </ul>
 ]]></content>
     </entry>
