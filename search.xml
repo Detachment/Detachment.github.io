@@ -87,6 +87,18 @@
 <li>字符串连接：通过了解符 <code>+</code> 来实现，注意有优先级的问题；</li>
 <li>数组：一系列值的组合；</li>
 </ul>
+<h4 id="实例及代码-4"><a href="#实例及代码-4" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/ZOydkq/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/ZOydkq/" target="_blank" rel="external">JavaScript-05</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-4"><a href="#测试题-4" class="headerlink" title="测试题"></a>测试题</h4><p>请根据本节所学的知识，完成下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>制作一个选项卡；</li>
+<li>有四个选项，且每一项都对应不同的内容；</li>
+<li>鼠标移动到不同选项卡的时候，显示不同的内容；</li>
+<li>鼠标移入选项卡的时候，选项卡本身的样式也会发生一些变化。</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
