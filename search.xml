@@ -130,7 +130,7 @@
 </ul>
 <h4 id="实例及代码-6"><a href="#实例及代码-6" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/NAvGjb/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/NAvGjb/" target="_blank" rel="external">JavaScript-07</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
-<h4 id="测试题-6"><a href="#测试题-6" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节内容多为介绍性，基本上每个程序都非常简单，可用联系下列小程序：</p>
+<h4 id="测试题-6"><a href="#测试题-6" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节内容多为介绍性，基本上每个程序都非常简单，可用练习下列小程序：</p>
 <blockquote>
 <ol>
 <li>制作一个隔行变色的表格；</li>
@@ -141,6 +141,28 @@
 </ol>
 </blockquote>
 <hr>
+<h3 id="《深入JavaScript》"><a href="#《深入JavaScript》" class="headerlink" title="《深入JavaScript》"></a>《深入JavaScript》</h3><h4 id="关键词：函数返回值、函数传参（不定参）、取非行间样式、数组、splice、concat、join、sort"><a href="#关键词：函数返回值、函数传参（不定参）、取非行间样式、数组、splice、concat、join、sort" class="headerlink" title="关键词：函数返回值、函数传参（不定参）、取非行间样式、数组、splice、concat、join、sort"></a>关键词：函数返回值、函数传参（不定参）、取非行间样式、数组、splice、concat、join、sort</h4><ul>
+<li>函数返回值：即为函数的执行结果；</li>
+<li>传不定参：arguments，参数的个数可变；（例子：求和、css函数）</li>
+<li>取非行间样式：如果样式没有写在行间，那么应该利用currentStyle(IE)或者getComputedStyle(obj，false).name。利用if，else来进行兼容性处理；获取复合样式的属性时需要注明所取的明确样式（如获取背景颜色，需要写backgroundColor，直接写background是没有作用的）。</li>
+<li>数组：使用单一变量的值存储一系列的值；数组的length属性既可读亦可写，因此可利用可写功能快速清空数组；添加：push及unshift（分别表示在尾部及头部添加）；删除：pop及shift（分别表示从尾部及头部删除）；</li>
+<li>splice：splice(n1,n2)表示从数组的n1位置开始删n2个元素；splice(n1,n2,”a”,”b”,”c”…)表示在n1位置删除n2个元素，并添加后面的”a”,”b”,”c”,等等；</li>
+<li>concat：数组的连接，语法:<code>a.concat(b)</code>,则数组a和b连接，a是元素在b的元素前面；</li>
+<li>join：表示用给定的参数连接数组里面的值，语法为<code>arr.join(&quot;value&quot;)</code>,那么arr中的值就将会被value连接起来；</li>
+<li>sort：数组的排序，语法为<code>arr.sort()</code>,其中sort()括号中可传入函数，表示排序的依据；在对数字排序的时候，因为sort属性只认字符串，所以必须传入比较函数；</li>
+</ul>
+<h4 id="实例及代码-7"><a href="#实例及代码-7" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/EyvXLd/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyvXLd/" target="_blank" rel="external">JavaScript-08</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-7"><a href="#测试题-7" class="headerlink" title="测试题"></a>测试题</h4><p>同样的，本节也主要是在讲一些非常基础的知识，没有涉及到复杂程序的练习，所以大家可选择性练习下方小程序：</p>
+<blockquote>
+<ol>
+<li>利用不定参argument制作一个程序，如果传入的是两个参数则获取参数值；如传入三个值，则设置参数；</li>
+<li>练习数组的相关属性：pop、unshift、push、shift、concat、join、sort、splice、length；</li>
+</ol>
+</blockquote>
+<h4 id="小问题："><a href="#小问题：" class="headerlink" title="小问题："></a>小问题：</h4><blockquote>
+<p>有没有什么方法能够直接修改css样式中的参数值？（由本节讲到的可直接获取样式中的参数值想到的）</p>
+</blockquote>
 ]]></content>
     </entry>
     
