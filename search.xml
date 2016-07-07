@@ -151,7 +151,7 @@
 <li>join：表示用给定的参数连接数组里面的值，语法为<code>arr.join(&quot;value&quot;)</code>,那么arr中的值就将会被value连接起来；</li>
 <li>sort：数组的排序，语法为<code>arr.sort()</code>,其中sort()括号中可传入函数，表示排序的依据；在对数字排序的时候，因为sort属性只认字符串，所以必须传入比较函数；</li>
 </ul>
-<h4 id="实例及代码-7"><a href="#实例及代码-7" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/EyvXLd/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyvXLd/" target="_blank" rel="external">JavaScript-08</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码-7"><a href="#实例及代码-7" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyvXLd/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyvXLd/" target="_blank" rel="external">JavaScript-08</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
 <h4 id="测试题-7"><a href="#测试题-7" class="headerlink" title="测试题"></a>测试题</h4><p>同样的，本节也主要是在讲一些非常基础的知识，没有涉及到复杂程序的练习，所以大家可选择性练习下方小程序：</p>
 <blockquote>
@@ -160,9 +160,10 @@
 <li>练习数组的相关属性：pop、unshift、push、shift、concat、join、sort、splice、length；</li>
 </ol>
 </blockquote>
-<h4 id="小问题："><a href="#小问题：" class="headerlink" title="小问题："></a>小问题：</h4><blockquote>
+<h4 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h4><blockquote>
 <p>有没有什么方法能够直接修改css样式中的参数值？（由本节讲到的可直接获取样式中的参数值想到的）</p>
 </blockquote>
+<hr>
 ]]></content>
     </entry>
     
