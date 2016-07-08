@@ -164,6 +164,25 @@
 <p>有没有什么方法能够直接修改css样式中的参数值？（由本节讲到的可直接获取样式中的参数值想到的）</p>
 </blockquote>
 <hr>
+<h3 id="《定时器的使用01》"><a href="#《定时器的使用01》" class="headerlink" title="《定时器的使用01》"></a>《定时器的使用01》</h3><h4 id="关键词：定时器、清除定时器、Date对象、charAt"><a href="#关键词：定时器、清除定时器、Date对象、charAt" class="headerlink" title="关键词：定时器、清除定时器、Date对象、charAt()"></a>关键词：定时器、清除定时器、Date对象、charAt()</h4><ul>
+<li>定时器：间隔性(setInterval)、延时性(setTimeout);</li>
+<li>清除定时器：clearInterval(name),name为需要关闭的定时器的名称；对应的还有clearTimeout;</li>
+<li>Date(): 包括<code>getHours(),getMinutes(),getSeconds(),getFullYear(),getMonth(),getDate(),getDay()</code>，其中getMonth()获取的月份是从0开始的；</li>
+<li>charAt: 兼容低版本的获取元素的方法，比如获取str中第i位元素：<code>str[i]=str.charAt(i)</code>;</li>
+</ul>
+<h4 id="实例及代码-8"><a href="#实例及代码-8" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="355" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akyxYo/?height=355&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akyxYo/" target="_blank" rel="external">JavaScript09</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-8"><a href="#测试题-8" class="headerlink" title="测试题"></a>测试题</h4><p>本节讲到了两个例子，一个就是上面的数码时钟，另一个就是下面的延时提示框，需要满足的功能如下：</p>
+<blockquote>
+<ol>
+<li>有一大一小两个div，左右分布；</li>
+<li>当鼠标放入小div区域时，大的div显示；</li>
+<li>当鼠标移出小div到别处，大div经过500ms后消失；</li>
+<li>如果在这500ms内，鼠标移入大div区域，则大div不消失；</li>
+<li>从大div移出时，500ms后大div消失；</li>
+<li>在500ms内如果鼠标移入小div，则大div不消失；<br>（简单来说：当鼠标在可见的div范围内，div常显；当鼠标在空白处500ms后，大div消失）</li>
+</ol>
+</blockquote>
 ]]></content>
     </entry>
     
