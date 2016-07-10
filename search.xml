@@ -221,14 +221,25 @@
 </ol>
 </blockquote>
 <hr>
-<h3 id="《DOM操作应用》"><a href="#《DOM操作应用》" class="headerlink" title="《DOM操作应用》"></a>《DOM操作应用》</h3><h4 id="关键词：creatElement、appendChild、insertBefore、removeChild、文档碎片"><a href="#关键词：creatElement、appendChild、insertBefore、removeChild、文档碎片" class="headerlink" title="关键词：creatElement、appendChild、insertBefore、removeChild、文档碎片"></a>关键词：creatElement、appendChild、insertBefore、removeChild、文档碎片</h4><ul>
-<li>creatElement： 创建元素，语法<code>creatElement(element)</code>，创建完成后还需要添加到父节点才有效；</li>
+<h3 id="《DOM操作应用》"><a href="#《DOM操作应用》" class="headerlink" title="《DOM操作应用》"></a>《DOM操作应用》</h3><h4 id="关键词：createElement、appendChild、insertBefore、removeChild、文档碎片"><a href="#关键词：createElement、appendChild、insertBefore、removeChild、文档碎片" class="headerlink" title="关键词：createElement、appendChild、insertBefore、removeChild、文档碎片"></a>关键词：createElement、appendChild、insertBefore、removeChild、文档碎片</h4><ul>
+<li>creatElement： 创建元素，语法<code>createElement(element)</code>，创建完成后还需要添加到父节点才有效；</li>
 <li>appendChild：将创建的元素添加到父节点，语法：<code>obj.appendChild(element)</code>，其中obj为父节点，element为创建出来的元素；</li>
 <li>注意：不管是html中原有的，还是通过DOM创建出来的，性质都是一样的，没有区别；</li>
 <li>insertBefore：在父节点内插入子节点，语法：<code>obj.insertBefore(element, obj[i])</code>表示在父节点obj中的第i个元素前面插入元素；但是如果obj中本来没有元素，那么就没法obj[i]就不存在，这时候还得用appendChild，所以这两个经常结合使用，解决兼容性问题；</li>
 <li>removeChild：移除子节点，语法<code>obj.removeChild(element)</code>，其中obj为父节点，element为需要移除的元素；</li>
-<li>文档碎片：文档碎片可以提高DOM操作性能（理论上），语法：<code>creatDocumentFragment()</code>；（实际上在高级浏览器上，文档碎片几乎不会提高效率）</li>
+<li>文档碎片：文档碎片可以提高DOM操作性能（理论上），语法：<code>createDocumentFragment()</code>；（实际上在高级浏览器上，文档碎片几乎不会提高效率）</li>
 </ul>
+<h4 id="实例及代码-11"><a href="#实例及代码-11" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="219" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/zBEPKE/?height=219&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/zBEPKE/" target="_blank" rel="external">JavaScript12</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-11"><a href="#测试题-11" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的内容，完成下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>制作一个表格。两个按钮：一个增加表格行数，一个删除表格行数；</li>
+<li>每次增加的行数都在第一行，删除则从最后一行开始；</li>
+<li>顺便加上各行变色的小功能；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
