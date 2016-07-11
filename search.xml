@@ -292,6 +292,26 @@
 </ol>
 </blockquote>
 <hr>
+<h3 id="《JS运动基础-1》"><a href="#《JS运动基础-1》" class="headerlink" title="《JS运动基础-1》"></a>《JS运动基础-1》</h3><h4 id="关键词：运动框架、分享侧边栏、图片淡入淡出"><a href="#关键词：运动框架、分享侧边栏、图片淡入淡出" class="headerlink" title="关键词：运动框架、分享侧边栏、图片淡入淡出"></a>关键词：运动框架、分享侧边栏、图片淡入淡出</h4><ul>
+<li>运动：利用定时器及offsetLeft来实现；</li>
+<li>框架完善过程：<ol>
+<li>到指定地点停止；</li>
+<li>点击后，运动前先清除定时器，保证每次只有一个定时器处于工作状态；</li>
+</ol>
+</li>
+<li>分享侧边栏：鼠标移入移出，运动方向相反；</li>
+<li>图片淡入淡出：鼠标移入移出改变图片的透明度；</li>
+</ul>
+<h4 id="实例及代码-14"><a href="#实例及代码-14" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="353" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/XKZwyK/?height=353&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/XKZwyK/" target="_blank" rel="external">JavaScript15</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br><strong>注意：变量申明的位置非常重要，变量申明的位置能够直接影响到变量的值是否收到函数的影响</strong></p>
+<h4 id="测试题-14"><a href="#测试题-14" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的运动框架的学习，完成下面的小程序：</p>
+<blockquote>
+<ol>
+<li>新建一个分享侧边栏，侧边栏上有个小标签；</li>
+<li>将整个div布局在视窗的左下角；</li>
+<li>正常情况下侧边栏只有标签能看到，鼠标移入时，整个div出现，移出div后0.5s后侧边栏又隐藏到视窗外；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
