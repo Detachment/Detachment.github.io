@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[基于《精通JavaScript开发》课程的复习与总结]]></title>
+      <title><![CDATA[《精通JavaScript开发》]]></title>
       <url>http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。</p>
 <a id="more"></a>
@@ -247,7 +247,7 @@
 <li>search：搜索文本，如果搜索到则返回所在位置，未找到则返回-1；</li>
 <li>split：切分字符串，语法为<code>str.split(&#39;aa&#39;)</code>，表示用aa来切分str，aa可以为空格或者任何字符；</li>
 </ul>
-<h4 id="实例及代码-12"><a href="#实例及代码-12" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/QEqAOQ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/QEqAOQ/" target="_blank" rel="external">JavaScript13</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
+<h4 id="实例及代码-12"><a href="#实例及代码-12" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/jAGxaz/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/jAGxaz/" target="_blank" rel="external">JavaScript13</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
 <blockquote>
 <p>本程序具有的功能：</p>
 <ol>
