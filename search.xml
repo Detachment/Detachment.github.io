@@ -312,7 +312,11 @@
 </ol>
 </blockquote>
 <hr>
-]]></content>
+<h3 id="《JS运动基础-02》"><a href="#《JS运动基础-02》" class="headerlink" title="《JS运动基础-02》"></a>《JS运动基础-02》</h3><h4 id="关键词：缓冲运动、Math、右侧悬浮框"><a href="#关键词：缓冲运动、Math、右侧悬浮框" class="headerlink" title="关键词：缓冲运动、Math、右侧悬浮框"></a>关键词：缓冲运动、Math、右侧悬浮框</h4><ul>
+<li>缓冲运动：运动速度与到目标位置相关；</li>
+<li>Math：数学函数，常用的有Math.cell()，表示向上取整；Math.floor()，表示向下取整；由于目标值可能大于也可能小于现在的值，所以需要根据速度来判断是向上还是向下取整，这时候就可以利用三元运算符简单的判断一下了，具体的操作可以在下面的实例中看到；Math.abs()，表示的是取绝对值，在匀速运动的停止条件的时候能用到；</li>
+</ul>
+<h4 id="实例及代码-15"><a href="#实例及代码-15" class="headerlink" title="实例及代码"></a>实例及代码</h4>]]></content>
     </entry>
     
     <entry>
