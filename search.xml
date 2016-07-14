@@ -247,94 +247,18 @@
 <li>search：搜索文本，如果搜索到则返回所在位置，未找到则返回-1；</li>
 <li>split：切分字符串，语法为<code>str.split(&#39;aa&#39;)</code>，表示用aa来切分str，aa可以为空格或者任何字符；</li>
 </ul>
-<h4 id="实例及代码-12"><a href="#实例及代码-12" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/jAGxaz/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/jAGxaz/" target="_blank" rel="external">JavaScript13</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
-<blockquote>
-<p>本程序具有的功能：</p>
-<ol>
-<li>表格隔行变色；</li>
-<li>鼠标移入移除高亮；</li>
-<li>手动输入添加内容，并同时保证功能1和2有效，而且自动标号不重复；</li>
-<li>具有删除所添加行的功能，同时保证1和2的功能有效；</li>
-<li>只能搜索，可忽略大小写及模糊搜索；</li>
-</ol>
-</blockquote>
-<h4 id="测试题-12"><a href="#测试题-12" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学内容，完善上面的小程序：</p>
+<h4 id="实例及代码-12"><a href="#实例及代码-12" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/jAGxaz/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/jAGxaz/" target="_blank" rel="external">JavaScript13</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br>&gt; 本程序具有的功能：<br>1. 表格隔行变色；<br>2. 鼠标移入移除高亮；<br>3. 手动输入添加内容，并同时保证功能1和2有效，而且自动标号不重复；<br>4. 具有删除所添加行的功能，同时保证1和2的功能有效；<br>5. 只能搜索，可忽略大小写及模糊搜索；<br><br>#### 测试题<br>根据本节所学内容，完善上面的小程序：<br>&gt; 1. 加入多关键词搜索功能（结合split功能及search）；<br>2. 搜索功能与上述功能1，2兼容；（目前我还没想到更好的办法去解决）<br><br>—<br><br>### 《DOM操作应用高级-02》<br>#### 关键词：排序、aLi、表单、onsubmit、onreset、表单验证<br>- 排序：中心思想是结合利用appendChild的移动功能及sort的排序功能；<br>- aLi：aLi=document.getElementById(‘li’),虽然看起来像是数组，但却又不是正真的数组，它不具备sort、join等功能，确切来说这只是一个元素集合；<br>- 表单：用于向服务器提交数据，action为链接地址；<br>- onsubmit：提交数据是发生的事件；<br>- onreset：重置表单时发生的事件；<br>- 表单验证：阻止用户输入非法字符等；<br><br>#### 实例及代码<br><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/YWABXk/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/YWABXk/" target="_blank" rel="external">JavaScript14</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br>&gt;本小程序就有的功能：<br>&gt; 1. 所有上节课程序所具有的功能；<br>2. 在上节课的基础上具有排序功能；<br>3. 与课程相比，本排序功能具有选择性，即可根据所需要的排序依据进行排序；<br><br>#### 测试题<br>表单内容比较简单，可利用表单完成下面一个小程序：<br>&gt; 1. 制作一个表单，包括用户名、密码和提交；<br>2. 提交时会弹出一个确认页面；<br>3. 具有重置内容；<br><br>—<br><br>### 《JS运动基础-01》<br>#### 关键词：运动框架、分享侧边栏、图片淡入淡出<br>- 运动：利用定时器及offsetLeft来实现；<br>- 框架完善过程：<br>  1. 到指定地点停止；<br>  2. 点击后，运动前先清除定时器，保证每次只有一个定时器处于工作状态；<br>- 分享侧边栏：鼠标移入移出，运动方向相反；<br>- 图片淡入淡出：鼠标移入移出改变图片的透明度；<br><br>#### 实例及代码<br><iframe height="353" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/XKZwyK/?height=353&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/XKZwyK/" target="_blank" rel="external">JavaScript15</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br><strong>注意：变量申明的位置非常重要，变量申明的位置能够直接影响到变量的值是否收到函数的影响</strong><br><br>#### 测试题<br>根据本节所学的运动框架的学习，完成下面的小程序：<br>&gt; 1. 新建一个分享侧边栏，侧边栏上有个小标签；<br>2. 将整个div布局在视窗的左下角；<br>3. 正常情况下侧边栏只有标签能看到，鼠标移入时，整个div出现，移出div后0.5s后侧边栏又隐藏到视窗外；<br><br>—<br><br>### 《JS运动基础-02》<br>#### 关键词：缓冲运动、Math、右侧悬浮框<br>- 缓冲运动：运动速度与到目标位置相关；<br>- Math：数学函数，常用的有Math.ceil()，表示向上取整；Math.floor()，表示向下取整；由于目标值可能大于也可能小于现在的值，所以需要根据速度来判断是向上还是向下取整，这时候就可以利用三元运算符简单的判断一下了，具体的操作可以在下面的实例中看到；Math.abs()，表示的是取绝对值，在匀速运动的停止条件的时候能用到；<br>- 匀速运动时，由于速度可能不能被运动量整除，那么为了正好达到目标，可以定义在距离目标近到一定程度（绝对值小于速度值）的时候，直接让程序到达目标点；在缓冲运动中由于运动在最后，速度值可能会是小数，而浏览器默认会将小数部分舍去，所以达不到目标，为了达到目标，只要直接对速度进行取整（整数时向上取整，负数时向下取整），保证在速度为小数时也能继续运动；<br><br>#### 实例及代码<br><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/zBPaLv/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/zBPaLv/" target="_blank" rel="external">JavaScript16</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br>&gt; 本程序具有的功能：<br>1. 这个小程序就综合了匀速运动与缓冲运动，水平方向上为匀速运动，竖直方向为缓冲运动；<br>2. 注意：特别需要小心的是在写尺寸的时候别忘了加上“px”，否则代码无效而且不会报错！<br><br>#### 测试题<br>根据本节缩写的内容，完成制作一个缓冲样式的滚动条，具体如下：<br>&gt; 1. 缓冲条位于视窗的右侧中间位置；<br>2. 不管是向上滚动还是向下滚动，缓冲后滚动条都会停止在视窗右侧中间；<br>3. 停止运动时不能抖动（用到parseInt属性）；<br><br>—<br><br>### 《JS运动应用-01》<br>#### 关键词：多物体同时运动、offsetWidth、任意值运动框架<br>- 多物体运动框架：将定时器变成元素的属性，那么调用时则不会相互干扰；（例子：改变div的长度，互不影响；或者改变透明度；）<br>- 补充：在多物体运动的情况下，所有的属性都不能共用，例如上面提到的透明度，需要先把透明度赋值给一个变量，那么就需要将这个变量变成所有需要调用的对象的属性；<br>- offsetWidth：本节讨论到了与offset相关的属性，<strong>提到这是包含padding及border的属性</strong>，那么在有border的情况下，前面的例子就会有一定的变化；为了避免因为border及padding带来的影响，建议使用本身的属性来带入程序（因为一般样式属性写在样式表中，那么就会用到之前学到的currentStyle活getComputeStyle属性了）；<br>- 任意值运动框架：一套运动框架能控制几乎所有的属性变化，其包含三个属性：作用对象、作用属性、变化值；<br><br>#### 代码及实例<br><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/mEqNoE/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/mEqNoE/" target="_blank" rel="external">JavaScript17</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-12"><a href="#测试题-12" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的知识，制作如下一个小程序：</p>
 <blockquote>
 <ol>
-<li>加入多关键词搜索功能（结合split功能及search）；</li>
-<li>搜索功能与上述功能1，2兼容；（目前我还没想到更好的办法去解决）</li>
+<li>自己重写一个完美运动框架；</li>
+<li>利用这个框架来改变不同的样式，但是别包括上面已经写过的长度、宽度或者透明度；</li>
+<li>给对象加上border属性后检查效果是否仍然相符。</li>
 </ol>
 </blockquote>
 <hr>
-<h3 id="《DOM操作应用高级-02》"><a href="#《DOM操作应用高级-02》" class="headerlink" title="《DOM操作应用高级-02》"></a>《DOM操作应用高级-02》</h3><h4 id="关键词：排序、aLi、表单、onsubmit、onreset、表单验证"><a href="#关键词：排序、aLi、表单、onsubmit、onreset、表单验证" class="headerlink" title="关键词：排序、aLi、表单、onsubmit、onreset、表单验证"></a>关键词：排序、aLi、表单、onsubmit、onreset、表单验证</h4><ul>
-<li>排序：中心思想是结合利用appendChild的移动功能及sort的排序功能；</li>
-<li>aLi：aLi=document.getElementById(‘li’),虽然看起来像是数组，但却又不是正真的数组，它不具备sort、join等功能，确切来说这只是一个元素集合；</li>
-<li>表单：用于向服务器提交数据，action为链接地址；</li>
-<li>onsubmit：提交数据是发生的事件；</li>
-<li>onreset：重置表单时发生的事件；</li>
-<li>表单验证：阻止用户输入非法字符等；</li>
-</ul>
-<h4 id="实例及代码-13"><a href="#实例及代码-13" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/YWABXk/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/YWABXk/" target="_blank" rel="external">JavaScript14</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
-<blockquote>
-<p>本小程序就有的功能：</p>
-<ol>
-<li>所有上节课程序所具有的功能；</li>
-<li>在上节课的基础上具有排序功能；</li>
-<li>与课程相比，本排序功能具有选择性，即可根据所需要的排序依据进行排序；</li>
-</ol>
-</blockquote>
-<h4 id="测试题-13"><a href="#测试题-13" class="headerlink" title="测试题"></a>测试题</h4><p>表单内容比较简单，可利用表单完成下面一个小程序：</p>
-<blockquote>
-<ol>
-<li>制作一个表单，包括用户名、密码和提交；</li>
-<li>提交时会弹出一个确认页面；</li>
-<li>具有重置内容；</li>
-</ol>
-</blockquote>
-<hr>
-<h3 id="《JS运动基础-01》"><a href="#《JS运动基础-01》" class="headerlink" title="《JS运动基础-01》"></a>《JS运动基础-01》</h3><h4 id="关键词：运动框架、分享侧边栏、图片淡入淡出"><a href="#关键词：运动框架、分享侧边栏、图片淡入淡出" class="headerlink" title="关键词：运动框架、分享侧边栏、图片淡入淡出"></a>关键词：运动框架、分享侧边栏、图片淡入淡出</h4><ul>
-<li>运动：利用定时器及offsetLeft来实现；</li>
-<li>框架完善过程：<ol>
-<li>到指定地点停止；</li>
-<li>点击后，运动前先清除定时器，保证每次只有一个定时器处于工作状态；</li>
-</ol>
-</li>
-<li>分享侧边栏：鼠标移入移出，运动方向相反；</li>
-<li>图片淡入淡出：鼠标移入移出改变图片的透明度；</li>
-</ul>
-<h4 id="实例及代码-14"><a href="#实例及代码-14" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="353" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/XKZwyK/?height=353&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/XKZwyK/" target="_blank" rel="external">JavaScript15</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe><br><strong>注意：变量申明的位置非常重要，变量申明的位置能够直接影响到变量的值是否收到函数的影响</strong></p>
-<h4 id="测试题-14"><a href="#测试题-14" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的运动框架的学习，完成下面的小程序：</p>
-<blockquote>
-<ol>
-<li>新建一个分享侧边栏，侧边栏上有个小标签；</li>
-<li>将整个div布局在视窗的左下角；</li>
-<li>正常情况下侧边栏只有标签能看到，鼠标移入时，整个div出现，移出div后0.5s后侧边栏又隐藏到视窗外；</li>
-</ol>
-</blockquote>
-<hr>
-<h3 id="《JS运动基础-02》"><a href="#《JS运动基础-02》" class="headerlink" title="《JS运动基础-02》"></a>《JS运动基础-02》</h3><h4 id="关键词：缓冲运动、Math、右侧悬浮框"><a href="#关键词：缓冲运动、Math、右侧悬浮框" class="headerlink" title="关键词：缓冲运动、Math、右侧悬浮框"></a>关键词：缓冲运动、Math、右侧悬浮框</h4><ul>
-<li>缓冲运动：运动速度与到目标位置相关；</li>
-<li>Math：数学函数，常用的有Math.ceil()，表示向上取整；Math.floor()，表示向下取整；由于目标值可能大于也可能小于现在的值，所以需要根据速度来判断是向上还是向下取整，这时候就可以利用三元运算符简单的判断一下了，具体的操作可以在下面的实例中看到；Math.abs()，表示的是取绝对值，在匀速运动的停止条件的时候能用到；</li>
-<li>匀速运动时，由于速度可能不能被运动量整除，那么为了正好达到目标，可以定义在距离目标近到一定程度（绝对值小于速度值）的时候，直接让程序到达目标点；在缓冲运动中由于运动在最后，速度值可能会是小数，而浏览器默认会将小数部分舍去，所以达不到目标，为了达到目标，只要直接对速度进行取整（整数时向上取整，负数时向下取整），保证在速度为小数时也能继续运动；</li>
-</ul>
-<h4 id="实例及代码-15"><a href="#实例及代码-15" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/zBPaLv/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/zBPaLv/" target="_blank" rel="external">JavaScript16</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
-<blockquote>
-<p>本程序具有的功能：</p>
-<ol>
-<li>这个小程序就综合了匀速运动与缓冲运动，水平方向上为匀速运动，竖直方向为缓冲运动；</li>
-<li>注意：特别需要小心的是在写尺寸的时候别忘了加上“px”，否则代码无效而且不会报错！</li>
-</ol>
-</blockquote>
-<h4 id="测试题-15"><a href="#测试题-15" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节缩写的内容，完成制作一个缓冲样式的滚动条，具体如下：</p>
-<blockquote>
-<ol>
-<li>缓冲条位于视窗的右侧中间位置；</li>
-<li>不管是向上滚动还是向下滚动，缓冲后滚动条都会停止在视窗右侧中间；</li>
-<li>停止运动时不能抖动（用到parseInt属性）；</li>
-</ol>
-</blockquote>
-<hr>
-]]></content>
+<h3 id="《JS运动应用-02》"><a href="#《JS运动应用-02》" class="headerlink" title="《JS运动应用-02》"></a>《JS运动应用-02》</h3><h4 id="关键词：仿flash运动"><a href="#关键词：仿flash运动" class="headerlink" title="关键词：仿flash运动"></a>关键词：仿flash运动</h4>]]></content>
     </entry>
     
     <entry>
