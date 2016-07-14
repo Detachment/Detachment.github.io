@@ -358,10 +358,16 @@
 <hr>
 <h3 id="《JS运动应用-02》"><a href="#《JS运动应用-02》" class="headerlink" title="《JS运动应用-02》"></a>《JS运动应用-02》</h3><h4 id="关键词：仿flash运动"><a href="#关键词：仿flash运动" class="headerlink" title="关键词：仿flash运动"></a>关键词：仿flash运动</h4><ul>
 <li>仿flash运动：这个小程序结合了近几节课所学的知识点，非常值得联系，具体的实现过程如下：<ol>
-<li>左右按钮移入移出显示隐藏；（包括在左右键上）</li>
+<li>左右按钮移入移出显示隐藏；（包括在左右键上）；</li>
+<li>点击小图能起到切换大图的功能（更改大图的Zindex–写在行间为Zindex，写在样式表中为Z-index，缓冲运动改高度）；切换之前需要判断切换到的是否为当前，如果为当前则不发生变化；</li>
+<li>点击时，小图除切换功能外还会变成不透明；所有的小图移入移出透明度都有变化，但是当前图片移出时不变化；</li>
+<li>增加左右按钮点击时大图切换的功能；（第一张图及最后一张图的时候则开始自循环）</li>
+<li>点击左右按钮时除了大图要切换，小图也需要滚动，而且也要注意第一张及最后一张的特殊情况；</li>
+<li>增加自动播放的功能，也加入鼠标移入移出时的消除启动播放；</li>
 </ol>
 </li>
 </ul>
+<h4 id="实例及代码-16"><a href="#实例及代码-16" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="635" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/grorbK/?height=635&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/grorbK/" target="_blank" rel="external">JavaScript18</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 ]]></content>
     </entry>
     
