@@ -367,7 +367,46 @@
 </ol>
 </li>
 </ul>
-<h4 id="实例及代码-16"><a href="#实例及代码-16" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="635" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/grorbK/?height=635&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/grorbK/" target="_blank" rel="external">JavaScript18</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码-16"><a href="#实例及代码-16" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="769" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/grorbK/?height=769&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/grorbK/" target="_blank" rel="external">JavaScript18</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<blockquote>
+<p>注：</p>
+<ol>
+<li>本程序实现的过程中没有利用课程中所讲到的利用Z-index属性的叠加，而是利用了之前课程中学到的轮播，效果算是各有特色；</li>
+<li>实现的过程中发现布局对JS的影响非常大，第一次跟着课程实现效果的时候因为CSS还学习的很糟糕，所以就知识重写了JS部分，这次再重写的时候，写到CSS才发现为什么用到Z-index，以及不用也行的道理；</li>
+<li>实践出真知。</li>
+</ol>
+</blockquote>
+<h4 id="测试题-17"><a href="#测试题-17" class="headerlink" title="测试题"></a>测试题</h4><p>根据这节课所学到的知识点，完成下面的小程序：</p>
+<blockquote>
+<ol>
+<li>利用Z-index或者我上面使用的轮播的形式重写一次这个程序，巩固学习效果；</li>
+<li>所重写的程序应该具有上面提到的所有功能；</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="《JS运动中级》"><a href="#《JS运动中级》" class="headerlink" title="《JS运动中级》"></a>《JS运动中级》</h3><h4 id="关键词：链式运动（土豆提示栏）、完美运动框架（新浪微博）"><a href="#关键词：链式运动（土豆提示栏）、完美运动框架（新浪微博）" class="headerlink" title="关键词：链式运动（土豆提示栏）、完美运动框架（新浪微博）"></a>关键词：链式运动（土豆提示栏）、完美运动框架（新浪微博）</h4><ul>
+<li>链式运动：完成一个运动之后，开始另一个运动。原理即为在原来的运动框架中加入一个函数参数，即在动作完成的部分加入一条新的语句；</li>
+<li>完美运动：结合json及运动框架，构建一个完美运动框架，能同时改变多个属性值；（注意：在同时改变多个属性值的时候，需要所有值都达到目标值后才能关闭定时器）；</li>
+</ul>
+<h4 id="实例及代码-17"><a href="#实例及代码-17" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/groGqv/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/groGqv/" target="_blank" rel="external">JavaScript19</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<blockquote>
+<p>注：</p>
+<ol>
+<li>本例为完美运动框架的简单运用，这个运动框架能满足多个元素属性值的同时改变直到所有的属性值都达到目标值才停止；</li>
+</ol>
+</blockquote>
+<h4 id="测试题-18"><a href="#测试题-18" class="headerlink" title="测试题"></a>测试题</h4><p>根据这节课所学到的完美运动框架，写出下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>形式如新浪微博的新消息发布；</li>
+<li>点击发布后，公告栏则会生成输入的信息；</li>
+<li>信息显示按时间排布，最新的消息显示在最上端；</li>
+<li>新生成消息的过程加上完美运动框架，达到高度缓慢撑开，透明度逐渐增加的效果；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
