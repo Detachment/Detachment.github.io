@@ -407,7 +407,15 @@
 </ol>
 </blockquote>
 <hr>
-<h3 id="《JS事件基础》"><a href="#《JS事件基础》" class="headerlink" title="《JS事件基础》"></a>《JS事件基础》</h3><h4 id="关键词："><a href="#关键词：" class="headerlink" title="关键词："></a>关键词：</h4>]]></content>
+<h3 id="《JS事件基础》"><a href="#《JS事件基础》" class="headerlink" title="《JS事件基础》"></a>《JS事件基础》</h3><h4 id="关键词：event对象、document、事件流（事件冒泡）、鼠标事件、keyCode、其他属性"><a href="#关键词：event对象、document、事件流（事件冒泡）、鼠标事件、keyCode、其他属性" class="headerlink" title="关键词：event对象、document、事件流（事件冒泡）、鼠标事件、keyCode、其他属性"></a>关键词：event对象、document、事件流（事件冒泡）、鼠标事件、keyCode、其他属性</h4><ul>
+<li>event对象：事件对象，应用在IE6-8及高版本的chrome浏览器，在低版本的chrome浏览器及Firefox中需要用到一个参数：ev，在调用函数时，系统就将这个参数传给函数；为了解决这个兼容问题，可以用一个“或”的表达式，例如：<code>var oEvent=event||ev;</code>，然后调用的时候，直接用oEvent就好了；</li>
+<li>document：包含整个页面的内容，上至&lt;!DOCTYPE html&gt;，下至;如果需要给整个页面加点击事件，应该加在document上而不是body上，因为body的范围由它所包含的内容决定；</li>
+<li>事件流：最简单的一个事件流的例子——事件冒泡（一般会带来一些困扰，所以很多时候需要取消冒泡：通过事件对象来解决——<code>oEvent.cancelBubble=true;</code>，典型的例子为仿select下拉框）；</li>
+<li>鼠标事件：鼠标坐标，clientX及clientY(表示的是可视区的坐标，所有如果有滚动的时候需要加上scrollTop和scrollLeft)；</li>
+<li>keyCode：表示键盘上按键的键码，按键事件为onkeydown及onkeyup；（按键卡顿现象：照顾特殊人群，但是会造成不好的影响，解决方案为将事件加上setInterval函数来将延迟给掩饰掉，按键抬起时清除定时器）；</li>
+<li>其他属性：ctrlKey，shiftKey、altKey，使用的时候都需要结合事件对象，例如：<code>oEvent.ctrlKey</code>；</li>
+</ul>
+<h4 id="实例及代码-18"><a href="#实例及代码-18" class="headerlink" title="实例及代码"></a>实例及代码</h4>]]></content>
     </entry>
     
     <entry>
