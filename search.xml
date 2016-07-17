@@ -415,7 +415,8 @@
 <li>keyCode：表示键盘上按键的键码，按键事件为onkeydown及onkeyup；（按键卡顿现象：照顾特殊人群，但是会造成不好的影响，解决方案为将事件加上setInterval函数来将延迟给掩饰掉，按键抬起时清除定时器）；</li>
 <li>其他属性：ctrlKey，shiftKey、altKey，使用的时候都需要结合事件对象，例如：<code>oEvent.ctrlKey</code>；</li>
 </ul>
-<h4 id="实例及代码-18"><a href="#实例及代码-18" class="headerlink" title="实例及代码"></a>实例及代码</h4>]]></content>
+<h4 id="实例及代码-18"><a href="#实例及代码-18" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyQxLk/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyQxLk/" target="_blank" rel="external">JavaScript20</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+]]></content>
     </entry>
     
     <entry>
