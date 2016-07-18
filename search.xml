@@ -450,6 +450,17 @@
 </ol>
 </li>
 </ul>
+<h4 id="实例及代码-19"><a href="#实例及代码-19" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/zBRKYz/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/zBRKYz/" target="_blank" rel="external">JavaScript21</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-20"><a href="#测试题-20" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的内容，制作一个小程序：</p>
+<blockquote>
+<ol>
+<li>在整个页面组织右键菜单的默认属性；</li>
+<li>自己定制一个菜单栏，里面可以包括一些链接之类的；</li>
+<li>页面空白处单击则菜单栏消失；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
