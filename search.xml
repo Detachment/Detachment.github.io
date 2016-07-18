@@ -416,6 +416,40 @@
 <li>其他属性：ctrlKey，shiftKey、altKey，使用的时候都需要结合事件对象，例如：<code>oEvent.ctrlKey</code>；</li>
 </ul>
 <h4 id="实例及代码-18"><a href="#实例及代码-18" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyQxLk/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyQxLk/" target="_blank" rel="external">JavaScript20</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<blockquote>
+<p>注：</p>
+<ol>
+<li>在输入框中输入任意字符；</li>
+<li>鼠标点击enter或者直接用键盘enter；</li>
+<li>移动鼠标就能按到效果，输入的字符越多，效果越明显；</li>
+<li>如果未输入任何字符，那么将会提示输入；</li>
+</ol>
+</blockquote>
+<h4 id="测试题-19"><a href="#测试题-19" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的鼠标及键盘事件，写出下面一个小程序：</p>
+<blockquote>
+<ol>
+<li>能通过鼠标及键盘控制一个div的运动；</li>
+<li>需要将scroll因素考虑在移动的范围内；</li>
+<li>需要避免连续按住不放时产生的卡顿现象（利用定时器）；</li>
+</ol>
+</blockquote>
+<hr>
+<h3 id="《JS事件中级》"><a href="#《JS事件中级》" class="headerlink" title="《JS事件中级》"></a>《JS事件中级》</h3><h4 id="关键词：默认行为、拖拽"><a href="#关键词：默认行为、拖拽" class="headerlink" title="关键词：默认行为、拖拽"></a>关键词：默认行为、拖拽</h4><ul>
+<li>默认行为：浏览器自带的一些行为，有些时候需要阻止系统自带的默认行为，加上自己设置的行为；（比如右键菜单-oncontextmenu）<ol>
+<li>阻止右键菜单：需要阻止时，直接oncontexmenu函数返回为false即可；自己设置一个菜单，并且在鼠标右键的时候改变display属性，将定制菜单的位置改为鼠标的位置，然后在页面空白处点击的时候（给document加上onclick事件）将定制菜单栏收回；</li>
+<li>设置一个只能输入数字的输入框：默认时，在输入框按下按键则会在输入框显示相应字符或者操作。这也是一种默认行为，当onkeydown事件返回为false的时候，则能阻止这种默认行为。结合keyCode和阻止这种默认事件的功能，则可以设计一个能输入数字及特定按钮（如方向键及退格键）功能的小程序；</li>
+</ol>
+</li>
+<li>拖拽：保证鼠标的位置及被拖动元素的相对位置不变，需要注意的点如下：<ol>
+<li>应该是只有杂鼠标按下之后才能移动，鼠标抬起时移动停止；</li>
+<li>对于鼠标快速移动时可能移出元素范围带来的移动异常，将移动事件加在document上即可解决；</li>
+<li>当移动出视窗时释放鼠标按键，仍然能够移动，为了解决这个问题，需要将鼠标释放按钮事件也加在document上；</li>
+<li>在Firefox中拖拽空元素的时候会出现重影，这也是FF中的一种默认事件，可以用返回false的方法来组织这个bug；</li>
+<li>被拖拽元素被拖出视窗范围，这时候就可以判断来阻止元素被拖出视窗；</li>
+</ol>
+</li>
+</ul>
 ]]></content>
     </entry>
     
