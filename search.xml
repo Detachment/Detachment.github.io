@@ -461,6 +461,9 @@
 </ol>
 </blockquote>
 <hr>
+<h3 id="《JS事件高级应用-01》"><a href="#《JS事件高级应用-01》" class="headerlink" title="《JS事件高级应用-01》"></a>《JS事件高级应用-01》</h3><h4 id="关键词：事件绑定"><a href="#关键词：事件绑定" class="headerlink" title="关键词：事件绑定"></a>关键词：事件绑定</h4><ul>
+<li>事件绑定：attachEvent(name, function)，可以将多个函数加到同一个事件上。</li>
+</ul>
 ]]></content>
     </entry>
     
