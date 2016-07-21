@@ -461,9 +461,29 @@
 </ol>
 </blockquote>
 <hr>
-<h3 id="《JS事件高级应用-01》"><a href="#《JS事件高级应用-01》" class="headerlink" title="《JS事件高级应用-01》"></a>《JS事件高级应用-01》</h3><h4 id="关键词：事件绑定"><a href="#关键词：事件绑定" class="headerlink" title="关键词：事件绑定"></a>关键词：事件绑定</h4><ul>
-<li>事件绑定：attachEvent(name, function)，可以将多个函数加到同一个事件上。</li>
+<h3 id="《JS事件高级应用-01》"><a href="#《JS事件高级应用-01》" class="headerlink" title="《JS事件高级应用-01》"></a>《JS事件高级应用-01》</h3><h4 id="关键词：事件绑定、高级拖拽"><a href="#关键词：事件绑定、高级拖拽" class="headerlink" title="关键词：事件绑定、高级拖拽"></a>关键词：事件绑定、高级拖拽</h4><ul>
+<li>事件绑定：attachEvent(name, function)，可以将多个函数加到同一个事件上，在chrome及FF上不兼容，为了兼容需要用到addEventListener（name，function，false）（此属性也不兼容IE9以下的IE浏览器）。所以为了都兼容，应该使用一个判断函数整合这个属性的不同写法，但是要注意addEventListerner属性中的事件是没有“on”的（具体写法可见实例）；</li>
+<li>高级拖拽：新增功能———— 1.不拖出父级div或者其他指定对象的区域；2.边缘吸附；3.利用事件捕获来解决在低版本IE下拖拽时会选中文字的问题，setCapture（只兼容IE，功能是将页面的所有事件都集中在加了事件捕获的对象上），与之相应的为releaseCapture，即解除对象的捕获；</li>
 </ul>
+<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/qNoPxz/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/qNoPxz/" target="_blank" rel="external">JavaScript22</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<p>这个小程序所具有的功能：</p>
+<blockquote>
+<ol>
+<li>事件绑定，点击内部的div后会弹出两次会话框；</li>
+<li>可以在指定外框自由移动；</li>
+<li>不会产生移动时文字的选中；</li>
+<li>兼容低版本的IE浏览器；</li>
+</ol>
+</blockquote>
+<h4 id="测试题-21"><a href="#测试题-21" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的内容，重写事件绑定及完美拖拽的小程序，特别注意以下两点：</p>
+<blockquote>
+<ol>
+<li>兼容性问题；</li>
+<li>代码重用性；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
