@@ -484,6 +484,26 @@
 </ol>
 </blockquote>
 <hr>
+<h3 id="《JS事件高级应用-02》"><a href="#《JS事件高级应用-02》" class="headerlink" title="《JS事件高级应用-02》"></a>《JS事件高级应用-02》</h3><h4 id="关键词：带框拖拽、自定义滚动条"><a href="#关键词：带框拖拽、自定义滚动条" class="headerlink" title="关键词：带框拖拽、自定义滚动条"></a>关键词：带框拖拽、自定义滚动条</h4><ul>
+<li>带框拖拽：预先设置一个样式，按下鼠标产生一个div并赋予样式，div的大小与框相同，位置与框相同，移动时只移动框，松开鼠标时才移动框，并且将产生的div移出；</li>
+<li>自定义滚动条：控制对象的大小、透明度、文字滚动等；</li>
+</ul>
+<h4 id="代码及实例-2"><a href="#代码及实例-2" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/wWmQjx/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/wWmQjx/" target="_blank" rel="external">JavaScript23</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<p>这个小程序具有的功能：</p>
+<blockquote>
+<ol>
+<li>利用滚动条能控制div的大小；</li>
+<li>div具有带框移动的功能；</li>
+</ol>
+</blockquote>
+<h4 id="测试题-22"><a href="#测试题-22" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的知识，制作一个自定义的滚动条：</p>
+<blockquote>
+<ol>
+<li>自定义滚动条样式；</li>
+<li>能实现通过滚动来控制文字上下翻转的功能；</li>
+</ol>
+</blockquote>
 ]]></content>
     </entry>
     
