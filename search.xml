@@ -524,7 +524,31 @@
 </ol>
 </blockquote>
 <hr>
-<h3 id="《Ajax中级》"><a href="#《Ajax中级》" class="headerlink" title="《Ajax中级》"></a>《Ajax中级》</h3><h4 id="关键词："><a href="#关键词：" class="headerlink" title="关键词："></a>关键词：</h4>]]></content>
+<h3 id="《Ajax中级》"><a href="#《Ajax中级》" class="headerlink" title="《Ajax中级》"></a>《Ajax中级》</h3><h4 id="关键词：编写Ajax对象、接收状态值、onreadystatechange、responseText"><a href="#关键词：编写Ajax对象、接收状态值、onreadystatechange、responseText" class="headerlink" title="关键词：编写Ajax对象、接收状态值、onreadystatechange、responseText"></a>关键词：编写Ajax对象、接收状态值、onreadystatechange、responseText</h4><ul>
+<li>编写Ajax对象：<ol>
+<li>创建Ajax对象；</li>
+<li>连接到服务器；</li>
+<li>发送请求；</li>
+<li>接收返回值；</li>
+</ol>
+</li>
+<li>注意：在JS中利用没有定义的变量时会弹出错误，而利用没有定义的属性时则会提示undifined；</li>
+<li>接收状态值（readyState）：<ol>
+<li>0 （未初始化）还没有调用open（）方法；</li>
+<li>1 （载入）已调用send（）方法，正在发送请求；</li>
+<li>2 （载入完成）send（）方法完成，已收到全部相应内容；</li>
+<li>3 （解析）正在解析相应内容；</li>
+<li>4 （完成）相应内容解析完成，可以在客户端调用了；</li>
+</ol>
+</li>
+<li>http状态码（status）：最常见的为200，表示读取成功；</li>
+<li>onreadystatechange: 表示返回状态；</li>
+<li>responseText: 读取的文件内容；</li>
+</ul>
+<h4 id="实例及代码-20"><a href="#实例及代码-20" class="headerlink" title="实例及代码"></a>实例及代码</h4><p>由于本节也需要在本地服务器运行，所以只能讲代码贴出来，ajax代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ajax</span>(<span class="params">url, fnsucc, fnfail</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1. Set a new ajax object:</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">        <span class="keyword">var</span> oAjax=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> oAjax=<span class="keyword">new</span> ActivaXObject(<span class="string">'Microsoft.XMLHTTP'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. Get connected:</span></span><br><span class="line">    oAjax.open(<span class="string">'GET'</span>, url, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. Send the request:</span></span><br><span class="line">    oAjax.send();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4. Get data back:</span></span><br><span class="line">    oAjax.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(oAjax.readyState==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(oAjax.status==<span class="number">200</span>)&#123;</span><br><span class="line">                fnsucc(oAjax.responseText);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(fnfail)&#123;</span><br><span class="line">                    fnfail(oAjax.status);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="测试题-24"><a href="#测试题-24" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节所学的内容比较单一，所以根据本节所学的内容自己手写一个完整的Ajax程序。</p>
+<hr>
+]]></content>
     </entry>
     
     <entry>
