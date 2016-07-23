@@ -582,6 +582,18 @@
 
 <h4 id="测试题-26"><a href="#测试题-26" class="headerlink" title="测试题"></a>测试题</h4><p>用混合方式重写一个面向对象的小程序。</p>
 <hr>
+<h3 id="《JS面向对象实例》"><a href="#《JS面向对象实例》" class="headerlink" title="《JS面向对象实例》"></a>《JS面向对象实例》</h3><h4 id="关键词：将面向过程的函数改写成面向对象的形式"><a href="#关键词：将面向过程的函数改写成面向对象的形式" class="headerlink" title="关键词：将面向过程的函数改写成面向对象的形式"></a>关键词：将面向过程的函数改写成面向对象的形式</h4><ul>
+<li>改写：<ol>
+<li>不能有函数嵌套，但可以有全局变量；</li>
+<li>将onload改写成构造函数，将全局变量改写成属性，将函数改写成方法；</li>
+<li>debug，主要容易出现在this、事件、闭包及传参上；</li>
+</ol>
+</li>
+</ul>
+<h4 id="代码及实例-4"><a href="#代码及实例-4" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/jAxqQa/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/jAxqQa/" target="_blank" rel="external">JavaScript28</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-27"><a href="#测试题-27" class="headerlink" title="测试题"></a>测试题</h4><p>按照这节课所学的内容，利用面向对象的方式重写选项卡或者之前写过的任何一个程序。</p>
+<hr>
 ]]></content>
     </entry>
     
