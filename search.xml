@@ -548,6 +548,28 @@
 <h4 id="实例及代码-20"><a href="#实例及代码-20" class="headerlink" title="实例及代码"></a>实例及代码</h4><p>由于本节也需要在本地服务器运行，所以只能讲代码贴出来，ajax代码如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Ajax</span>(<span class="params">url, fnsucc, fnfail</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 1. Set a new ajax object:</span></span><br><span class="line">    <span class="keyword">if</span>(<span class="built_in">window</span>.XMLHttpRequest)&#123;</span><br><span class="line">        <span class="keyword">var</span> oAjax=<span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> oAjax=<span class="keyword">new</span> ActivaXObject(<span class="string">'Microsoft.XMLHTTP'</span>)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 2. Get connected:</span></span><br><span class="line">    oAjax.open(<span class="string">'GET'</span>, url, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3. Send the request:</span></span><br><span class="line">    oAjax.send();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 4. Get data back:</span></span><br><span class="line">    oAjax.onreadystatechange=<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(oAjax.readyState==<span class="number">4</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(oAjax.status==<span class="number">200</span>)&#123;</span><br><span class="line">                fnsucc(oAjax.responseText);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span>(fnfail)&#123;</span><br><span class="line">                    fnfail(oAjax.status);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h4 id="测试题-24"><a href="#测试题-24" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节所学的内容比较单一，所以根据本节所学的内容自己手写一个完整的Ajax程序。</p>
 <hr>
+<h3 id="《JS面向对象基础-01》"><a href="#《JS面向对象基础-01》" class="headerlink" title="《JS面向对象基础-01》"></a>《JS面向对象基础-01》</h3><h4 id="关键词：面向对象、对象组成、this、object对象、构造函数、工厂方式、"><a href="#关键词：面向对象、对象组成、this、object对象、构造函数、工厂方式、" class="headerlink" title="关键词：面向对象、对象组成、this、object对象、构造函数、工厂方式、"></a>关键词：面向对象、对象组成、this、object对象、构造函数、工厂方式、</h4><ul>
+<li>面向对象：对象是一个整体，对外提供一些操作；面向对象指的是使用对象时只关注对象提供的功能，而不关注其内部细节；（这是一种通用思想，而非只在编程中适用）</li>
+<li>JS中面向对象：简称OOP，具有以下三个特点：<ol>
+<li>抽象：抓住主要问题；</li>
+<li>封装：不考虑内部实现，只考虑功能使用；</li>
+<li>继承：从已有对象上，继承出新的对象，可以最大限度重用现有代码，包括多重继承（继承多个对象的功能）和多态；</li>
+</ol>
+</li>
+<li>对象组成：包括方法和属性<ol>
+<li>方法：和函数类似，函数是自由的，但方法具有归属的对象，这两者都是过程量，是动态的；</li>
+<li>属性：和变量类似，变量时自由的，但属性具有归属的对象，这两者都是状态量，是静态的；</li>
+</ol>
+</li>
+<li>this：当前的方法属于谁就指向谁；</li>
+<li>注意：不能在系统对象中随意附加方法、属性，否则会覆盖已有方法、属性；</li>
+<li>object对象：空白对象；</li>
+<li>构造函数：用于构造一个对象的函数，功能与普通函数一样；</li>
+<li>工厂方式：创建空白对象，加工对象，返回对象；缺点：创建时没有’new’，函数重复导致资源浪费；</li>
+</ul>
+<h4 id="实例及代码-21"><a href="#实例及代码-21" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="304" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/WxJQmL/?height=304&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJQmL/" target="_blank" rel="external">JavaScript26</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-25"><a href="#测试题-25" class="headerlink" title="测试题"></a>测试题</h4><p>用工厂方式重写一个面向对象的程序。</p>
 ]]></content>
     </entry>
     
