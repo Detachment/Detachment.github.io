@@ -570,6 +570,18 @@
 <h4 id="实例及代码-21"><a href="#实例及代码-21" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="304" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/WxJQmL/?height=304&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJQmL/" target="_blank" rel="external">JavaScript26</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
 <h4 id="测试题-25"><a href="#测试题-25" class="headerlink" title="测试题"></a>测试题</h4><p>用工厂方式重写一个面向对象的程序。</p>
+<hr>
+<h3 id="《JS面向对象基础-02》"><a href="#《JS面向对象基础-02》" class="headerlink" title="《JS面向对象基础-02》"></a>《JS面向对象基础-02》</h3><h4 id="关键词：new、原型-prototype-、类和对象、对象命名规范"><a href="#关键词：new、原型-prototype-、类和对象、对象命名规范" class="headerlink" title="关键词：new、原型(prototype)、类和对象、对象命名规范"></a>关键词：new、原型(prototype)、类和对象、对象命名规范</h4><ul>
+<li>new：通过new+构造函数来构造对象，可以理解为“new”会先通过系统在函数内部创建<code>var this=new Object()</code>这个对象，然后在最后的时候又自动返回<code>return this</code>这个对象，这样理解之后，面向对象的方式和工厂方式原理上也是一样的；</li>
+<li>原型(prototype)：可以理解为css中的class， 能够同时给多个对象加方法；</li>
+<li>类和对象：前者不具备实际功能，而后者具有，它们之间的关系就相当于模子和产品的关系；为了同时给多个对象加方法，那么就需要在类上面加原型，既可以给系统对象加也可以在创建的对象加；</li>
+<li>注意：用构造函数加属性，用原型加方法。区别于工厂方式，这种方式叫做混合的构造函数/原型方式，简称混合方式构造对象；</li>
+<li>对象命名规范：为了和系统对象保持一致，自己构造出来的对象命名时最好也保持首字母大写；</li>
+</ul>
+<h4 id="实例及代码-22"><a href="#实例及代码-22" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/OXkrVB/?height=265&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/OXkrVB/" target="_blank" rel="external">JavaScript27</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-26"><a href="#测试题-26" class="headerlink" title="测试题"></a>测试题</h4><p>用混合方式重写一个面向对象的小程序。</p>
+<hr>
 ]]></content>
     </entry>
     
