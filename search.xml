@@ -625,7 +625,24 @@
 
 <h4 id="测试题-29"><a href="#测试题-29" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节课所学的大部分为基础知识，应用都较简单，所以可重写上例中的小程序，巩固知识点。</p>
 <hr>
-<h3 id="《COOKIES基础与应用》"><a href="#《COOKIES基础与应用》" class="headerlink" title="《COOKIES基础与应用》"></a>《COOKIES基础与应用》</h3>]]></content>
+<h3 id="《COOKIES基础与应用》"><a href="#《COOKIES基础与应用》" class="headerlink" title="《COOKIES基础与应用》"></a>《COOKIES基础与应用》</h3><h4 id="关键词：cookie、setDate-、读取cookie、删除cookie"><a href="#关键词：cookie、setDate-、读取cookie、删除cookie" class="headerlink" title="关键词：cookie、setDate()、读取cookie、删除cookie"></a>关键词：cookie、setDate()、读取cookie、删除cookie</h4><ul>
+<li>cookie：<ol>
+<li>页面用来保存信息；</li>
+<li>同一个网站共享一套cookie；</li>
+<li>数量、大小有限（一般数量小于50，大小不超过4k或10k）；</li>
+<li>有过期时间；（expires）</li>
+<li>使用方式<code>document.cookie=&#39;name=value&#39;</code>;</li>
+</ol>
+</li>
+<li>setDate(): 相对于getDate()获取系统时间，setDate()能够设置对象的时间；</li>
+<li>读取cookie：需要利用字符串分割，具体见例子；</li>
+<li>删除cookie：设置需要删除的cookie的有效期为’-1’即可；</li>
+</ul>
+<h4 id="实例及代码-24"><a href="#实例及代码-24" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="274" scrolling="no" src="//codepen.io/Leon-Zhao/embed/WxJOBL/?height=274&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJOBL/" target="_blank" rel="external">JavaScript31</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-30"><a href="#测试题-30" class="headerlink" title="测试题"></a>测试题</h4><p>在FireFox浏览器的环境下尝试使用cookie的相关功能，具体写法可参考上面的实例。</p>
+<hr>
+<h3 id="《JS中的正则表达式》"><a href="#《JS中的正则表达式》" class="headerlink" title="《JS中的正则表达式》"></a>《JS中的正则表达式》</h3>]]></content>
     </entry>
     
     <entry>
