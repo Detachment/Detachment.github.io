@@ -603,7 +603,11 @@
 <li>总结：属性的继承利用call，方法的继承利用循环；</li>
 <li>系统对象：本地对象（非静态对象，如Object/Function/Array/String等），内置对象（静态对象，如Global/Math）,宿主对象（由浏览器提供，如BOM/DOM）；</li>
 </ul>
-]]></content>
+<h4 id="实例及代码-23"><a href="#实例及代码-23" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/WxJpzZ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJpzZ/" target="_blank" rel="external">JavaScript29</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-28"><a href="#测试题-28" class="headerlink" title="测试题"></a>测试题</h4><p>利用继承的特点，用面向对象的方式重写拖拽的小程序。</p>
+<hr>
+<h3 id="《BOM应用》"><a href="#《BOM应用》" class="headerlink" title="《BOM应用》"></a>《BOM应用》</h3>]]></content>
     </entry>
     
     <entry>
