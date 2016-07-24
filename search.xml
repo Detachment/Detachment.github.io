@@ -607,7 +607,25 @@
 
 <h4 id="测试题-28"><a href="#测试题-28" class="headerlink" title="测试题"></a>测试题</h4><p>利用继承的特点，用面向对象的方式重写拖拽的小程序。</p>
 <hr>
-<h3 id="《BOM应用》"><a href="#《BOM应用》" class="headerlink" title="《BOM应用》"></a>《BOM应用》</h3>]]></content>
+<h3 id="《BOM应用》"><a href="#《BOM应用》" class="headerlink" title="《BOM应用》"></a>《BOM应用》</h3><h4 id="关键词：BOM基础"><a href="#关键词：BOM基础" class="headerlink" title="关键词：BOM基础"></a>关键词：BOM基础</h4><ul>
+<li>BOM基础：<ol>
+<li>window.open(a, b) 打开新的页面，b表示是打开的新窗口是显示在本页还是新的页面；</li>
+<li>window.close() FF中不能用这个去关闭非脚本打开的窗口；</li>
+<li>document.write() 先清空，然后写入；</li>
+<li>window.navigator.userAgent 表示的是浏览器的类型及版本；</li>
+<li>window.location 表示当前页面的地址；</li>
+<li>document.documentElement.clientWidth及document.documentElement.clientHeight：表示可视区的宽度及高度；</li>
+<li>document.documentElement.scrollTop(IE)及document.body.scrollTop（chrome）：表示滚动条高度；</li>
+<li>window.onscroll及window.onresize分别表示在页面滚动及更改窗口尺寸时发生的事件；</li>
+<li>alert/confirm/prompt: 系统对话框；</li>
+</ol>
+</li>
+</ul>
+<h4 id="代码及实例-5"><a href="#代码及实例-5" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="250" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/dXZRXY/?height=250&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/dXZRXY/" target="_blank" rel="external">JavaScript30</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-29"><a href="#测试题-29" class="headerlink" title="测试题"></a>测试题</h4><p>由于本节课所学的大部分为基础知识，应用都较简单，所以可重写上例中的小程序，巩固知识点。</p>
+<hr>
+<h3 id="《COOKIES基础与应用》"><a href="#《COOKIES基础与应用》" class="headerlink" title="《COOKIES基础与应用》"></a>《COOKIES基础与应用》</h3>]]></content>
     </entry>
     
     <entry>
