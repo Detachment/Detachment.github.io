@@ -6,7 +6,7 @@
     <entry>
       <title><![CDATA[《精通JavaScript开发》]]></title>
       <url>http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。</p>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。<b>对于本课程或者本博客有任何问题，非常欢迎给我发邮件，我会尽我所能回答你的问题。</b></p>
 <a id="more"></a>
 <h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="《初探JavaScript魅力01》"><a href="#《初探JavaScript魅力01》" class="headerlink" title="《初探JavaScript魅力01》"></a>《初探JavaScript魅力01》</h3><h4 id="关键词：JS、事件、属性、函数、重用、变量"><a href="#关键词：JS、事件、属性、函数、重用、变量" class="headerlink" title="关键词：JS、事件、属性、函数、重用、变量"></a>关键词：JS、事件、属性、函数、重用、变量</h4><ul>
 <li>JavaScript：交互、功能；</li>
@@ -656,9 +656,9 @@
 <li>replace：替换复合要求的元素，用法为：<code>name.replace(a, b)</code>表示将name中的a替换成b（如果有多个，则只替换第一个，除非用正则匹配全局），常用于敏感词过滤；</li>
 <li>元字符：用<code>[]</code>表示，<code>[abc]</code>表示a、b、c中的任意一个，<code>[a-z]</code>表示从所有字母，数字同理。<code>[^a]</code>表示出了a；</li>
 <li>转义字符：<ol>
-<li>\d  表示数字                    \D  表示出了数字</li>
-<li>\w  表示英文、数字和下划线       \W  表示出了英文、数字和下划线</li>
-<li>\s  空白字符                    \S  表示出了空白字符</li>
+<li>\d  表示数字                    \D  表示除了数字</li>
+<li>\w  表示英文、数字和下划线       \W  表示除了英文、数字和下划线</li>
+<li>\s  空白字符                    \S  表示除了空白字符</li>
 <li>.   表示任意字符，很容易出错，不建议使用；</li>
 </ol>
 </li>
@@ -679,6 +679,38 @@
 </li>
 <li>test：<code>reg.test(name)</code>，用于检测name是否符合reg所表示的正则，如果符合则返回true；需要注意的是，只要name一部分符合reg的要求就会返回true，这时候就需要用到<code>^</code>及<code>$</code>，分别表示行首和行尾；</li>
 </ul>
+<h4 id="实例及代码-25"><a href="#实例及代码-25" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="335" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/WxJrPO/?height=335&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJrPO/" target="_blank" rel="external">JavaScript32</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="测试题-31"><a href="#测试题-31" class="headerlink" title="测试题"></a>测试题</h4><p>根据本节所学的正则表达式，制作一个这样的小程序：</p>
+<blockquote>
+<ol>
+<li>能够识别输入的数字是否为电话号码；</li>
+<li>如果不是电话号码则弹出“输入的不是电话号码”；</li>
+<li>如果符合要求则弹出“输入成功”。</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从开始学习这门课程到今天正好两个月。当时虽然也已经花了将近一个月的时间去学习JS，但还是感觉很茫然，直到开始学习这门课程。最初是看视频跟着老师的讲解一步一步的写程序，学习完一遍以后，自知很多知识点掌握的还不是很牢固，然后果断作出了复习一遍，重写所有程序的决定。复习的时候，先是重新看一遍老师的讲解，巩固基础知识，然后将当节课的知识点尽量综合起来放在一个程序里面重写出来，这个过程就是举一反三的过程。举几个例子：</p>
+<blockquote>
+<ol>
+<li>第五节课制作日历，第一遍写的时候没有写任何布局相关的内容，重写时所有的css、js和html都是独立完成；</li>
+<li>第九节课制作超酷时钟，同样关系到布局问题，而且首次结合图床来写程序；</li>
+<li>第十三节课DOM高级应用，将这节课中所学的所有功能都集中在了一起，并且增加了按要求排序这个课程中并没有讲到的功能，而且没有bug；</li>
+<li>第十八节课仿flash运动，这个小程序是目前写过的功能最多的程序了，而且实现过程并非照搬老师的讲解，实现的效果也基本一致；</li>
+<li>……</li>
+</ol>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在复习的过程中，对知识点的理解和掌握程度远远超过第一次学习。这个过程中积攒了些许经验，希望能和大家分享：</p>
+<blockquote>
+<ol>
+<li>写程序之前先理清逻辑关系，否则debug的时候很难发现问题；</li>
+<li>动手写比脑子想更重要，看似很简单很套路的知识点，如果自己不去套路一遍，这个套路就不属于你；</li>
+<li>有足够的耐心。debug是个很烦人却又很让人兴奋的过程，程序成功运行的瞬间，所有debug的烦恼都消失了；</li>
+<li>善用搜索引擎。前端发展了这么多年，我们所踩得坑前人都已经踩烂了，只要有疑问，直接搜关键词基本上都能搜出相关的博客或者问题；</li>
+<li>不要好高骛远。基础知识永远不会过时。</li>
+</ol>
+</blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;毋庸置疑，本课程非常适合新手学习，但同时也不难发现课程中很少触及真正基础的知识，而且后面还有一部分内容并没有讲到。下一步，我将通过书本继续巩固基础知识，同时开始学习JS框架，准备开始做几个简单的项目。这些内容都会在之后的博客中更新。<br>&nbsp;&nbsp;&nbsp;&nbsp;最后，作为一个初学者，我深知在学习过程中的种种疑惑和迷茫，即使在现在，这份心情依然存在。然而，只要不放弃努力，就始终在进步，目标终将会越来越近。<br> </p><h4>&nbsp;&nbsp;&nbsp;&nbsp;<em> The world is a fine place and worth fighting for !</em></h4><p></p>
 ]]></content>
     </entry>
     
