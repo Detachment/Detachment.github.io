@@ -638,7 +638,7 @@
 <li>读取cookie：需要利用字符串分割，具体见例子；</li>
 <li>删除cookie：设置需要删除的cookie的有效期为’-1’即可；</li>
 </ul>
-<h4 id="实例及代码-24"><a href="#实例及代码-24" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="274" scrolling="no" src="//codepen.io/Leon-Zhao/embed/WxJOBL/?height=274&theme-id=0&default-tab=js,result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJOBL/" target="_blank" rel="external">JavaScript31</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码-24"><a href="#实例及代码-24" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="224" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/WxJOBL/?height=224&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/WxJOBL/" target="_blank" rel="external">JavaScript31</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
 <h4 id="测试题-30"><a href="#测试题-30" class="headerlink" title="测试题"></a>测试题</h4><p>在FireFox浏览器的环境下尝试使用cookie的相关功能，具体写法可参考上面的实例。</p>
 <hr>
