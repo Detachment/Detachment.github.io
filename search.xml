@@ -642,7 +642,44 @@
 
 <h4 id="测试题-30"><a href="#测试题-30" class="headerlink" title="测试题"></a>测试题</h4><p>在FireFox浏览器的环境下尝试使用cookie的相关功能，具体写法可参考上面的实例。</p>
 <hr>
-<h3 id="《JS中的正则表达式》"><a href="#《JS中的正则表达式》" class="headerlink" title="《JS中的正则表达式》"></a>《JS中的正则表达式》</h3>]]></content>
+<h3 id="《JS中的正则表达式》"><a href="#《JS中的正则表达式》" class="headerlink" title="《JS中的正则表达式》"></a>《JS中的正则表达式》</h3><h4 id="关键词：正则基础、正在表达式、写法、match、replace、元字符、转义字符、量词、test"><a href="#关键词：正则基础、正在表达式、写法、match、replace、元字符、转义字符、量词、test" class="headerlink" title="关键词：正则基础、正在表达式、写法、match、replace、元字符、转义字符、量词、test"></a>关键词：正则基础、正在表达式、写法、match、replace、元字符、转义字符、量词、test</h4><ul>
+<li>正则基础：了解正则表达式需要从字符串操作开始，最常见的字符串操作如下<ol>
+<li>name.search(a): 表示的是在name中查找a，并返回a的位置；如果不存在则返回-1；</li>
+<li>name.substring(value1, value2): 表示在name中截取从第value1到value2（不包括结束位置）的字符；如果只给一个参数，则返回至最后一位；</li>
+<li>name.charAt(value): 表示获取字符串的某一位；</li>
+<li>name.split(s):利用s来切分name，其中s可以是字符串或者符号；</li>
+</ol>
+</li>
+<li>正则表达式：舶来语，表示的是一套规则，这套规则是计算机可识别的；</li>
+<li>写法：JS风格（新建对象，然后使用对象），Perl风格（正则最早是出现在perl语言中）；</li>
+<li>match: 提取所有复合条件的元素；<code>i</code>表示忽略大小写，<code>g</code>表示全局搜索；</li>
+<li>replace：替换复合要求的元素，用法为：<code>name.replace(a, b)</code>表示将name中的a替换成b（如果有多个，则只替换第一个，除非用正则匹配全局），常用于敏感词过滤；</li>
+<li>元字符：用<code>[]</code>表示，<code>[abc]</code>表示a、b、c中的任意一个，<code>[a-z]</code>表示从所有字母，数字同理。<code>[^a]</code>表示出了a；</li>
+<li>转义字符：<ol>
+<li>\d  表示数字                    \D  表示出了数字</li>
+<li>\w  表示英文、数字和下划线       \W  表示出了英文、数字和下划线</li>
+<li>\s  空白字符                    \S  表示出了空白字符</li>
+<li>.   表示任意字符，很容易出错，不建议使用；</li>
+</ol>
+</li>
+<li>量词：表示个数，用{}<ol>
+<li>{n}      表示正好出现n次；</li>
+<li>{n, m}   最少n次，最多m次；</li>
+<li>{n, }    最少n次，最多无限；</li>
+<li><ul>
+<li>相当于{1，}，即最少出现1次；</li>
+</ul>
+</li>
+<li>?       相当于{0，1}，即可有可无；</li>
+<li><ul>
+<li>相当于{0，}，表示可有可无，而且出现多少次都无所谓，很容易出错，不建议使用；</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>test：<code>reg.test(name)</code>，用于检测name是否符合reg所表示的正则，如果符合则返回true；需要注意的是，只要name一部分符合reg的要求就会返回true，这时候就需要用到<code>^</code>及<code>$</code>，分别表示行首和行尾；</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
