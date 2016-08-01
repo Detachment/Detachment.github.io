@@ -7,6 +7,11 @@
       <title><![CDATA[《jQuery学习教程》]]></title>
       <url>http://detachment.club/2016/07/31/jQuery%20%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="external">w3school</a>查看。</p>
+<a id="more"></a>
+<h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><h4 id="关键词：简介、安装、语法、选择器、事件"><a href="#关键词：简介、安装、语法、选择器、事件" class="headerlink" title="关键词：简介、安装、语法、选择器、事件"></a>关键词：简介、安装、语法、选择器、事件</h4><ul>
+<li>简介：jQuery是一个轻量级的JavaScript库，能极大的简化JavaScript编程，宗旨是“write less, do more”；包含的功能非常多（1. HTML元素选取；2. HTML元素操作；3. CSS操作；4. HTML事件函数；5. JavaScript特效和动画；6. HTML DOM遍历和修改；7. AJAX；8. Utilities；）；</li>
+<li>安装：可以将jQuery库下载到本地引用，也可以直接引用Microsoft或者google的CDN；使用引用CDN的方式有一个很大的优势就是许多用户在访问其他站点的时候已经加载过jQuery，结果就是当这些人访问站点时，会直接从缓存中加载jQuery，从而减少加载时间。而且，大多数CDN都可以确保用户在请求文件时，从最近的服务器上返回响应，从而提高加载速度；</li>
+</ul>
 ]]></content>
     </entry>
     
