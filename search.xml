@@ -28,6 +28,18 @@
 </ol>
 </li>
 </ul>
+<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akawvG/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akawvG/" target="_blank" rel="external">jQuery01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
+<blockquote>
+<p>注意：由于CodePen后台提供了jQuery的链接，所以在面板上看不到引入库的这一段代码。</p>
+</blockquote>
+<h4 id="小测试"><a href="#小测试" class="headerlink" title="小测试"></a>小测试</h4><p>本节主要是关于jQuery的简单介绍，其中选择器及事件为重点内容，可以查看手册后挑几个练习，使得具有最基本的功能：</p>
+<blockquote>
+<ol>
+<li>下载jQuery库后本地引用或者直接引用链接；</li>
+<li>具有基本的选择器及事件函数；</li>
+</ol>
+</blockquote>
+<hr>
 ]]></content>
     </entry>
     
