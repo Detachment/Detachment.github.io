@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="jQuery,基础,前端," />
+  <meta name="keywords" content="前端,基础,jQuery," />
 
 
 
@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-01T15:35:41.387Z">
+<meta property="og:updated_time" content="2016-08-02T09:26:00.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -356,9 +356,25 @@
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="external">w3school</a>查看。</p>
 <a id="more"></a>
-<h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><h4 id="关键词：简介、安装、语法、选择器、事件"><a href="#关键词：简介、安装、语法、选择器、事件" class="headerlink" title="关键词：简介、安装、语法、选择器、事件"></a>关键词：简介、安装、语法、选择器、事件</h4><ul>
-<li>简介：jQuery是一个轻量级的JavaScript库，能极大的简化JavaScript编程，宗旨是“write less, do more”；包含的功能非常多（1. HTML元素选取；2. HTML元素操作；3. CSS操作；4. HTML事件函数；5. JavaScript特效和动画；6. HTML DOM遍历和修改；7. AJAX；8. Utilities；）；</li>
-<li>安装：可以将jQuery库下载到本地引用，也可以直接引用Microsoft或者google的CDN；使用引用CDN的方式有一个很大的优势就是许多用户在访问其他站点的时候已经加载过jQuery，结果就是当这些人访问站点时，会直接从缓存中加载jQuery，从而减少加载时间。而且，大多数CDN都可以确保用户在请求文件时，从最近的服务器上返回响应，从而提高加载速度；</li>
+<h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><h4 id="关键词：简介、安装、语法、选择器、事件、名称冲突"><a href="#关键词：简介、安装、语法、选择器、事件、名称冲突" class="headerlink" title="关键词：简介、安装、语法、选择器、事件、名称冲突"></a>关键词：简介、安装、语法、选择器、事件、名称冲突</h4><ul>
+<li><strong>简介</strong>：jQuery是一个轻量级的JavaScript库，能极大的简化JavaScript编程，宗旨是“write less, do more”；包含的功能非常多（1. HTML元素选取；2. HTML元素操作；3. CSS操作；4. HTML事件函数；5. JavaScript特效和动画；6. HTML DOM遍历和修改；7. AJAX；8. Utilities；）；</li>
+<li><strong>安装</strong>：可以将jQuery库下载到本地引用，也可以直接引用Microsoft或者google的CDN；使用引用CDN的方式有一个很大的优势就是许多用户在访问其他站点的时候已经加载过jQuery，结果就是当这些人访问站点时，会直接从缓存中加载jQuery，从而减少加载时间。而且，大多数CDN都可以确保用户在请求文件时，从最近的服务器上返回响应，从而提高加载速度；</li>
+<li><strong>语法</strong>：语法形式为<code>$(selector).action()</code>，其中美元符号定义了jQuery，选择符（seclector）查询出符合条件的html元素，action函数对筛选出来的元素进行操作；举个最常见的例子：<code>$(document).ready(function(){});</code>这段代码表示在整个页面加载完成后再执行其中的操作；</li>
+<li><strong>选择器</strong>：常见的选择器有以下几种：<ol>
+<li>元素选择器：例如<code>$(&#39;p&#39;)</code>表示选取<code>&lt;p&gt;</code>元素；<code>$(&#39;p.intro&#39;)</code>表示选择类别为intro的<code>&lt;p&gt;</code>元素；</li>
+<li>属性选择器：例如<code>$(&quot;[href]&quot;)</code>表示选取所有带有href属性的元素；<code>$(&quot;[href=&#39;#&#39;]&quot;)</code>表示选择所有带有href值等于#的元素；<code>$(&quot;[href$=&#39;.jpg&#39;]&quot;)</code>表示选择所有href值以.jpg结尾的元素；</li>
+<li>更多是选择器参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="external">jQuery选择器手册</a>。</li>
+</ol>
+</li>
+<li><strong>事件</strong>：jQuery事件处理方法是jQuery的核心函数，事件处理程序指的是当HTML中发生某些事件所调用的方法，也叫作“触发”；（通常把jQuery代码放在<code>&lt;head&gt;</code>部分的事件处理方法中；详细的事件参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="external">jQuery事件手册</a></li>
+<li><strong>名称冲突</strong>：由于其他库也可能使用<code>$</code>符号，那么就会引起冲突，jQuery中使用<code>noConflict()</code>方法来解决这个问题；</li>
+<li><strong>注意</strong>：为了使代码更容易维护，以下事项需要注意：<ol>
+<li>把所有的jQuery代码置于事件处理函数中；</li>
+<li>把所有事件处理函数置于文档就绪事件处理器中；</li>
+<li>把jQuery代码置于单独的<code>.js</code>文件中;</li>
+<li>如果存在名称冲突，则重命名jQuery库；</li>
+</ol>
+</li>
 </ul>
 
       
@@ -381,11 +397,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
+            <a href="/tags/前端/" rel="tag">#前端</a>
           
             <a href="/tags/基础/" rel="tag">#基础</a>
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
+            <a href="/tags/jQuery/" rel="tag">#jQuery</a>
           
         </div>
       
@@ -585,7 +601,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
