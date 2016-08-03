@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-03T08:32:19.146Z">
+<meta property="og:updated_time" content="2016-08-03T08:43:23.423Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -401,6 +401,12 @@
 <h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyZZQY/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyZZQY/" target="_blank" rel="external">jQuery02</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
 <h4 id="小测试-1"><a href="#小测试-1" class="headerlink" title="小测试"></a>小测试</h4><p>利用这节课所学的知识点，重现具有以上功能的div。</p>
+<h4 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h4><p>  既然很多方法中已经都有callback函数的可选参数来达到链式运动的目的，那么为什么jQuery还需要有链式运动的功能？</p>
+<ol>
+<li>callback函数可以是任意函数，函数改变的对象可以是任意对象；</li>
+<li>链式运动改变的对象是同一元素，链式运动的写法更简单；</li>
+<li>还有类似功能的是动画的队列功能，不过动画改变的是具体的css属性；</li>
+</ol>
 <hr>
 
       
@@ -627,7 +633,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery效果"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><span class="nav-number">2.2.1.</span> <span class="nav-text">关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">小测试</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery效果"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><span class="nav-number">2.2.1.</span> <span class="nav-text">关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">小测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小问题"><span class="nav-number">2.2.4.</span> <span class="nav-text">小问题</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
