@@ -28,7 +28,8 @@
 </ol>
 </li>
 </ul>
-<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><p><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akawvG/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akawvG/" target="_blank" rel="external">jQuery01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe></p>
+<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akawvG/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akawvG/" target="_blank" rel="external">jQuery01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
 <blockquote>
 <p>注意：由于CodePen后台提供了jQuery的链接，所以在面板上看不到引入库的这一段代码。</p>
 </blockquote>
@@ -44,12 +45,16 @@
 <li><strong>隐藏显示</strong>：方法为<code>hide(), show()</code>，使用语法为<code>$(selector).hide(speed, callback)</code>，其中speed可以是slow，fast或者毫秒；而callback表示的是完成这个动作之后执行的函数；除了这两个方法之外，可以用<code>toggle()</code>的方法来切换显示隐藏，效果不错；</li>
 <li><strong>淡入淡出</strong>：方法为<code>fadeIn(), fadeOut(), fadeToggle(), fadeTo()</code>，使用语法为<code>$(selector).fadeIn(speed, callback)</code>，其中speed和callback的理解和上面的一样；其中<code>fadeTo()</code>方法略有不同，语法为<code>$(selector).fadeTo(speed,opacity,callback)</code>，表示的是将选择出的元素的透明度变成目标值；</li>
 <li><strong>滑动</strong>：方法为<code>slideDown(), slideUp(), slideToggle()</code>使用语法为<code>$(selector).slideDown(speed, callback)</code>，其中speed和callback的解释同上；</li>
-<li><strong>动画</strong>：方法为<code>animate()</code>，使用语法为<code>$(selector).animate({params}, speed, callback)</code>，其中params参数定义形成动画的css属性，speed和callback的含义解释同上；其中属性的动画值可以设置成<code>&quot;show&quot;,&quot;hide&quot;,&quot;toggle&quot;</code>，具体见实例；如果需要实现步骤有先后的动画，那么可以通过编写多个animate()方法，jQuery就会逐一运行这些代码，这种功能叫做队列功能；</li>
+<li><strong>动画</strong>：方法为<code>animate()</code>，使用语法为<code>$(selector).animate({params}, speed, callback)</code>，其中params参数定义形成动画的css属性，speed和callback的含义解释同上；其中属性的动画值可以设置成<code>&quot;show&quot;,&quot;hide&quot;,&quot;toggle&quot;</code>，具体见实例；如果需要实现步骤有先后的动画，那么可以通过编写多个animate()方法，jQuery就会逐一运行这些代码，这种功能叫做队列功能；animate方法几乎能操作所有的CSS属性，但是需要注意的是需要使用Camel标记法来书写属性名，比如paddingLeft,marginRight等；</li>
 <li><strong>stop()</strong>: 此方法用于停止动画或者效果，适用于所有jQuery效果函数，语法为<code>$(selector).stop(stopAll,goToEnd)</code>，其中可选参数stopAll规定是否应该清除动画队列，默认是false，即仅停止活动的动画，但允许队列中的其他动画执行；可选参数goToEnd表示是否立即完成当前动画，默认为false；</li>
 <li><strong>Callback</strong>：此函数在当前动画100%完成之后执行；因为JS语句是逐一执行的，为了避免因为动画还没执行完成而造成动画与之后的语句之间可能产生的错误或者页面冲突，建议以参数的形式添加Callback函数；</li>
 <li><strong>Chaining</strong>：Chaining允许我们在一条语句中添加多个方法，例如<code>$(&#39;p&#39;).css(&#39;color&#39;, &#39;red&#39;).slideUp(2000).slideDown(2000);</code>，这是p元素就会先改变css样式，然后收缩，最后张开；为了易读性及格式的美观，可以通过换行及空格来美化；</li>
 </ul>
-<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4>]]></content>
+<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyZZQY/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyZZQY/" target="_blank" rel="external">jQuery02</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<h4 id="小测试-1"><a href="#小测试-1" class="headerlink" title="小测试"></a>小测试</h4><p>利用这节课所学的知识点，重现具有以上功能的div。</p>
+<hr>
+]]></content>
     </entry>
     
     <entry>
