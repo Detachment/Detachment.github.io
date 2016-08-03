@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-02T14:17:49.032Z">
+<meta property="og:updated_time" content="2016-08-03T03:23:38.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -388,7 +388,16 @@
 </ol>
 </blockquote>
 <hr>
-
+<h3 id="jQuery效果"><a href="#jQuery效果" class="headerlink" title="jQuery效果"></a>jQuery效果</h3><h4 id="关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><a href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining" class="headerlink" title="关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining"></a>关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</h4><ul>
+<li><strong>隐藏显示</strong>：方法为<code>hide(), show()</code>，使用语法为<code>$(selector).hide(speed, callback)</code>，其中speed可以是slow，fast或者毫秒；而callback表示的是完成这个动作之后执行的函数；除了这两个方法之外，可以用<code>toggle()</code>的方法来切换显示隐藏，效果不错；</li>
+<li><strong>淡入淡出</strong>：方法为<code>fadeIn(), fadeOut(), fadeToggle(), fadeTo()</code>，使用语法为<code>$(selector).fadeIn(speed, callback)</code>，其中speed和callback的理解和上面的一样；其中<code>fadeTo()</code>方法略有不同，语法为<code>$(selector).fadeTo(speed,opacity,callback)</code>，表示的是将选择出的元素的透明度变成目标值；</li>
+<li><strong>滑动</strong>：方法为<code>slideDown(), slideUp(), slideToggle()</code>使用语法为<code>$(selector).slideDown(speed, callback)</code>，其中speed和callback的解释同上；</li>
+<li><strong>动画</strong>：方法为<code>animate()</code>，使用语法为<code>$(selector).animate({params}, speed, callback)</code>，其中params参数定义形成动画的css属性，speed和callback的含义解释同上；其中属性的动画值可以设置成<code>&quot;show&quot;,&quot;hide&quot;,&quot;toggle&quot;</code>，具体见实例；如果需要实现步骤有先后的动画，那么可以通过编写多个animate()方法，jQuery就会逐一运行这些代码，这种功能叫做队列功能；</li>
+<li><strong>stop()</strong>: 此方法用于停止动画或者效果，适用于所有jQuery效果函数，语法为<code>$(selector).stop(stopAll,goToEnd)</code>，其中可选参数stopAll规定是否应该清除动画队列，默认是false，即仅停止活动的动画，但允许队列中的其他动画执行；可选参数goToEnd表示是否立即完成当前动画，默认为false；</li>
+<li><strong>Callback</strong>：此函数在当前动画100%完成之后执行；因为JS语句是逐一执行的，为了避免因为动画还没执行完成而造成动画与之后的语句之间可能产生的错误或者页面冲突，建议以参数的形式添加Callback函数；</li>
+<li><strong>Chaining</strong>：Chaining允许我们在一条语句中添加多个方法，例如<code>$(&#39;p&#39;).css(&#39;color&#39;, &#39;red&#39;).slideUp(2000).slideDown(2000);</code>，这是p元素就会先改变css样式，然后收缩，最后张开；为了易读性及格式的美观，可以通过换行及空格来美化；</li>
+</ul>
+<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4>
       
     </div>
 
@@ -613,7 +622,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery效果"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><span class="nav-number">2.2.1.</span> <span class="nav-text">关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例及代码</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
