@@ -60,6 +60,16 @@
 <li>还有类似功能的是动画的队列功能，不过动画改变的是具体的css属性；</li>
 </ol>
 <hr>
+<h3 id="jQuery-HTML"><a href="#jQuery-HTML" class="headerlink" title="jQuery HTML"></a>jQuery HTML</h3><h4 id="关键词：获取、设置、添加、删除、css类、css-、尺寸"><a href="#关键词：获取、设置、添加、删除、css类、css-、尺寸" class="headerlink" title="关键词：获取、设置、添加、删除、css类、css()、尺寸"></a>关键词：获取、设置、添加、删除、css类、css()、尺寸</h4><ul>
+<li>获取:用于获取内容的DOM操作方法主要有三个，获取属性值的方法主要有一个，分别是：<ol>
+<li>text():设置或返回所选元素的文本内容；</li>
+<li>html():设置或者返回所选元素的内容（包括html标签）；</li>
+<li>val():设置或返回表单字段的值；</li>
+<li>attr():用于获取属性值；</li>
+</ol>
+</li>
+<li>设置：设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容，具体方法可见例子；</li>
+</ul>
 ]]></content>
     </entry>
     
