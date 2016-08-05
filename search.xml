@@ -116,7 +116,39 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line">hello!                           <span class="comment">//利用after()来添加 "Hello!"</span></span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">This is a paragraph!</span><br><span class="line">Hello!                          <span class="comment">//利用append()来添加 "Hello!"</span></span><br><span class="line">&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="小测试-2"><a href="#小测试-2" class="headerlink" title="小测试"></a>小测试</h4><p>通过本节的学习，应该已经知道了利用jQuery来控制html元素的添加与删除以及css样式的设置，那么可以从添加、删除及设置样式的方法中任选几个来制作一个和上面所示类似功能的程序。</p>
 <hr>
-<h3 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h3>]]></content>
+<h3 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h3><h4 id="关键词：遍历、祖先、后代、同胞、过滤"><a href="#关键词：遍历、祖先、后代、同胞、过滤" class="headerlink" title="关键词：遍历、祖先、后代、同胞、过滤"></a>关键词：遍历、祖先、后代、同胞、过滤</h4><ul>
+<li>遍历：用于根据其相对于其他元素的关系来查找或者选取HTML元素；</li>
+<li>祖先：祖先元素包括父元素、祖父元素等等，常用的方法为：<ol>
+<li>parent()：返回被选元素的直接父元素；</li>
+<li>parents()：返回被选元素的所有祖先元素，其中甚至包括文档的根元素（即<html>)；</html></li>
+<li>parentUntil()：返回介于两个给定元素之间的祖先元素；</li>
+</ol>
+</li>
+<li>后代：与祖先相对的，后代指的是子、孙、曾孙等，常用的方法为：<ol>
+<li>children()：返回被选元素的直接子元素；</li>
+<li>find()：返回被选元素的被find的元素，包括所有后代；</li>
+</ol>
+</li>
+<li>同胞：同胞拥有相同的父元素，常用的方法为：<ol>
+<li>siblings()：返回所有被选元素的同胞元素；</li>
+<li>next()：返回被选元素的下一个同胞元素；</li>
+<li>nextAll()：返回被选元素的所有跟随的同胞元素；</li>
+<li>nextUntil()：返回介于两个给定参数之间的所有跟随的同胞元素；</li>
+<li>pre()：返回被选元素的上一个同胞元素；</li>
+<li>preAll():返回被选元素的所有前面的同胞元素；</li>
+<li>prevUntil()：返回介于两个给定参数之间的所有的同胞元素；</li>
+</ol>
+</li>
+<li>过滤：缩小搜索元素的范围，常用的方位有以下几种：<ol>
+<li>first()：返回被选元素的首个子元素；</li>
+<li>last()：返回被选元素的最后一个元素；</li>
+<li>eq()：返回被选元素中带有指定索引号的元素；</li>
+<li>filter()：返回符合匹配标准的元素集合；</li>
+<li>not()：返回不匹配标准的所有元素集合；</li>
+</ol>
+</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
