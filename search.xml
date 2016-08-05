@@ -98,7 +98,25 @@
 </ol>
 </li>
 </ul>
-]]></content>
+<h4 id="实例及代码-2"><a href="#实例及代码-2" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/OXBzLX/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/OXBzLX/" target="_blank" rel="external">jQuery03</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<blockquote>
+<p>本小程序具有的功能：</p>
+<ol>
+<li>点击第一个按钮，能在方框中添加一个list，list的内容为输入框中的内容，且添加都是从头开始添加；</li>
+<li>点击第二个按钮，移除方框中的一个list，且每次移除都是移除第一个；</li>
+<li>点击第三个按钮能够改变方框中list的样式，具体为改变字体、字体颜色及list的样式；</li>
+<li>点击第四个按钮能够改变方框的尺寸；</li>
+</ol>
+</blockquote>
+<h4 id="小问题-1"><a href="#小问题-1" class="headerlink" title="小问题"></a>小问题</h4><p>利用append()及after()来添加内容的话，有何不同？</p>
+<blockquote>
+<p>前者是在所选元素的结尾处添加内容，也就是说，并没有新增加一个节点；而后者则在所选元素的后面增加内容，很显然这时候增加了一个节点。可以通过一个很小的例子来证明，局部代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line">hello!                           <span class="comment">//利用after()来添加 "Hello!"</span></span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">This is a paragraph!</span><br><span class="line">Hello!                          <span class="comment">//利用append()来添加 "Hello!"</span></span><br><span class="line">&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="小测试-2"><a href="#小测试-2" class="headerlink" title="小测试"></a>小测试</h4><p>通过本节的学习，应该已经知道了利用jQuery来控制html元素的添加与删除以及css样式的设置，那么可以从添加、删除及设置样式的方法中任选几个来制作一个和上面所示类似功能的程序。</p>
+<hr>
+<h3 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h3>]]></content>
     </entry>
     
     <entry>
