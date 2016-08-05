@@ -62,13 +62,41 @@
 <hr>
 <h3 id="jQuery-HTML"><a href="#jQuery-HTML" class="headerlink" title="jQuery HTML"></a>jQuery HTML</h3><h4 id="关键词：获取、设置、添加、删除、css类、css-、尺寸"><a href="#关键词：获取、设置、添加、删除、css类、css-、尺寸" class="headerlink" title="关键词：获取、设置、添加、删除、css类、css()、尺寸"></a>关键词：获取、设置、添加、删除、css类、css()、尺寸</h4><ul>
 <li>获取:用于获取内容的DOM操作方法主要有三个，获取属性值的方法主要有一个，分别是：<ol>
-<li>text():设置或返回所选元素的文本内容；</li>
-<li>html():设置或者返回所选元素的内容（包括html标签）；</li>
-<li>val():设置或返回表单字段的值；</li>
-<li>attr():用于获取属性值；</li>
+<li>text(): 设置或返回所选元素的文本内容；</li>
+<li>html(): 设置或者返回所选元素的内容（包括html标签）；</li>
+<li>val(): 设置或返回表单字段的值；</li>
+<li>attr(): 用于获取属性值；</li>
 </ol>
 </li>
-<li>设置：设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容，具体方法可见例子；</li>
+<li>设置：设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容，具体方法可见例子；同时需要知道，这三个jQuery方法都拥有回调函数，函数有两个参数，分别为被选元素列表中当前元素的下标以及原始值，<a href="http://www.w3school.com.cn/jquery/jquery_dom_set.asp" target="_blank" rel="external">text()、html() 以及 val() 的回调函数</a>；利用attr()来设置属性时可以同时设置多个属性，属性之间利用逗号隔开，此方法同样具有回调函数；</li>
+<li>添加：利用jQuery可以很容易的添加新元素或者新内容，方法如下：<ol>
+<li>append()：在被选元素的结尾插入内容或元素；</li>
+<li>prepend()：在被选元素的开头插入内容或元素；</li>
+<li>after()：在被选元素之后插入内容或元素；</li>
+<li>before()：在被选元素之前插入内容或元素；</li>
+</ol>
+</li>
+<li>删除：删除元素或内容主要通过以下两个jQuery方法：<ol>
+<li>remove()：删除被选元素及其子元素，括号中可添加选择器，用于删除符合选择器条件的元素及其子元素；</li>
+<li>empty(): 从被选元素中删除子元素；</li>
+</ol>
+</li>
+<li>css类：通过jQuery可以很容易对css元素进行操作，主要方法有：<ol>
+<li>addClass()：向被选元素添加一个或多个类（添加多个类的时候类名称之间用空格隔开）；</li>
+<li>removeClass()：从被选元素删除一个或多个类；</li>
+<li>toggle()：对被选元素添加/删除类的切换操作；</li>
+<li>css()：设置或返回被选元素的一个或多个样式属性，语法为<code>css(&#39;propertyName&#39;)</code>如果有多个满足被选条件，则只返回第一个元素的属性；如需设置CSS属性，则需使用语法为<code>css(&#39;propertyName&#39;, &#39;value&#39;)</code>，此时将所有满足条件的元素的样式都设置成目标样式；</li>
+</ol>
+</li>
+<li>尺寸：通过jQuery很容易处理元素和浏览器窗口的尺寸，主要的方法如下：<ol>
+<li>width()：设置或返回元素的宽度（不包括内边距、边框和外边距），如果对象为document或者window，则表示返回HTML文档或者浏览器窗口的宽度和高度；如果在括号中加入数字，则表示将对应的尺寸设置为对应的值；</li>
+<li>height()：设置或返回元素的高度（不包括内边距、边框和外边距）；</li>
+<li>innerWidth()：返回元素的宽度（包括内边距）；</li>
+<li>innerHeight()：返回元素的高度（包括内边距）；</li>
+<li>outerWidth()：返回元素的宽度（包括内边距和边框），如果括号中增加参数‘true’则表示返回包括内外边距及边框的宽度；</li>
+<li>outerHeight()：返回元素的高度（包括内边距和边框），如果括号中增加参数‘true’则表示返回包括内外边距及边框的高度；</li>
+</ol>
+</li>
 </ul>
 ]]></content>
     </entry>
