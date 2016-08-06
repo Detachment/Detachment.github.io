@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-06T11:10:55.700Z">
+<meta property="og:updated_time" content="2016-08-06T11:14:14.410Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -518,6 +518,7 @@
 <li>命名冲突：noConflict()，由于有可能其他框架也使用$符号作为简写，那么如果同时使用这两种框架的话就可能导致脚本停止运行，为了解决这个问题，在jQuery中使用noConflict()方法。语法为<code>$.noConflict()</code>这样写完以后，就需要用全名jQuery来代替$符号了。如果希望直接用$符号且不引起冲突，那么可以将$符号作为变量传给ready函数，但是需要注意的是在函数外还是需要用全名。</li>
 </ul>
 <h4 id="实例及代码-3"><a href="#实例及代码-3" class="headerlink" title="实例及代码"></a>实例及代码</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.noConflict();</span><br><span class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"button"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"p"</span>).text(<span class="string">"jQuery 仍在运行！"</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<hr>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
       
     </div>
