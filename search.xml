@@ -155,7 +155,18 @@
 </blockquote>
 <h4 id="小测试-3"><a href="#小测试-3" class="headerlink" title="小测试"></a>小测试</h4><p>本节的内容比较简单，只需要注意方法之间的细微差异就好。通过本节的学习，应该已经能够快速的找出所需要的元素或元素合集了。为了加深印象，可从上面那么多的遍历方法中挑出几个来进行练习。</p>
 <hr>
-<h3 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h3><h4 id="关键词："><a href="#关键词：" class="headerlink" title="关键词："></a>关键词：</h4>]]></content>
+<h3 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h3><h4 id="关键词：AJAX简介、加载、Get-Post"><a href="#关键词：AJAX简介、加载、Get-Post" class="headerlink" title="关键词：AJAX简介、加载、Get/Post"></a>关键词：AJAX简介、加载、Get/Post</h4><ul>
+<li>简介：全称为Asynchronous JavaScript and XML，异步的JavaScript和XML，此功能能够在不重载整个页面的情况下通过后台加载数据，并在页面上显示出来；</li>
+<li>加载：在jQuery中的AJAX方式为：load()，此方法能够从服务器中加载数据，并把返回的数据放入到被选元素中；语法为：<code>$(selector).load(URL, data, callback)</code>其中URL参数表示希望加载的地址；可选参数data规定了与请求一同发送的查询字符串键/值对集合；可选参数callback是load方法完成后所执行的函数名称，可设置参数为responsTxt（包含调用成功时的结果内容）,statusTxt（包含调用的状态）,xhr（包含XMLHttpRequest对象）；</li>
+<li>Get/Post：两种常见的从服务器请求数据的方法，<a href="http://www.w3school.com.cn/tags/html_ref_httpmethods.asp" target="_blank" rel="external">点击这个链接可了解这两者的详细区别</a>；</li>
+</ul>
+<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset="utf-8"&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script type="text/javascript" src='https://code.jquery.com/jquery-2.2.4.min.js'&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(document).ready(function () &#123;</span><br><span class="line">            $('#btn').click(function () &#123;</span><br><span class="line">                $.get('a.txt?t='+ new Date().getTime(), function (data, status) &#123;</span><br><span class="line">                    alert('Date:'+data+"\nStatus:"+status);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button type="button" id="btn"&gt;Get&lt;/button&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：由于ajax部分的内容需要在服务器环境下进行测试，所以本节只给出了代码的例子。</p>
+</blockquote>
+<h4 id="小测试-4"><a href="#小测试-4" class="headerlink" title="小测试"></a>小测试</h4><p>利用jquery我们不再需要自己去手写ajax文件了，确实是非常的方便。通过本节课程的学习，可自己动手在服务器环境下测试一下获取信息。（需要注意的是最好将html文件和待查询文件放在同一个服务器的文件夹中）</p>
+<hr>
+]]></content>
     </entry>
     
     <entry>
