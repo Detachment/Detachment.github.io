@@ -121,7 +121,7 @@
 <li>祖先：祖先元素包括父元素、祖父元素等等，常用的方法为：<ol>
 <li>parent()：返回被选元素的直接父元素；</li>
 <li>parents()：返回被选元素的所有祖先元素，其中甚至包括文档的根元素（即<html>)；</html></li>
-<li>parentUntil()：返回介于两个给定元素之间的祖先元素；</li>
+<li>parentsUntil()：返回介于两个给定元素之间的祖先元素；</li>
 </ol>
 </li>
 <li>后代：与祖先相对的，后代指的是子、孙、曾孙等，常用的方法为：<ol>
@@ -134,8 +134,8 @@
 <li>next()：返回被选元素的下一个同胞元素；</li>
 <li>nextAll()：返回被选元素的所有跟随的同胞元素；</li>
 <li>nextUntil()：返回介于两个给定参数之间的所有跟随的同胞元素；</li>
-<li>pre()：返回被选元素的上一个同胞元素；</li>
-<li>preAll():返回被选元素的所有前面的同胞元素；</li>
+<li>prev()：返回被选元素的上一个同胞元素；</li>
+<li>prevAll():返回被选元素的所有前面的同胞元素；</li>
 <li>prevUntil()：返回介于两个给定参数之间的所有的同胞元素；</li>
 </ol>
 </li>
@@ -148,7 +148,14 @@
 </ol>
 </li>
 </ul>
-]]></content>
+<h4 id="代码及实例"><a href="#代码及实例" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/BzqvZJ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/BzqvZJ/" target="_blank" rel="external">jQuery04</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+
+<blockquote>
+<p>注意：<br>在使用filter()进行筛选的时候，<code>$(selector).filter(some)</code>其中seclector和some是同一等级的，也就是说是在很多selector中找出符合‘some’这个筛选要求的selector。</p>
+</blockquote>
+<h4 id="小测试-3"><a href="#小测试-3" class="headerlink" title="小测试"></a>小测试</h4><p>本节的内容比较简单，只需要注意方法之间的细微差异就好。通过本节的学习，应该已经能够快速的找出所需要的元素或元素合集了。为了加深印象，可从上面那么多的遍历方法中挑出几个来进行练习。</p>
+<hr>
+<h3 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h3><h4 id="关键词："><a href="#关键词：" class="headerlink" title="关键词："></a>关键词：</h4>]]></content>
     </entry>
     
     <entry>

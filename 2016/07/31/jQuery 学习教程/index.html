@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-05T15:25:21.941Z">
+<meta property="og:updated_time" content="2016-08-06T07:48:53.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -469,7 +469,7 @@
 <li>祖先：祖先元素包括父元素、祖父元素等等，常用的方法为：<ol>
 <li>parent()：返回被选元素的直接父元素；</li>
 <li>parents()：返回被选元素的所有祖先元素，其中甚至包括文档的根元素（即<html>)；</html></li>
-<li>parentUntil()：返回介于两个给定元素之间的祖先元素；</li>
+<li>parentsUntil()：返回介于两个给定元素之间的祖先元素；</li>
 </ol>
 </li>
 <li>后代：与祖先相对的，后代指的是子、孙、曾孙等，常用的方法为：<ol>
@@ -482,8 +482,8 @@
 <li>next()：返回被选元素的下一个同胞元素；</li>
 <li>nextAll()：返回被选元素的所有跟随的同胞元素；</li>
 <li>nextUntil()：返回介于两个给定参数之间的所有跟随的同胞元素；</li>
-<li>pre()：返回被选元素的上一个同胞元素；</li>
-<li>preAll():返回被选元素的所有前面的同胞元素；</li>
+<li>prev()：返回被选元素的上一个同胞元素；</li>
+<li>prevAll():返回被选元素的所有前面的同胞元素；</li>
 <li>prevUntil()：返回介于两个给定参数之间的所有的同胞元素；</li>
 </ol>
 </li>
@@ -496,7 +496,14 @@
 </ol>
 </li>
 </ul>
+<h4 id="代码及实例"><a href="#代码及实例" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/BzqvZJ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/BzqvZJ/" target="_blank" rel="external">jQuery04</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
 
+<blockquote>
+<p>注意：<br>在使用filter()进行筛选的时候，<code>$(selector).filter(some)</code>其中seclector和some是同一等级的，也就是说是在很多selector中找出符合‘some’这个筛选要求的selector。</p>
+</blockquote>
+<h4 id="小测试-3"><a href="#小测试-3" class="headerlink" title="小测试"></a>小测试</h4><p>本节的内容比较简单，只需要注意方法之间的细微差异就好。通过本节的学习，应该已经能够快速的找出所需要的元素或元素合集了。为了加深印象，可从上面那么多的遍历方法中挑出几个来进行练习。</p>
+<hr>
+<h3 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h3><h4 id="关键词："><a href="#关键词：" class="headerlink" title="关键词："></a>关键词：</h4>
       
     </div>
 
@@ -721,7 +728,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery效果"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><span class="nav-number">2.2.1.</span> <span class="nav-text">关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">小测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小问题"><span class="nav-number">2.2.4.</span> <span class="nav-text">小问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-HTML"><span class="nav-number">2.3.</span> <span class="nav-text">jQuery HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：获取、设置、添加、删除、css类、css-、尺寸"><span class="nav-number">2.3.1.</span> <span class="nav-text">关键词：获取、设置、添加、删除、css类、css()、尺寸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小问题-1"><span class="nav-number">2.3.3.</span> <span class="nav-text">小问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery遍历"><span class="nav-number">2.4.</span> <span class="nav-text">jQuery遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：遍历、祖先、后代、同胞、过滤"><span class="nav-number">2.4.1.</span> <span class="nav-text">关键词：遍历、祖先、后代、同胞、过滤</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#课程章节"><span class="nav-number">2.</span> <span class="nav-text">课程章节</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery介绍"><span class="nav-number">2.1.</span> <span class="nav-text">jQuery介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：简介、安装、语法、选择器、事件、名称冲突"><span class="nav-number">2.1.1.</span> <span class="nav-text">关键词：简介、安装、语法、选择器、事件、名称冲突</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码"><span class="nav-number">2.1.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试"><span class="nav-number">2.1.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery效果"><span class="nav-number">2.2.</span> <span class="nav-text">jQuery效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：隐藏显示，淡入淡出，滑动，动画，stop-，Callback-Chaining"><span class="nav-number">2.2.1.</span> <span class="nav-text">关键词：隐藏显示，淡入淡出，滑动，动画，stop()，Callback, Chaining</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-1"><span class="nav-number">2.2.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-1"><span class="nav-number">2.2.3.</span> <span class="nav-text">小测试</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小问题"><span class="nav-number">2.2.4.</span> <span class="nav-text">小问题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-HTML"><span class="nav-number">2.3.</span> <span class="nav-text">jQuery HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：获取、设置、添加、删除、css类、css-、尺寸"><span class="nav-number">2.3.1.</span> <span class="nav-text">关键词：获取、设置、添加、删除、css类、css()、尺寸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例及代码-2"><span class="nav-number">2.3.2.</span> <span class="nav-text">实例及代码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小问题-1"><span class="nav-number">2.3.3.</span> <span class="nav-text">小问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-2"><span class="nav-number">2.3.4.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery遍历"><span class="nav-number">2.4.</span> <span class="nav-text">jQuery遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词：遍历、祖先、后代、同胞、过滤"><span class="nav-number">2.4.1.</span> <span class="nav-text">关键词：遍历、祖先、后代、同胞、过滤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码及实例"><span class="nav-number">2.4.2.</span> <span class="nav-text">代码及实例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小测试-3"><span class="nav-number">2.4.3.</span> <span class="nav-text">小测试</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jQuery-AJAX"><span class="nav-number">2.5.</span> <span class="nav-text">jQuery AJAX</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词："><span class="nav-number">2.5.1.</span> <span class="nav-text">关键词：</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
