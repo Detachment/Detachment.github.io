@@ -974,7 +974,7 @@
 <li><strong>图像透明</strong>：属性为<code>opacity; filter:alpha(opacity=value)</code>，如果需要用<code>:hover</code>属性来设置鼠标移入之后的效果，那么一定要声明<code>&lt;!DOCTYPE html&gt;</code>，否则不能应用在除了a以外的其他元素；</li>
 <li><strong>css2媒介类型</strong>：媒介类型允许定义以何种媒介来提交文档，文档被显示在显示器、纸媒介或者听觉浏览器上等等；语法为<code>@media class</code>，类别中有screen、print、tv、handheld等等（然后就出现了Bootstrap的自适应？）</li>
 </ul>
-<blockquote>
+<h2 id="面试常见问题集合"><a href="#面试常见问题集合" class="headerlink" title="面试常见问题集合"></a>面试常见问题集合</h2><blockquote>
 <h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><h4 id="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"><a href="#本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。" class="headerlink" title="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"></a>本文内容主要来源为<a href="http://www.w3school.com.cn/index.html" target="_blank" rel="external">w3school</a>，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。</h4></blockquote>
 ]]></content>
     </entry>
