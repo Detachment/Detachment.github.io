@@ -21,8 +21,24 @@
 </blockquote>
 <h3 id="常见的浏览器内核有几种？"><a href="#常见的浏览器内核有几种？" class="headerlink" title="常见的浏览器内核有几种？"></a>常见的浏览器内核有几种？</h3><blockquote>
 <p>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]<br>Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等<br>Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]<br>Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]</p>
-<p>补充：浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。它负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。JS 引擎则是解析 Javascript 语言，执行 javascript 语言来实现网页的动态效果。最开始渲染引擎和 JS 引擎并没有区分的很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。<br></p>
+<p>补充：浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。它负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。JS 引擎则是解析 Javascript 语言，执行 javascript 语言来实现网页的动态效果。最开始渲染引擎和 JS 引擎并没有区分的很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。</p>
 <p><a href="http://web.jobbole.com/84826/" target="_blank" rel="external">想了解浏览器内核历史的，戳我~</a></p>
+</blockquote>
+<h3 id="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h3><blockquote>
+<p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>      绘画 canvas;<br>      用于媒介回放的 video 和 audio 元素;<br>      本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>      sessionStorage 的数据在浏览器关闭后自动删除;<br>      语意化更好的内容元素，比如 article、footer、header、nav、section;<br>      表单控件，calendar、date、time、email、url、search;<br>      新的技术webworker, websocket, Geolocation;</p>
+<p> 移除的元素：<br>      纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>      对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+<p>支持HTML5新标签：<br>     IE8/IE7/IE6支持通过document.createElement方法产生的标签，<br>     可以利用这一特性让这些浏览器支持HTML5新标签，<br>     浏览器支持新标签后，还需要添加标签默认的样式。</p>
+<p> 当然也可以直接使用成熟的框架、比如html5shim;<br>   <code>&lt;script&gt;src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt;</code></p>
+<p>如何区分HTML5： DOCTYPE声明或新增的结构元素或功能元素；</p>
+</blockquote>
+<h3 id="简述一下你对HTML语义化的理解？"><a href="#简述一下你对HTML语义化的理解？" class="headerlink" title="简述一下你对HTML语义化的理解？"></a>简述一下你对HTML语义化的理解？</h3><blockquote>
+<p>总结起来为：用正确的标签做正确的事情。</p>
+<ol>
+<li>html语义化让页面的内容结构化，结构更清晰，便于对浏览器、搜索引擎解析;</li>
+<li>即使在没有样式CSS情况下也以一种文档格式显示，并且是容易阅读的;</li>
+<li>搜索引擎的爬虫也依赖于HTML标记来确定上下文和各个关键字的权重，利于SEO;</li>
+<li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</li>
+</ol>
 </blockquote>
 ]]></content>
     </entry>
