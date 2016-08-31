@@ -40,6 +40,26 @@
 <li>使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</li>
 </ol>
 </blockquote>
+<h3 id="请描述一下-cookies，sessionStorage-和-localStorage-的区别？"><a href="#请描述一下-cookies，sessionStorage-和-localStorage-的区别？" class="headerlink" title="请描述一下 cookies，sessionStorage 和 localStorage 的区别？"></a>请描述一下 cookies，sessionStorage 和 localStorage 的区别？</h3><blockquote>
+<p>cookie是网站为了标示用户身份而储存在用户本地终端（Client Side）上的数据（通常经过加密）。<br>cookie数据始终在同源的http请求中携带（即使不需要），记会在浏览器和服务器间来回传递。<br>sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存。</p>
+<ul>
+<li>存储大小：<br>  cookie数据大小不能超过4k。<br>  sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</li>
+<li>有期时间：<br>  localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>  sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>  cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</li>
+</ul>
+<p><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="external">更多关于Cooikes信息，戳我~</a></p>
+</blockquote>
+<h3 id="iframe有那些缺点？"><a href="#iframe有那些缺点？" class="headerlink" title="iframe有那些缺点？"></a>iframe有那些缺点？</h3><blockquote>
+<ul>
+<li>iframe会阻塞主页面的Onload事件；</li>
+<li>搜索引擎的检索程序无法解读这种页面，不利于SEO;</li>
+<li>iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</li>
+<li>使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript<br>动态给iframe添加src属性值，这样可以绕开以上两个问题。</li>
+</ul>
+<p><a href="https://www.zhihu.com/question/20653055" target="_blank" rel="external">想看使用iframe的好处的，戳我~</a></p>
+</blockquote>
+<h3 id="Label的作用是什么？是怎么用的？"><a href="#Label的作用是什么？是怎么用的？" class="headerlink" title="Label的作用是什么？是怎么用的？"></a>Label的作用是什么？是怎么用的？</h3><blockquote>
+<p>label 元素不会向用户呈现任何特殊的样式。不过，它为鼠标用户改善了可用性，因为如果用户点击 label 元素内的文本，则会切换到控件本身。label 标签的 for 属性应该等于相关元素的 id 元素，以便将它们捆绑起来。<br><strong>本题考察的是HTML5新标签的用法，可推广到所有其他标签的常规使用，应举一反三。</strong></p>
+</blockquote>
 ]]></content>
     </entry>
     
