@@ -974,7 +974,29 @@
 <li><strong>图像透明</strong>：属性为<code>opacity; filter:alpha(opacity=value)</code>，如果需要用<code>:hover</code>属性来设置鼠标移入之后的效果，那么一定要声明<code>&lt;!DOCTYPE html&gt;</code>，否则不能应用在除了a以外的其他元素；</li>
 <li><strong>css2媒介类型</strong>：媒介类型允许定义以何种媒介来提交文档，文档被显示在显示器、纸媒介或者听觉浏览器上等等；语法为<code>@media class</code>，类别中有screen、print、tv、handheld等等（然后就出现了Bootstrap的自适应？）</li>
 </ul>
-<h2 id="面试常见问题集合"><a href="#面试常见问题集合" class="headerlink" title="面试常见问题集合"></a>面试常见问题集合</h2><blockquote>
+<hr>
+<h2 id="面试常见问题集合"><a href="#面试常见问题集合" class="headerlink" title="面试常见问题集合"></a>面试常见问题集合</h2><h3 id="HTML部分-1"><a href="#HTML部分-1" class="headerlink" title="HTML部分"></a>HTML部分</h3><ol>
+<li><p>DOCTYPE的作用是什么？兼容模式与标准模式各有什么区别？</p>
+<blockquote>
+<p> &lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 <html> 标签之前；它不是 HTML 标签；而是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5 不基于 SGML，所以不需要引用 DTD。其中DTD指的是：document type definition; SGML指的是 Standard Generalized Markup Language;<br><a href="https://www.zhihu.com/question/20249139" target="_blank" rel="external">然后，为什么HTML5不再基于SGML？</a></html></p>
+<p>标准模式及兼容模式：标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
+</blockquote>
+</li>
+<li><p>行内元素有哪些？块级元素有哪些？空元素有哪些？</p>
+<blockquote>
+<p>行内元素：a b span img input select strong；块级元素有：div ul ol li dl dt dd h1 p; 常见的空元素：br hr img input link meta;</p>
+</blockquote>
+</li>
+<li><p>页面导入样式时，使用link和@import有什么区别？</p>
+<blockquote>
+<p>（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;</p>
+<p>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;</p>
+<p>（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
+<p><a href="http://www.daqianduan.com/2417.html" target="_blank" rel="external">更详细的区别戳</a></p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
 <h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><h4 id="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"><a href="#本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。" class="headerlink" title="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"></a>本文内容主要来源为<a href="http://www.w3school.com.cn/index.html" target="_blank" rel="external">w3school</a>，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。</h4></blockquote>
 ]]></content>
     </entry>
