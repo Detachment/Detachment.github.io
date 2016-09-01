@@ -60,6 +60,60 @@
 <h3 id="Label的作用是什么？是怎么用的？"><a href="#Label的作用是什么？是怎么用的？" class="headerlink" title="Label的作用是什么？是怎么用的？"></a>Label的作用是什么？是怎么用的？</h3><blockquote>
 <p>label 元素不会向用户呈现任何特殊的样式。不过，它为鼠标用户改善了可用性，因为如果用户点击 label 元素内的文本，则会切换到控件本身。label 标签的 for 属性应该等于相关元素的 id 元素，以便将它们捆绑起来。<br><strong>本题考察的是HTML5新标签的用法，可推广到所有其他标签的常规使用，应举一反三。</strong></p>
 </blockquote>
+<h3 id="页面可见性（Page-Visibility-API）可以有什么用途？"><a href="#页面可见性（Page-Visibility-API）可以有什么用途？" class="headerlink" title="页面可见性（Page Visibility API）可以有什么用途？"></a>页面可见性（Page Visibility API）可以有什么用途？</h3><blockquote>
+<p>可通过检测visibilityState的值检测页面是否可见，以及打开网页的时间等；<br>在页面被切换到后台进程的时候，自动暂停音乐或者视频的播放；</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">想了解更多信息，戳我~</a></p>
+</blockquote>
+<h3 id="如何在页面实现一个圆形的可点击区域？"><a href="#如何在页面实现一个圆形的可点击区域？" class="headerlink" title="如何在页面实现一个圆形的可点击区域？"></a>如何在页面实现一个圆形的可点击区域？</h3><blockquote>
+<ol>
+<li>map+area或者svg <a href="http://www.w3school.com.cn/tags/att_area_coords.asp" target="_blank" rel="external">具体实现方式，戳我~</a></li>
+<li>border-radius</li>
+<li>纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等；</li>
+</ol>
+</blockquote>
+<h3 id="网页验证码是干嘛的？是为了解决什么安全问题？"><a href="#网页验证码是干嘛的？是为了解决什么安全问题？" class="headerlink" title="网页验证码是干嘛的？是为了解决什么安全问题？"></a>网页验证码是干嘛的？是为了解决什么安全问题？</h3><blockquote>
+<p>是为了区分用户是计算机还是人类的公共自动程序。可以防止恶意破解密码、刷票、论坛灌水；<br>也可以有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。</p>
+<p><a href="https://www.zhihu.com/question/19563610" target="_blank" rel="external">据说谷歌还利用验证码来完成古籍文字的识别，戳我~</a></p>
+</blockquote>
+<h3 id="title与h1的区别、b与strong的区别、i与em的区别？"><a href="#title与h1的区别、b与strong的区别、i与em的区别？" class="headerlink" title="title与h1的区别、b与strong的区别、i与em的区别？"></a>title与h1的区别、b与strong的区别、i与em的区别？</h3><blockquote>
+<ul>
+<li>title属性没有明确意义只表示是个标题，H1则表示层次明确的标题，对页面信息的抓取也有很大的影响；</li>
+<li>strong是标明重点内容，有语气加强的含义，使用阅读设备阅读网络时strong会重读，而B是展示强调内容。</li>
+<li>i内容展示为斜体，em表示强调的文本；</li>
+<li>Physical Style Elements – 自然样式标签<br>  b, i, u, s, pre</li>
+<li>Semantic Style Elements – 语义样式标签<br> strong, em, ins, del, code<br>应该准确使用语义样式标签, 但不能滥用, 如果不能确定时首选使用自然样式标签。</li>
+</ul>
+</blockquote>
+<hr>
+<h2 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h2><h3 id="介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"><a href="#介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？" class="headerlink" title="介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"></a>介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</h3><blockquote>
+<p>（1）有两种， IE 盒子模型、W3C 盒子模型；<br>（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；<br>（3）区  别： IE的content部分把 border 和 padding计算了进去;<br>(其实更准确的说法应该是本来width值指的是内容区域，而在IE5，6版本中，width值包括padding和border。content部分一直都是content部分。)</p>
+<p><a href="http://www.w3school.com.cn/css/css_boxmodel.asp" target="_blank" rel="external">想知道详细内容？戳我~</a></p>
+</blockquote>
+<h3 id="CSS选择符有哪些？哪些属性可以继承？"><a href="#CSS选择符有哪些？哪些属性可以继承？" class="headerlink" title="CSS选择符有哪些？哪些属性可以继承？"></a>CSS选择符有哪些？哪些属性可以继承？</h3><blockquote>
+<ol>
+<li>id选择器（ # myid）</li>
+<li>类选择器（.myclassname）</li>
+<li>标签选择器（div, h1, p）</li>
+<li>相邻选择器（h1 + p）</li>
+<li>子选择器（ul &gt; li）</li>
+<li>后代选择器（li a）</li>
+<li>通配符选择器（ * ）</li>
+<li>属性选择器（a[rel = “external”]）</li>
+<li>伪类（a:hover, li:nth-child）</li>
+<li>伪元素(:before, :after, :first-line, first-letter)</li>
+</ol>
+<ul>
+<li>可继承的样式： font-size font-family color, UL LI DL DD DT;</li>
+<li>不可继承的样式：border padding margin width height ;</li>
+</ul>
+<p><a href="http://www.cnblogs.com/rubylouvre/archive/2009/09/04/1559557.html" target="_blank" rel="external">想知道更全面的可继承与不可继承属性？戳我~</a></p>
+</blockquote>
+<h3 id="CSS优先级算法如何计算？"><a href="#CSS优先级算法如何计算？" class="headerlink" title="CSS优先级算法如何计算？"></a>CSS优先级算法如何计算？</h3><blockquote>
+<p>优先级就近原则，同权重情况下样式定义最近者为准;<br>载入样式以最后载入的定位为准;<br>优先级为：!important &gt;  id &gt; class &gt; tag  其中important比内联样式优先级高。</p>
+</blockquote>
+<h3 id="如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？"><a href="#如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？" class="headerlink" title="如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？"></a>如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？</h3><blockquote>
+<p>由于本问题涉及较多代码，希望知道详细解释的，<a href="http://www.w3cplus.com/css/elements-horizontally-center-with-css.html" target="_blank" rel="external">直接戳我就好了~</a></p>
+</blockquote>
 ]]></content>
     </entry>
     
