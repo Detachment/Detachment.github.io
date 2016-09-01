@@ -126,6 +126,18 @@
 <p>原理很简单，就是将一个div的宽高设置成0，然后根据不同的需求设置div的border属性，从而能够得到各种三角形。</p>
 <p><a href="http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/" target="_blank" rel="external">更详细的说明，戳我~</a></p>
 </blockquote>
+<h3 id="解释一下CSS3中Flex-box以及使用场景？"><a href="#解释一下CSS3中Flex-box以及使用场景？" class="headerlink" title="解释一下CSS3中Flex-box以及使用场景？"></a>解释一下CSS3中Flex-box以及使用场景？</h3><blockquote>
+<p>box-flex 属性规定框的子元素是否可伸缩其尺寸。可伸缩元素能够随着框的缩小或扩大而缩写或放大。只要框中有多余的空间，可伸缩元素就会扩展来填充这些空间。目前浏览器使用这个属性时都需要加前缀，比如Firefox 支持替代的 -moz-box-flex 属性，Safari、Opera 以及 Chrome 支持替代的 -webkit-box-flex 属性。</p>
+<p><a href="http://www.w3school.com.cn/cssref/pr_box-flex.asp" target="_blank" rel="external">更多详细内容，戳我~</a></p>
+</blockquote>
+<h3 id="常见的浏览器兼容性问题有哪些？原因及解决方法是什么？"><a href="#常见的浏览器兼容性问题有哪些？原因及解决方法是什么？" class="headerlink" title="常见的浏览器兼容性问题有哪些？原因及解决方法是什么？"></a>常见的浏览器兼容性问题有哪些？原因及解决方法是什么？</h3><blockquote>
+<p><a href="http://www.cnblogs.com/jscode/archive/2012/07/10/2583856.html" target="_blank" rel="external">问题范围太大了，想详细了解的戳我~</a><br><br><a href="https://www.zhihu.com/question/28954391" target="_blank" rel="external">然后，戳我了解更多~</a></p>
+</blockquote>
+<h3 id="为什么要初始化CSS样式？"><a href="#为什么要初始化CSS样式？" class="headerlink" title="为什么要初始化CSS样式？"></a>为什么要初始化CSS样式？</h3><blockquote>
+<p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br>当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
+<p><a href="http://www.cnblogs.com/xiangzi888/archive/2011/09/21/2184442.html" target="_blank" rel="external">各大厂详细的初始化方案，戳我~</a></p>
+</blockquote>
+<p>###</p>
 ]]></content>
     </entry>
     
