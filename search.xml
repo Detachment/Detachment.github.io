@@ -182,8 +182,7 @@
 <hr>
 <h2 id="JavaScript-部分"><a href="#JavaScript-部分" class="headerlink" title="JavaScript 部分"></a>JavaScript 部分</h2><h3 id="介绍JS中的基本数据类型。"><a href="#介绍JS中的基本数据类型。" class="headerlink" title="介绍JS中的基本数据类型。"></a>介绍JS中的基本数据类型。</h3><blockquote>
 <p>一般来说分为两种，分别为基本类型和对象类型，其中基本类型包括undefined, null, Boolean, Number, String, Symbol，对象类型即为Object。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" target="_blank" rel="external">MDN中关于JS基本数据类型的介绍~</a></p>
-<p><a href="http://www.cnblogs.com/snandy/archive/2013/01/02/2841899.html" target="_blank" rel="external">JS中基本类型之争</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" target="_blank" rel="external">MDN中关于JS基本数据类型的介绍~</a><br><a href="http://www.cnblogs.com/snandy/archive/2013/01/02/2841899.html" target="_blank" rel="external">JS中基本类型之争</a></p>
 </blockquote>
 <h3 id="JS中有哪些内置对象？"><a href="#JS中有哪些内置对象？" class="headerlink" title="JS中有哪些内置对象？"></a>JS中有哪些内置对象？</h3><blockquote>
 <p>Object 是 JavaScript 中所有对象的父对象<br>数据封装类对象：Object、Array、Boolean、Number 和 String<br>其他对象：Function、Arguments、Math、Date、RegExp、Error</p>
@@ -191,6 +190,48 @@
 </blockquote>
 <h3 id="说几条JS的基本规范"><a href="#说几条JS的基本规范" class="headerlink" title="说几条JS的基本规范"></a>说几条JS的基本规范</h3><blockquote>
 <p>1.不要在同一行声明多个变量。<br>2.请使用 ===/!==来比较true/false或者数值<br>3.使用对象字面量替代new Array这种形式<br>4.不要使用全局函数。<br>5.Switch语句必须带有default分支<br>6.函数不应该有时候有返回值，有时候没有返回值。<br>7.For循环必须使用大括号<br>8.If语句必须使用大括号<br>9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。</p>
+<p><a href="https://github.com/lxj/javascript.patterns/blob/master/chapter2.markdown" target="_blank" rel="external">需要知道更多的要点？ 戳我~</a></p>
+</blockquote>
+<h3 id="简单解释下JS中的原型及原型链，有什么特点？"><a href="#简单解释下JS中的原型及原型链，有什么特点？" class="headerlink" title="简单解释下JS中的原型及原型链，有什么特点？"></a>简单解释下JS中的原型及原型链，有什么特点？</h3><blockquote>
+<p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。<br>特点：JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">MDN上关于JS中继承及原型链的解释</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html" target="_blank" rel="external">强大的原型及原型链</a></p>
+</blockquote>
+<h3 id="JS中有几种类型的值？它们之间的区别时是什么？"><a href="#JS中有几种类型的值？它们之间的区别时是什么？" class="headerlink" title="JS中有几种类型的值？它们之间的区别时是什么？"></a>JS中有几种类型的值？它们之间的区别时是什么？</h3><blockquote>
+<p>主要有两种，分别为栈和堆；<br>栈：原始数据类型（Undefined，Null，Boolean，Number、String）<br>堆：引用数据类型（对象、数组和函数）</p>
+<p>两种类型的区别是：存储位置不同；<br>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；<br>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</p>
+</blockquote>
+<h3 id="常见的内存泄露的方式有？如何避免？"><a href="#常见的内存泄露的方式有？如何避免？" class="headerlink" title="常见的内存泄露的方式有？如何避免？"></a>常见的内存泄露的方式有？如何避免？</h3><blockquote>
+<p>主要有以下几种方式：</p>
+<ol>
+<li>意外的全局变量</li>
+<li>被遗忘的计时器或回调函数</li>
+<li>脱离 DOM 的引用</li>
+<li>闭包</li>
+</ol>
+<p><a href="http://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/" target="_blank" rel="external">关于这个问题的答案，具体解释戳我~</a><br><a href="https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/" target="_blank" rel="external">英文原文链接</a></p>
+</blockquote>
+<h3 id="JS中怎么实现继承？"><a href="#JS中怎么实现继承？" class="headerlink" title="JS中怎么实现继承？"></a>JS中怎么实现继承？</h3><blockquote>
+<p>主要有以下几种：<br>1、构造继承<br>2、原型继承<br>3、实例继承<br>4、拷贝继承</p>
+<p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="external">详细内容戳我~</a></p>
+</blockquote>
+<h3 id="JS中创建对象有几种方式？"><a href="#JS中创建对象有几种方式？" class="headerlink" title="JS中创建对象有几种方式？"></a>JS中创建对象有几种方式？</h3><blockquote>
+<p>常见的创建对象的方式有：</p>
+<ol>
+<li>直接创建对象；</li>
+<li>用构造函数；</li>
+<li>用工厂方式；</li>
+<li>用原型方式；</li>
+<li>用混合方式；</li>
+</ol>
+<p><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="external">原文链接，戳我直达~</a><br><a href="http://www.yuanlairc.com/program/jsobject.html" target="_blank" rel="external">javascript创建对象的几种模式</a></p>
+</blockquote>
+<h3 id="谈谈对在JS中This的理解"><a href="#谈谈对在JS中This的理解" class="headerlink" title="谈谈对在JS中This的理解"></a>谈谈对在JS中This的理解</h3><blockquote>
+<ul>
+<li>this总是指向函数的直接调用者（而非间接调用者）；</li>
+<li>如果有new关键字，this指向new出来的那个对象；</li>
+<li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；</li>
+</ul>
+<p><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="external">Javascript中this的用法 by 阮一峰</a></p>
 </blockquote>
 ]]></content>
     </entry>
