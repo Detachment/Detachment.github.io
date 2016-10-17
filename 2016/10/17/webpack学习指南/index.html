@@ -90,10 +90,12 @@
 <meta property="og:url" content="http://detachment.club/2016/10/17/webpack学习指南/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。">
-<meta property="og:updated_time" content="2016-10-17T09:19:48.822Z">
+<meta property="og:image" content="http://webpack.github.io/assets/what-is-webpack.png">
+<meta property="og:updated_time" content="2016-10-17T14:52:25.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack学习指南">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。">
+<meta name="twitter:image" content="http://webpack.github.io/assets/what-is-webpack.png">
 
 
 
@@ -365,8 +367,8 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp; 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。</p>
-<hr>
 <a id="more"></a>
+<hr>
 <h2 id="开始学习"><a href="#开始学习" class="headerlink" title="开始学习"></a>开始学习</h2><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>现在的网页应用有以下特点：</p>
 <ul>
 <li>有越来越多的JavaScript代码；</li>
@@ -482,7 +484,23 @@
 <p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
 <hr>
-<h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><h4 id="Webpack介绍"><a href="#Webpack介绍" class="headerlink" title="Webpack介绍"></a>Webpack介绍</h4><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><hr>
+<h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><h4 id="Webpack介绍"><a href="#Webpack介绍" class="headerlink" title="Webpack介绍"></a>Webpack介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Webpack是一种模块打包机。</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack用于处理有依赖关系的模块，它会生成一些静态文件来表示这些模块。简单而言，如下图所示：<br><img src="http://webpack.github.io/assets/what-is-webpack.png" alt="Webpack"></p>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;为什么还需要模块打包机？</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;简单而言，是因为现在的打包机无法满足大型的单页应用。而真正促使开发新型打包机的原因是代码分割和静态文件在模块化的过程中需要无缝连接。我尝试过拓展先后的打包机，但是都不能达到这些要求（注：Webpack作者）。</p>
+<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;目标</strong>  </p>
+<ul>
+<li>将依赖分割成不同的chunk，按需加载</li>
+<li>让初始加载时间较少</li>
+<li>每个静态文件都应该是一个模块</li>
+<li>能将第三方的库整合成模块</li>
+<li>打包机本身可高度定制</li>
+<li>适合大型项目</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Webpack有什么不同？</strong>  </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">代码分割</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的依赖关系有两种类型：同步和异步。<br>异步依赖相当于分割点，会形成一个新的chunk。当chunk之间的关系最优化之后，每个chunk都会有一个相关文件。   </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/loaders.html" target="_blank" rel="external">Loaders</a><br>&nbsp;&nbsp;&nbsp;&nbsp; Webpack只能在本地处理JavaScript，而利用loaders能够将其他资源转化成JavaScript，通过这种手段，所有的资源都能形成模块。  </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>智能解析</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的智能解析功能使得它基本上能够处理所有第三方库，甚至允许模块以下面这种方式来表示依赖关系：<code>require(&quot;./templates/&quot; + name + &quot;.jade&quot;).</code>它能兼容常见的模块模式，如 <a href="http://webpack.github.io/docs/commonjs.html" target="_blank" rel="external">CommonJS</a> 以及 <a href="http://webpack.github.io/docs/amd.html" target="_blank" rel="external">AMD</a>。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/plugins.html" target="_blank" rel="external">插件系统</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的强大离不开其强大的插件系统的支持。这也使得Webpack具有高度定制性，也吸引人们创造更多的开源插件</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><hr>
 
       
     </div>
