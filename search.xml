@@ -4,6 +4,131 @@
   
     
     <entry>
+      <title><![CDATA[webpack学习指南]]></title>
+      <url>http://detachment.club/2016/10/17/webpack%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp; 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。</p>
+<hr>
+<a id="more"></a>
+<h2 id="开始学习"><a href="#开始学习" class="headerlink" title="开始学习"></a>开始学习</h2><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>现在的网页应用有以下特点：</p>
+<ul>
+<li>有越来越多的JavaScript代码；</li>
+<li>现代浏览器能提供越来越多的接口；</li>
+<li>虽然有越来越多的代码，但很少会一次加载完。</li>
+</ul>
+<p>这些代码需要得到有序管理，模块系统随之产生。</p>
+<p>在JavaScript中，有许多不同的方式用来引入数据以及定义依赖关系，常见的有以下几种：</p>
+<ul>
+<li>通过<code>&lt;script&gt;</code>标签引入（没有模块系统）</li>
+<li>CommonJS</li>
+<li>AMD及其相关</li>
+<li>ES6模块</li>
+<li>其他……</li>
+</ul>
+<h4 id="lt-script-gt-标签"><a href="#lt-script-gt-标签" class="headerlink" title="&lt;script&gt; 标签"></a><code>&lt;script&gt;</code> 标签</h4><p>如果不利用模块系统的话，通过<code>&lt;script&gt;</code>标签引入如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"libraryA.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>这些数据的接口将连接到全局对象中。常见的问题如下：</p>
+<ul>
+<li>在全局对象中产生冲突；</li>
+<li>数据引入顺序非常重要；</li>
+<li>开发者需要手动管理引入模块的依赖关系；</li>
+<li>在数据较多的情况下会导致引入列表过长，难以管理。</li>
+</ul>
+<h4 id="CommonJS：同步的require"><a href="#CommonJS：同步的require" class="headerlink" title="CommonJS：同步的require"></a>CommonJS：同步的<code>require</code></h4><p>通过利用<code>require</code>方法来加载依赖，同时返回一个接口，如下所示：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"module"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"../file.js"</span>);</span><br><span class="line">exports.doStuff = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">module</span>.exports = someValue;</span><br></pre></td></tr></table></figure>
+<p>特点：</p>
+<ul>
+<li>服务器端的模块可以重用</li>
+<li>有很多已写好的模块（npm）</li>
+<li>简单易用</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>网络的阻塞调用效果不太好，而且网络请求是异步的</li>
+<li>复合模块不能并行请求</li>
+</ul>
+<p>应用：</p>
+<ul>
+<li>node.js</li>
+<li>browerify</li>
+<li>modules-webmake</li>
+<li>wreq</li>
+</ul>
+<h4 id="AMD：异步的require"><a href="#AMD：异步的require" class="headerlink" title="AMD：异步的require"></a>AMD：异步的<code>require</code></h4><p><a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">异步的模块的定义</a><br>有一些浏览器在处理同步引入模块时会有一些问题，为此引入了异步加载模块，具体方式如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"module"</span>, <span class="string">"../file"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">module, file</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;);</span><br><span class="line">define(<span class="string">"mymodule"</span>, [<span class="string">"dep1"</span>, <span class="string">"dep2"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">d1, d2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> someExportedValue;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>特点：</p>
+<ul>
+<li>符合异步加载网络请求的模式</li>
+<li>并行加载符合模块</li>
+</ul>
+<p>缺点：  </p>
+<ul>
+<li>读写难度较大</li>
+<li>类似于一种变通方式  </li>
+</ul>
+<p>应用：  </p>
+<ul>
+<li>require.js</li>
+<li>curl</li>
+</ul>
+<p>更多关于<a href="http://webpack.github.io/docs/commonjs.html" target="_blank" rel="external">CommonJS</a>以及<a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">AMD</a>的内容。</p>
+<h4 id="ES6模块"><a href="#ES6模块" class="headerlink" title="ES6模块"></a>ES6模块</h4><p>ES6加入了一些JavaScript构造器，这就组成了一种模块系统，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">doStuff</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">module</span> <span class="string">"localModule"</span> &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>特点：</p>
+<ul>
+<li>静态分析变得简单</li>
+<li>指明了ES标准的方向</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>本地浏览器支持还需要时间</li>
+<li>已有的模块较少</li>
+</ul>
+<h4 id="转移"><a href="#转移" class="headerlink" title="转移"></a>转移</h4><p>因为模块需要在客户端执行，那么就必须将它们从服务器端转移到浏览器端。<br>有两种极端的转移情况：</p>
+<ul>
+<li>每个模块一个请求</li>
+<li>所有的模块在一个请求</li>
+</ul>
+<p>这两种情况都是存在的，但都不是最优的：</p>
+<ul>
+<li>每个模块一个请求：<ul>
+<li>优点：按需加载模块</li>
+<li>缺点：更多的请求以为着更多的工作量</li>
+<li>缺点：应用启动速度慢</li>
+</ul>
+</li>
+<li>所有模块在一个请求：<ul>
+<li>优点：请求工作量较少，延迟较低</li>
+<li>缺点：不需要（或暂不需要）的模块也会被一并加载</li>
+</ul>
+</li>
+</ul>
+<p><strong>Chunked 转移方式</strong></p>
+<p>面对上面两种方式所带来的问题，在大多数的案例中，采用折中的方案会取得比较好的效果。</p>
+<p>→ 编译所有模块:将模块组合分成较小一些的组（chunks）。<br>这样做能够使得初始化是没有被请求的数据在被请求时再加载，能起到加快启动速度的同时加载比需要更多的代码。</p>
+<p>“代码分割点”可以由开发者自己决定。</p>
+<p>→ 大代码库成为可能！</p>
+<p>注：这个构思来自于 <a href="https://developers.google.com/web-toolkit/doc/latest/DevGuideCodeSplitting" target="_blank" rel="external">Google’s GWT.</a></p>
+<p>更多关于 <a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">代码分割。</a></p>
+<h4 id="为什么只应用在JavaScript？"><a href="#为什么只应用在JavaScript？" class="headerlink" title="为什么只应用在JavaScript？"></a>为什么只应用在JavaScript？</h4><p>为什么模块系统仅仅用于管理JavaScript？还有许多其他资源需要管理：</p>
+<ul>
+<li>样式</li>
+<li>图片</li>
+<li>字体</li>
+<li>html文件</li>
+<li>等等  </li>
+</ul>
+<p>以及转化过或者处理过的：</p>
+<ul>
+<li>coffeescript → JavaScript</li>
+<li>elm → JavaScript</li>
+<li>less stylesheets → css stylesheets</li>
+<li>等等</li>
+</ul>
+<p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
+<hr>
+<h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><h4 id="Webpack介绍"><a href="#Webpack介绍" class="headerlink" title="Webpack介绍"></a>Webpack介绍</h4><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[前端面试常见问题整理]]></title>
       <url>http://detachment.club/2016/08/31/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。</p>
