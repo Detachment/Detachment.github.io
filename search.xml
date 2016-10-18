@@ -6,14 +6,13 @@
     <entry>
       <title><![CDATA[webpack学习指南]]></title>
       <url>http://detachment.club/2016/10/17/webpack%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp; 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。</p>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。</p>
 <a id="more"></a>
-<hr>
 <h2 id="开始学习"><a href="#开始学习" class="headerlink" title="开始学习"></a>开始学习</h2><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>现在的网页应用有以下特点：</p>
 <ul>
 <li>有越来越多的JavaScript代码；</li>
 <li>现代浏览器能提供越来越多的接口；</li>
-<li>虽然有越来越多的代码，但很少会一次加载完。</li>
+<li>虽然有越来越多的代码，但很少会一次加载完。  </li>
 </ul>
 <p>这些代码需要得到有序管理，模块系统随之产生。</p>
 <p>在JavaScript中，有许多不同的方式用来引入数据以及定义依赖关系，常见的有以下几种：</p>
@@ -24,7 +23,8 @@
 <li>ES6模块</li>
 <li>其他……</li>
 </ul>
-<h4 id="lt-script-gt-标签"><a href="#lt-script-gt-标签" class="headerlink" title="&lt;script&gt; 标签"></a><code>&lt;script&gt;</code> 标签</h4><p>如果不利用模块系统的话，通过<code>&lt;script&gt;</code>标签引入如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"libraryA.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><strong> <code>&lt;script&gt;</code> 标签</strong></p>
+<p>如果不利用模块系统的话，通过<code>&lt;script&gt;</code>标签引入如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"libraryA.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这些数据的接口将连接到全局对象中。常见的问题如下：</p>
 <ul>
 <li>在全局对象中产生冲突；</li>
@@ -32,7 +32,8 @@
 <li>开发者需要手动管理引入模块的依赖关系；</li>
 <li>在数据较多的情况下会导致引入列表过长，难以管理。</li>
 </ul>
-<h4 id="CommonJS：同步的require"><a href="#CommonJS：同步的require" class="headerlink" title="CommonJS：同步的require"></a>CommonJS：同步的<code>require</code></h4><p>通过利用<code>require</code>方法来加载依赖，同时返回一个接口，如下所示：</p>
+<p><strong>CommonJS：同步请求</strong>  </p>
+<p>通过利用<code>require</code>方法来加载依赖，同时返回一个接口，如下所示：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"module"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"../file.js"</span>);</span><br><span class="line">exports.doStuff = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"><span class="built_in">module</span>.exports = someValue;</span><br></pre></td></tr></table></figure>
 <p>特点：</p>
 <ul>
@@ -52,7 +53,8 @@
 <li>modules-webmake</li>
 <li>wreq</li>
 </ul>
-<h4 id="AMD：异步的require"><a href="#AMD：异步的require" class="headerlink" title="AMD：异步的require"></a>AMD：异步的<code>require</code></h4><p><a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">异步的模块的定义</a><br>有一些浏览器在处理同步引入模块时会有一些问题，为此引入了异步加载模块，具体方式如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"module"</span>, <span class="string">"../file"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">module, file</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;);</span><br><span class="line">define(<span class="string">"mymodule"</span>, [<span class="string">"dep1"</span>, <span class="string">"dep2"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">d1, d2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> someExportedValue;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><strong>AMD：异步请求</strong>  </p>
+<p><a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">异步的模块的定义</a><br>有一些浏览器在处理同步引入模块时会有一些问题，为此引入了异步加载模块，具体方式如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">"module"</span>, <span class="string">"../file"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">module, file</span>) </span>&#123; <span class="comment">/* ... */</span> &#125;);</span><br><span class="line">define(<span class="string">"mymodule"</span>, [<span class="string">"dep1"</span>, <span class="string">"dep2"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">d1, d2</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> someExportedValue;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <p>特点：</p>
 <ul>
 <li>符合异步加载网络请求的模式</li>
@@ -69,7 +71,8 @@
 <li>curl</li>
 </ul>
 <p>更多关于<a href="http://webpack.github.io/docs/commonjs.html" target="_blank" rel="external">CommonJS</a>以及<a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank" rel="external">AMD</a>的内容。</p>
-<h4 id="ES6模块"><a href="#ES6模块" class="headerlink" title="ES6模块"></a>ES6模块</h4><p>ES6加入了一些JavaScript构造器，这就组成了一种模块系统，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">doStuff</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">module</span> <span class="string">"localModule"</span> &#123;&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>ES6模块</strong></p>
+<p>ES6加入了一些JavaScript构造器，这就组成了一种模块系统，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"jquery"</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">doStuff</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line"><span class="built_in">module</span> <span class="string">"localModule"</span> &#123;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>特点：</p>
 <ul>
 <li>静态分析变得简单</li>
@@ -80,7 +83,8 @@
 <li>本地浏览器支持还需要时间</li>
 <li>已有的模块较少</li>
 </ul>
-<h4 id="转移"><a href="#转移" class="headerlink" title="转移"></a>转移</h4><p>因为模块需要在客户端执行，那么就必须将它们从服务器端转移到浏览器端。<br>有两种极端的转移情况：</p>
+<p><strong>转移</strong></p>
+<p>因为模块需要在客户端执行，那么就必须将它们从服务器端转移到浏览器端。<br>有两种极端的转移情况：</p>
 <ul>
 <li>每个模块一个请求</li>
 <li>所有的模块在一个请求</li>
@@ -103,10 +107,11 @@
 <p>面对上面两种方式所带来的问题，在大多数的案例中，采用折中的方案会取得比较好的效果。</p>
 <p>→ 编译所有模块:将模块组合分成较小一些的组（chunks）。<br>这样做能够使得初始化是没有被请求的数据在被请求时再加载，能起到加快启动速度的同时加载比需要更多的代码。</p>
 <p>“代码分割点”可以由开发者自己决定。</p>
-<p>→ 大代码库成为可能！</p>
+<p>→  大代码库成为可能！</p>
 <p>注：这个构思来自于 <a href="https://developers.google.com/web-toolkit/doc/latest/DevGuideCodeSplitting" target="_blank" rel="external">Google’s GWT.</a></p>
 <p>更多关于 <a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">代码分割。</a></p>
-<h4 id="为什么只应用在JavaScript？"><a href="#为什么只应用在JavaScript？" class="headerlink" title="为什么只应用在JavaScript？"></a>为什么只应用在JavaScript？</h4><p>为什么模块系统仅仅用于管理JavaScript？还有许多其他资源需要管理：</p>
+<p><strong>为什么只应用在JavaScript？</strong></p>
+<p>为什么模块系统仅仅用于管理JavaScript？还有许多其他资源需要管理：</p>
 <ul>
 <li>样式</li>
 <li>图片</li>
@@ -124,9 +129,10 @@
 <p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
 <hr>
-<h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><h4 id="Webpack介绍"><a href="#Webpack介绍" class="headerlink" title="Webpack介绍"></a>Webpack介绍</h4><p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Webpack是一种模块打包机。</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack用于处理有依赖关系的模块，它会生成一些静态文件来表示这些模块。简单而言，如下图所示：<br><img src="http://webpack.github.io/assets/what-is-webpack.png" alt="Webpack"></p>
-<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;为什么还需要模块打包机？</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;简单而言，是因为现在的打包机无法满足大型的单页应用。而真正促使开发新型打包机的原因是代码分割和静态文件在模块化的过程中需要无缝连接。我尝试过拓展先后的打包机，但是都不能达到这些要求（注：Webpack作者）。</p>
-<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;目标</strong>  </p>
+<h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
+<p><strong>Webpack是一种模块打包机。</strong><br>Webpack用于处理有依赖关系的模块，它会生成一些静态文件来表示这些模块。简单而言，如下图所示：<br><img src="http://webpack.github.io/assets/what-is-webpack.png" alt="Webpack"></p>
+<p><strong>为什么还需要模块打包机？</strong><br>简单而言，是因为现在的打包机无法满足大型的单页应用。而真正促使开发新型打包机的原因是代码分割和静态文件在模块化的过程中需要无缝连接。我尝试过拓展先后的打包机，但是都不能达到这些要求（注：Webpack作者）。</p>
+<p><strong>目标</strong>  </p>
 <ul>
 <li>将依赖分割成不同的chunk，按需加载</li>
 <li>让初始加载时间较少</li>
@@ -135,12 +141,78 @@
 <li>打包机本身可高度定制</li>
 <li>适合大型项目</li>
 </ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>Webpack有什么不同？</strong>  </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">代码分割</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的依赖关系有两种类型：同步和异步。<br>异步依赖相当于分割点，会形成一个新的chunk。当chunk之间的关系最优化之后，每个chunk都会有一个相关文件。   </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/loaders.html" target="_blank" rel="external">Loaders</a><br>&nbsp;&nbsp;&nbsp;&nbsp; Webpack只能在本地处理JavaScript，而利用loaders能够将其他资源转化成JavaScript，通过这种手段，所有的资源都能形成模块。  </p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>智能解析</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的智能解析功能使得它基本上能够处理所有第三方库，甚至允许模块以下面这种方式来表示依赖关系：<code>require(&quot;./templates/&quot; + name + &quot;.jade&quot;).</code>它能兼容常见的模块模式，如 <a href="http://webpack.github.io/docs/commonjs.html" target="_blank" rel="external">CommonJS</a> 以及 <a href="http://webpack.github.io/docs/amd.html" target="_blank" rel="external">AMD</a>。</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://webpack.github.io/docs/plugins.html" target="_blank" rel="external">插件系统</a><br>&nbsp;&nbsp;&nbsp;&nbsp;Webpack的强大离不开其强大的插件系统的支持。这也使得Webpack具有高度定制性，也吸引人们创造更多的开源插件</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><hr>
+<p><strong>Webpack有什么不同？</strong>  </p>
+<p><a href="http://webpack.github.io/docs/code-splitting.html" target="_blank" rel="external">代码分割</a><br>Webpack的依赖关系有两种类型：同步和异步。<br>异步依赖相当于分割点，会形成一个新的chunk。当chunk之间的关系最优化之后，每个chunk都会有一个相关文件。   </p>
+<p><a href="http://webpack.github.io/docs/loaders.html" target="_blank" rel="external">Loaders</a><br> Webpack只能在本地处理JavaScript，而利用loaders能够将其他资源转化成JavaScript，通过这种手段，所有的资源都能形成模块。  </p>
+<p><strong>智能解析</strong><br>Webpack的智能解析功能使得它基本上能够处理所有第三方库，甚至允许模块以下面这种方式来表示依赖关系：<code>require(&quot;./templates/&quot; + name + &quot;.jade&quot;).</code>它能兼容常见的模块模式，如 <a href="http://webpack.github.io/docs/commonjs.html" target="_blank" rel="external">CommonJS</a> 以及 <a href="http://webpack.github.io/docs/amd.html" target="_blank" rel="external">AMD</a>。</p>
+<p><a href="http://webpack.github.io/docs/plugins.html" target="_blank" rel="external">插件系统</a><br>Webpack的强大离不开其强大的插件系统的支持。这也使得Webpack具有高度定制性，也吸引人们创造更多的开源插件</p>
+<p><strong>安装</strong><br><strong>node.js</strong><br>首先安装 <a href="http://nodejs.org/" target="_blank" rel="external">node.js</a>，里面包含了一种包管理工具，叫做npm。  </p>
+<p><strong>Webpack</strong><br>用npm来全局安装Webpack，全局安装的话就可以在全局环境中直接用 <code>Webpack</code> 命令了，命令行如下：<br><code>$ npm install webpack -g</code>  </p>
+<p><strong>在项目中引入</strong><br>做项目的时候最好以项目依赖的方式引入Webpack，那样的话就不会去依赖全局的Webpack了。<br>首先利用npm新建一个package.json配置文件，命令行如下：<br><code>$ npm init</code><br>上面提到的项目依赖的方式安装Webpack可以通过以下命令行实现：<br><code>$ npm install webpack --save-dev</code></p>
+<p><strong>版本</strong><br>有两个版本的Webpack可供下载，一个是稳定版本，另一个是测试版本。测试版本有<code>-beta</code>的后缀，这个版本会包含一些带有实验性质的性能，而且也没有经过大量的测试。所以建议对稳定性能要求较高的同志们选择稳定版本，命令行如下：<br><code>$ npm install webpack@1.2.x --save-dev</code></p>
+<p><strong>开发者工具</strong><br>如果需要使用开发者工具，就需要安装了，命令行如下：<br><code>$ npm install webpack-dev-server --save-dev</code></p>
+<hr>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p><strong>安装</strong><br>上面已经提到可全局安装或者以项目依赖的方式安装。在实际项目中，建议都以项目依赖的方式安装，本文为了方便展示，都是以全局安装为例的。  </p>
+<p><strong>开始使用</strong>  </p>
+<ul>
+<li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line">module.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
+<p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
+</li>
+<li><p>打包文件：Webpack需要指定入口文件（app.js），同时也需要明确的指定输出文件的名字（app.bundle.js），指令如下：<br><code>webpack ./app.js app.bundle.js</code><br>然后Webpack会解读入口文件同时分析其依赖（以及依赖的依赖），分析完以后，会将所有的依赖绑定输出到输出文件中（本例为app.bundle.js）。<br><img src="https://dtinth.github.io/webpack-docs-images/usage/how-it-works.png" alt="webpack"></p>
+</li>
+<li><p>然后就可以运行了，在node中运行及结果如下：</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">node</span> <span class="title">app</span>.bundle.js</span><br><span class="line">[<span class="string">"dave"</span>, <span class="string">"henry"</span>, <span class="string">"martha"</span>]</span><br></pre></td></tr></table></figure>
+<p>当然了，也可以在浏览器的环境下运行。  </p>
+</li>
+</ul>
+<p><strong>使用进阶</strong><br>webpack具有很多高级功能，很多功能通过命令行工具很难体现出来，这时候我们就需要去创建配置文件了。</p>
+<ul>
+<li><p>项目结构：在实际的生产环境中，我们会将源文件和输出文件放在不同的文件夹中以便于管理，典型的例子如下图所示：<br><img src="https://raw.githubusercontent.com/dtinth/webpack-docs-images/2459637650502958669ea6b11bf49dc0b3b083ae/usage/project-structure.png" alt="folders"></p>
+<blockquote>
+<p><em>在实际的生产环境中会有很多类似但并不完全相同的项目结构，比如有些项目会将 src 文件夹命名为 APP ，会将 bin 文件夹命名为 dist 或者是 build ，等等诸如此类，其实都是一样的。</em></p>
+</blockquote>
+</li>
+<li><p>配置文件：当项目变得越来越庞大复杂的时候，手动设置这些就显得不是那么明智了，这时候可以创建一个配置文件，名字叫做<code>webpack.config.js</code>:</p>
+<ol>
+<li><p>创建一个<code>webpack.config.js</code>的配置文件：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">module</span>.<span class="keyword">exports</span> = &#123;</span><br><span class="line">    entry: <span class="string">'./src/app.js'</span>,</span><br><span class="line">    output: &#123;</span><br><span class="line">        path: <span class="string">'./bin'</span>,</span><br><span class="line">        filename: <span class="string">'app.bundle.js'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将配置文件放在合适的位置，现在运行webpack只需要以下代码：<br><code>webpack</code><br>然后webpack就会去解析配置文件，并按照配置文件中的配置来解读接入文件以及输出文件到指定位置。</p>
+</li>
+</ol>
+</li>
+<li><p>引入loaders：webpack本身只支持JavaScript模块，为了支持其他模块，就需要引入各种loader了。loader能够将其他资源加载成webpack能够识别的JavaScript。典型的例子如 babel-loader，json-loader等，如下图：<br><img src="https://dtinth.github.io/webpack-docs-images/usage/babel-loader.png" alt="babel-loader"><br><img src="https://dtinth.github.io/webpack-docs-images/usage/json-loader.png" alt="json-loader"><br><img src="https://dtinth.github.io/webpack-docs-images/usage/yaml-loader.png" alt="yaml-loader"></p>
+</li>
+<li><p>以babel-loader为例说明如下：</p>
+<ol>
+<li>安装Babel：<br><code>npm install --save-dev babel-core babel-preset-es2015</code></li>
+<li>安装babel-loader：<br><code>npm install --save-dev babel-loader</code></li>
+<li>新建一个.babelrc文件，这个文件用来配置Babel，使其利用预先设置的语法（es2015）来解析。.babelrc的内容如下：<br><code>{ &quot;presets&quot;: [ &quot;es2015&quot; ] }</code></li>
+<li><p>更改 webpack.config.js 文件，使的所有的 .js 文件都用 babel-loader 来处理：</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="keyword">module</span>.exports = &#123;</span><br><span class="line">  entry: <span class="string">'./src/app.js'</span>,</span><br><span class="line">  output: &#123;</span><br><span class="line">      path: <span class="string">'./bin'</span>,</span><br><span class="line">      filename: <span class="string">'app.bundle.js'</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">module</span>: &#123;</span><br><span class="line">      loaders: [&#123;</span><br><span class="line">          test: <span class="regexp">/\.js$/</span>,</span><br><span class="line">          exclude: <span class="regexp">/node_modules/</span>,</span><br><span class="line">          loader: <span class="string">'babel-loader'</span></span><br><span class="line">      &#125;]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><em>注意：这里讲node_modules文件排除在外了，因为不排除的话，这些外部的插件库也会被Babel处理，从而减缓编译速度</em>  </p>
+</blockquote>
+</li>
+<li><p>安装所需要的其他库（以jQuery为例）：<br><code>npm install --save jquery babel-polyfill</code></p>
+<blockquote>
+<p><em>注意：这里没有用 –save-dev，因为这些库只有在项目运行时才会使用，同时为了能在低版本的浏览器中使用ES6的特性，这里安装了babel-ployfill。</em></p>
+</blockquote>
+</li>
+<li><p>编辑 <code>src/app.js</code> 文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">'babel-polyfill'</span>;</span><br><span class="line"><span class="keyword">import</span> cats <span class="keyword">from</span> <span class="string">'./cats'</span>;</span><br><span class="line"><span class="keyword">import</span> $ <span class="keyword">from</span> <span class="string">'jquery'</span>;</span><br><span class="line"></span><br><span class="line">$(<span class="string">'&lt;h1&gt;Cats&lt;/h1&gt;'</span>).appendTo(<span class="string">'body'</span>);</span><br><span class="line"><span class="keyword">const</span> ul = $(<span class="string">'&lt;ul&gt;&lt;/ul&gt;'</span>).appendTo(<span class="string">'body'</span>);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> cat <span class="keyword">of</span> cats) &#123;</span><br><span class="line">    $(<span class="string">'&lt;li&gt;&lt;/li&gt;'</span>).text(cat).appendTo(ul);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用webpack来打包模块：<br><code>webpack</code></p>
+</li>
+<li><p>创建一个index.html文件，并将打包好的文件引入，以便于在浏览器中展示出来：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"bin/app.bundle.js"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当打开index.html时，不出意外的话会看到下图：<br><img src="https://dtinth.github.io/webpack-docs-images/usage/cats.png" alt="cats"></p>
+</li>
+</ol>
+</li>
+</ul>
 ]]></content>
     </entry>
     
