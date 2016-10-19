@@ -278,7 +278,38 @@
 <p>当使用 <code>npm</code> 来安装第三方插件的时候，建议使用这个工具: <a href="https://www.npmjs.com/package/webpack-load-plugins" target="_blank" rel="external">https://www.npmjs.com/package/webpack-load-plugins</a> ，它会自动检测依赖中的所有插件，然后在需要的时候懒加载它们。</p>
 <p><strong>更多阅读</strong><br><a href="http://webpack.github.io/docs/list-of-plugins.html" target="_blank" rel="external">了解更多，可查看插件列表</a></p>
 <hr>
-<h3 id="故障排查"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查</h3>]]></content>
+<h3 id="故障排查"><a href="#故障排查" class="headerlink" title="故障排查"></a>故障排查</h3><p><strong>解析过程</strong></p>
+<ul>
+<li>常见故障：<ul>
+<li>利用 <code>--display-error-details</code> 可以得到详细信息</li>
+<li>阅读配置文件，关于故障分析的部分都在 <code>resolve</code></li>
+<li>loaders 的配置文件中有对应的故障分析 <code>resolveLoader</code></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>npm 链接模块找不到所需依赖<br>&nbsp;&nbsp;&nbsp;&nbsp;node.js 的模块解析算法非常简单：系统寻找模块依赖时，会在所需模块的父文件夹的 <code>node_modules</code> 文件夹中寻找。如果你 npm 链接的带有同级依赖的模块没有放在根目录下，那么系统就无法找到这些模块（你可能会认为带有 <code>npm link</code> 的 <code>peerDependencies</code> 是 node.js 的设计缺陷）。需要注意的是应用的依赖也是一种 <code>peerDependencies</code>， 即使这种依赖并没有在模块的 <code>package.json</code> 文件中列出来。<br>&nbsp;&nbsp;&nbsp;&nbsp;要在 webpack 中分析这个问题其实很简单：只需要将应用的 <code>node_modules</code> 文件夹放在解析路径中，具体的设置例子如下：  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  resolve: &#123; fallback: path.join(__dirname, <span class="string">"node_modules"</span>) &#125;,</span><br><span class="line">  resolveLoader: &#123; fallback: path.join(__dirname, <span class="string">"node_modules"</span>) &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>监测过程</strong></p>
+<ul>
+<li><p>监测过程中， webpack 不会在资源有变动时重编译</p>
+</li>
+<li><p>监测到文件变化，但是文件并没有更新<br>&nbsp;&nbsp;&nbsp;&nbsp;可以确定的是，在 webpack 中，如果运行时加上了 <code>-progress</code> 标签，那么资源的变动将不会被监测。如果保存时能看到进展但却没有文件输出，那么就可能是配置上的问题，而不是文件监测问题了。<br><code>webpack --watch --progress</code></p>
+</li>
+<li><p>监测器不够<br>&nbsp;&nbsp;&nbsp;&nbsp;首先需要确认你的系统中是否有足够可用的检测器，如果可用数量太少，那么 webpack 中的检测器可能就检测不到变化了：<br><code>cat /proc/sys/fs/inotify/max_user_watches</code><br>对于 Arch 用户，将 <code>fs.inotify.max_user_watches=524288</code> 加到 <code>/etc/sysctl.d/99-sysctl.conf</code> 文件中，然后执行 <code>sysctl --system</code>。对于 Ubutu 用户：<code>echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf &amp;&amp; sudo sysctl -p.</code></p>
+</li>
+<li><p>OS-X FSevents bug<br>在 OS-X 系统中，文件夹可能会崩溃，具体可参考下面的文章：<br><a href="http://feedback.livereload.com/knowledgebase/articles/86239-os-x-fsevents-bug-may-prevent-monitoring-of-certai" target="_blank" rel="external">OS X FSEvents bug may prevent monitoring of certain folders</a></p>
+</li>
+<li><p>Windows 路径<br>&nbsp;&nbsp;&nbsp;&nbsp;在 webpack 中的很多配置选项默认都是绝对路径。 <code>__dirname + &quot;/app/folder&quot;</code> 这种写法是错误的，因为在 Windows 系统中路径的分隔符是 <code>\</code>。这有时候会产生一些问题。建议使用正确的分隔符，比如 <code>path.resolve(__dirname, &quot;app/folder&quot;)</code> 或者 <code>path.join(__dirname, &quot;app&quot;, &quot;folder&quot;).</code></p>
+</li>
+<li><p>Vim<br>&nbsp;&nbsp;&nbsp;&nbsp;有些型号的机器上，Vim 的 <code>backupcopy option</code> 会被默认设置成 <code>auto</code>。这有可能会影响到系统的文件监测机制。所以建议将这个选项设置为 <code>yes</code>，这样的话就会在保存的时候覆盖原文件并保存一份副本。Vim 中的设置如下：<br><code>:set backupcopy=yes</code></p>
+</li>
+<li><p>WebStorm<br>&nbsp;&nbsp;&nbsp;&nbsp;当使用 JetBrains 的 WebStorm 的 IDE 的时候，你可能会发现在保存更改过的文件时并没有触发预想中的检测器。这时候就需要设置 <code>safe write</code> 选项了，这个选项决定了是否在保存更改过的文件前保存一份原文件在临时路径中： 取消下列设置<br><code>File &gt; Settings... &gt; System Settings &gt; Use &quot;safe write&quot; (save changes to a temporary file first).</code></p>
+</li>
+</ul>
+<hr>
+<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2>]]></content>
     </entry>
     
     <entry>
