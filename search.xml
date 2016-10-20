@@ -309,7 +309,15 @@
 </li>
 </ul>
 <hr>
-<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2>]]></content>
+<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2><blockquote>
+<p>文档比较混乱，所以先放一放，后面的部分写好再来。</p>
+</blockquote>
+<hr>
+<h2 id="指导文件"><a href="#指导文件" class="headerlink" title="指导文件"></a>指导文件</h2><h3 id="CommonJs"><a href="#CommonJs" class="headerlink" title="CommonJs"></a>CommonJs</h3><p>为了解决JS中作用域的问题， CommonJS 小组定义了一种模块格式，这可以确保所有的模块都在自己的命名空间执行。<br>怎样能到达到这个目的呢？其一需要在模块中明确的输出那些适用于全局作用域的变量，其二需要定义其他模块需要的变量。<br>为了达到这个效果， CommonJS 给我们提供了两个工具：</p>
+<ul>
+<li><code>require()</code> 函数</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>

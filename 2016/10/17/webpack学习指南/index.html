@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="前端,Webpack,工具," />
+  <meta name="keywords" content="Webpack,工具,前端," />
 
 
 
@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/json-loader.png">
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/yaml-loader.png">
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/cats.png">
-<meta property="og:updated_time" content="2016-10-19T07:42:45.687Z">
+<meta property="og:updated_time" content="2016-10-20T09:57:47.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack学习指南">
 <meta name="twitter:description" content="前言 前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。">
@@ -675,7 +675,15 @@
 </li>
 </ul>
 <hr>
-<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2>
+<h2 id="实例操作"><a href="#实例操作" class="headerlink" title="实例操作"></a>实例操作</h2><blockquote>
+<p>文档比较混乱，所以先放一放，后面的部分写好再来。</p>
+</blockquote>
+<hr>
+<h2 id="指导文件"><a href="#指导文件" class="headerlink" title="指导文件"></a>指导文件</h2><h3 id="CommonJs"><a href="#CommonJs" class="headerlink" title="CommonJs"></a>CommonJs</h3><p>为了解决JS中作用域的问题， CommonJS 小组定义了一种模块格式，这可以确保所有的模块都在自己的命名空间执行。<br>怎样能到达到这个目的呢？其一需要在模块中明确的输出那些适用于全局作用域的变量，其二需要定义其他模块需要的变量。<br>为了达到这个效果， CommonJS 给我们提供了两个工具：</p>
+<ul>
+<li><code>require()</code> 函数</li>
+</ul>
+
       
     </div>
 
@@ -696,11 +704,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag">#前端</a>
-          
             <a href="/tags/Webpack/" rel="tag">#Webpack</a>
           
             <a href="/tags/工具/" rel="tag">#工具</a>
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
           
         </div>
       
@@ -908,7 +916,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始学习"><span class="nav-number">2.</span> <span class="nav-text">开始学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块系统"><span class="nav-number">2.1.</span> <span class="nav-text">模块系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack及安装"><span class="nav-number">2.2.</span> <span class="nav-text">Webpack及安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">2.3.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Loaders"><span class="nav-number">2.4.</span> <span class="nav-text">使用 Loaders</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用插件"><span class="nav-number">2.5.</span> <span class="nav-text">使用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#故障排查"><span class="nav-number">2.6.</span> <span class="nav-text">故障排查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例操作"><span class="nav-number">3.</span> <span class="nav-text">实例操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始学习"><span class="nav-number">2.</span> <span class="nav-text">开始学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模块系统"><span class="nav-number">2.1.</span> <span class="nav-text">模块系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Webpack及安装"><span class="nav-number">2.2.</span> <span class="nav-text">Webpack及安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">2.3.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-Loaders"><span class="nav-number">2.4.</span> <span class="nav-text">使用 Loaders</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用插件"><span class="nav-number">2.5.</span> <span class="nav-text">使用插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#故障排查"><span class="nav-number">2.6.</span> <span class="nav-text">故障排查</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例操作"><span class="nav-number">3.</span> <span class="nav-text">实例操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指导文件"><span class="nav-number">4.</span> <span class="nav-text">指导文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CommonJs"><span class="nav-number">4.1.</span> <span class="nav-text">CommonJs</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
