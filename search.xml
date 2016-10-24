@@ -131,7 +131,7 @@
 <hr>
 <h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
 <p><strong>Webpack是一种模块打包机。</strong><br>Webpack用于处理有依赖关系的模块，它会生成一些静态文件来表示这些模块。简单而言，如下图所示：<br><img src="http://webpack.github.io/assets/what-is-webpack.png" alt="Webpack"></p>
-<p><strong>为什么还需要模块打包机？</strong><br>简单而言，是因为现在的打包机无法满足大型的单页应用。而真正促使开发新型打包机的原因是代码分割和静态文件在模块化的过程中需要无缝连接。我尝试过拓展先后的打包机，但是都不能达到这些要求（注：Webpack作者）。</p>
+<p><strong>为什么还需要模块打包机？</strong><br>简单而言，是因为现在的打包机无法满足大型的单页应用。而真正促使开发新型打包机的原因是代码分割和静态文件在模块化的过程中需要无缝连接。我尝试过拓展现存的打包机，但是都不能达到这些要求（注：Webpack作者）。</p>
 <p><strong>目标</strong>  </p>
 <ul>
 <li>将依赖分割成不同的chunk，按需加载</li>
@@ -328,6 +328,7 @@
 <p>需要注意，在我们利用 <code>require</code> 引用的时候，并没有使用 <code>salute.js</code> 的全名，意思就是我们可以省略后缀。 <code>./</code> 符号表示的是相对路径：引用文件和被引用文件在同一个文件夹目录下。</p>
 <p><strong>最后的例子</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleA.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params"> value </span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> value*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleB.js</span></span><br><span class="line"><span class="keyword">var</span> multiplyBy2 = <span class="built_in">require</span>(<span class="string">'./moduleA'</span>);</span><br><span class="line"><span class="keyword">var</span> result = multiplyBy2( <span class="number">4</span> );</span><br></pre></td></tr></table></figure>
+<hr>
 <h3 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h3><p>AMD (Asynchronous Module Definition) 的产生是因为有些人认为 CommonJS 的模块系统暂时还不适合浏览器环境，因为从本质上来说 CommonJS 的模块是同步加载的。<br>AMD 指出了一种模块化 JavaScript 的规范， 按照这个规范模块能够异步加载它们的依赖，这就解决了同步加载带来的问题。</p>
 <p><strong>规范说明</strong><br>在 AMD 中，模块是利用<code>define</code> 来定义的。<br><em>define</em><br>在 AMD 规范中利用 <code>define</code> 函数定义模块的形式如下：<br><code>define(id?: String, dependencies?: String[], factory: Function|Object);</code><br><em>id</em><br>模块的名字，为可选项<br><em>dependencies</em><br>这个参数是用来指出正在被定义的这个模块所需要依赖的其他模块，这个参数是个数组，里面包含了依赖模块的标识符。这也是一个可选参数，如果省略不写，默认值则是：<code>[&quot;require&quot;, &quot;exports&quot;, &quot;module&quot;]</code><br><em>factory</em><br>这个参数是用来定义模块的。它可以是个函数（这个函数应该会被调用），或者是个对象。如果这个参数是个函数，那么函数的返回值将会是这个模块的输出值。</p>
 <p><strong>例子</strong><br>简单的来看一些例子。</p>
@@ -352,6 +353,7 @@
   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $ = <span class="built_in">require</span>(<span class="string">'jquery'</span>);</span><br><span class="line">    $(<span class="string">'body'</span>).text(<span class="string">'hello world'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
+<hr>
 <h3 id="代码分割"><a href="#代码分割" class="headerlink" title="代码分割"></a>代码分割</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;对于大型的网页应用而言，把所有的代码放在一个文件中往往会效率低下，特别是当其中有些代码块只需要在特定环境下加载的时候。 webpack 中有一个特性，这个特性能够将代码分割成许多的 <code>chunks</code> ，这些代码块只会在被需要的时候才加载。有些其他的打包机将被分割的代码块称作为 <code>layers</code>, <code>rollups</code> 或者 <code>fragments</code>。这个特性就叫做“代码分割”。<br>&nbsp;&nbsp;&nbsp;&nbsp;这是一个可选的特性。我们可以在代码中定义代码分割点，然后 webpack 内部来处理依赖关系，输出文件和执行环境等事物。<br>&nbsp;&nbsp;&nbsp;&nbsp;在这里需要澄清一个概念：代码分割的功能不仅仅是将普通的代码提取分割成共享的代码块（chunk），它最重要的功能其实是将代码分割成能够 <strong>按需加载</strong> 的代码块。这样就会减少网页应用的初始加载量，并使得其他代码能够按需加载。</p>
 <p><strong>定义分割点</strong><br>AMD 和 CommonJS 通过不同的方式使得代码按需加载。这些方法都是有效的，分别如下所示：</p>
 <ul>
@@ -412,6 +414,73 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>.ensure([<span class="string">"./file"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">"./file2"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// is equal to</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">require</span>.ensure([], <span class="function"><span class="keyword">function</span>(<span class="params">require</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">require</span>.include(<span class="string">"./file"</span>);</span><br><span class="line">  <span class="built_in">require</span>(<span class="string">"./file2"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>如果模块是在复合子代码块中，那么这个函数将非常有用。在父级代码块中运用这个函数引入模块将会使得这个子代码块中的模块实例都消失。</p>
 </li>
+</ul>
+<hr>
+<h3 id="样式表"><a href="#样式表" class="headerlink" title="样式表"></a>样式表</h3><p><strong>内嵌样式表</strong><br>通过利用 <code>style-loader</code> 以及 <code>css-loader</code> 使得将样式表内嵌在 JavaScript 打包文件中变得可能。这种方式下你可以将你的样式表和其他模块一起模块化。引用方式非常简单： <code>require(&quot;./stylesheet.css&quot;)</code>。使用步骤如下：</p>
+<ul>
+<li><p>安装<br>首先从 <code>npm</code> 上下载 <code>loaders</code><br><code>npm install style-loader css-loader --save-dev</code></p>
+</li>
+<li><p>配置<br>下面是一个配置参考：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        loaders:[</span><br><span class="line">            &#123; test: <span class="regexp">/\.css$/</span>, loader: <span class="string">"style-loader!css-loader"</span> &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：对于一些需要编译的 css 样式，可以参考相对应的 loader 的配置例子，然后链式调用它们。</p>
+</blockquote>
+<p>需要记住的是我们很难管理模块的执行顺序，所以最好设计好样式表使得顺序无关紧要。（在一个 css 文件中，顺序还是可靠的。）</p>
+</li>
+<li><p>使用<br>使用非常简单：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// in your modules just require the stylesheet</span></span><br><span class="line"><span class="comment">// This has the side effect that a &lt;style&gt;-tag is added to the DOM.</span></span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./stylesheet.css"</span>);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>独立的样式打包</strong><br>结合使用 <a href="https://github.com/webpack/extract-text-webpack-plugin" target="_blank" rel="external">extract-text-webpack-plugin</a> 这个插件，可以产生一个本地的 css 输出文件。<br>结合代码分割，我们可以使用两种不同的模式：</p>
+<ul>
+<li>针对每一个初始 chunk 都创建一个 css 文件， 将样式表内嵌至附加的 chunk 中。（推荐做法）</li>
+<li>针对每一个初始 chunk 都创建一个 css 文件，并且这个文件中包含了附加 chunk 的样式。  </li>
+</ul>
+<p>从初始加载速度优化的角度考虑，推荐使用第一种模式。因为缓存和 http 请求头的原因，在一些具有多个入口点的小型应用中，第二种模式可能会更好一些。</p>
+<p>步骤如下：</p>
+<ul>
+<li><p>安装插件<br><code>npm install extract-text-webpack-plugin --save</code></p>
+</li>
+<li><p>处理初始 chunk 中的样式生成分离的 css 文件输出<br>下面展示的虽然是多个入口点的例子，但是这种方式也适合单个入口点。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// webpack.config.js</span></span><br><span class="line"><span class="keyword">var</span> ExtractTextPlugin = <span class="built_in">require</span>(<span class="string">"extract-text-webpack-plugin"</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    <span class="comment">// The standard entry point and output config</span></span><br><span class="line">    entry: &#123;</span><br><span class="line">        posts: <span class="string">"./posts"</span>,</span><br><span class="line">        post: <span class="string">"./post"</span>,</span><br><span class="line">        about: <span class="string">"./about"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">"[name].js"</span>,</span><br><span class="line">        chunkFilename: <span class="string">"[id].js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="built_in">module</span>: &#123;</span><br><span class="line">        loaders: [</span><br><span class="line">            <span class="comment">// Extract css files</span></span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.css$/</span>,</span><br><span class="line">                loader: ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader"</span>)</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="comment">// Optionally extract less files</span></span><br><span class="line">            <span class="comment">// or any other compile-to-css language</span></span><br><span class="line">            &#123;</span><br><span class="line">                test: <span class="regexp">/\.less$/</span>,</span><br><span class="line">                loader: ExtractTextPlugin.extract(<span class="string">"style-loader"</span>, <span class="string">"css-loader!less-loader"</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// You could also use other loaders the same way. I. e. the autoprefixer-loader</span></span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// Use the plugin to specify the resulting filename (and add needed behavior to the compiler)</span></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> ExtractTextPlugin(<span class="string">"[name].css"</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后你会得到如下文件：</p>
+<ul>
+<li><code>posts.js  posts.css</code></li>
+<li><code>post.js  post.css</code></li>
+<li><code>about.js  about.css</code></li>
+<li><code>1.js  2.js</code>（包含内嵌样式）</li>
+</ul>
+</li>
+<li><p>所有样式都具有各自的 css 输出文件<br>利用第二种模式，只需要将 <code>allChunks</code> 选项设置成 <code>true</code> 即可：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> ExtractTextPlugin(<span class="string">"style.css"</span>, &#123;</span><br><span class="line">            allChunks: <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后将得到如下文件：</p>
+<ul>
+<li><code>posts.js  posts.css</code></li>
+<li><code>post.js  post.css</code></li>
+<li><code>about.js  about.css</code></li>
+<li><code>1.js  2.js</code>（不包含内嵌样式）</li>
+</ul>
+</li>
+<li><p>在 commons chunk 中的样式<br>可以结合利用 <code>CommonsChunkPlugin</code> 及分离的样式文件来为 commons chunk 生成样式文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="string">"commons"</span>, <span class="string">"commons.js"</span>),</span><br><span class="line">        <span class="keyword">new</span> ExtractTextPlugin(<span class="string">"[name].css"</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>然后将得到如下输出文件：</p>
+<ul>
+<li><code>commons.js  commons.css</code></li>
+<li><code>posts.js  posts.css</code></li>
+<li><code>post.js  post.css</code></li>
+<li><code>about.js  about.css</code></li>
+<li><code>1.js  2.js</code>（包含内嵌样式）<br>或者设置 <code>allChunks: true</code>，得到</li>
+<li><code>1.js 2.js</code>（不包含内嵌样式）</li>
+</ul>
+<hr>
+<h3 id="优化"><a href="#优化" class="headerlink" title="优化"></a>优化</h3><p><strong>压缩</strong><br>为了压缩文件中的 JavaScript（如果用了 css-loader，css 文件也可以），webpack 提供了一个简单的选项：<br><code>--optimize-minimize</code> 对应于：<code>new webpack.optimize.UglifyJsPlugin()</code><br>这是一个简单而有效的优化网页应用的方法。<br>你应该知道（如果你看过之前的文档）在 webpack 中是通过给 chunk 和模块赋予 id 的方式来辨别它们的。通过一个选项， webpack 可以分辨 id 的分布，并将具有较小长度的 id 分配给这些模块或者 chunk：<br><code>--optimize-occurrence-order</code> 对应于：<code>new webpack.optimize.OccurrenceOrderPlugin()</code><br>在对文件体积的影响程度上，入口 chunk 具有更高的优先级。</p>
+<p><strong>去重</strong><br>如果你使用了一些拥有不错的依赖关系的库，那么在打包的过程中就可能会产生一些完全相同的文件。webpack 可以识别这些文件，然后删除重复的。在运行环境下通过利用函数替代重复代码的方式，从而避免打包文件中包含重复代码文件。这对语义化不会有什么影响。可以通过下面的方式来实现这个功能：<br><code>--optimize-dedupe</code> 对应于：<code>new webpack.optimize.DedupePlugin()</code><br>利用这种特性的时候会在入口 chunk 中引入一些额外的代码。</p>
+<p><strong>Chunks</strong><br>在编写代码的时候，为了达到按需加载的目的，你可能已经设定好了一些代码分割点。但是在编译之后，你可能会发现产生了非常多的很小的 chunk，这会导致 HTTP 请求头数据量非常大。不过不用担心，通过以下两项设置，我们可以在 webpack 中利用合并的方式来处理这些 chunks：</p>
+<ul>
+<li>限制允许存在的 chunk 的数量（比如15个）： <code>--optimize-max-chunks 15  new webpack.optimize.LimitChunkPlugin({maxChunks: 15})</code></li>
+<li>限制允许存在的 chunk 的最小体积（比如 10000）：<code>--optimize-min-chunk-size 10000 new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000})</code> </li>
 </ul>
 ]]></content>
     </entry>
