@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[怎样利用 git 撤销操作]]></title>
+      <url>http://detachment.club/2016/10/29/%E6%80%8E%E6%A0%B7%E5%88%A9%E7%94%A8%20git%20%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。<br>每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。<br>这下面这篇文章中，我将会就几种常见的情景来讨论怎样通过 git 来完美的撤销这些操作。</p>
+<hr>
+<h2 id="撤销已发布"><a href="#撤销已发布" class="headerlink" title="撤销已发布"></a>撤销已发布</h2><p><strong>情景</strong>：你刚按下 <code>git push</code> ，将修改推送到了 github ，然后就发现在你的提交中存在一些问题。这时候那就会想撤销操作。</p>
+<p><strong>解决</strong>： <code>git revert &lt;SHA&gt;</code></p>
+<p><strong>原理</strong>： <code>git revert &lt;SHA&gt;</code> 这个操作会生成一个新的 commit，这个提交和 提供的 SHA 是相反的：如果之前的提交是 “matter”，那么这个提交就是 “anti-matter”，也就是说之前操作中新增的内容将会被删除，之前操作中被删除的内容也将会被增加。</p>
+<p>这是 git 中最基础也最安全的撤销操作情景，因为它不会 <em>改动</em> 变更历史——你可以放心的使用 <code>git push</code> “相反的”提交来撤销你错误的操作。</p>
+<hr>
+<h2 id="修改提交信息"><a href="#修改提交信息" class="headerlink" title="修改提交信息"></a>修改提交信息</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[webpack学习指南]]></title>
       <url>http://detachment.club/2016/10/17/webpack%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。<br>&nbsp;&nbsp;&nbsp;&nbsp;本文所有资料来源都是 webpack 官网，有意看原文的戳链接： <a href="http://webpack.github.io/docs/.html" target="_blank" rel="external">webpack document</a></p>
