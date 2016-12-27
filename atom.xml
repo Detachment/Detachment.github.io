@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Share and Create</title>
   
+  <link href="/atom.xml" rel="self"/>
   
+  <link href="http://detachment.club/"/>
+  <updated>2016-12-27T10:08:16.592Z</updated>
+  <id>http://detachment.club/</id>
+  
+  <author>
+    <name>Detachment</name>
     
-    <entry>
-      <title><![CDATA[Vue.js, JavaScript, ES6 知识点总结 暨 2016年 年终总结]]></title>
-      <url>http://detachment.club/2016/12/27/Vue.js,%20JavaScript,%20ES6%20%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%20%E6%9A%A8%202016%E5%B9%B4%20%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<p><iframe src="http://www.xmind.net/embed/iYwX" width="900px" height="540px" frameborder="0" scrolling="no"></iframe><br>nizheshizaizaoyaoaodafo</p>
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue.js, JavaScript, ES6 知识点总结 暨 2016年 年终总结</title>
+    <link href="http://detachment.club/2016/12/27/Vue.js,%20JavaScript,%20ES6%20%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%20%E6%9A%A8%202016%E5%B9%B4%20%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://detachment.club/2016/12/27/Vue.js, JavaScript, ES6 知识点总结 暨 2016年 年终总结/</id>
+    <published>2016-12-26T16:00:00.000Z</published>
+    <updated>2016-12-27T10:08:16.592Z</updated>
+    
+    <content type="html"><![CDATA[<p><iframe src="http://www.xmind.net/embed/iYwX" width="900px" height="540px" frameborder="0" scrolling="no"></iframe><br>nizheshizaizaoyaoaodafo</p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[怎样利用 git 撤销操作]]></title>
-      <url>http://detachment.club/2016/10/29/%E6%80%8E%E6%A0%B7%E5%88%A9%E7%94%A8%20git%20%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。<br>&nbsp;&nbsp;&nbsp;&nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。<br>&nbsp;&nbsp;&nbsp;&nbsp;这下面这篇文章中，我将会就几种常见的情景来讨论怎样通过 git 来完美的撤销这些操作。</p>
+    <summary type="html">
+    
+      &lt;p&gt;&lt;iframe src=&quot;http://www.xmind.net/embed/iYwX&quot; width=&quot;900px&quot; height=&quot;540px&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot;&gt;&lt;/iframe&gt;&lt;br&gt;nizheshizaizaoyaoa
+    
+    </summary>
+    
+      <category term="总结" scheme="http://detachment.club/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="JavaScript" scheme="http://detachment.club/tags/JavaScript/"/>
+    
+      <category term="Vue.js" scheme="http://detachment.club/tags/Vue-js/"/>
+    
+      <category term="ES6" scheme="http://detachment.club/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎样利用 git 撤销操作</title>
+    <link href="http://detachment.club/2016/10/29/%E6%80%8E%E6%A0%B7%E5%88%A9%E7%94%A8%20git%20%E6%92%A4%E9%94%80%E6%93%8D%E4%BD%9C/"/>
+    <id>http://detachment.club/2016/10/29/怎样利用 git 撤销操作/</id>
+    <published>2016-10-28T16:00:00.000Z</published>
+    <updated>2016-10-29T10:48:34.034Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。<br>&nbsp;&nbsp;&nbsp;&nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。<br>&nbsp;&nbsp;&nbsp;&nbsp;这下面这篇文章中，我将会就几种常见的情景来讨论怎样通过 git 来完美的撤销这些操作。</p>
 <a id="more"></a>
 <h2 id="不同情况"><a href="#不同情况" class="headerlink" title="不同情况"></a>不同情况</h2><h3 id="撤销已发布"><a href="#撤销已发布" class="headerlink" title="撤销已发布"></a>撤销已发布</h3><p><strong>情景</strong>：你刚按下 <code>git push</code> ，将修改推送到了 github ，然后就发现在你的提交中存在一些问题。这时候那就会想撤销操作。</p>
 <p><strong>解决</strong>： <code>git revert &lt;SHA&gt;</code></p>
@@ -94,12 +132,32 @@
 <p><strong>commit：</strong>  在文中被翻译为 提交<br>  <strong>push：</strong> 在文中被译为 推送</p>
 </blockquote>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[webpack学习指南]]></title>
-      <url>http://detachment.club/2016/10/17/webpack%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。<br>&nbsp;&nbsp;&nbsp;&nbsp;本文所有资料来源都是 webpack 官网，有意看原文的戳链接： <a href="http://webpack.github.io/docs/.html" target="_blank" rel="external">webpack document</a></p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;这下面这篇文章中，我将会就几种常见的情景来讨论怎样通过 git 来完美的撤销这些操作。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="工具" scheme="http://detachment.club/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="git" scheme="http://detachment.club/tags/git/"/>
+    
+      <category term="github" scheme="http://detachment.club/tags/github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack学习指南</title>
+    <link href="http://detachment.club/2016/10/17/webpack%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/"/>
+    <id>http://detachment.club/2016/10/17/webpack学习指南/</id>
+    <published>2016-10-16T16:00:00.000Z</published>
+    <updated>2016-10-25T14:30:33.208Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。<br>&nbsp;&nbsp;&nbsp;&nbsp;本文所有资料来源都是 webpack 官网，有意看原文的戳链接： <a href="http://webpack.github.io/docs/.html" target="_blank" rel="external">webpack document</a></p>
 <a id="more"></a>
 <h2 id="开始学习"><a href="#开始学习" class="headerlink" title="开始学习"></a>开始学习</h2><h3 id="模块系统"><a href="#模块系统" class="headerlink" title="模块系统"></a>模块系统</h3><p>现在的网页应用有以下特点：</p>
 <ul>
@@ -647,12 +705,32 @@
 <hr>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;webpack 文档也看了好几天了，上面翻译的也只是其中一部分内容，看到后面有点不知所云，翻译起来很吃力，有种以其昏昏使人昭昭的感觉。为了不误人子弟，所以决定暂时不再翻译，日后有了更多的理解了再来继续。<br>&nbsp;&nbsp;&nbsp;&nbsp;如果在阅读的过程中发现翻译不妥，欢迎在下方留言或者给我发邮件。</p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[前端面试常见问题整理]]></title>
-      <url>http://detachment.club/2016/08/31/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。</p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;本文所有资料来源都是 webpack 官网，有意看原文的戳链接： &lt;a href=&quot;http://webpack.github.io/docs/.html&quot;&gt;webpack document&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Webpack" scheme="http://detachment.club/tags/Webpack/"/>
+    
+      <category term="工具" scheme="http://detachment.club/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试常见问题整理</title>
+    <link href="http://detachment.club/2016/08/31/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86/"/>
+    <id>http://detachment.club/2016/08/31/前端面试常见问题整理/</id>
+    <published>2016-08-30T16:00:00.000Z</published>
+    <updated>2016-09-06T10:11:52.113Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。</p>
 <a id="more"></a>
 <p>注明：</p>
 <blockquote>
@@ -893,12 +971,30 @@
 <p><a href="https://segmentfault.com/a/1190000005956935" target="_blank" rel="external">想知道更详细的解释？戳我~</a></p>
 </blockquote>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[《Bootstrap 初体验》]]></title>
-      <url>http://detachment.club/2016/08/09/Bootstrap%E5%88%9D%E4%BD%93%E9%AA%8C/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;了解了jQuery的基本语法之后，就开始准备学习Bootstrap框架了。在慕课网上看过姜维老师讲述的<a href="http://www.imooc.com/learn/182" target="_blank" rel="external">《基于bootstrap的网页开发》</a>后，真正被Bootstrap的强大功能惊艳到。随后又在网易云课堂接触到李炎恢老师是<a href="http://study.163.com/course/courseMain.htm?courseId=1017002" target="_blank" rel="external">《Bootstrap视频教程》</a>，再一次被惊艳。在用一通宵的时间看完李老师的基础教程后，跃跃欲试，然后决定跟着老师的步骤做一个自己的网页。</p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="面试" scheme="http://detachment.club/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《Bootstrap 初体验》</title>
+    <link href="http://detachment.club/2016/08/09/Bootstrap%E5%88%9D%E4%BD%93%E9%AA%8C/"/>
+    <id>http://detachment.club/2016/08/09/Bootstrap初体验/</id>
+    <published>2016-08-08T16:00:00.000Z</published>
+    <updated>2016-08-10T07:00:05.739Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;了解了jQuery的基本语法之后，就开始准备学习Bootstrap框架了。在慕课网上看过姜维老师讲述的<a href="http://www.imooc.com/learn/182" target="_blank" rel="external">《基于bootstrap的网页开发》</a>后，真正被Bootstrap的强大功能惊艳到。随后又在网易云课堂接触到李炎恢老师是<a href="http://study.163.com/course/courseMain.htm?courseId=1017002" target="_blank" rel="external">《Bootstrap视频教程》</a>，再一次被惊艳。在用一通宵的时间看完李老师的基础教程后，跃跃欲试，然后决定跟着老师的步骤做一个自己的网页。</p>
 <a id="more"></a>
 <h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;虽说是准备跟着老师做，但也不想完全照搬老师的内容，这时候一转头，正好看到电脑屏幕上电影《Detachment》的截图，瞬间就决定了以此为主题制作网页。<br>&nbsp;&nbsp;&nbsp;&nbsp;由于整体框架和老师是完全一样的，所以制作的过程还算是比较顺利。整个网页大概花费了两天时间，其中有很大一部分时间花在找材料上，而且为了使网页实际体验效果比较好，在需要加链接的地方都尽量贴上了链接。做完以后面临的一个问题就是怎么展示这些网页，自己看的话在本地当然没有问题，但是如果要和别人分享的话，最好还是放在网上。为了达到这个目的，尝试了三个方法：</p>
 <ol>
@@ -915,12 +1011,32 @@
 </ol>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;虽然这个页面已经做完了，但自知整体布局都是老师已经选好的，并没有什么难度。这只是一个开始而已，路还很长，加油。</p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[《jQuery学习教程》]]></title>
-      <url>http://detachment.club/2016/07/31/jQuery%20%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="external">w3school</a>查看。</p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;了解了jQuery的基本语法之后，就开始准备学习Bootstrap框架了。在慕课网上看过姜维老师讲述的&lt;a href=&quot;http://www.imooc.com/learn/182&quot;&gt;《基于bootstrap的网页开发》&lt;/a&gt;后，真正被Bootstrap的强大功能惊艳到。随后又在网易云课堂接触到李炎恢老师是&lt;a href=&quot;http://study.163.com/course/courseMain.htm?courseId=1017002&quot;&gt;《Bootstrap视频教程》&lt;/a&gt;，再一次被惊艳。在用一通宵的时间看完李老师的基础教程后，跃跃欲试，然后决定跟着老师的步骤做一个自己的网页。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Bootstrap" scheme="http://detachment.club/tags/Bootstrap/"/>
+    
+      <category term="框架" scheme="http://detachment.club/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《jQuery学习教程》</title>
+    <link href="http://detachment.club/2016/07/31/jQuery%20%E5%AD%A6%E4%B9%A0%E6%95%99%E7%A8%8B/"/>
+    <id>http://detachment.club/2016/07/31/jQuery 学习教程/</id>
+    <published>2016-07-30T16:00:00.000Z</published>
+    <updated>2016-08-07T15:14:05.140Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="external">w3school</a>查看。</p>
 <a id="more"></a>
 <h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><h4 id="关键词：简介、安装、语法、选择器、事件、名称冲突"><a href="#关键词：简介、安装、语法、选择器、事件、名称冲突" class="headerlink" title="关键词：简介、安装、语法、选择器、事件、名称冲突"></a>关键词：简介、安装、语法、选择器、事件、名称冲突</h4><ul>
 <li><strong>简介</strong>：jQuery是一个轻量级的JavaScript库，能极大的简化JavaScript编程，宗旨是“write less, do more”；包含的功能非常多（1. HTML元素选取；2. HTML元素操作；3. CSS操作；4. HTML事件函数；5. JavaScript特效和动画；6. HTML DOM遍历和修改；7. AJAX；8. Utilities；）；</li>
@@ -1087,12 +1203,32 @@
 <hr>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp; &nbsp; &nbsp; &nbsp; 接触jquery其实有一段时间了，但是真正开始学习的时间并不长。初步学完JS之后，又接触到bootstrap，然后了解到其中也包含了jquery的内容，所以决定先全面了解jquery然后再来学习bootstrap。<br>&nbsp; &nbsp; &nbsp; &nbsp; jQuery作为JS的轻量级的库存在，自然而然的在应用层面上比原生JS有着很大的优势，在利用jQuery写效果的时候就能明显的感觉到这一点。在jQuery中各种选择器应有尽有，各种事件也非常多，还有很好用的链式写法，这一切都与jQuery的宗旨“Write less, do more”不谋而合。<br>&nbsp; &nbsp; &nbsp; &nbsp; 由于时间关系，并没有去了解jQuery的内部写法的精妙，在之后的学习生涯中一定会找出时间来认真了解下。同样的由于时间关系，并没有将每种事件，每个选择器，每个效果都去实现一遍，但私以为在应用层面上效果只不过是外表，其内核都是一样的，所以这并不影响在需要这种效果的时候来调用。</p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[《精通JavaScript开发》]]></title>
-      <url>http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。<b>对于本课程或者本博客有任何问题，非常欢迎给我发邮件，我会尽我所能回答你的问题。</b></p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上&lt;a href=&quot;http://www.w3school.com.cn/jquery&quot;&gt;w3school&lt;/a&gt;查看。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="jQuery" scheme="http://detachment.club/tags/jQuery/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《精通JavaScript开发》</title>
+    <link href="http://detachment.club/2016/07/02/%E5%9F%BA%E4%BA%8E%E3%80%8A%E7%B2%BE%E9%80%9AJavaScript%E5%BC%80%E5%8F%91%E3%80%8B%E8%AF%BE%E7%A8%8B%E7%9A%84%E5%A4%8D%E4%B9%A0%E4%B8%8E%E6%80%BB%E7%BB%93/"/>
+    <id>http://detachment.club/2016/07/02/基于《精通JavaScript开发》课程的复习与总结/</id>
+    <published>2016-07-01T16:00:00.000Z</published>
+    <updated>2016-07-25T14:27:36.743Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;从5月25日开始开始学习，用了将近一个月的时间将<a href="http://study.163.com/course/courseMain.htm?courseId=224014" target="_blank" rel="external">视频课程</a>过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。<b>对于本课程或者本博客有任何问题，非常欢迎给我发邮件，我会尽我所能回答你的问题。</b></p>
 <a id="more"></a>
 <h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="《初探JavaScript魅力01》"><a href="#《初探JavaScript魅力01》" class="headerlink" title="《初探JavaScript魅力01》"></a>《初探JavaScript魅力01》</h3><h4 id="关键词：JS、事件、属性、函数、重用、变量"><a href="#关键词：JS、事件、属性、函数、重用、变量" class="headerlink" title="关键词：JS、事件、属性、函数、重用、变量"></a>关键词：JS、事件、属性、函数、重用、变量</h4><ul>
 <li>JavaScript：交互、功能；</li>
@@ -1798,12 +1934,32 @@
 </blockquote>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;毋庸置疑，本课程非常适合新手学习，但同时也不难发现课程中很少触及真正基础的知识，而且后面还有一部分内容并没有讲到。下一步，我将通过书本继续巩固基础知识，同时开始学习JS框架，准备开始做几个简单的项目。这些内容都会在之后的博客中更新。<br>&nbsp;&nbsp;&nbsp;&nbsp;最后，作为一个初学者，我深知在学习过程中的种种疑惑和迷茫，即使在现在，这份心情依然存在。然而，只要不放弃努力，就始终在进步，目标终将会越来越近。<br> </p><h4>&nbsp;&nbsp;&nbsp;&nbsp;<em> The world is a fine place and worth fighting for !</em></h4><p></p>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[HTML和css基础知识汇总（长期更新）]]></title>
-      <url>http://detachment.club/2016/06/30/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
-      <content type="html"><![CDATA[<h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h2><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><ul>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从5月25日开始开始学习，用了将近一个月的时间将&lt;a href=&quot;http://study.163.com/course/courseMain.htm?courseId=224014&quot;&gt;视频课程&lt;/a&gt;过了一遍，对比W3school及另外一套课程，这个课程给我的体验是整体进度设置很合理，Blue老师循循善诱，讲课风格非常适合新手学习。为了更好的掌握JavaScript的内容，下文将对每一章节做对应的总结与复习，并有相应的小测试来巩固复习。本文内容适合所有正在学习此课程的同学。&lt;b&gt;对于本课程或者本博客有任何问题，非常欢迎给我发邮件，我会尽我所能回答你的问题。&lt;/b&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="JavaScript" scheme="http://detachment.club/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML和css基础知识汇总（长期更新）</title>
+    <link href="http://detachment.club/2016/06/30/HTML%E5%92%8CCSS%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/"/>
+    <id>http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/</id>
+    <published>2016-06-29T16:00:00.000Z</published>
+    <updated>2016-08-31T08:27:36.007Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h2><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><ul>
 <li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)；</li>
 <li>HTML 不是一种编程语言，而是一种标记语言 (markup language)；</li>
 <li>标记语言是一套标记标签 (markup tag)；</li>
@@ -1869,12 +2025,39 @@
 <blockquote>
 <h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><h4 id="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"><a href="#本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。" class="headerlink" title="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"></a>本文内容主要来源为<a href="http://www.w3school.com.cn/index.html" target="_blank" rel="external">w3school</a>，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。</h4></blockquote>
 ]]></content>
-    </entry>
     
-    <entry>
-      <title><![CDATA[Float, Position and Display in CSS]]></title>
-      <url>http://detachment.club/2016/06/27/Float,%20position%20and%20display%20in%20CSS/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。<br>&nbsp;&nbsp;&nbsp;&nbsp;为了搞懂这个问题，首先能想到的当然是先多看几遍教材，然后直接Google，搜索到几篇中文博客，之后在StackOverFlow上搜索与Float相关的问题，这一遍下来，搜索的资料让我看了好久，而我所理解的都将在下面的文章中通过图文来表述。</p>
+    <summary type="html">
+    
+      &lt;h2 id=&quot;HTML部分&quot;&gt;&lt;a href=&quot;#HTML部分&quot; class=&quot;headerlink&quot; title=&quot;HTML部分&quot;&gt;&lt;/a&gt;HTML部分&lt;/h2&gt;&lt;h3 id=&quot;简介：&quot;&gt;&lt;a href=&quot;#简介：&quot; class=&quot;headerlink&quot; title=&quot;简介：&quot;&gt;&lt;/a&gt;简介：&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;HTML 指的是超文本标记语言 (Hyper Text Markup Language)；&lt;/li&gt;
+&lt;li&gt;HTML 不是一种编程语言，而是一种标记语言 (markup language)；&lt;/li&gt;
+&lt;li&gt;标记语言是一套标记标签 (markup tag)；&lt;/li&gt;
+&lt;li&gt;HTML使用标记标签来描述网页；&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
+    
+      <category term="HTML" scheme="http://detachment.club/tags/HTML/"/>
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Float, Position and Display in CSS</title>
+    <link href="http://detachment.club/2016/06/27/Float,%20position%20and%20display%20in%20CSS/"/>
+    <id>http://detachment.club/2016/06/27/Float, position and display in CSS/</id>
+    <published>2016-06-26T16:00:00.000Z</published>
+    <updated>2016-07-04T02:24:08.923Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。<br>&nbsp;&nbsp;&nbsp;&nbsp;为了搞懂这个问题，首先能想到的当然是先多看几遍教材，然后直接Google，搜索到几篇中文博客，之后在StackOverFlow上搜索与Float相关的问题，这一遍下来，搜索的资料让我看了好久，而我所理解的都将在下面的文章中通过图文来表述。</p>
 <a id="more"></a>
 <h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><ol>
 <li>normal flow:<blockquote>
@@ -1982,8 +2165,22 @@
 <li><a href="http://www.cnblogs.com/coffeedeveloper/p/3145790.html" target="_blank" rel="external">Blog–对CSS中的Position、Float属性的一些深入探讨</a></li>
 </ul>
 ]]></content>
-    </entry>
     
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;为了搞懂这个问题，首先能想到的当然是先多看几遍教材，然后直接Google，搜索到几篇中文博客，之后在StackOverFlow上搜索与Float相关的问题，这一遍下来，搜索的资料让我看了好久，而我所理解的都将在下面的文章中通过图文来表述。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="CSS" scheme="http://detachment.club/categories/CSS/"/>
+    
+    
+      <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
-  
-</search>
+</feed>
