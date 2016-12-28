@@ -61,18 +61,30 @@
   </entry>
   
   <entry>
-    <title>写在2016年的尾巴</title>
+    <title>【置顶】 写在2016年的尾巴</title>
     <link href="http://detachment.club/2016/12/27/%E5%86%99%E5%9C%A82016%E5%B9%B4%E7%9A%84%E5%B0%BE%E5%B7%B4/"/>
     <id>http://detachment.club/2016/12/27/写在2016年的尾巴/</id>
     <published>2016-12-26T16:00:00.000Z</published>
-    <updated>2016-12-28T06:08:49.371Z</updated>
+    <updated>2016-12-28T09:46:41.259Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;能使人变聪明的诀窍是没有的。倒是有种诀窍能使人觉得自己变聪明了，实际上却是变得更笨。人应该记住自己做过的聪明事，更该记住自己做的那些傻事————更重要的是记住自己今年几岁了，别再搞小孩子的把戏。</p>
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;一年的时间过得太快，但也足以发生很多很多的事情，这也造成了提笔难言的窘境。如果要叙述一个复杂的故事，最简单的办法就是利用时间作为线索，采用顺序的叙述结构。这种结构同样非常适合年终总结。</p>
+<a id="more"></a>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;在前言中，我就简单的以时间为线来简单的流水一遍我这一年：</p>
+<ul>
+<li>1-3月：设计制作最后三套轮胎自动搬运设备，3月底辞职；</li>
+<li>4-5月：在w3school上学习html，css，JavaScript的相关知识；重新使用github；</li>
+<li>6-7月：利用视频教程学习JavaScript；搭建博客并将整个学习过程总结到博客上；</li>
+<li>8-9月：学习jQuery，BootStrap并利用所学模仿制作了简历；开始投简历、面试、得到offer并放弃；学习《JavaScript编程精解》；初步接触vue.js；</li>
+<li>10月：学习vue.js及相关工具（router、vuex、loader）；学习webpack的使用；学习git；投简历被拒；</li>
+<li>11月：学习《JavaScript高级程序设计》；尝试利用vue.js制作完整项目遇阻；</li>
+<li>12月：重新学习vue.js并准备做完整的项目，遇阻；学习ES6语法；利用xmind总结vue.js；年终总结。</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;上面所提到的虽不全面，但也大体覆盖了这近一年所做的主要努力。下面的正文还将从各个方面来进行总结，从另一个角度来更加全面的回顾这一年所发生的的事情。</p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;能使人变聪明的诀窍是没有的。倒是有种诀窍能使人觉得自己变聪明了，实际上却是变得更笨。人应该记
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;一年的时间过得太快，但也足以发生很多很多的事情，这也造成了提笔难言的窘境。如果要叙述一个复杂的故事，最简单的办法就是利用时间作为线索，采用顺序的叙述结构。这种结构同样非常适合年终总结。&lt;/p&gt;
     
     </summary>
     
