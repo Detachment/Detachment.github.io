@@ -64,7 +64,56 @@
 </li>
 <li><p><strong>框架工具学习</strong></p>
 <ol>
-<li>jQuery：</li>
+<li><strong>jQuery</strong>：主要通过 w3s 来学习，掌握基本用法，未深究；</li>
+<li><strong>BootStrap</strong>：通过视频及官方文档来学习。有独立项目，其中个人简历即在此阶段完成的；</li>
+<li><p><strong>Vue.js</strong>：仔细看过几遍官方文档并有总结，对基本用法了熟于心。同时也了解关于 Vue.js 的一些辅助插件，如 vuex、vue-router 以及 vue-loader。在很快的一段时间内将会利用这些来完成一个复杂程度较高的完整前端项目。附简单的总结图如下（利用 xMind 制作，如有需要源文件的可以给我发邮件）：<br><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/vuex.png" alt="vue.js"></p>
+<p><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/Vue.png" alt="vue.js"></p>
+</li>
+<li><strong>webpack</strong>：完整的看了一遍文档，并翻译发布了一篇博客，有过少许实践经验。在这个过程中接触到 npm，yarn，gitbook等等；</li>
+<li><strong>git</strong>：熟练使用 git 的基本操作，写过一篇相关博客。</li>
+</ol>
+</li>
+<li><p><strong>博客写作</strong><br>  &nbsp;&nbsp;&nbsp;&nbsp;自从6月份开通到现在为止，一共发布了10篇博客，除了两篇为翻译文档，其余全为原创。有一篇访问量超过2500pv，对自己来说也是一个鼓励。以此同时，有多位朋友看过博客后通过邮件和我联系并给于肯定，在此对他们表示感谢，也希望大家在前端学习的路上大家都能越走越远。下面附上一些简单的博客流量图：<br>  <img src="http://o9ybnkuir.bkt.clouddn.com/imgs/tongji1.JPG" alt="tongji"><br>  <img src="http://o9ybnkuir.bkt.clouddn.com/imgs/tongji2.JPG" alt="tongji"><br>  <img src="http://o9ybnkuir.bkt.clouddn.com/imgs/tongji3.JPG" alt="tongji"></p>
+</li>
+</ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;至此，学习工作方面的内容基本上也已经总结的差不多了，接下来继续总结生活娱乐方面。</p>
+<h3 id="生活娱乐"><a href="#生活娱乐" class="headerlink" title="生活娱乐"></a>生活娱乐</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;All work and no play makes Jack a dull boy. 从以下两个方面来总结吧：精神建设以及生活质量。</p>
+<ul>
+<li><p><strong>精神建设</strong></p>
+<ol>
+<li><p><strong>电影</strong>：看电影是一个终生爱好，可能和小时候的经历有关。按照时间顺序简单的总结下今年看过的影片（包括电影和剧集，数据来自豆瓣记录以及下载记录），根据个人喜好推荐加粗部分的电影：</p>
+<ul>
+<li>一月份： <strong>《老炮儿》</strong>《黑金》《我的少女时代》《机械姬》<strong>《走到尽头》</strong>《为了N》（剧集）;</li>
+<li>二月份：<strong>《守望者》</strong>《美国狙击手》《史蒂夫·乔布斯》<strong>《夜行者》</strong>《暗杀》<strong>《视觉》</strong>；</li>
+<li>三月份：《八恶人》《饥饿游戏3：嘲笑鸟》<strong>《聚焦》</strong> <strong>《荒野猎人》</strong>《蝙蝠侠大战超人：正义黎明》<strong>《控方证人》</strong>《功夫熊猫3》；</li>
+<li>四月份：<strong>《纸牌屋 第四季》</strong>；</li>
+<li>五月份：<strong>《危楼愚夫》《成长系列》《盗梦空间》</strong>，其中<a href="https://movie.douban.com/subject/10748226/" target="_blank" rel="external">《成长系列》</a>极力推荐；</li>
+<li>六月份：无记录。（可能在 B 站上有看，但是记录不可查）；</li>
+<li>七月份：《危机13小时》《奇幻森林》《人间世》《知无涯者》《行尸走肉》；</li>
+<li>八月份：<strong>《一个叫欧维的男人决定去死》</strong>《红眼航班》<strong>《云图》</strong>；</li>
+<li>九月份：《惊天盗魔团》《寒战2》<strong>《黑客军团2》《心迷宫》</strong>《你眼中的世界》<strong>《杀死一只知更鸟》《阿凡达》</strong>；</li>
+<li>十月份：<strong>《荒野生存》</strong>《黑镜3》《西部世界》《冰血暴2》《毕业生》<strong>《追梦赤子心》</strong></li>
+<li>十一月份：<strong>《我们这一天》</strong>《斯诺登》<strong>《头脑特工队》</strong>《逃避虽可耻但有用》<strong>《七武士》《双峰 第一季》</strong>《双峰 第二季》</li>
+<li>十二月份：<strong>《行星地球2》</strong>《萨利机长》<strong>《梦之安魂曲》《驴得水》《疯狂的麦克斯4》</strong>《豪勇七蛟龙》<strong>《夜班经理》</strong><blockquote>
+<p>由于有部分电影在 B 站上看的，导致没有任何记录，所以可能有 10%-20% 左右的电影没有归纳出来。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>书籍</strong>：除了专业书籍之外，还看了一些其他方面的书，以下大概按照时间来排序：</p>
+<ul>
+<li><p>《独生告白》：这是一本关于家庭教育的书，我认为每个身为人父（母）的人都应该看一看这本书。文章中的心理描写非常精彩，比如下面这一段：</p>
+<blockquote>
+<p>多年来对爱的渴望让她变得敏感，她就像一条饥饿的狗，不停的翕动鼻孔，捕捉着哪怕是最微弱的食物的香气。她不会弄错的。她一看到就认出了它。那是爱，是一厢情愿的深切渴慕，只有付出，得不到回报；是小心翼翼而安静的爱恋，却无所畏惧，无论如何，都会执着的进行下去。  </p>
+</blockquote>
+</li>
+<li><p>《黑客与画家》：讨论了很多关于计算机以及互联网行业的问题，比如编程语言发展趋势。对我影响不大，看完之后很多内容多忘记了。摘取一段作者对于怎么致富的方法的看法：</p>
+<blockquote>
+<p>要致富，你需要有两样东西：可测量性和可放大性。你的职位产生的业绩，应该是可测量的，否则你做的再多，也不会得到更多的报酬。此外，你还必须有可放大性，也就是说你做的决定能够产生巨大的效应。</p>
+</blockquote>
+</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -280,7 +329,7 @@
 <li>less stylesheets → css stylesheets</li>
 <li>等等</li>
 </ul>
-<p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这些处理起来非常简单，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
 <hr>
 <h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
@@ -310,7 +359,7 @@
 <p><strong>开始使用</strong>  </p>
 <ul>
 <li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line">module.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="built_in">module</span>.exports = cats;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
 <p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
 </li>
@@ -1088,7 +1137,7 @@
 <blockquote>
 <p>前者是在所选元素的结尾处添加内容，也就是说，并没有新增加一个节点；而后者则在所选元素的后面增加内容，很显然这时候增加了一个节点。可以通过一个很小的例子来证明，局部代码如下：</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a paragraph!<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line"></span><br><span class="line">&lt;p&gt;This is a paragraph!<span class="xml"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span></span><br><span class="line">hello!                           <span class="comment">//利用after()来添加 "Hello!"</span></span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">This is a paragraph!</span><br><span class="line">Hello!                          <span class="comment">//利用append()来添加 "Hello!"</span></span><br><span class="line">&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;This is a paragraph!&lt;/p&gt;</span><br><span class="line">hello!                           <span class="comment">//利用after()来添加 "Hello!"</span></span><br><span class="line"></span><br><span class="line">&lt;p&gt;</span><br><span class="line">This is a paragraph!</span><br><span class="line">Hello!                          <span class="comment">//利用append()来添加 "Hello!"</span></span><br><span class="line">&lt;<span class="regexp">/p&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="小测试-2"><a href="#小测试-2" class="headerlink" title="小测试"></a>小测试</h4><p>通过本节的学习，应该已经知道了利用jQuery来控制html元素的添加与删除以及css样式的设置，那么可以从添加、删除及设置样式的方法中任选几个来制作一个和上面所示类似功能的程序。</p>
 <hr>
 <h3 id="jQuery遍历"><a href="#jQuery遍历" class="headerlink" title="jQuery遍历"></a>jQuery遍历</h3><h4 id="关键词：遍历、祖先、后代、同胞、过滤"><a href="#关键词：遍历、祖先、后代、同胞、过滤" class="headerlink" title="关键词：遍历、祖先、后代、同胞、过滤"></a>关键词：遍历、祖先、后代、同胞、过滤</h4><ul>
@@ -1135,7 +1184,7 @@
 <li>加载：在jQuery中的AJAX方式为：load()，此方法能够从服务器中加载数据，并把返回的数据放入到被选元素中；语法为：<code>$(selector).load(URL, data, callback)</code>其中URL参数表示希望加载的地址；可选参数data规定了与请求一同发送的查询字符串键/值对集合；可选参数callback是load方法完成后所执行的函数名称，可设置参数为responsTxt（包含调用成功时的结果内容）,statusTxt（包含调用的状态）,xhr（包含XMLHttpRequest对象）；</li>
 <li>Get/Post：两种常见的从服务器请求数据的方法，<a href="http://www.w3school.com.cn/tags/html_ref_httpmethods.asp" target="_blank" rel="external">点击这个链接可了解这两者的详细区别</a>；</li>
 </ul>
-<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">'https://code.jquery.com/jquery-2.2.4.min.js'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line">        $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">'#btn'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $.get(<span class="string">'a.txt?t='</span>+ <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(), <span class="function"><span class="keyword">function</span> (<span class="params">data, status</span>) </span>&#123;</span><br><span class="line">                    alert(<span class="string">'Date:'</span>+data+<span class="string">"\nStatus:"</span>+status);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>Get<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset="utf-8"&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">    &lt;script type="text/javascript" src='https://code.jquery.com/jquery-2.2.4.min.js'&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        $(document).ready(function () &#123;</span><br><span class="line">            $('#btn').click(function () &#123;</span><br><span class="line">                $.get('a.txt?t='+ new Date().getTime(), function (data, status) &#123;</span><br><span class="line">                    alert('Date:'+data+"\nStatus:"+status);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;button type="button" id="btn"&gt;Get&lt;/button&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：由于ajax部分的内容需要在服务器环境下进行测试，所以本节只给出了代码的例子。</p>
 </blockquote>
