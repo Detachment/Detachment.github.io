@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://detachment.club/"/>
-  <updated>2017-03-18T15:41:33.810Z</updated>
+  <updated>2017-03-18T15:55:13.174Z</updated>
   <id>http://detachment.club/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://detachment.club/2017/03/11/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%20Vue-HackerNews-2.0%20%E9%A1%B9%E7%9B%AE/"/>
     <id>http://detachment.club/2017/03/11/从零开始构建 Vue-HackerNews-2.0 项目/</id>
     <published>2017-03-10T16:00:00.000Z</published>
-    <updated>2017-03-18T15:41:33.810Z</updated>
+    <updated>2017-03-18T15:55:13.174Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欢迎大家来到我的第一个程序搭建教程: <strong>从零开始搭建 《vue-hackernews-2.0》</strong>。  </p>
 <p>作为一个前端开发的初学者，在接触学习到 Vue.js 的时候，我发现官方提供并极力推荐的项目《vue-hackernews-2.0》对于新手而言比较难理解。但同时我又被这种高度工业化的项目所吸引，所以我决定花一段时间来弄清楚这个项目到底是怎么运行起来的。 在这个教程中我将会通过利用不同的版本的迭代的方式来逐步重建这个项目。</p>
@@ -30,7 +30,7 @@
 <p>注明：简便起见，如未特别说明，在之后的所有章节中我会用 Vue-HN 来代替 vue-hackernews-2.0 项目。 项目运行的系统是 Windows 7，因条件限制未在其他系统上测试，请见谅。</p>
 </blockquote>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="0-Vue-js-Vuex-Vue-router-HN-API-Firebase-ES6"><a href="#0-Vue-js-Vuex-Vue-router-HN-API-Firebase-ES6" class="headerlink" title="0. Vue.js, Vuex, Vue-router, HN API, Firebase, ES6"></a>0. Vue.js, Vuex, Vue-router, HN API, Firebase, ES6</h3><h4 id="章节前言"><a href="#章节前言" class="headerlink" title="章节前言"></a>章节前言</h4><p>作为一个前端初学者，我对最原始的页面构造比较熟悉，也就是页面只由 HTML、CSS 以及 JavaScript 构成。所以自从我开始学习 Vue-HN 这个项目我就想是不是可以用最原始的方法来实现这个项目（当然，不考虑用户体验及性能等方面）。在经过多次失败的尝试之后，我终于只利用 Vue.js 及其生态中的一些库实现了这个版本。下面这两个动图就分别是我这个版本和官方版本。</p>
-<p align="center"><br>    <img src="./img/Author.gif" width="700px" alt="Origin Website"><br>    <br><br>    [ 我的版本 ]<br>    <br><br>    <br><br>    <img src="./img/Mine.gif" width="700px" alt="Plane Vue.js"><br>    <br><br>    [ 官方版本 ]<br></p>
+<p align="center"><br>    <img src="http://o9ybnkuir.bkt.clouddn.com/vue-hackernews/0-edition/Anthor.gif" width="700px" alt="Origin Website"><br>    [ 我的版本 ]<br>    <br><br>    <img src="http://o9ybnkuir.bkt.clouddn.com/vue-hackernews/0-edition/Mine.gif" width="700px" alt="Plane Vue.js"><br>    [ 官方版本 ]<br></p>
 
 <p>从上面的动图我们可以清楚的看到，基本上官方给出例子中的所有功能在我这个版本中都被实现出来了，而且仅仅只依赖于 Vue.js 以及其生态中的一些库。在开始搭建这个版本的项目之前，你应该对下面所列的链接中的知识点有所了解。了解完之后开始看代码才会有初步的认识。（了解每个链接对应的知识点即可，链接仅供参考。比如要了解 ES2015 的知识，就很推荐阮一峰老师的教程）</p>
 <ul>
@@ -66,7 +66,7 @@
 <h4 id="后续版本"><a href="#后续版本" class="headerlink" title="后续版本"></a>后续版本</h4><p>目前一切顺利。但是如果我们更耐心些，重新审视这个版本的项目，我们会发现存在一些致命的缺陷。比如所有的文件都很混乱，项目的结构非常的脆弱，而且没有任何措施用于提高访问速度、优化用户体验。这些都会造成很高的维护成本。<br>在下一个版本中，我们将针对这些作出一些改进。  </p>
 <hr>
 <h3 id="1-Webpack-Vue-js-Vue-router-Vuex-and-Hackernews-API"><a href="#1-Webpack-Vue-js-Vue-router-Vuex-and-Hackernews-API" class="headerlink" title="1. Webpack, Vue.js, Vue-router, Vuex and Hackernews API"></a>1. Webpack, Vue.js, Vue-router, Vuex and Hackernews API</h3><h4 id="章节前言-1"><a href="#章节前言-1" class="headerlink" title="章节前言"></a>章节前言</h4><p>经过第一个版本后，我们对这个项目有了初步的了解。在这个版本中，我们会使用一些工具，使得我们这个项目初步模块化，同时也更加便于维护。在这个版本中我们将会使用到一些基本的插件和包，并通过 webpack 来实现功能。我们只需要简单的配置一下 webpack 就行，不会涉及到服务器端的内容，不会涉及缓存也不会涉及生产模式及开发模式的不同配置。下面的动图就是这个版本的成品，同时这个动图里面还包含了对整个项目的简单解构。</p>
-<p align="center"><br>    <img src="./public/first_edition.gif" width="700px" alt="Basic functions and simple deconstruction"><br>    <br><br>    [ 基本功能及简单解构 ]<br></p>
+<p align="center"><br>    <img src="http://o9ybnkuir.bkt.clouddn.com/vue-hackernews/1-edition/first_edition.gif" width="700px" alt="Basic functions and simple deconstruction"><br>    [ 基本功能及简单解构 ]<br></p>
 
 <p>为了更好的理解这个版本的内容，下面会列出一些需要了解的工具、插件和库的链接，你只需要对这些有基本的了解就行。（如果前面版本中已经列出来了，那么本节将不再重复。比如 Vue.js 及其生态、ES6 等等）：</p>
 <ul>
@@ -111,7 +111,7 @@
 <h4 id="后续版本-2"><a href="#后续版本-2" class="headerlink" title="后续版本"></a>后续版本</h4><p>基本上这就是我对这个项目的理解了。有一些不懂的地方没有说明，也有一些懂的地方没有说到。之后对整个项目有更深入、更高层次的理解再来补充这一章。在下一个版本中，我将会根据我自己的喜好对整个项目进行一些改造（主要是外在的页面）。下个版本再见。  </p>
 <hr>
 <h3 id="3-Change-the-Project-as-I-like"><a href="#3-Change-the-Project-as-I-like" class="headerlink" title="3. Change the Project as I like"></a>3. Change the Project as I like</h3><h4 id="章节前言-3"><a href="#章节前言-3" class="headerlink" title="章节前言"></a>章节前言</h4><p>在这个版本中，我将会根据自己的喜好对整个网页进行一些改造，使得网页整体更具有 Vue.js 风格，至少从视觉上来说更加的 Vue.js。下面的动图可以预览到我这个版本的成品，为了对照官方例子，你可以去<a href="https://vue-hn.now.sh/top" target="_blank" rel="external">官网</a>查看原网页。对于所添加及更改的部分，本节的下半部分将会详细介绍。</p>
-<p align="center"><br>    <img src="./public/last-edition-resize.gif" width="700px" alt="Last Edition of Vue-HackerNews"><br>    <br><br>    [ Vue-HackerNews 最后版本 ]<br></p>
+<p align="center"><br>    <img src="http://o9ybnkuir.bkt.clouddn.com/vue-hackernews/3-edition/last-edition-resize.gif" width="700px" alt="Last Edition of Vue-HackerNews"><br>    [ Vue-HackerNews 最后版本 ]<br></p>
 
 <h4 id="开发过程-1"><a href="#开发过程-1" class="headerlink" title="开发过程"></a>开发过程</h4><ol>
 <li><p><strong>使网页更具 Vue.js 风格</strong><br>打开这个版本（或者看上面的动图），一个最明显的变化就是网页的主色调发生了改变。我将页面中所有的橘黄色（<code>#ff6600</code>）都替换成了浅绿色（<code>#41b883</code>）。主色调是一个网站风格的重要组成部分，比如 HackerNews 的橘黄、知乎的深蓝、github 的墨黑以及 Vue.js 的浅绿。<br>至少从视觉上，我觉得这更加的 Vue.js 了，嘿嘿。</p>
