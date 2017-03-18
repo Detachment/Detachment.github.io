@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[从零开始搭建 《vue-hackernews-2.0》]]></title>
+      <title><![CDATA[【置顶】 从零开始搭建 《vue-hackernews-2.0》]]></title>
       <url>http://detachment.club/2017/03/11/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%20Vue-HackerNews-2.0%20%E9%A1%B9%E7%9B%AE/</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欢迎大家来到我的第一个程序搭建教程: <strong>从零开始搭建 《vue-hackernews-2.0》</strong>。  </p>
 <p>作为一个前端开发的初学者，在接触学习到 Vue.js 的时候，我发现官方提供并极力推荐的项目《vue-hackernews-2.0》对于新手而言比较难理解。但同时我又被这种高度工业化的项目所吸引，所以我决定花一段时间来弄清楚这个项目到底是怎么运行起来的。 在这个教程中我将会通过利用不同的版本的迭代的方式来逐步重建这个项目。</p>
