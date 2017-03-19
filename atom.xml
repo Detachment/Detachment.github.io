@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://detachment.club/"/>
-  <updated>2017-03-18T16:02:42.912Z</updated>
+  <updated>2017-03-19T08:48:12.020Z</updated>
   <id>http://detachment.club/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://detachment.club/2017/03/11/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%20Vue-HackerNews-2.0%20%E9%A1%B9%E7%9B%AE/"/>
     <id>http://detachment.club/2017/03/11/从零开始构建 Vue-HackerNews-2.0 项目/</id>
     <published>2017-03-10T16:00:00.000Z</published>
-    <updated>2017-03-18T16:02:42.912Z</updated>
+    <updated>2017-03-19T08:48:12.020Z</updated>
     
     <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>欢迎大家来到我的第一个程序搭建教程: <strong>从零开始搭建 《vue-hackernews-2.0》</strong>。  </p>
 <p>作为一个前端开发的初学者，在接触学习到 Vue.js 的时候，我发现官方提供并极力推荐的项目《vue-hackernews-2.0》对于新手而言比较难理解。但同时我又被这种高度工业化的项目所吸引，所以我决定花一段时间来弄清楚这个项目到底是怎么运行起来的。 在这个教程中我将会通过利用不同的版本的迭代的方式来逐步重建这个项目。</p>
@@ -127,6 +127,9 @@
 <li><strong>在 <code>ItemView.vue</code> 页面增加 <code>toTop</code> 按钮</strong><br>返回顶部按钮也是很多网站的常见功能。由于首页只有20条信息，所以在首页上我没有加上这个。但是在评论页面，动辄上百条，我认为加上这个按钮应该会方便一些。反正都是根据我自己的喜好来加的，有没有实际意义我也不知道，哈哈。</li>
 </ol>
 <h4 id="章节结尾"><a href="#章节结尾" class="headerlink" title="章节结尾"></a>章节结尾</h4><p>到目前为止，这个项目的所有版本都已经完成了。在完成这些版本的过程中，我感受到了思考和创造带来的乐趣。这就是生活啊，希望大家也能感受到。<br>最后，衷心感谢原作者 <a href="https://github.com/yyx990803" target="_blank" rel="external">尤雨溪前辈</a> 给我们提供了一个这么好用的框架以及这么精彩的官方示例！</p>
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>从开始接触这个项目到现在已经过去好几个月了，一直想通过学习这个项目来巩固 Vue.js 的知识点，但很长一段时间都没有什么收获。因为知识储备不够，很多内容都看不懂。碰壁碰多了就知道转弯。然后去学习 ES6 以及 Node.js 相关知识，再来看的时候，很多地方就豁然开朗了。在这之后，对这个项目的理解速度就远超过之前了。    </p>
+<p>一天晚上睡不着，就思考着这种情况对于前端新手应该是挺常见的，我为什么不把自己的经验教训分享出来给大家？然后就有了这个项目。<br>项目实现的过程遇到各种困难，特别是第一个版本和第三个版本。第一个版本所遇到的关键点在上面已经说过了，不断的阅读各种文档然后尝试，最后终于在 Chrome 中跑了起来。挫败感是常态，成就感是偶尔才有的。第三个版本是官方完整版，自认为直到现在对其的理解程度都只有十之七八。但也暂时不纠结了，没有工作经验，很多在工程中需要考虑的因素对我而言还比较捉摸不透。很多问题在经验丰富的开发者来看是一种常识，但对于新手而言却会感到无比的困惑。“书读百遍，其义自见” 就是这个意思吧。  </p>
+<p>现在项目完成了，再来回顾整个项目，有点感慨。最开始对这个项目的想法是从简到繁一步一步和大家一起重建这个项目，整个过程会非常详细。现在项目完成了，由于精力和知识层次的限制，却并没有完全达到这种效果，还是有点遗憾。不过除此之外，项目覆盖的还是比较全面的。<br>最后，希望看过我这个教程的小伙伴能够有所收获；如果有小伙伴或者前辈发现文中出现错误，也请不吝赐教，先谢谢大家了。</p>
 ]]></content>
     
     <summary type="html">
@@ -2356,11 +2359,11 @@
     
       <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
     
+      <category term="HTML" scheme="http://detachment.club/tags/HTML/"/>
+    
       <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
-    
-      <category term="HTML" scheme="http://detachment.club/tags/HTML/"/>
     
   </entry>
   
