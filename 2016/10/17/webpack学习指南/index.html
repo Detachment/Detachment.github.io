@@ -494,7 +494,7 @@
 <li>less stylesheets → css stylesheets</li>
 <li>等等</li>
 </ul>
-<p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这些处理起来非常简单，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
 <hr>
 <h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
@@ -524,7 +524,7 @@
 <p><strong>开始使用</strong>  </p>
 <ul>
 <li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line">module.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="built_in">module</span>.exports = cats;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
 <p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
 </li>
@@ -1040,7 +1040,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-count">12</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1141,7 +1141,7 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="http://blog.csdn.net/aimingoo/" title="周爱民" target="_blank">周爱民</a>
+                  <a href="http://2ality.com/index.html" title="2ality" target="_blank">2ality</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
@@ -1150,6 +1150,14 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="http://es6.ruanyifeng.com/" title="ES6入门" target="_blank">ES6入门</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TomXu/category/338104.html" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://exploringjs.com/es2016-es2017/index.html" title="ES2016 & ES2017" target="_blank">ES2016 & ES2017</a>
                 </li>
               
             </ul>

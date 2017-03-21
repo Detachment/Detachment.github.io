@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://detachment.club/"/>
-  <updated>2017-03-19T08:48:12.020Z</updated>
+  <updated>2017-03-21T13:49:09.152Z</updated>
   <id>http://detachment.club/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript 基础知识总结</title>
+    <link href="http://detachment.club/2017/03/21/JavaScript%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>http://detachment.club/2017/03/21/JavaScript 基础知识总结/</id>
+    <published>2017-03-20T16:00:00.000Z</published>
+    <updated>2017-03-21T13:49:09.152Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="总结" scheme="http://detachment.club/categories/%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+      <category term="JavaScript" scheme="http://detachment.club/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>【置顶】 从零开始搭建 《vue-hackernews-2.0》</title>
@@ -596,7 +618,7 @@
 <li>less stylesheets → css stylesheets</li>
 <li>等等</li>
 </ul>
-<p>这些处理起来非常简单，如：<br><figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
+<p>这些处理起来非常简单，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="external">loader。</a></p>
 <hr>
 <h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
@@ -626,7 +648,7 @@
 <p><strong>开始使用</strong>  </p>
 <ul>
 <li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line">module.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="built_in">module</span>.exports = cats;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
 <p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
 </li>
@@ -1340,11 +1362,11 @@
       <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="Bootstrap" scheme="http://detachment.club/tags/Bootstrap/"/>
     
       <category term="框架" scheme="http://detachment.club/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -2357,11 +2379,11 @@
       <category term="前端" scheme="http://detachment.club/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
+      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
       <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
     
       <category term="HTML" scheme="http://detachment.club/tags/HTML/"/>
-    
-      <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
     
@@ -2492,9 +2514,9 @@
       <category term="CSS" scheme="http://detachment.club/categories/CSS/"/>
     
     
-      <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
-    
       <category term="前端" scheme="http://detachment.club/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="CSS" scheme="http://detachment.club/tags/CSS/"/>
     
       <category term="基础" scheme="http://detachment.club/tags/%E5%9F%BA%E7%A1%80/"/>
     
