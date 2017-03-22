@@ -6,7 +6,12 @@
     <entry>
       <title><![CDATA[JavaScript 基础知识总结]]></title>
       <url>http://detachment.club/2017/03/21/JavaScript%20%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇博客为 JavaScript 基础知识总结，长期更新。</p>
+<a id="more"></a>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ol>
+<li>数据类型（p23）<br>ECMAScript 中有5种简单数据类型（也称基本数据类型）：Undefined，Null，Boolean，Number，String；一种复杂数据类型：Object。ES6中新增一个基本类型：Symbol，表示独一无二的值。</li>
+</ol>
+]]></content>
     </entry>
     
     <entry>
