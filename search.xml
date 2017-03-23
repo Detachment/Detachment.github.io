@@ -18,7 +18,37 @@
 <li>基本类型： typeof</li>
 <li>引用类型： instanceof</li>
 </ul>
-<h4 id="4-2-执行环境及作用域"><a href="#4-2-执行环境及作用域" class="headerlink" title="4.2 执行环境及作用域"></a>4.2 执行环境及作用域</h4>]]></content>
+<h4 id="4-2-执行环境及作用域"><a href="#4-2-执行环境及作用域" class="headerlink" title="4.2 执行环境及作用域"></a>4.2 执行环境及作用域</h4><ul>
+<li>执行环境：  </li>
+<li>变量对象：   </li>
+<li>作用域链：</li>
+<li>活动对象：</li>
+</ul>
+<h5 id="4-2-1-延长作用域链"><a href="#4-2-1-延长作用域链" class="headerlink" title="4.2.1 延长作用域链"></a>4.2.1 延长作用域链</h5><p>两种情况下会延长： with 语句以及 try-catch 语句的 catch 块</p>
+<h5 id="4-2-2-没有块级作用域"><a href="#4-2-2-没有块级作用域" class="headerlink" title="4.2.2 没有块级作用域"></a>4.2.2 没有块级作用域</h5><ul>
+<li>声明变量：</li>
+<li>查询标识符：</li>
+</ul>
+<h4 id="4-3-垃圾收集"><a href="#4-3-垃圾收集" class="headerlink" title="4.3 垃圾收集"></a>4.3 垃圾收集</h4><p>原理：找到不再继续使用的变量，然后释放其占用的内存。</p>
+<h5 id="4-3-1-标记清除"><a href="#4-3-1-标记清除" class="headerlink" title="4.3.1 标记清除"></a>4.3.1 标记清除</h5><p>JavaScript 中最常用的垃圾收集方式</p>
+<h5 id="4-3-2-引用计数"><a href="#4-3-2-引用计数" class="headerlink" title="4.3.2 引用计数"></a>4.3.2 引用计数</h5><p>不太常见的垃圾收集策略。含义是跟踪记录每个值被引用的次数。</p>
+<ul>
+<li>循环引用：</li>
+<li>将变量设置为 null 意味着切断变量与它之前引用的值之间的连接</li>
+</ul>
+<h5 id="4-3-3-性能问题"><a href="#4-3-3-性能问题" class="headerlink" title="4.3.3 性能问题"></a>4.3.3 性能问题</h5><p>讨论的是以怎样的标准来确定是否回收</p>
+<h5 id="4-4-4-管理内存"><a href="#4-4-4-管理内存" class="headerlink" title="4.4.4 管理内存"></a>4.4.4 管理内存</h5><ul>
+<li>解除引用：优化内存的最佳方式，就是为执行中的代码只保存必要的数据。一旦不再有用，最好将其值设置为 null 来释放引用。（解除引用并不意味着自动回收所占内存，而是让值脱离执行环境，以便垃圾收集器下次将其回收）</li>
+</ul>
+<h4 id="4-4-小结"><a href="#4-4-小结" class="headerlink" title="4.4 小结"></a>4.4 小结</h4><hr>
+<h3 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h3><p>在 ECMAScript 中，引用类型是一种数据结构，用于将数据和功能组织在一起。常被称为类，但并不妥当。因为尽管 ECMAScript 从技术上讲是一门面向对象的语言，但是不具备面向对象语言所支持的类和接口等基本结构。</p>
+<ul>
+<li>对象定义：</li>
+<li>引用类型有时候也被称为对象定义</li>
+<li>实例：</li>
+<li>构造函数：</li>
+</ul>
+<h4 id="5-1-Object-类型"><a href="#5-1-Object-类型" class="headerlink" title="5.1 Object 类型"></a>5.1 Object 类型</h4>]]></content>
     </entry>
     
     <entry>
