@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="博客,置顶,订阅," />
+  <meta name="keywords" content="博客,置顶,订阅,加密," />
 
 
 
@@ -96,7 +96,7 @@
 <meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner2.JPG">
 <meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner3.JPG">
 <meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner4.JPG">
-<meta property="og:updated_time" content="2016-12-28T08:00:56.554Z">
+<meta property="og:updated_time" content="2017-03-31T07:16:39.804Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客构建笔记">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。">
@@ -390,6 +390,8 @@
 </ol>
 <hr>
 <h3 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;这也是一个一直想要的功能，因为很有可能有些博客的重要性比其他的更高，但是由于默认按照时间来排序导致翻页之后才能看到这些文章。正好这两天在捣鼓博客，索性将这个功能也做出来。最开始的时候准备将博客的源码文件捋清楚后自己修改代码，但是打开hexo文件夹一看，打了个哆嗦就把文件夹关了：我是不是傻，为啥不先去搜索一番？<br>&nbsp;&nbsp;&nbsp;&nbsp;果然，一搜就发现有很多人多有这个需求: <a href="https://github.com/iissnan/hexo-theme-next/issues/415" target="_blank" rel="external">如何置顶post？</a>。整个帖子看下来的结论是：各种尝试的结果都或多或少有bug，所以此暂时暂时搁置，日后再来开发。不过里面倒是有个链接指出了通用配置方法，这也是目前我所采用的方法。<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="external">原文写的比较详细</a>，我也就不再多费口舌了，总的来说就是更改排序规则，并将新的变量（top）增加到post的开头部分。经测试，效果不错。</p>
+<hr>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;对于某些涉及隐私，或者只希望分享给有限人群的博客，加密功能就非常实用了。之前一直没有将这个功能加上来，因为需求没这么迫切。最近准备开始投简历，里面会涉及一些个人信息，但是又希望公司能够通过博客的形式看到简历，这个功能就必不可少了。通过搜索，找到这个一个帖子，基本能满足需求：<br><a href="http://edolphin.site/2016/05/31/encrypt-post/" target="_blank" rel="external">加密博客内容，使用密码访问</a><br>&nbsp;&nbsp;&nbsp;&nbsp;仔细看了一下这篇博客及对应项目的 GitHub 文档，满足基本需求不成问题，但是有两点不足：第一，官方文档写的不是太好，有些地方不好理解；第二，对于基于 GitHub page 的博客基本无效。然后在 GitHub 上顺藤摸瓜，找出了下面这个项目：<br><a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="external">hexo-blog-encrypt</a><br>&nbsp;&nbsp;&nbsp;&nbsp;文档清晰易懂，开发者响应迅速，最重要的是能够完整加密。如果非要提不足的地方，那就是解密后目录栏不会自动更新。和开发者沟通过，这个需要根据不同的 Hexo 主题进行对应的更改，经过一番尝试后测试失败。由于时间问题，暂时我就不去管它了。<br>&nbsp;&nbsp;&nbsp;&nbsp;所以，如果你也需要为博客设置密码，推荐第二种方式。<br>&nbsp;&nbsp;&nbsp;&nbsp;非常感谢两位开发者做出的探索。</p>
 
       
     </div>
@@ -416,6 +418,8 @@
             <a href="/tags/置顶/" rel="tag">#置顶</a>
           
             <a href="/tags/订阅/" rel="tag">#订阅</a>
+          
+            <a href="/tags/加密/" rel="tag">#加密</a>
           
         </div>
       
@@ -526,7 +530,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -642,7 +646,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#订阅"><span class="nav-number">2.1.</span> <span class="nav-text">订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#置顶"><span class="nav-number">2.2.</span> <span class="nav-text">置顶</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#订阅"><span class="nav-number">2.1.</span> <span class="nav-text">订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#置顶"><span class="nav-number">2.2.</span> <span class="nav-text">置顶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密"><span class="nav-number">2.3.</span> <span class="nav-text">加密</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
