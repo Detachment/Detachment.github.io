@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="前言本篇博客为 JavaScript 基础知识总结，长期更新。">
+<meta name="description" content="本篇博客为 JavaScript 基础知识总结，长期更新。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript 基础知识总结（进行中）">
 <meta property="og:url" content="http://detachment.club/2017/03/21/JavaScript 基础知识总结/index.html">
 <meta property="og:site_name" content="Share and Create">
-<meta property="og:description" content="前言本篇博客为 JavaScript 基础知识总结，长期更新。">
-<meta property="og:updated_time" content="2017-04-01T11:49:59.131Z">
+<meta property="og:description" content="本篇博客为 JavaScript 基础知识总结，长期更新。">
+<meta property="og:updated_time" content="2017-04-04T08:27:19.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript 基础知识总结（进行中）">
-<meta name="twitter:description" content="前言本篇博客为 JavaScript 基础知识总结，长期更新。">
+<meta name="twitter:description" content="本篇博客为 JavaScript 基础知识总结，长期更新。">
 
 
 
@@ -366,89 +366,115 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇博客为 JavaScript 基础知识总结，长期更新。</p>
+        <blockquote>
+<p>本篇博客为 JavaScript 基础知识总结，长期更新。</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="4-变量、作用域和内存问题"><a href="#4-变量、作用域和内存问题" class="headerlink" title="4. 变量、作用域和内存问题"></a>4. 变量、作用域和内存问题</h3><h4 id="4-1-基本类型和引用类型"><a href="#4-1-基本类型和引用类型" class="headerlink" title="4.1 基本类型和引用类型"></a>4.1 基本类型和引用类型</h4><p>按值访问：<br>按引用访问：  </p>
-<h5 id="4-1-1-动态属性"><a href="#4-1-1-动态属性" class="headerlink" title="4.1.1 动态属性"></a>4.1.1 动态属性</h5><p>只能给引用类型值动态添加属性  </p>
-<h5 id="4-1-2-复制变量值"><a href="#4-1-2-复制变量值" class="headerlink" title="4.1.2 复制变量值"></a>4.1.2 复制变量值</h5><h5 id="4-1-3-传递参数"><a href="#4-1-3-传递参数" class="headerlink" title="4.1.3 传递参数"></a>4.1.3 传递参数</h5><ul>
+<h2 id="JavaScript-简介"><a href="#JavaScript-简介" class="headerlink" title="JavaScript 简介"></a>JavaScript 简介</h2><h2 id="在-HTML-中使用-JavaScript"><a href="#在-HTML-中使用-JavaScript" class="headerlink" title="在 HTML 中使用 JavaScript"></a>在 HTML 中使用 JavaScript</h2><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h2 id="变量、作用域和内存问题"><a href="#变量、作用域和内存问题" class="headerlink" title="变量、作用域和内存问题"></a>变量、作用域和内存问题</h2><h3 id="基本类型和引用类型"><a href="#基本类型和引用类型" class="headerlink" title="基本类型和引用类型"></a>基本类型和引用类型</h3><p>按值访问：<br>按引用访问：  </p>
+<h4 id="动态属性"><a href="#动态属性" class="headerlink" title="动态属性"></a>动态属性</h4><p>只能给引用类型值动态添加属性  </p>
+<h4 id="复制变量值"><a href="#复制变量值" class="headerlink" title="复制变量值"></a>复制变量值</h4><h4 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h4><ul>
 <li>ECMAScript 中所有函数的参数都是按值传递的  </li>
 <li>命名参数：  </li>
 </ul>
-<h5 id="4-1-4-检测类型"><a href="#4-1-4-检测类型" class="headerlink" title="4.1.4 检测类型"></a>4.1.4 检测类型</h5><ul>
+<h4 id="检测类型"><a href="#检测类型" class="headerlink" title="检测类型"></a>检测类型</h4><ul>
 <li>基本类型： typeof</li>
 <li>引用类型： instanceof</li>
 </ul>
-<h4 id="4-2-执行环境及作用域"><a href="#4-2-执行环境及作用域" class="headerlink" title="4.2 执行环境及作用域"></a>4.2 执行环境及作用域</h4><ul>
+<h3 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h3><ul>
 <li>执行环境：  </li>
 <li>变量对象：   </li>
 <li>作用域链：</li>
 <li>活动对象：</li>
 </ul>
-<h5 id="4-2-1-延长作用域链"><a href="#4-2-1-延长作用域链" class="headerlink" title="4.2.1 延长作用域链"></a>4.2.1 延长作用域链</h5><p>两种情况下会延长： with 语句以及 try-catch 语句的 catch 块</p>
-<h5 id="4-2-2-没有块级作用域"><a href="#4-2-2-没有块级作用域" class="headerlink" title="4.2.2 没有块级作用域"></a>4.2.2 没有块级作用域</h5><ul>
+<h4 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h4><p>两种情况下会延长： with 语句以及 try-catch 语句的 catch 块</p>
+<h4 id="没有块级作用域"><a href="#没有块级作用域" class="headerlink" title="没有块级作用域"></a>没有块级作用域</h4><ul>
 <li>声明变量：</li>
 <li>查询标识符：</li>
 </ul>
-<h4 id="4-3-垃圾收集"><a href="#4-3-垃圾收集" class="headerlink" title="4.3 垃圾收集"></a>4.3 垃圾收集</h4><p>原理：找到不再继续使用的变量，然后释放其占用的内存。</p>
-<h5 id="4-3-1-标记清除"><a href="#4-3-1-标记清除" class="headerlink" title="4.3.1 标记清除"></a>4.3.1 标记清除</h5><p>JavaScript 中最常用的垃圾收集方式</p>
-<h5 id="4-3-2-引用计数"><a href="#4-3-2-引用计数" class="headerlink" title="4.3.2 引用计数"></a>4.3.2 引用计数</h5><p>不太常见的垃圾收集策略。含义是跟踪记录每个值被引用的次数。</p>
+<h3 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h3><p>原理：找到不再继续使用的变量，然后释放其占用的内存。</p>
+<h4 id="标记清除"><a href="#标记清除" class="headerlink" title="标记清除"></a>标记清除</h4><p>JavaScript 中最常用的垃圾收集方式</p>
+<h4 id="引用计数"><a href="#引用计数" class="headerlink" title="引用计数"></a>引用计数</h4><p>不太常见的垃圾收集策略。含义是跟踪记录每个值被引用的次数。</p>
 <ul>
 <li>循环引用：</li>
 <li>将变量设置为 null 意味着切断变量与它之前引用的值之间的连接</li>
 </ul>
-<h5 id="4-3-3-性能问题"><a href="#4-3-3-性能问题" class="headerlink" title="4.3.3 性能问题"></a>4.3.3 性能问题</h5><p>讨论的是以怎样的标准来确定是否回收</p>
-<h5 id="4-4-4-管理内存"><a href="#4-4-4-管理内存" class="headerlink" title="4.4.4 管理内存"></a>4.4.4 管理内存</h5><ul>
+<h4 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h4><p>讨论的是以怎样的标准来确定是否回收</p>
+<h4 id="管理内存"><a href="#管理内存" class="headerlink" title="管理内存"></a>管理内存</h4><ul>
 <li>解除引用：优化内存的最佳方式，就是为执行中的代码只保存必要的数据。一旦不再有用，最好将其值设置为 null 来释放引用。（解除引用并不意味着自动回收所占内存，而是让值脱离执行环境，以便垃圾收集器下次将其回收）</li>
 </ul>
-<h4 id="4-4-小结"><a href="#4-4-小结" class="headerlink" title="4.4 小结"></a>4.4 小结</h4><hr>
-<h3 id="5-引用类型"><a href="#5-引用类型" class="headerlink" title="5. 引用类型"></a>5. 引用类型</h3><p>在 ECMAScript 中，引用类型是一种数据结构，用于将数据和功能组织在一起。常被称为类，但并不妥当。因为尽管 ECMAScript 从技术上讲是一门面向对象的语言，但是不具备面向对象语言所支持的类和接口等基本结构。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><hr>
+<h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><p>在 ECMAScript 中，引用类型是一种数据结构，用于将数据和功能组织在一起。常被称为类，但并不妥当。因为尽管 ECMAScript 从技术上讲是一门面向对象的语言，但是不具备面向对象语言所支持的类和接口等基本结构。</p>
 <ul>
 <li>对象定义：</li>
 <li>引用类型有时候也被称为对象定义</li>
 <li>实例：</li>
 <li>构造函数：</li>
 </ul>
-<h4 id="5-1-Object-类型"><a href="#5-1-Object-类型" class="headerlink" title="5.1 Object 类型"></a>5.1 Object 类型</h4><ul>
+<h3 id="Object-类型"><a href="#Object-类型" class="headerlink" title="Object 类型"></a>Object 类型</h3><ul>
 <li>创建：构造函数或者对象字面量</li>
 <li>表达上下文：</li>
 <li>语句上下文：</li>
 <li>访问对象属性方式：点或者方括号，方括号会先计算后访问</li>
 </ul>
-<h4 id="5-2-Array-类型"><a href="#5-2-Array-类型" class="headerlink" title="5.2 Array 类型"></a>5.2 Array 类型</h4><ul>
+<h3 id="Array-类型"><a href="#Array-类型" class="headerlink" title="Array 类型"></a>Array 类型</h3><ul>
 <li>创建：构造函数（可省略 new ）或者数组字面量表示法</li>
 <li>用字面量表示法创建时，不会调用相关函数（对象及数组都是这样）</li>
 <li>数组的 length 可写</li>
 </ul>
-<h5 id="5-2-1-检测数组"><a href="#5-2-1-检测数组" class="headerlink" title="5.2.1 检测数组"></a>5.2.1 检测数组</h5><ul>
+<h4 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h4><ul>
 <li>对于只有一个全局作用域： instanceof</li>
 <li>对于网页中包含多个框架： Array.isArray()</li>
 </ul>
-<h5 id="5-2-2-转换方法"><a href="#5-2-2-转换方法" class="headerlink" title="5.2.2 转换方法"></a>5.2.2 转换方法</h5><p>所有对象都有 toLocalString(), toString(), valueOf() 方法，对于数组：</p>
+<h4 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h4><p>所有对象都有 toLocalString(), toString(), valueOf() 方法，对于数组：</p>
 <ul>
 <li>toString()：返回由数组每个值的字符串形式拼接而成并且以逗号隔开的字符串（实际上是调用数组每个值的 toString() 方法）</li>
 <li>valueOf(): 返回数组</li>
 <li>alert() 的参数应该是字符串形式，如果不是则会调用 toString() 方法</li>
 <li>toLocalString()：除了是调用每个值的 toLocalString() 方法，其与和 toString() 没有区别</li>
 </ul>
-<h5 id="5-2-3-栈方法"><a href="#5-2-3-栈方法" class="headerlink" title="5.2.3 栈方法"></a>5.2.3 栈方法</h5><ul>
+<h4 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h4><ul>
 <li>栈：可以限制插入和删除项的数据结构，是一种 LIFO (last-in-first-out) 的数据结构</li>
 <li>push()：参数任意，添加到数组末尾，返回的是 <strong>数字的长度</strong></li>
 <li>pop()：移除数组最后一项，返回的是 <strong>被移除的项</strong></li>
 </ul>
-<h5 id="5-2-4-队列方法"><a href="#5-2-4-队列方法" class="headerlink" title="5.2.4 队列方法"></a>5.2.4 队列方法</h5><ul>
+<h4 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h4><ul>
 <li>队列：FIFO(First-in-First-Out)</li>
 <li>shift(): 移除第一项，并返回该项，数组长度减一</li>
 <li>unshift(): 在数组前端添加项，并返回数组长度</li>
 </ul>
-<h5 id="5-2-5-重排序方法"><a href="#5-2-5-重排序方法" class="headerlink" title="5.2.5 重排序方法"></a>5.2.5 重排序方法</h5><ul>
+<h4 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h4><ul>
 <li>reverse(): 反转数组的顺序</li>
 <li>sort(): 默认情况下按照升序排列，其原理是调用每个项的 toString() 方法，然后比较字符串，不适用大多情况，因此常传入比较参数。</li>
 </ul>
-<h5 id="5-2-6-操作方法"><a href="#5-2-6-操作方法" class="headerlink" title="5.2.6 操作方法"></a>5.2.6 操作方法</h5><ul>
+<h4 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h4><ul>
 <li>concat(): 合并数组</li>
 <li>slice(): 取部分数组</li>
 <li>splice(): 接收多个参数，第一个为要删除的起始位置，第二个表示要删除的项数，第三个表示要插入的项。返回被删除的项，并且会改变原数组。</li>
 </ul>
+<h4 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h4><ul>
+<li>indexOf(): 两参数，分别为要查找项及开始位置。返回在第一个匹配项在数组中的位置，不存在则返回 -1。使用全等比较。</li>
+<li>lastIndexOf(): 同上，从数组末尾开始</li>
+</ul>
+<h4 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h4><p>每个方法接收两个参数：处理函数及作用域（可选）。处理函数接收三个参数：数组项、项的位置及数组对象。都不会改变原数组。</p>
+<ul>
+<li>every(): 在函数作用后，所有项返回 true 则返回 true</li>
+<li>filter(): 返回函数结果为 true 的项组成的数组</li>
+<li>forEach(): 无返回值</li>
+<li>map(): 返回函数作用后的新数组</li>
+<li>some(): 有一项返回 true 则返回 true</li>
+</ul>
+<h4 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h4><p>归并数组所有项，最终返回一个值。每个方法接收两个参数：作用在每一项的函数及归并基础值（可选）。每个函数接收四个参数：前一个值、当前值、项的索引以及数组对象</p>
+<ul>
+<li>reduce(): 从左往右</li>
+<li>reduceRight(): 从右往左</li>
+</ul>
+<h3 id="Date-类型"><a href="#Date-类型" class="headerlink" title="Date 类型"></a>Date 类型</h3><ul>
+<li>日起对象： new Date()，自动获得当前日期和时间</li>
+<li>Date.parse(): 根据传入字符串返回对应毫秒数</li>
+<li>Date.UTC(): 返回毫秒数，但传入参数不同</li>
+<li>Date.now(): 调用该方法时的日期和时间毫秒数</li>
+</ul>
+<h4 id="继承的方法"><a href="#继承的方法" class="headerlink" title="继承的方法"></a>继承的方法</h4><h4 id="日期格式化方法"><a href="#日期格式化方法" class="headerlink" title="日期格式化方法"></a>日期格式化方法</h4><h4 id="日期-时间组件方法"><a href="#日期-时间组件方法" class="headerlink" title="日期/时间组件方法"></a>日期/时间组件方法</h4><p>都是日期对象中的属性，书本 P102</p>
 
       
     </div>
@@ -701,7 +727,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#正文"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-变量、作用域和内存问题"><span class="nav-number">2.1.</span> <span class="nav-text">4. 变量、作用域和内存问题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-基本类型和引用类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">4.1 基本类型和引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-1-动态属性"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">4.1.1 动态属性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-2-复制变量值"><span class="nav-number">2.1.1.2.</span> <span class="nav-text">4.1.2 复制变量值</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-3-传递参数"><span class="nav-number">2.1.1.3.</span> <span class="nav-text">4.1.3 传递参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-1-4-检测类型"><span class="nav-number">2.1.1.4.</span> <span class="nav-text">4.1.4 检测类型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-执行环境及作用域"><span class="nav-number">2.1.2.</span> <span class="nav-text">4.2 执行环境及作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-2-1-延长作用域链"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">4.2.1 延长作用域链</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-2-2-没有块级作用域"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">4.2.2 没有块级作用域</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-垃圾收集"><span class="nav-number">2.1.3.</span> <span class="nav-text">4.3 垃圾收集</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-3-1-标记清除"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">4.3.1 标记清除</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-3-2-引用计数"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">4.3.2 引用计数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-3-3-性能问题"><span class="nav-number">2.1.3.3.</span> <span class="nav-text">4.3.3 性能问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-4-4-管理内存"><span class="nav-number">2.1.3.4.</span> <span class="nav-text">4.4.4 管理内存</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-小结"><span class="nav-number">2.1.4.</span> <span class="nav-text">4.4 小结</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-引用类型"><span class="nav-number">2.2.</span> <span class="nav-text">5. 引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-Object-类型"><span class="nav-number">2.2.1.</span> <span class="nav-text">5.1 Object 类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-Array-类型"><span class="nav-number">2.2.2.</span> <span class="nav-text">5.2 Array 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-1-检测数组"><span class="nav-number">2.2.2.1.</span> <span class="nav-text">5.2.1 检测数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-2-转换方法"><span class="nav-number">2.2.2.2.</span> <span class="nav-text">5.2.2 转换方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-3-栈方法"><span class="nav-number">2.2.2.3.</span> <span class="nav-text">5.2.3 栈方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-4-队列方法"><span class="nav-number">2.2.2.4.</span> <span class="nav-text">5.2.4 队列方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-5-重排序方法"><span class="nav-number">2.2.2.5.</span> <span class="nav-text">5.2.5 重排序方法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-2-6-操作方法"><span class="nav-number">2.2.2.6.</span> <span class="nav-text">5.2.6 操作方法</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript-简介"><span class="nav-number">1.</span> <span class="nav-text">JavaScript 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在-HTML-中使用-JavaScript"><span class="nav-number">2.</span> <span class="nav-text">在 HTML 中使用 JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">3.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量、作用域和内存问题"><span class="nav-number">4.</span> <span class="nav-text">变量、作用域和内存问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型和引用类型"><span class="nav-number">4.1.</span> <span class="nav-text">基本类型和引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态属性"><span class="nav-number">4.1.1.</span> <span class="nav-text">动态属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复制变量值"><span class="nav-number">4.1.2.</span> <span class="nav-text">复制变量值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传递参数"><span class="nav-number">4.1.3.</span> <span class="nav-text">传递参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#检测类型"><span class="nav-number">4.1.4.</span> <span class="nav-text">检测类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#执行环境及作用域"><span class="nav-number">4.2.</span> <span class="nav-text">执行环境及作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#延长作用域链"><span class="nav-number">4.2.1.</span> <span class="nav-text">延长作用域链</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#没有块级作用域"><span class="nav-number">4.2.2.</span> <span class="nav-text">没有块级作用域</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#垃圾收集"><span class="nav-number">4.3.</span> <span class="nav-text">垃圾收集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标记清除"><span class="nav-number">4.3.1.</span> <span class="nav-text">标记清除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#引用计数"><span class="nav-number">4.3.2.</span> <span class="nav-text">引用计数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能问题"><span class="nav-number">4.3.3.</span> <span class="nav-text">性能问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#管理内存"><span class="nav-number">4.3.4.</span> <span class="nav-text">管理内存</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">4.4.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用类型"><span class="nav-number">5.</span> <span class="nav-text">引用类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-类型"><span class="nav-number">5.1.</span> <span class="nav-text">Object 类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-类型"><span class="nav-number">5.2.</span> <span class="nav-text">Array 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检测数组"><span class="nav-number">5.2.1.</span> <span class="nav-text">检测数组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#转换方法"><span class="nav-number">5.2.2.</span> <span class="nav-text">转换方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈方法"><span class="nav-number">5.2.3.</span> <span class="nav-text">栈方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#队列方法"><span class="nav-number">5.2.4.</span> <span class="nav-text">队列方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重排序方法"><span class="nav-number">5.2.5.</span> <span class="nav-text">重排序方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#操作方法"><span class="nav-number">5.2.6.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#位置方法"><span class="nav-number">5.2.7.</span> <span class="nav-text">位置方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#迭代方法"><span class="nav-number">5.2.8.</span> <span class="nav-text">迭代方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#归并方法"><span class="nav-number">5.2.9.</span> <span class="nav-text">归并方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Date-类型"><span class="nav-number">5.3.</span> <span class="nav-text">Date 类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承的方法"><span class="nav-number">5.3.1.</span> <span class="nav-text">继承的方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期格式化方法"><span class="nav-number">5.3.2.</span> <span class="nav-text">日期格式化方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期-时间组件方法"><span class="nav-number">5.3.3.</span> <span class="nav-text">日期/时间组件方法</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
