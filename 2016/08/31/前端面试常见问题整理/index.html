@@ -87,12 +87,14 @@
 
 
 <meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。">
+<meta name="keywords" content="基础,面试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端面试常见问题整理">
 <meta property="og:url" content="http://detachment.club/2016/08/31/前端面试常见问题整理/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。">
-<meta property="og:updated_time" content="2016-09-06T10:11:52.113Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-09-06T10:11:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端面试常见问题整理">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;从开始学习前端到现在已经五个月了，在时间上已经到了该找工作的阶段了，但从目前对前端技能的掌握的层面来说，还离社招的水平有较大一段距离。现实和计划之间永远存在在差距。现在也已经开始投简历了，为了有更好的面试状态同时也检验一下前阶段对知识的掌握程度，特地在网上收集了一些面试资料来借鉴参考。">
@@ -370,11 +372,11 @@
 <a id="more"></a>
 <p>注明：</p>
 <blockquote>
-<p>本文里面的绝大部分问题来自github上<a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="external">markyun同学的项目</a>，感谢所有为此付出努力的同学们~<br>对于原文中收集的有些问题我看了答案还是不能很理解，或者是有些没有答案的问题，我都做了一些收集并将链接附在了文中，也对这些热爱分享的同学表示感谢~</p>
+<p>本文里面的绝大部分问题来自github上<a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="noopener">markyun同学的项目</a>，感谢所有为此付出努力的同学们~<br>对于原文中收集的有些问题我看了答案还是不能很理解，或者是有些没有答案的问题，我都做了一些收集并将链接附在了文中，也对这些热爱分享的同学表示感谢~</p>
 </blockquote>
 <h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h2><h3 id="DOCTYPE的作用是什么？兼容模式与标准模式各有什么区别？"><a href="#DOCTYPE的作用是什么？兼容模式与标准模式各有什么区别？" class="headerlink" title="DOCTYPE的作用是什么？兼容模式与标准模式各有什么区别？"></a>DOCTYPE的作用是什么？兼容模式与标准模式各有什么区别？</h3><blockquote>
 <p> &lt;!DOCTYPE&gt; 声明必须是 HTML 文档的第一行，位于 <html> 标签之前；它不是 HTML 标签；而是指示 web 浏览器关于页面使用哪个 HTML 版本进行编写的指令。在 HTML 4.01 中，&lt;!DOCTYPE&gt; 声明引用 DTD，因为 HTML 4.01 基于 SGML。DTD 规定了标记语言的规则，这样浏览器才能正确地呈现内容。HTML5 不基于 SGML，所以不需要引用 DTD。其中DTD指的是：document type definition; SGML指的是 Standard Generalized Markup Language;</html></p>
-<p><a href="https://www.zhihu.com/question/20249139" target="_blank" rel="external">然后，为什么HTML5不再基于SGML？</a></p>
+<p><a href="https://www.zhihu.com/question/20249139" target="_blank" rel="noopener">然后，为什么HTML5不再基于SGML？</a></p>
 <p>标准模式及兼容模式：标准模式的排版 和JS运作模式都是以该浏览器支持的最高标准运行。在兼容模式中，页面以宽松的向后兼容的方式显示,模拟老式浏览器的行为以防止站点无法工作。</p>
 </blockquote>
 <h3 id="行内元素有哪些？块级元素有哪些？空元素有哪些？"><a href="#行内元素有哪些？块级元素有哪些？空元素有哪些？" class="headerlink" title="行内元素有哪些？块级元素有哪些？空元素有哪些？"></a>行内元素有哪些？块级元素有哪些？空元素有哪些？</h3><blockquote>
@@ -382,12 +384,12 @@
 </blockquote>
 <h3 id="页面导入样式时，使用link和-import有什么区别？"><a href="#页面导入样式时，使用link和-import有什么区别？" class="headerlink" title="页面导入样式时，使用link和@import有什么区别？"></a>页面导入样式时，使用link和@import有什么区别？</h3><blockquote>
 <p>（1）link属于XHTML标签，除了加载CSS外，还能用于定义RSS, 定义rel连接属性等作用；而@import是CSS提供的，只能用于加载CSS;<br>（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;<br>（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;</p>
-<p><a href="http://www.daqianduan.com/2417.html" target="_blank" rel="external">更详细的区别戳我~</a></p>
+<p><a href="http://www.daqianduan.com/2417.html" target="_blank" rel="noopener">更详细的区别戳我~</a></p>
 </blockquote>
 <h3 id="常见的浏览器内核有几种？"><a href="#常见的浏览器内核有几种？" class="headerlink" title="常见的浏览器内核有几种？"></a>常见的浏览器内核有几种？</h3><blockquote>
 <p>Trident内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称MSHTML]<br>Gecko内核：Netscape6及以上版本，FF,MozillaSuite/SeaMonkey等<br>Presto内核：Opera7及以上。      [Opera内核原为：Presto，现为：Blink;]<br>Webkit内核：Safari,Chrome等。   [ Chrome的：Blink（WebKit的分支）]</p>
 <p>补充：浏览器内核又可以分成两部分：渲染引擎(layout engineer 或者 Rendering Engine)和 JS 引擎。它负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入 CSS 等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。JS 引擎则是解析 Javascript 语言，执行 javascript 语言来实现网页的动态效果。最开始渲染引擎和 JS 引擎并没有区分的很明确，后来 JS 引擎越来越独立，内核就倾向于只指渲染引擎。</p>
-<p><a href="http://web.jobbole.com/84826/" target="_blank" rel="external">想了解浏览器内核历史的，戳我~</a></p>
+<p><a href="http://web.jobbole.com/84826/" target="_blank" rel="noopener">想了解浏览器内核历史的，戳我~</a></p>
 </blockquote>
 <h3 id="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h3><blockquote>
 <p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>      绘画 canvas;<br>      用于媒介回放的 video 和 audio 元素;<br>      本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>      sessionStorage 的数据在浏览器关闭后自动删除;<br>      语意化更好的内容元素，比如 article、footer、header、nav、section;<br>      表单控件，calendar、date、time、email、url、search;<br>      新的技术webworker, websocket, Geolocation;</p>
@@ -411,7 +413,7 @@
 <li>存储大小：<br>  cookie数据大小不能超过4k。<br>  sessionStorage和localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大。</li>
 <li>有期时间：<br>  localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据；<br>  sessionStorage  数据在当前浏览器窗口关闭后自动删除。<br>  cookie          设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭</li>
 </ul>
-<p><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="external">更多关于Cooikes信息，戳我~</a></p>
+<p><a href="http://bubkoo.com/2014/04/21/http-cookies-explained/" target="_blank" rel="noopener">更多关于Cooikes信息，戳我~</a></p>
 </blockquote>
 <h3 id="iframe有那些缺点？"><a href="#iframe有那些缺点？" class="headerlink" title="iframe有那些缺点？"></a>iframe有那些缺点？</h3><blockquote>
 <ul>
@@ -420,25 +422,25 @@
 <li>iframe和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</li>
 <li>使用iframe之前需要考虑这两个缺点。如果需要使用iframe，最好是通过javascript<br>动态给iframe添加src属性值，这样可以绕开以上两个问题。</li>
 </ul>
-<p><a href="https://www.zhihu.com/question/20653055" target="_blank" rel="external">想看使用iframe的好处的，戳我~</a></p>
+<p><a href="https://www.zhihu.com/question/20653055" target="_blank" rel="noopener">想看使用iframe的好处的，戳我~</a></p>
 </blockquote>
 <h3 id="Label的作用是什么？是怎么用的？"><a href="#Label的作用是什么？是怎么用的？" class="headerlink" title="Label的作用是什么？是怎么用的？"></a>Label的作用是什么？是怎么用的？</h3><blockquote>
 <p>label 元素不会向用户呈现任何特殊的样式。不过，它为鼠标用户改善了可用性，因为如果用户点击 label 元素内的文本，则会切换到控件本身。label 标签的 for 属性应该等于相关元素的 id 元素，以便将它们捆绑起来。<br><strong>本题考察的是HTML5新标签的用法，可推广到所有其他标签的常规使用，应举一反三。</strong></p>
 </blockquote>
 <h3 id="页面可见性（Page-Visibility-API）可以有什么用途？"><a href="#页面可见性（Page-Visibility-API）可以有什么用途？" class="headerlink" title="页面可见性（Page Visibility API）可以有什么用途？"></a>页面可见性（Page Visibility API）可以有什么用途？</h3><blockquote>
 <p>可通过检测visibilityState的值检测页面是否可见，以及打开网页的时间等；<br>在页面被切换到后台进程的时候，自动暂停音乐或者视频的播放；</p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="external">想了解更多信息，戳我~</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Page_Visibility_API" target="_blank" rel="noopener">想了解更多信息，戳我~</a></p>
 </blockquote>
 <h3 id="如何在页面实现一个圆形的可点击区域？"><a href="#如何在页面实现一个圆形的可点击区域？" class="headerlink" title="如何在页面实现一个圆形的可点击区域？"></a>如何在页面实现一个圆形的可点击区域？</h3><blockquote>
 <ol>
-<li>map+area或者svg <a href="http://www.w3school.com.cn/tags/att_area_coords.asp" target="_blank" rel="external">具体实现方式，戳我~</a></li>
+<li>map+area或者svg <a href="http://www.w3school.com.cn/tags/att_area_coords.asp" target="_blank" rel="noopener">具体实现方式，戳我~</a></li>
 <li>border-radius</li>
 <li>纯js实现 需要求一个点在不在圆上简单算法、获取鼠标坐标等等；</li>
 </ol>
 </blockquote>
 <h3 id="网页验证码是干嘛的？是为了解决什么安全问题？"><a href="#网页验证码是干嘛的？是为了解决什么安全问题？" class="headerlink" title="网页验证码是干嘛的？是为了解决什么安全问题？"></a>网页验证码是干嘛的？是为了解决什么安全问题？</h3><blockquote>
 <p>是为了区分用户是计算机还是人类的公共自动程序。可以防止恶意破解密码、刷票、论坛灌水；<br>也可以有效防止黑客对某一个特定注册用户用特定程序暴力破解方式进行不断的登陆尝试。</p>
-<p><a href="https://www.zhihu.com/question/19563610" target="_blank" rel="external">据说谷歌还利用验证码来完成古籍文字的识别，戳我~</a></p>
+<p><a href="https://www.zhihu.com/question/19563610" target="_blank" rel="noopener">据说谷歌还利用验证码来完成古籍文字的识别，戳我~</a></p>
 </blockquote>
 <h3 id="title与h1的区别、b与strong的区别、i与em的区别？"><a href="#title与h1的区别、b与strong的区别、i与em的区别？" class="headerlink" title="title与h1的区别、b与strong的区别、i与em的区别？"></a>title与h1的区别、b与strong的区别、i与em的区别？</h3><blockquote>
 <ul>
@@ -452,7 +454,7 @@
 <hr>
 <h2 id="CSS部分"><a href="#CSS部分" class="headerlink" title="CSS部分"></a>CSS部分</h2><h3 id="介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"><a href="#介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？" class="headerlink" title="介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？"></a>介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？</h3><blockquote>
 <p>（1）有两种， IE 盒子模型、W3C 盒子模型；<br>（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；<br>（3）区  别： IE的content部分把 border 和 padding计算了进去;<br>(其实更准确的说法应该是本来width值指的是内容区域，而在IE5，6版本中，width值包括padding和border。content部分一直都是content部分。)</p>
-<p><a href="http://www.w3school.com.cn/css/css_boxmodel.asp" target="_blank" rel="external">想知道详细内容？戳我~</a></p>
+<p><a href="http://www.w3school.com.cn/css/css_boxmodel.asp" target="_blank" rel="noopener">想知道详细内容？戳我~</a></p>
 </blockquote>
 <h3 id="CSS选择符有哪些？哪些属性可以继承？"><a href="#CSS选择符有哪些？哪些属性可以继承？" class="headerlink" title="CSS选择符有哪些？哪些属性可以继承？"></a>CSS选择符有哪些？哪些属性可以继承？</h3><blockquote>
 <ol>
@@ -471,43 +473,43 @@
 <li>可继承的样式： font-size font-family color, UL LI DL DD DT;</li>
 <li>不可继承的样式：border padding margin width height ;</li>
 </ul>
-<p><a href="http://www.cnblogs.com/rubylouvre/archive/2009/09/04/1559557.html" target="_blank" rel="external">想知道更全面的可继承与不可继承属性？戳我~</a></p>
+<p><a href="http://www.cnblogs.com/rubylouvre/archive/2009/09/04/1559557.html" target="_blank" rel="noopener">想知道更全面的可继承与不可继承属性？戳我~</a></p>
 </blockquote>
 <h3 id="CSS优先级算法如何计算？"><a href="#CSS优先级算法如何计算？" class="headerlink" title="CSS优先级算法如何计算？"></a>CSS优先级算法如何计算？</h3><blockquote>
 <p>优先级就近原则，同权重情况下样式定义最近者为准;<br>载入样式以最后载入的定位为准;<br>优先级为：!important &gt;  id &gt; class &gt; tag  其中important比内联样式优先级高。</p>
 </blockquote>
 <h3 id="如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？"><a href="#如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？" class="headerlink" title="如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？"></a>如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？</h3><blockquote>
-<p>由于本问题涉及较多代码，希望知道详细解释的，<a href="http://www.w3cplus.com/css/elements-horizontally-center-with-css.html" target="_blank" rel="external">直接戳我就好了~</a></p>
+<p>由于本问题涉及较多代码，希望知道详细解释的，<a href="http://www.w3cplus.com/css/elements-horizontally-center-with-css.html" target="_blank" rel="noopener">直接戳我就好了~</a></p>
 </blockquote>
 <h3 id="display有哪些值？他们的作用分别是？"><a href="#display有哪些值？他们的作用分别是？" class="headerlink" title="display有哪些值？他们的作用分别是？"></a>display有哪些值？他们的作用分别是？</h3><blockquote>
 <p>block         象块类型元素一样显示。<br>  none          缺省值。象行内元素类型一样显示。<br>  inline-block  象行内元素一样显示，但其内容象块类型元素一样显示。<br>  list-item     象块类型元素一样显示，并添加样式列表标记。<br>  table         此元素会作为块级表格来显示<br>  inherit       规定应该从父元素继承 display 属性的值</p>
-<p><a href="http://www.w3school.com.cn/cssref/pr_class_display.asp" target="_blank" rel="external">更多详细内容，戳我~</a></p>
+<p><a href="http://www.w3school.com.cn/cssref/pr_class_display.asp" target="_blank" rel="noopener">更多详细内容，戳我~</a></p>
 </blockquote>
 <h3 id="CSS3中有哪些新特征？"><a href="#CSS3中有哪些新特征？" class="headerlink" title="CSS3中有哪些新特征？"></a>CSS3中有哪些新特征？</h3><blockquote>
 <p>新增各种CSS选择器  （: not(.input)：所有 class 不是“input”的节点）<br>  圆角           （border-radius:8px）<br>  多列布局        （multi-column layout）<br>  阴影和反射        （Shadow, Reflect）<br>  文字特效      （text-shadow、）<br>  文字渲染      （Text-decoration）<br>  线性渐变      （gradient）<br>  旋转          （transform）<br>  增加了旋转,缩放,定位,倾斜,动画，多背景<br>  transform:scale(0.85,0.90), translate(0px,-30px), skew(-9deg,0deg), Animation:</p>
-<p><a href="http://www.w3school.com.cn/css3/css3_border.asp" target="_blank" rel="external">个人认为上面的分类不够系统，戳我了解更多~</a></p>
+<p><a href="http://www.w3school.com.cn/css3/css3_border.asp" target="_blank" rel="noopener">个人认为上面的分类不够系统，戳我了解更多~</a></p>
 </blockquote>
 <h3 id="用纯CSS创建一个三角形的原理是什么？"><a href="#用纯CSS创建一个三角形的原理是什么？" class="headerlink" title="用纯CSS创建一个三角形的原理是什么？"></a>用纯CSS创建一个三角形的原理是什么？</h3><blockquote>
 <p>原理很简单，就是将一个div的宽高设置成0，然后根据不同的需求设置div的border属性，从而能够得到各种三角形。</p>
-<p><a href="http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/" target="_blank" rel="external">更详细的说明，戳我~</a></p>
+<p><a href="http://www.zhangxinxu.com/wordpress/2010/05/css-border%E4%B8%89%E8%A7%92%E3%80%81%E5%9C%86%E8%A7%92%E5%9B%BE%E5%BD%A2%E7%94%9F%E6%88%90%E6%8A%80%E6%9C%AF%E7%AE%80%E4%BB%8B/" target="_blank" rel="noopener">更详细的说明，戳我~</a></p>
 </blockquote>
 <h3 id="解释一下CSS3中Flex-box以及使用场景？"><a href="#解释一下CSS3中Flex-box以及使用场景？" class="headerlink" title="解释一下CSS3中Flex-box以及使用场景？"></a>解释一下CSS3中Flex-box以及使用场景？</h3><blockquote>
 <p>box-flex 属性规定框的子元素是否可伸缩其尺寸。可伸缩元素能够随着框的缩小或扩大而缩写或放大。只要框中有多余的空间，可伸缩元素就会扩展来填充这些空间。目前浏览器使用这个属性时都需要加前缀，比如Firefox 支持替代的 -moz-box-flex 属性，Safari、Opera 以及 Chrome 支持替代的 -webkit-box-flex 属性。</p>
-<p><a href="http://www.w3school.com.cn/cssref/pr_box-flex.asp" target="_blank" rel="external">更多详细内容，戳我~</a></p>
+<p><a href="http://www.w3school.com.cn/cssref/pr_box-flex.asp" target="_blank" rel="noopener">更多详细内容，戳我~</a></p>
 </blockquote>
 <h3 id="常见的浏览器兼容性问题有哪些？原因及解决方法是什么？"><a href="#常见的浏览器兼容性问题有哪些？原因及解决方法是什么？" class="headerlink" title="常见的浏览器兼容性问题有哪些？原因及解决方法是什么？"></a>常见的浏览器兼容性问题有哪些？原因及解决方法是什么？</h3><blockquote>
-<p><a href="http://www.cnblogs.com/jscode/archive/2012/07/10/2583856.html" target="_blank" rel="external">问题范围太大了，想详细了解的戳我~</a><br><br><a href="https://www.zhihu.com/question/28954391" target="_blank" rel="external">然后，戳我了解更多~</a></p>
+<p><a href="http://www.cnblogs.com/jscode/archive/2012/07/10/2583856.html" target="_blank" rel="noopener">问题范围太大了，想详细了解的戳我~</a><br><br><a href="https://www.zhihu.com/question/28954391" target="_blank" rel="noopener">然后，戳我了解更多~</a></p>
 </blockquote>
 <h3 id="为什么要初始化CSS样式？"><a href="#为什么要初始化CSS样式？" class="headerlink" title="为什么要初始化CSS样式？"></a>为什么要初始化CSS样式？</h3><blockquote>
 <p>因为浏览器的兼容问题，不同浏览器对有些标签的默认值是不同的，如果没对CSS初始化往往会出现浏览器之间的页面显示差异。<br>当然，初始化样式会对SEO有一定的影响，但鱼和熊掌不可兼得，但力求影响最小的情况下初始化。</p>
-<p><a href="http://www.cnblogs.com/xiangzi888/archive/2011/09/21/2184442.html" target="_blank" rel="external">各大厂详细的初始化方案，戳我~</a></p>
+<p><a href="http://www.cnblogs.com/xiangzi888/archive/2011/09/21/2184442.html" target="_blank" rel="noopener">各大厂详细的初始化方案，戳我~</a></p>
 </blockquote>
 <h3 id="在CSS中position，display和float有什么关系？"><a href="#在CSS中position，display和float有什么关系？" class="headerlink" title="在CSS中position，display和float有什么关系？"></a>在CSS中position，display和float有什么关系？</h3><blockquote>
-<p><a href="http://www.w3cfuns.com/notes/16548/6c7c4a0e6fe54320bfeb26fdc1e08ca1.html" target="_blank" rel="external">由于这个问题比较复杂，他们之间的详细的关系可以戳我~</a><br><a href="https://www.zhihu.com/question/19588854" target="_blank" rel="external">或者戳我~</a><br><a href="http://detachment.club/2016/06/27/Float,%20position%20and%20display%20in%20CSS/">还有我~</a></p>
+<p><a href="http://www.w3cfuns.com/notes/16548/6c7c4a0e6fe54320bfeb26fdc1e08ca1.html" target="_blank" rel="noopener">由于这个问题比较复杂，他们之间的详细的关系可以戳我~</a><br><a href="https://www.zhihu.com/question/19588854" target="_blank" rel="noopener">或者戳我~</a><br><a href="http://detachment.club/2016/06/27/Float,%20position%20and%20display%20in%20CSS/">还有我~</a></p>
 </blockquote>
 <h3 id="CSS声明的权重是怎样的？"><a href="#CSS声明的权重是怎样的？" class="headerlink" title="CSS声明的权重是怎样的？"></a>CSS声明的权重是怎样的？</h3><blockquote>
 <p>CSS声明的权重指的是优先级，由选择器中的每一种选择器类型的数值决定，当数值相等时，css中最后的那个声明将作用到元素上。权重数值如下：<br>0 . 元素(类型)选择器（type selectors）（例如：h1）和 伪元素选择器（pseudo-elements）（例如：:before）<br>1 . 类选择器（class selectors） (例如：.example)，属性选择器（attributes selectors）（例如：[type=”radio”]），伪类选择器（pseudo-classes）（例如：:hover）<br>2 . ID选择器（例如：#example）<br>通用选择器（universal selector）(*),组合符合（combinators） (+, &gt;, ~, ‘ ‘)  和 否定伪类（negation pseudo-class）(:not()) 不会影响优先级（但是，在 :not() 内部声明的选择器是会影响优先级的）。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity" target="_blank" rel="external">详细信息戳我~</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/Specificity" target="_blank" rel="noopener">详细信息戳我~</a></p>
 </blockquote>
 <h3 id="清除浮动有几种方式？优缺点有哪些？"><a href="#清除浮动有几种方式？优缺点有哪些？" class="headerlink" title="清除浮动有几种方式？优缺点有哪些？"></a>清除浮动有几种方式？优缺点有哪些？</h3><blockquote>
 <ol>
@@ -519,27 +521,27 @@
 <li>父元素设置display:table;</li>
 <li>用:after伪元素，思路是用:after元素在div后面插入一个隐藏文本”.”，隐藏文本用clear来实现闭合浮动：</li>
 </ol>
-<p><a href="http://www.jianshu.com/p/07eb19957991#" target="_blank" rel="external">原文链接，戳我~</a></p>
+<p><a href="http://www.jianshu.com/p/07eb19957991#" target="_blank" rel="noopener">原文链接，戳我~</a></p>
 </blockquote>
 <h3 id="浏览器是怎样解析CSS选择器的？"><a href="#浏览器是怎样解析CSS选择器的？" class="headerlink" title="浏览器是怎样解析CSS选择器的？"></a>浏览器是怎样解析CSS选择器的？</h3><blockquote>
-<p>总的来说，浏览器是遵循从右到左的顺序来解析CSS选择器的，这样解析的效率最高。<br><br><a href="https://segmentfault.com/q/1010000000713509" target="_blank" rel="external">想知道详细解释的，戳我</a><br><br><a href="https://segmentfault.com/q/1010000000713509" target="_blank" rel="external">然后也可以戳我~</a></p>
+<p>总的来说，浏览器是遵循从右到左的顺序来解析CSS选择器的，这样解析的效率最高。<br><br><a href="https://segmentfault.com/q/1010000000713509" target="_blank" rel="noopener">想知道详细解释的，戳我</a><br><br><a href="https://segmentfault.com/q/1010000000713509" target="_blank" rel="noopener">然后也可以戳我~</a></p>
 </blockquote>
 <h3 id="CSS优化、提高性能的方法有哪些？"><a href="#CSS优化、提高性能的方法有哪些？" class="headerlink" title="CSS优化、提高性能的方法有哪些？"></a>CSS优化、提高性能的方法有哪些？</h3><blockquote>
-<p><a href="http://www.zhihu.com/question/19886806" target="_blank" rel="external">问题比较笼统，较详细的解释可戳我~</a></p>
+<p><a href="http://www.zhihu.com/question/19886806" target="_blank" rel="noopener">问题比较笼统，较详细的解释可戳我~</a></p>
 </blockquote>
 <h3 id="在网页中较多的使用奇数号字体还是偶数号字体？为什么？"><a href="#在网页中较多的使用奇数号字体还是偶数号字体？为什么？" class="headerlink" title="在网页中较多的使用奇数号字体还是偶数号字体？为什么？"></a>在网页中较多的使用奇数号字体还是偶数号字体？为什么？</h3><blockquote>
 <p>首先答案是较多的使用偶数号字体，具体原因点下面的链接。</p>
-<p><a href="https://www.zhihu.com/question/20440679" target="_blank" rel="external">为什么网页多使用偶数号字体？</a></p>
+<p><a href="https://www.zhihu.com/question/20440679" target="_blank" rel="noopener">为什么网页多使用偶数号字体？</a></p>
 </blockquote>
 <h3 id="元素竖向的百分比设定是相对于容器的高度吗？"><a href="#元素竖向的百分比设定是相对于容器的高度吗？" class="headerlink" title="元素竖向的百分比设定是相对于容器的高度吗？"></a>元素竖向的百分比设定是相对于容器的高度吗？</h3><blockquote>
 <p>如果是定位元素，则相对的是容器的高度；而如果是内外边距，那么相对的则是容器的宽度。</p>
 </blockquote>
 <h3 id="从输入URL到页面加载完成的过程中都发生了什么事情？"><a href="#从输入URL到页面加载完成的过程中都发生了什么事情？" class="headerlink" title="从输入URL到页面加载完成的过程中都发生了什么事情？"></a>从输入URL到页面加载完成的过程中都发生了什么事情？</h3><blockquote>
-<p><a href="http://yuehu.io/padding-me/406" target="_blank" rel="external">这篇文章写得非常详细，戳我阅读~</a></p>
+<p><a href="http://yuehu.io/padding-me/406" target="_blank" rel="noopener">这篇文章写得非常详细，戳我阅读~</a></p>
 </blockquote>
 <h3 id="如何修改chrome记住密码后自动填充表单的黄色背景-？"><a href="#如何修改chrome记住密码后自动填充表单的黄色背景-？" class="headerlink" title="如何修改chrome记住密码后自动填充表单的黄色背景 ？"></a>如何修改chrome记住密码后自动填充表单的黄色背景 ？</h3><blockquote>
 <p><em>我觉着这种问题不是太适合面试，没有尝试过的同学估计很难知道具体的修改方式</em></p>
-<p><a href="http://zcoder.cn/2015/01/14/front-end/chrome-autofill/" target="_blank" rel="external">想了解具体的修改方式，戳我~</a></p>
+<p><a href="http://zcoder.cn/2015/01/14/front-end/chrome-autofill/" target="_blank" rel="noopener">想了解具体的修改方式，戳我~</a></p>
 </blockquote>
 <h3 id="什么是CSS-预处理器-后处理器？"><a href="#什么是CSS-预处理器-后处理器？" class="headerlink" title="什么是CSS 预处理器/后处理器？"></a>什么是CSS 预处理器/后处理器？</h3><blockquote>
 <p>预处理器例如：LESS、Sass、Stylus，用来预编译Sass或less，增强了css代码的复用性，<br>  还有层级、mixin、变量、循环、函数等，具有很方便的UI组件模块化开发能力，极大的提高工作效率。<br>后处理器例如：PostCSS，通常被视为在完成的样式表中根据CSS规范处理CSS，让其更有效；目前最常做的是给CSS属性添加浏览器私有前缀，实现跨浏览器兼容性的问题。</p>
@@ -547,19 +549,19 @@
 <hr>
 <h2 id="JavaScript-部分"><a href="#JavaScript-部分" class="headerlink" title="JavaScript 部分"></a>JavaScript 部分</h2><h3 id="介绍JS中的基本数据类型。"><a href="#介绍JS中的基本数据类型。" class="headerlink" title="介绍JS中的基本数据类型。"></a>介绍JS中的基本数据类型。</h3><blockquote>
 <p>一般来说分为两种，分别为基本类型和对象类型，其中基本类型包括undefined, null, Boolean, Number, String, Symbol，对象类型即为Object。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" target="_blank" rel="external">MDN中关于JS基本数据类型的介绍~</a><br><a href="http://www.cnblogs.com/snandy/archive/2013/01/02/2841899.html" target="_blank" rel="external">JS中基本类型之争</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" target="_blank" rel="noopener">MDN中关于JS基本数据类型的介绍~</a><br><a href="http://www.cnblogs.com/snandy/archive/2013/01/02/2841899.html" target="_blank" rel="noopener">JS中基本类型之争</a></p>
 </blockquote>
 <h3 id="JS中有哪些内置对象？"><a href="#JS中有哪些内置对象？" class="headerlink" title="JS中有哪些内置对象？"></a>JS中有哪些内置对象？</h3><blockquote>
 <p>Object 是 JavaScript 中所有对象的父对象<br>数据封装类对象：Object、Array、Boolean、Number 和 String<br>其他对象：Function、Arguments、Math、Date、RegExp、Error</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="external">JS中的标准全局对象</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener">JS中的标准全局对象</a></p>
 </blockquote>
 <h3 id="说几条JS的基本规范"><a href="#说几条JS的基本规范" class="headerlink" title="说几条JS的基本规范"></a>说几条JS的基本规范</h3><blockquote>
 <p>1.不要在同一行声明多个变量。<br>2.请使用 ===/!==来比较true/false或者数值<br>3.使用对象字面量替代new Array这种形式<br>4.不要使用全局函数。<br>5.Switch语句必须带有default分支<br>6.函数不应该有时候有返回值，有时候没有返回值。<br>7.For循环必须使用大括号<br>8.If语句必须使用大括号<br>9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。</p>
-<p><a href="https://github.com/lxj/javascript.patterns/blob/master/chapter2.markdown" target="_blank" rel="external">需要知道更多的要点？ 戳我~</a></p>
+<p><a href="https://github.com/lxj/javascript.patterns/blob/master/chapter2.markdown" target="_blank" rel="noopener">需要知道更多的要点？ 戳我~</a></p>
 </blockquote>
 <h3 id="简单解释下JS中的原型及原型链，有什么特点？"><a href="#简单解释下JS中的原型及原型链，有什么特点？" class="headerlink" title="简单解释下JS中的原型及原型链，有什么特点？"></a>简单解释下JS中的原型及原型链，有什么特点？</h3><blockquote>
 <p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。<br>特点：JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="external">MDN上关于JS中继承及原型链的解释</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html" target="_blank" rel="external">强大的原型及原型链</a></p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener">MDN上关于JS中继承及原型链的解释</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html" target="_blank" rel="noopener">强大的原型及原型链</a></p>
 </blockquote>
 <h3 id="JS中有几种类型的值？它们之间的区别时是什么？"><a href="#JS中有几种类型的值？它们之间的区别时是什么？" class="headerlink" title="JS中有几种类型的值？它们之间的区别时是什么？"></a>JS中有几种类型的值？它们之间的区别时是什么？</h3><blockquote>
 <p>主要有两种，分别为栈和堆；<br>栈：原始数据类型（Undefined，Null，Boolean，Number、String）<br>堆：引用数据类型（对象、数组和函数）</p>
@@ -573,11 +575,11 @@
 <li>脱离 DOM 的引用</li>
 <li>闭包</li>
 </ol>
-<p><a href="http://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/" target="_blank" rel="external">关于这个问题的答案，具体解释戳我~</a><br><a href="https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/" target="_blank" rel="external">英文原文链接</a></p>
+<p><a href="http://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/" target="_blank" rel="noopener">关于这个问题的答案，具体解释戳我~</a><br><a href="https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/" target="_blank" rel="noopener">英文原文链接</a></p>
 </blockquote>
 <h3 id="JS中怎么实现继承？"><a href="#JS中怎么实现继承？" class="headerlink" title="JS中怎么实现继承？"></a>JS中怎么实现继承？</h3><blockquote>
 <p>主要有以下几种：<br>1、构造继承<br>2、原型继承<br>3、实例继承<br>4、拷贝继承</p>
-<p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="external">详细内容戳我~</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="noopener">详细内容戳我~</a></p>
 </blockquote>
 <h3 id="JS中创建对象有几种方式？"><a href="#JS中创建对象有几种方式？" class="headerlink" title="JS中创建对象有几种方式？"></a>JS中创建对象有几种方式？</h3><blockquote>
 <p>常见的创建对象的方式有：</p>
@@ -588,7 +590,7 @@
 <li>用原型方式；</li>
 <li>用混合方式；</li>
 </ol>
-<p><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="external">原文链接，戳我直达~</a><br><a href="http://www.yuanlairc.com/program/jsobject.html" target="_blank" rel="external">javascript创建对象的几种模式</a></p>
+<p><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="noopener">原文链接，戳我直达~</a><br><a href="http://www.yuanlairc.com/program/jsobject.html" target="_blank" rel="noopener">javascript创建对象的几种模式</a></p>
 </blockquote>
 <h3 id="谈谈对在JS中This的理解"><a href="#谈谈对在JS中This的理解" class="headerlink" title="谈谈对在JS中This的理解"></a>谈谈对在JS中This的理解</h3><blockquote>
 <ul>
@@ -596,15 +598,15 @@
 <li>如果有new关键字，this指向new出来的那个对象；</li>
 <li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；</li>
 </ul>
-<p><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="external">Javascript中this的用法 by 阮一峰</a></p>
+<p><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript中this的用法 by 阮一峰</a></p>
 </blockquote>
 <h3 id="null和undefined有什么区别？"><a href="#null和undefined有什么区别？" class="headerlink" title="null和undefined有什么区别？"></a>null和undefined有什么区别？</h3><blockquote>
 <p>null最常见的用法表示一个对象被定义了，但值为空值；<br>undefined最常用的用法表示一个对象未被定义或者需要访问的对象的属性不存在；</p>
-<p><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/#core.undefined" target="_blank" rel="external">undefined和null——《秘密花园》</a><br><a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="external">undefined和null的区别，阮一峰</a></p>
+<p><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/#core.undefined" target="_blank" rel="noopener">undefined和null——《秘密花园》</a><br><a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="noopener">undefined和null的区别，阮一峰</a></p>
 </blockquote>
 <h3 id="“1”-“2”-“3”-map-parseInt-答案是多少？"><a href="#“1”-“2”-“3”-map-parseInt-答案是多少？" class="headerlink" title="[“1”, “2”, “3”].map(parseInt) 答案是多少？"></a>[“1”, “2”, “3”].map(parseInt) 答案是多少？</h3><blockquote>
 <p>答案是[1, NaN, NaN]。<br>map方法中的回调函数可以有三个参数来声明，第一个为数组元素的值，第二个为数组元素的数字索引，但三个为包含该元素的数组对象。<br>在这个例子中，回调函数为parseInt，传入参数为待解析字符串及进制数，其中进制数为可选参数。<br>然后在这个，parseInt函数正好将数组元素的数字索引当做进制数来进行运算，所以最终的结果如上所说。</p>
-<p><a href="https://segmentfault.com/a/1190000005956935" target="_blank" rel="external">想知道更详细的解释？戳我~</a></p>
+<p><a href="https://segmentfault.com/a/1190000005956935" target="_blank" rel="noopener">想知道更详细的解释？戳我~</a></p>
 </blockquote>
 
       

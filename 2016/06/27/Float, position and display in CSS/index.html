@@ -87,12 +87,14 @@
 
 
 <meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;为了搞懂这个问题，首先能想到的当">
+<meta name="keywords" content="前端,CSS,基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Float, Position and Display in CSS">
 <meta property="og:url" content="http://detachment.club/2016/06/27/Float, position and display in CSS/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;为了搞懂这个问题，首先能想到的当">
-<meta property="og:updated_time" content="2016-07-04T02:24:08.923Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-07-04T02:24:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Float, Position and Display in CSS">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;目前是第二遍学习CSS，第一遍学习的时候只是看了一遍教材，当时感觉还行，但是在之后学习JS的过程中就愈发感觉到没有学好这一章节的严重性，所有在第二遍学习的时候，一定要将这个知识点彻底的弄清楚才会进入到下一阶段，这也就是为什么我会花3天的时间来弄清楚这个知识点的原因了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;为了搞懂这个问题，首先能想到的当">
@@ -414,7 +416,7 @@
 <li>只有横向浮动，没有纵向浮动；（属性值只有none、left及right）</li>
 <li>浮动元素的上外边框不能超过其包含块的上边框；</li>
 <li>浮动元素脱离普通流后其包含容器将得不到此元素的高度属性（然后就有了关于clearfix方法的讨论）；</li>
-<li>更多特点见<a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-float" target="_blank" rel="external">Float说明。</a></li>
+<li>更多特点见<a href="https://www.w3.org/TR/CSS21/visuren.html#propdef-float" target="_blank" rel="noopener">Float说明。</a></li>
 </ol>
 <h2 id="定位（Position）"><a href="#定位（Position）" class="headerlink" title="定位（Position）"></a>定位（Position）</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;定位属性比较好理解，其值有 inhert, static, relative, absolute, fixed 这五种。其中static为默认值，表示没有定位，根据位置出现在文档的普通流中；inhert 为继承父元素的position属性；relative 为相对定位，相对的是其本身在普通流中的位置，而且设定为相对浮动后，元素仍然占据原来普通流中的位置；absolute 为绝对定位，定位基准是最靠近的定位属性不为static的祖先元素，当设置为未绝对定位后，元素的位置就与普通流无关了，同时也不占据文档流空间，而且在设置为绝对定位后，元素会形成一个新的块级格式化上下文（BFC），原来是行内元素的会变成块级元素，而块级元素的宽度则由其本身的内容决定，而不再是默认的100%了；fixed可以说是absolute的特殊类，它也是固定定位，但是它的定位基准为视窗（viewport），除此之外，与决定定位没有区别。</p>
 <h2 id="显示类（Display）"><a href="#显示类（Display）" class="headerlink" title="显示类（Display）"></a>显示类（Display）</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;Display属性主要决定元素是块级元素还是行间元素。属性值主要有block、inline-block、inline、list-item和none。块级元素为垂直排列，块级元素会自动换行，可设置块的宽高信息；行间元素为水平排列，宽高由内容决定，外部设置对其无效。</p>
@@ -465,13 +467,13 @@
 <blockquote>
 <h4 id="由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！"><a href="#由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！" class="headerlink" title="由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！"></a><strong>由于笔者水平有限，本文有很多需要完善的地方，将长期保持更新；如阅读发现任何问题，欢迎批评指正！</strong></h4></blockquote>
 <h4 id="参考文章-Reference-："><a href="#参考文章-Reference-：" class="headerlink" title="参考文章(Reference)："></a>参考文章(Reference)：</h4><ul>
-<li><a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170" target="_blank" rel="external">Stackoverflow–What methods of ‘clearfix’ can I use?</a></li>
-<li><a href="http://www.quirksmode.org/css/clearing.html#top" target="_blank" rel="external">Blog–Clearing floats</a></li>
-<li><a href="http://yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/" target="_blank" rel="external">Blog–CSS 101: Block Formatting Contexts</a></li>
-<li><a href="https://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo" target="_blank" rel="external">W3C–Relationships between ‘display’, ‘position’, and ‘float’</a></li>
-<li><a href="http://www.jianshu.com/p/07eb19957991#" target="_blank" rel="external">Blog–CSS浮动float详解</a></li>
-<li><a href="http://www.cnblogs.com/dolphinX/archive/2012/10/13/2722501.html" target="_blank" rel="external">Blog–CSS布局 ——从display，position， float属性谈起</a></li>
-<li><a href="http://www.cnblogs.com/coffeedeveloper/p/3145790.html" target="_blank" rel="external">Blog–对CSS中的Position、Float属性的一些深入探讨</a></li>
+<li><a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use/1633170#1633170" target="_blank" rel="noopener">Stackoverflow–What methods of ‘clearfix’ can I use?</a></li>
+<li><a href="http://www.quirksmode.org/css/clearing.html#top" target="_blank" rel="noopener">Blog–Clearing floats</a></li>
+<li><a href="http://yuiblog.com/blog/2010/05/19/css-101-block-formatting-contexts/" target="_blank" rel="noopener">Blog–CSS 101: Block Formatting Contexts</a></li>
+<li><a href="https://www.w3.org/TR/CSS21/visuren.html#dis-pos-flo" target="_blank" rel="noopener">W3C–Relationships between ‘display’, ‘position’, and ‘float’</a></li>
+<li><a href="http://www.jianshu.com/p/07eb19957991#" target="_blank" rel="noopener">Blog–CSS浮动float详解</a></li>
+<li><a href="http://www.cnblogs.com/dolphinX/archive/2012/10/13/2722501.html" target="_blank" rel="noopener">Blog–CSS布局 ——从display，position， float属性谈起</a></li>
+<li><a href="http://www.cnblogs.com/coffeedeveloper/p/3145790.html" target="_blank" rel="noopener">Blog–对CSS中的Position、Float属性的一些深入探讨</a></li>
 </ul>
 
       

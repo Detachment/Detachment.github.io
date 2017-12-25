@@ -87,12 +87,14 @@
 
 
 <meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
+<meta name="keywords" content="前端,基础,jQuery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《jQuery学习教程》">
 <meta property="og:url" content="http://detachment.club/2016/07/31/jQuery 学习教程/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
-<meta property="og:updated_time" content="2016-08-07T15:14:05.140Z">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2016-08-07T15:14:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《jQuery学习教程》">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这">
@@ -366,7 +368,7 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="external">w3school</a>查看。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;网上学习JS的过程告一段落，然后就马不停蹄的开始找JS框架和库的教程（感觉知乎上很多学习课程都是不负责任推荐，有点怀疑他们本身有没有看过那些推荐的教程。当然了，也可能是那些课程仅仅是不适合我。），找了一圈下来（网易云课堂、慕课网、极客学院、codecademy、free code camp等）没有发现适合的，要么讲的太简单了，要么信息量太大了。这时候，终于想起了w3school。以下的学习内容大部分都是基于这上面的，需要更详细的内容可以上<a href="http://www.w3school.com.cn/jquery" target="_blank" rel="noopener">w3school</a>查看。</p>
 <a id="more"></a>
 <h2 id="课程章节"><a href="#课程章节" class="headerlink" title="课程章节"></a>课程章节</h2><h3 id="jQuery介绍"><a href="#jQuery介绍" class="headerlink" title="jQuery介绍"></a>jQuery介绍</h3><h4 id="关键词：简介、安装、语法、选择器、事件、名称冲突"><a href="#关键词：简介、安装、语法、选择器、事件、名称冲突" class="headerlink" title="关键词：简介、安装、语法、选择器、事件、名称冲突"></a>关键词：简介、安装、语法、选择器、事件、名称冲突</h4><ul>
 <li><strong>简介</strong>：jQuery是一个轻量级的JavaScript库，能极大的简化JavaScript编程，宗旨是“write less, do more”；包含的功能非常多（1. HTML元素选取；2. HTML元素操作；3. CSS操作；4. HTML事件函数；5. JavaScript特效和动画；6. HTML DOM遍历和修改；7. AJAX；8. Utilities；）；</li>
@@ -375,10 +377,10 @@
 <li><strong>选择器</strong>：常见的选择器有以下几种：<ol>
 <li>元素选择器：例如<code>$(&#39;p&#39;)</code>表示选取<code>&lt;p&gt;</code>元素；<code>$(&#39;p.intro&#39;)</code>表示选择类别为intro的<code>&lt;p&gt;</code>元素；</li>
 <li>属性选择器：例如<code>$(&quot;[href]&quot;)</code>表示选取所有带有href属性的元素；<code>$(&quot;[href=&#39;#&#39;]&quot;)</code>表示选择所有带有href值等于#的元素；<code>$(&quot;[href$=&#39;.jpg&#39;]&quot;)</code>表示选择所有href值以.jpg结尾的元素；</li>
-<li>更多是选择器参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="external">jQuery选择器手册</a>。</li>
+<li>更多是选择器参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="noopener">jQuery选择器手册</a>。</li>
 </ol>
 </li>
-<li><strong>事件</strong>：jQuery事件处理方法是jQuery的核心函数，事件处理程序指的是当HTML中发生某些事件所调用的方法，也叫作“触发”；（通常把jQuery代码放在<code>&lt;head&gt;</code>部分的事件处理方法中；详细的事件参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="external">jQuery事件手册</a></li>
+<li><strong>事件</strong>：jQuery事件处理方法是jQuery的核心函数，事件处理程序指的是当HTML中发生某些事件所调用的方法，也叫作“触发”；（通常把jQuery代码放在<code>&lt;head&gt;</code>部分的事件处理方法中；详细的事件参考<a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">jQuery事件手册</a></li>
 <li><strong>名称冲突</strong>：由于其他库也可能使用<code>$</code>符号，那么就会引起冲突，jQuery中使用<code>noConflict()</code>方法来解决这个问题；</li>
 <li><strong>注意</strong>：为了使代码更容易维护，以下事项需要注意：<ol>
 <li>把所有的jQuery代码置于事件处理函数中；</li>
@@ -388,7 +390,7 @@
 </ol>
 </li>
 </ul>
-<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akawvG/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akawvG/" target="_blank" rel="external">jQuery01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码"><a href="#实例及代码" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/akawvG/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/akawvG/" target="_blank" rel="noopener">jQuery01</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="noopener">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
 
 <blockquote>
 <p>注意：由于CodePen后台提供了jQuery的链接，所以在面板上看不到引入库的这一段代码。</p>
@@ -410,7 +412,7 @@
 <li><strong>Callback</strong>：此函数在当前动画100%完成之后执行；因为JS语句是逐一执行的，为了避免因为动画还没执行完成而造成动画与之后的语句之间可能产生的错误或者页面冲突，建议以参数的形式添加Callback函数；</li>
 <li><strong>Chaining</strong>：Chaining允许我们在一条语句中添加多个方法，例如<code>$(&#39;p&#39;).css(&#39;color&#39;, &#39;red&#39;).slideUp(2000).slideDown(2000);</code>，这是p元素就会先改变css样式，然后收缩，最后张开；为了易读性及格式的美观，可以通过换行及空格来美化；</li>
 </ul>
-<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyZZQY/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyZZQY/" target="_blank" rel="external">jQuery02</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码-1"><a href="#实例及代码-1" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/EyZZQY/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/EyZZQY/" target="_blank" rel="noopener">jQuery02</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="noopener">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
 
 <h4 id="小测试-1"><a href="#小测试-1" class="headerlink" title="小测试"></a>小测试</h4><p>利用这节课所学的知识点，重现具有以上功能的div。</p>
 <h4 id="小问题"><a href="#小问题" class="headerlink" title="小问题"></a>小问题</h4><p>  既然很多方法中已经都有callback函数的可选参数来达到链式运动的目的，那么为什么jQuery还需要有链式运动的功能？</p>
@@ -428,7 +430,7 @@
 <li>attr(): 用于获取属性值；</li>
 </ol>
 </li>
-<li>设置：设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容，具体方法可见例子；同时需要知道，这三个jQuery方法都拥有回调函数，函数有两个参数，分别为被选元素列表中当前元素的下标以及原始值，<a href="http://www.w3school.com.cn/jquery/jquery_dom_set.asp" target="_blank" rel="external">text()、html() 以及 val() 的回调函数</a>；利用attr()来设置属性时可以同时设置多个属性，属性之间利用逗号隔开，此方法同样具有回调函数；</li>
+<li>设置：设置内容也是用上一节提到的三个函数，不过需要在括号中加入需要设置的内容，具体方法可见例子；同时需要知道，这三个jQuery方法都拥有回调函数，函数有两个参数，分别为被选元素列表中当前元素的下标以及原始值，<a href="http://www.w3school.com.cn/jquery/jquery_dom_set.asp" target="_blank" rel="noopener">text()、html() 以及 val() 的回调函数</a>；利用attr()来设置属性时可以同时设置多个属性，属性之间利用逗号隔开，此方法同样具有回调函数；</li>
 <li>添加：利用jQuery可以很容易的添加新元素或者新内容，方法如下：<ol>
 <li>append()：在被选元素的结尾插入内容或元素；</li>
 <li>prepend()：在被选元素的开头插入内容或元素；</li>
@@ -458,7 +460,7 @@
 </ol>
 </li>
 </ul>
-<h4 id="实例及代码-2"><a href="#实例及代码-2" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/OXBzLX/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/OXBzLX/" target="_blank" rel="external">jQuery03</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="实例及代码-2"><a href="#实例及代码-2" class="headerlink" title="实例及代码"></a>实例及代码</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/OXBzLX/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/OXBzLX/" target="_blank" rel="noopener">jQuery03</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="noopener">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
 
 <blockquote>
 <p>本小程序具有的功能：</p>
@@ -508,7 +510,7 @@
 </ol>
 </li>
 </ul>
-<h4 id="代码及实例"><a href="#代码及实例" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/BzqvZJ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/BzqvZJ/" target="_blank" rel="external">jQuery04</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="external">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.<br></iframe>
+<h4 id="代码及实例"><a href="#代码及实例" class="headerlink" title="代码及实例"></a>代码及实例</h4><iframe height="265" scrolling="no" src="//codepen.io/Leon-Zhao/embed/preview/BzqvZJ/?height=265&theme-id=0&default-tab=result&embed-version=2" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;">See the Pen <a href="http://codepen.io/Leon-Zhao/pen/BzqvZJ/" target="_blank" rel="noopener">jQuery04</a> by Leon (<a href="http://codepen.io/Leon-Zhao" target="_blank" rel="noopener">@Leon-Zhao</a>) on <a href="http://codepen.io" target="_blank" rel="noopener">CodePen</a>.<br></iframe>
 
 <blockquote>
 <p>注意：<br>在使用filter()进行筛选的时候，<code>$(selector).filter(some)</code>其中seclector和some是同一等级的，也就是说是在很多selector中找出符合‘some’这个筛选要求的selector。</p>
@@ -518,9 +520,9 @@
 <h3 id="jQuery-AJAX"><a href="#jQuery-AJAX" class="headerlink" title="jQuery AJAX"></a>jQuery AJAX</h3><h4 id="关键词：AJAX简介、加载、Get-Post"><a href="#关键词：AJAX简介、加载、Get-Post" class="headerlink" title="关键词：AJAX简介、加载、Get/Post"></a>关键词：AJAX简介、加载、Get/Post</h4><ul>
 <li>简介：全称为Asynchronous JavaScript and XML，异步的JavaScript和XML，此功能能够在不重载整个页面的情况下通过后台加载数据，并在页面上显示出来；</li>
 <li>加载：在jQuery中的AJAX方式为：load()，此方法能够从服务器中加载数据，并把返回的数据放入到被选元素中；语法为：<code>$(selector).load(URL, data, callback)</code>其中URL参数表示希望加载的地址；可选参数data规定了与请求一同发送的查询字符串键/值对集合；可选参数callback是load方法完成后所执行的函数名称，可设置参数为responsTxt（包含调用成功时的结果内容）,statusTxt（包含调用的状态）,xhr（包含XMLHttpRequest对象）；</li>
-<li>Get/Post：两种常见的从服务器请求数据的方法，<a href="http://www.w3school.com.cn/tags/html_ref_httpmethods.asp" target="_blank" rel="external">点击这个链接可了解这两者的详细区别</a>；</li>
+<li>Get/Post：两种常见的从服务器请求数据的方法，<a href="http://www.w3school.com.cn/tags/html_ref_httpmethods.asp" target="_blank" rel="noopener">点击这个链接可了解这两者的详细区别</a>；</li>
 </ul>
-<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span><br><span class="line"></span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">'https://code.jquery.com/jquery-2.2.4.min.js'</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span><br><span class="line">        $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            $(<span class="string">'#btn'</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                $.get(<span class="string">'a.txt?t='</span>+ <span class="keyword">new</span> <span class="built_in">Date</span>().getTime(), <span class="function"><span class="keyword">function</span> (<span class="params">data, status</span>) </span>&#123;</span><br><span class="line">                    alert(<span class="string">'Date:'</span>+data+<span class="string">"\nStatus:"</span>+status);</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">    </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span> <span class="attr">id</span>=<span class="string">"btn"</span>&gt;</span>Get<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<h4 id="代码及实例-1"><a href="#代码及实例-1" class="headerlink" title="代码及实例"></a>代码及实例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">"utf-8"</span>&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line"></span><br><span class="line">    &lt;<span class="regexp">/style&gt;</span></span><br><span class="line"><span class="regexp">    &lt;script type="text/</span>javascript<span class="string">" src='https://code.jquery.com/jquery-2.2.4.min.js'&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">    &lt;script&gt;</span></span><br><span class="line"><span class="string">        $(document).ready(function () &#123;</span></span><br><span class="line"><span class="string">            $('#btn').click(function () &#123;</span></span><br><span class="line"><span class="string">                $.get('a.txt?t='+ new Date().getTime(), function (data, status) &#123;</span></span><br><span class="line"><span class="string">                    alert('Date:'+data+"</span>\nStatus:<span class="string">"+status);</span></span><br><span class="line"><span class="string">                &#125;);</span></span><br><span class="line"><span class="string">            &#125;);</span></span><br><span class="line"><span class="string">        &#125;);</span></span><br><span class="line"><span class="string">    &lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;/head&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&lt;body&gt;</span></span><br><span class="line"><span class="string">    &lt;button type="</span>button<span class="string">" id="</span>btn<span class="string">"&gt;Get&lt;/button&gt;</span></span><br><span class="line"><span class="string">&lt;/body&gt;</span></span><br><span class="line"><span class="string">&lt;/html&gt;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>注意：由于ajax部分的内容需要在服务器环境下进行测试，所以本节只给出了代码的例子。</p>
 </blockquote>

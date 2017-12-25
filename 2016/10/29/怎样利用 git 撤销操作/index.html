@@ -87,17 +87,19 @@
 
 
 <meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
+<meta name="keywords" content="工具,git,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="怎样利用 git 撤销操作">
 <meta property="og:url" content="http://detachment.club/2016/10/29/怎样利用 git 撤销操作/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
+<meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2077/6953866/f6b9f054-d891-11e4-8c53-838eff9f40ae.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2077/6953863/f6b1ab88-d891-11e4-97c1-e0630ac74e74.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2077/6953865/f6b605ca-d891-11e4-98cf-d567ca9f4edc.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2077/6953864/f6b4a9d2-d891-11e4-9ac9-10039c031d06.png">
 <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2077/6953862/f6a7a1d8-d891-11e4-8784-c32262ff54da.png">
-<meta property="og:updated_time" content="2016-10-29T10:48:34.034Z">
+<meta property="og:updated_time" content="2016-10-29T10:48:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="怎样利用 git 撤销操作">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;对于版本管理系统而言，最重要的一个特性之一就是能够撤销错误的操作。在 git 中，撤销有很多种可能的意思。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;每当你做出一个 提交 的时候，git 都会立即在你的 repository 保存一个快照，之后你就可以通过 git 来恢复到这个项目的前一个版本了。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp">
@@ -448,7 +450,7 @@
 <p><strong>原理</strong>：<code>.gitignore</code> 会使得 Git不去监测文件的变化，对于之前没有检测过的文件，它甚至会无视文件的存在。只要文件被提交了， Git 就会持续监测它的变化。类似的，如果利用 <code>git add -f</code> 或者覆盖 <code>.gitignore</code> 文件，那么 Git 也会监测这些文件的变化。</p>
 <p>如果你想使得那些本不应该被监测的文件脱离监测，那么你可以使用 <code>git rm --cached</code> 指令。利用这个指令会停止 Git 对它的监测，同时这个文件在硬盘上不受影响。由于这个文件现在不被监测了，所以利用 <code>git status</code> 不能看到这个文件了。</p>
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;这是一篇译文，原文地址为： <a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git" target="_blank" rel="external">How to undo (almost) anything with Git</a>。由于自己碰到了这方面的问题，然后搜索过程中发现了这片文章，写的很全面，所以就翻译了一下。翻译的过程中可能会有一些理解上的偏差，欢迎盆友们指正。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;这是一篇译文，原文地址为： <a href="https://github.com/blog/2019-how-to-undo-almost-anything-with-git" target="_blank" rel="noopener">How to undo (almost) anything with Git</a>。由于自己碰到了这方面的问题，然后搜索过程中发现了这片文章，写的很全面，所以就翻译了一下。翻译的过程中可能会有一些理解上的偏差，欢迎盆友们指正。</p>
 <blockquote>
 <p><strong>commit：</strong>  在文中被翻译为 提交<br>  <strong>push：</strong> 在文中被译为 推送</p>
 </blockquote>
