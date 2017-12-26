@@ -553,7 +553,8 @@
     <entry>
       <title><![CDATA[博客构建笔记]]></title>
       <url>http://detachment.club/2016/12/28/%E5%8D%9A%E5%AE%A2%E6%9E%84%E5%BB%BA%E7%AC%94%E8%AE%B0/</url>
-      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。</p>
+      <content type="html"><![CDATA[<p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。</p>
 <a id="more"></a>
 <h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><h3 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;一直都知道很多博客有订阅 rss 的功能，但是从来没有使用过，所以前期构建的时候并没有将这个功能作为博客的核心功能。直到邮件订阅了一些网站之后，只要有更新就会自动推送邮件，并且在邮件中就能看到更新的内容。这才感受到这个功能的便捷性，然后决定我也要给我的博客增加这个功能。<br>&nbsp;&nbsp;&nbsp;&nbsp;经过一番探索，经过以下步骤可以实现 rss 及邮件订阅的功能：</p>
 <ol>
@@ -578,6 +579,8 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;仔细看了一下这篇博客及对应项目的 GitHub 文档，满足基本需求不成问题，但是有两点不足：第一，官方文档写的不是太好，有些地方不好理解；第二，对于基于 GitHub page 的博客基本无效。然后在 GitHub 上顺藤摸瓜，找出了下面这个项目：   </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">hexo-blog-encrypt</a>    </p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;文档清晰易懂，开发者响应迅速，最重要的是能够完整加密。如果非要提不足的地方，那就是解密后目录栏不会自动更新。和开发者沟通过，这个需要根据不同的 Hexo 主题进行对应的更改，经过一番尝试后测试失败。由于时间问题，暂时我就不去管它了。<br>&nbsp;&nbsp;&nbsp;&nbsp;所以，如果你也需要为博客设置密码，推荐第二种方式。<br>&nbsp;&nbsp;&nbsp;&nbsp;非常感谢两位开发者做出的探索。</p>
+<hr>
+<h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><p>​    换电脑后写博客没有以前那么方便了，加上懒癌晚期，一直拖着没有把以前电脑上的资源迁移过来，所以大半年都没有写博客了。昨天晚上不知道哪根筋搭错了，终于决定将很久都没有做的事情完成下。</p>
 ]]></content>
       
         <categories>
@@ -596,6 +599,8 @@
             <tag> 订阅 </tag>
             
             <tag> 加密 </tag>
+            
+            <tag> 迁移 </tag>
             
         </tags>
         
