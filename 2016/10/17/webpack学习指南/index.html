@@ -101,7 +101,7 @@
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/json-loader.png">
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/yaml-loader.png">
 <meta property="og:image" content="https://dtinth.github.io/webpack-docs-images/usage/cats.png">
-<meta property="og:updated_time" content="2016-10-16T16:00:00.000Z">
+<meta property="og:updated_time" content="2016-10-17T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack学习指南">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;前端工程化已成为趋势，善于使用各种工具无疑能极大的提高工作效率，所以这段时间将陆续会有几篇关于这些工具的介绍文章，文章的内容大多是关于这些工具的文档的翻译。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;本文所有资料来源都是 webpack 官网，有意看原文的戳链接： webpack document">
@@ -318,6 +318,13 @@
             </time>
           </span>
 
+	
+  	<span class="post-updated">
+	&nbsp; | &nbsp; 更新于
+	<time itemprop="dateUpdated" datetime="2016-10-18T00:00:00+08:00" content="2016-10-18">
+	  2016-10-18
+	</time>
+ 	 </span>
 	
 
           
@@ -843,7 +850,7 @@
 <li><code>posts.js  posts.css</code></li>
 <li><code>post.js  post.css</code></li>
 <li><code>about.js  about.css</code></li>
-<li><code>1.js  2.js</code>（包含内嵌样式）<br>或者设置 <code>allChunks: true</code>，得到</li>
+<li><code>1.js  2.js</code>（包含内嵌样式）<br>  或者设置 <code>allChunks: true</code>，得到</li>
 <li><code>1.js 2.js</code>（不包含内嵌样式）</li>
 </ul>
 <hr>
@@ -908,7 +915,8 @@
 <li><p>分解依赖<br>  在很多语言中都有规范依赖的方法，比如在 css 中有 <code>@import</code> 以及 <code>url(...)</code> 的方式。模块系统应该能够分解这些依赖。<br>  有两种选择可达到这种目的：</p>
 <ul>
 <li>将它们转化成 <code>require</code></li>
-<li>利用 <code>this.resolve()</code> 函数来分解路径<br>举例一：css-loader。 css-loader 将依赖转化成 <code>require</code>，具体方式是利用 <code>require</code> 样式（也会被 css-loader 处理）来替代 <code>@import</code>，同时也利用 <code>require</code> 相关文件来替代 <code>url(...)</code> 引用。<br>如果这个语言只接受相对路径（比如在 css 中： <code>url(file)</code> 一般表示 <code>./file</code>），那么就可以通过 <code>~</code> 符号来将特定的引用传送给模块，如下所示：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url(file) -&gt; <span class="built_in">require</span>(<span class="string">"./file"</span>)</span><br><span class="line">url(~<span class="built_in">module</span>) -&gt; <span class="built_in">require</span>(<span class="string">"module"</span>)</span><br></pre></td></tr></table></figure>
+<li>利用 <code>this.resolve()</code> 函数来分解路径<br>  举例一：css-loader。 css-loader 将依赖转化成 <code>require</code>，具体方式是利用 <code>require</code> 样式（也会被 css-loader 处理）来替代 <code>@import</code>，同时也利用 <code>require</code> 相关文件来替代 <code>url(...)</code> 引用。<pre><code>如果这个语言只接受相对路径（比如在 css 中： `url(file)` 一般表示 `./file`），那么就可以通过 `~` 符号来将特定的引用传送给模块，如下所示：
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url(file) -&gt; <span class="built_in">require</span>(<span class="string">"./file"</span>)</span><br><span class="line">url(~<span class="built_in">module</span>) -&gt; <span class="built_in">require</span>(<span class="string">"module"</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
