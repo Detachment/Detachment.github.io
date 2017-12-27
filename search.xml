@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title><![CDATA[再见了，2017]]></title>
+      <url>http://detachment.club/2017/12/27/2017%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93(%E5%86%99%E4%BD%9C%E7%BB%88...)/</url>
+      <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;本来之前说好的是每个月一次总结的，却因为一次拖延，然后次次拖延。年终总结是怎么也不会少掉的。（先开个头，明天继续写，mobx + next.js + react + es6/es7 写的我确实心累）</p>
+]]></content>
+      
+        <categories>
+            
+            <category> 总结 </category>
+            
+        </categories>
+        
+        
+        <tags>
+            
+            <tag> 前端 </tag>
+            
+            <tag> JavaScript </tag>
+            
+            <tag> 2017 </tag>
+            
+            <tag> 工作 </tag>
+            
+            <tag> 计划 </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[域名迁移]]></title>
       <url>http://detachment.club/2017/06/13/%E5%9F%9F%E5%90%8D%E8%BF%81%E7%A7%BB/</url>
       <content type="html"><![CDATA[<h2 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h2><p> 本域名即将到期（6月22日），之后域名地址更改为：detachment.top。如果你一直在关注我的博客，别忘了更换地址。<br> 同时，在我 github 上的 <a href="https://github.com/Detachment/Detachment.github.io" target="_blank" rel="noopener">https://github.com/Detachment/Detachment.github.io</a> 这个项目里，你也可以找到我的最新博客地址，谢谢关注。</p>
