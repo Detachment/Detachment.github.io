@@ -20,7 +20,15 @@
 <h4 id="8-31-9-27-nbsp-nbsp-重构所有-iOS-H5页面"><a href="#8-31-9-27-nbsp-nbsp-重构所有-iOS-H5页面" class="headerlink" title="8.31 - 9.27 &nbsp;&nbsp; 重构所有 iOS H5页面"></a>8.31 - 9.27 &nbsp;&nbsp; 重构所有 iOS H5页面</h4><p><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180120_111545.png" alt="UC20180120_111545"><br>&nbsp;&nbsp;&nbsp;&nbsp;这个阶段主要工作是重构了之前所有的 iOS 相关的 H5 页面，重构完有一种终于将满是灰尘的房间打扫一番的感觉，耳目一新。这段时间还断断续续的写了 iOS 的机构页面，抽取追踪信息组件等工作。总结起来就一句话：欠下的债总归是要还的，逻辑清晰最重要。</p>
 <h4 id="9-27-10-30-nbsp-nbsp-烯牛博客及其相关"><a href="#9-27-10-30-nbsp-nbsp-烯牛博客及其相关" class="headerlink" title="9.27 - 10.30 &nbsp;&nbsp; 烯牛博客及其相关"></a>9.27 - 10.30 &nbsp;&nbsp; 烯牛博客及其相关</h4><p><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180120_113056.png" alt="UC20180120_113056"><br>&nbsp;&nbsp;&nbsp;&nbsp;这个阶段主要完成了博客系统的开发。用的是封装好的库 quill，因为之前完全没有做过，所以还是碰到了一些困难，比如从展示模式到编辑模式、图片的上传等等。这个阶段给我带来的思考主要有两点。其一：当有一条路走不通的时候，不妨停下来，然后换个思路继续走（图片上传功能就是在一段时间都找不到解决办法后突然就解决了）。其二：系统新功能开发前一定要经过开发确认。</p>
 <h4 id="10-30-12-31-nbsp-nbsp-行业页面（PC及微信端）-及新闻库"><a href="#10-30-12-31-nbsp-nbsp-行业页面（PC及微信端）-及新闻库" class="headerlink" title="10.30 - 12.31 &nbsp;&nbsp; 行业页面（PC及微信端） 及新闻库"></a>10.30 - 12.31 &nbsp;&nbsp; 行业页面（PC及微信端） 及新闻库</h4><p><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180120_115426.png" alt="UC20180120_115426"><br><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180120_115714.png" alt="UC20180120_115714"><br>&nbsp;&nbsp;&nbsp;&nbsp; 经过前面那么多项目的铺垫，这段时间的开发任务就比较常规了，并没有特别有难度的地方。值得一提的是，在这个阶段尝试写了一个后端的接口，虽然后来由于开发时间比较紧张而没有完成，但是对后端的流程有了一个感官的印象，对后面的继续学习有一定的帮助。</p>
-<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><hr>
+<h4 id="12-31-至今-nbsp-nbsp-服务器端渲染探索"><a href="#12-31-至今-nbsp-nbsp-服务器端渲染探索" class="headerlink" title="12.31 - 至今 &nbsp;&nbsp; 服务器端渲染探索"></a>12.31 - 至今 &nbsp;&nbsp; 服务器端渲染探索</h4><p><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180120_120644.png" alt="UC20180120_120644"><br>&nbsp;&nbsp;&nbsp;&nbsp;服务器端渲染已经被说过好多遍了，然后这段时间终于有空可以研究一下了。松哥确定了基本的架构，用封装好的 next.js 来渲染，用 mobx 来进行数据管理。由于里面用了很多 es6 甚至 es7 的内容，所以学习起来费了一番时间和精力。经过一番探索，现在已经可以开始尝试运用到移动端了，接下来的工作就是移动端的重构。</p>
+<h3 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h3><p>&nbsp;&nbsp;&nbsp;&nbsp; 总结的部分上面已经说的差不多了，接下来说一说今年的计划吧：</p>
+<ul>
+<li>前端继续深入学习，比如开始引入测试框架等等；</li>
+<li>后端学习，达到能独立开发的水平；</li>
+<li>希望公司给的帮助：希望能让大家对公司的整体层面有个更清晰的了解，对自己做的事以及自己所做的事对公司产生的影响有更清晰的了解。具体做法可以是企业培训或者开发新系统的对象扩大到所有同事。</li>
+</ul>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;开心的日子总是过得飞快，一转眼一年就过去了。</p>
+<hr>
 <h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><h3 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h3><h3 id="计划-1"><a href="#计划-1" class="headerlink" title="计划"></a>计划</h3><hr>
 <h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2>]]></content>
       
