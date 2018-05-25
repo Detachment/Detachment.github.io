@@ -402,9 +402,17 @@
 </blockquote>
 <h3 id="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？"><a href="#html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分-HTML-和-HTML5？" class="headerlink" title="html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？"></a>html5有哪些新特性、移除了那些元素？如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</h3><blockquote>
 <p>HTML5 现在已经不是 SGML 的子集，主要是关于图像，位置，存储，多任务等功能的增加。<br>      绘画 canvas;<br>      用于媒介回放的 video 和 audio 元素;<br>      本地离线存储 localStorage 长期存储数据，浏览器关闭后数据不丢失;<br>      sessionStorage 的数据在浏览器关闭后自动删除;<br>      语意化更好的内容元素，比如 article、footer、header、nav、section;<br>      表单控件，calendar、date、time、email、url、search;<br>      新的技术webworker, websocket, Geolocation;</p>
+</blockquote>
+<blockquote>
 <p> 移除的元素：<br>      纯表现的元素：basefont，big，center，font, s，strike，tt，u;<br>      对可用性产生负面影响的元素：frame，frameset，noframes；</p>
+</blockquote>
+<blockquote>
 <p>支持HTML5新标签：<br>     IE8/IE7/IE6支持通过document.createElement方法产生的标签，<br>     可以利用这一特性让这些浏览器支持HTML5新标签，<br>     浏览器支持新标签后，还需要添加标签默认的样式。</p>
+</blockquote>
+<blockquote>
 <p> 当然也可以直接使用成熟的框架、比如html5shim;<br>   <code>&lt;script&gt;src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&lt;/script&gt;</code></p>
+</blockquote>
+<blockquote>
 <p>如何区分HTML5： DOCTYPE声明或新增的结构元素或功能元素；</p>
 </blockquote>
 <h3 id="简述一下你对HTML语义化的理解？"><a href="#简述一下你对HTML语义化的理解？" class="headerlink" title="简述一下你对HTML语义化的理解？"></a>简述一下你对HTML语义化的理解？</h3><blockquote>
@@ -558,22 +566,32 @@
 <hr>
 <h2 id="JavaScript-部分"><a href="#JavaScript-部分" class="headerlink" title="JavaScript 部分"></a>JavaScript 部分</h2><h3 id="介绍JS中的基本数据类型。"><a href="#介绍JS中的基本数据类型。" class="headerlink" title="介绍JS中的基本数据类型。"></a>介绍JS中的基本数据类型。</h3><blockquote>
 <p>一般来说分为两种，分别为基本类型和对象类型，其中基本类型包括undefined, null, Boolean, Number, String, Symbol，对象类型即为Object。</p>
+</blockquote>
+<blockquote>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures" target="_blank" rel="noopener">MDN中关于JS基本数据类型的介绍~</a><br><a href="http://www.cnblogs.com/snandy/archive/2013/01/02/2841899.html" target="_blank" rel="noopener">JS中基本类型之争</a></p>
 </blockquote>
 <h3 id="JS中有哪些内置对象？"><a href="#JS中有哪些内置对象？" class="headerlink" title="JS中有哪些内置对象？"></a>JS中有哪些内置对象？</h3><blockquote>
 <p>Object 是 JavaScript 中所有对象的父对象<br>数据封装类对象：Object、Array、Boolean、Number 和 String<br>其他对象：Function、Arguments、Math、Date、RegExp、Error</p>
+</blockquote>
+<blockquote>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects" target="_blank" rel="noopener">JS中的标准全局对象</a></p>
 </blockquote>
 <h3 id="说几条JS的基本规范"><a href="#说几条JS的基本规范" class="headerlink" title="说几条JS的基本规范"></a>说几条JS的基本规范</h3><blockquote>
 <p>1.不要在同一行声明多个变量。<br>2.请使用 ===/!==来比较true/false或者数值<br>3.使用对象字面量替代new Array这种形式<br>4.不要使用全局函数。<br>5.Switch语句必须带有default分支<br>6.函数不应该有时候有返回值，有时候没有返回值。<br>7.For循环必须使用大括号<br>8.If语句必须使用大括号<br>9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。</p>
+</blockquote>
+<blockquote>
 <p><a href="https://github.com/lxj/javascript.patterns/blob/master/chapter2.markdown" target="_blank" rel="noopener">需要知道更多的要点？ 戳我~</a></p>
 </blockquote>
 <h3 id="简单解释下JS中的原型及原型链，有什么特点？"><a href="#简单解释下JS中的原型及原型链，有什么特点？" class="headerlink" title="简单解释下JS中的原型及原型链，有什么特点？"></a>简单解释下JS中的原型及原型链，有什么特点？</h3><blockquote>
 <p>每个对象都会在其内部初始化一个属性，就是prototype(原型)，当我们访问一个对象的属性时，如果这个对象内部不存在这个属性，那么他就会去prototype里找这个属性，这个prototype又会有自己的prototype，于是就这样一直找下去，也就是我们平时所说的原型链的概念。<br>特点：JavaScript对象是通过引用来传递的，我们创建的每个新对象实体中并没有一份属于自己的原型副本。当我们修改原型时，与之相关的对象也会继承这一改变。</p>
+</blockquote>
+<blockquote>
 <p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank" rel="noopener">MDN上关于JS中继承及原型链的解释</a><br><a href="http://www.cnblogs.com/TomXu/archive/2012/01/05/2305453.html" target="_blank" rel="noopener">强大的原型及原型链</a></p>
 </blockquote>
 <h3 id="JS中有几种类型的值？它们之间的区别时是什么？"><a href="#JS中有几种类型的值？它们之间的区别时是什么？" class="headerlink" title="JS中有几种类型的值？它们之间的区别时是什么？"></a>JS中有几种类型的值？它们之间的区别时是什么？</h3><blockquote>
 <p>主要有两种，分别为栈和堆；<br>栈：原始数据类型（Undefined，Null，Boolean，Number、String）<br>堆：引用数据类型（对象、数组和函数）</p>
+</blockquote>
+<blockquote>
 <p>两种类型的区别是：存储位置不同；<br>原始数据类型直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；<br>引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定,如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。</p>
 </blockquote>
 <h3 id="常见的内存泄露的方式有？如何避免？"><a href="#常见的内存泄露的方式有？如何避免？" class="headerlink" title="常见的内存泄露的方式有？如何避免？"></a>常见的内存泄露的方式有？如何避免？</h3><blockquote>
@@ -584,10 +602,14 @@
 <li>脱离 DOM 的引用</li>
 <li>闭包</li>
 </ol>
+</blockquote>
+<blockquote>
 <p><a href="http://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/" target="_blank" rel="noopener">关于这个问题的答案，具体解释戳我~</a><br><a href="https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/" target="_blank" rel="noopener">英文原文链接</a></p>
 </blockquote>
 <h3 id="JS中怎么实现继承？"><a href="#JS中怎么实现继承？" class="headerlink" title="JS中怎么实现继承？"></a>JS中怎么实现继承？</h3><blockquote>
 <p>主要有以下几种：<br>1、构造继承<br>2、原型继承<br>3、实例继承<br>4、拷贝继承</p>
+</blockquote>
+<blockquote>
 <p><a href="http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html" target="_blank" rel="noopener">详细内容戳我~</a></p>
 </blockquote>
 <h3 id="JS中创建对象有几种方式？"><a href="#JS中创建对象有几种方式？" class="headerlink" title="JS中创建对象有几种方式？"></a>JS中创建对象有几种方式？</h3><blockquote>
@@ -599,6 +621,8 @@
 <li>用原型方式；</li>
 <li>用混合方式；</li>
 </ol>
+</blockquote>
+<blockquote>
 <p><a href="https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers" target="_blank" rel="noopener">原文链接，戳我直达~</a><br><a href="http://www.yuanlairc.com/program/jsobject.html" target="_blank" rel="noopener">javascript创建对象的几种模式</a></p>
 </blockquote>
 <h3 id="谈谈对在JS中This的理解"><a href="#谈谈对在JS中This的理解" class="headerlink" title="谈谈对在JS中This的理解"></a>谈谈对在JS中This的理解</h3><blockquote>
@@ -607,14 +631,20 @@
 <li>如果有new关键字，this指向new出来的那个对象；</li>
 <li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window；</li>
 </ul>
+</blockquote>
+<blockquote>
 <p><a href="http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html" target="_blank" rel="noopener">Javascript中this的用法 by 阮一峰</a></p>
 </blockquote>
 <h3 id="null和undefined有什么区别？"><a href="#null和undefined有什么区别？" class="headerlink" title="null和undefined有什么区别？"></a>null和undefined有什么区别？</h3><blockquote>
 <p>null最常见的用法表示一个对象被定义了，但值为空值；<br>undefined最常用的用法表示一个对象未被定义或者需要访问的对象的属性不存在；</p>
+</blockquote>
+<blockquote>
 <p><a href="http://bonsaiden.github.io/JavaScript-Garden/zh/#core.undefined" target="_blank" rel="noopener">undefined和null——《秘密花园》</a><br><a href="http://www.ruanyifeng.com/blog/2014/03/undefined-vs-null.html" target="_blank" rel="noopener">undefined和null的区别，阮一峰</a></p>
 </blockquote>
 <h3 id="“1”-“2”-“3”-map-parseInt-答案是多少？"><a href="#“1”-“2”-“3”-map-parseInt-答案是多少？" class="headerlink" title="[“1”, “2”, “3”].map(parseInt) 答案是多少？"></a>[“1”, “2”, “3”].map(parseInt) 答案是多少？</h3><blockquote>
 <p>答案是[1, NaN, NaN]。<br>map方法中的回调函数可以有三个参数来声明，第一个为数组元素的值，第二个为数组元素的数字索引，但三个为包含该元素的数组对象。<br>在这个例子中，回调函数为parseInt，传入参数为待解析字符串及进制数，其中进制数为可选参数。<br>然后在这个，parseInt函数正好将数组元素的数字索引当做进制数来进行运算，所以最终的结果如上所说。</p>
+</blockquote>
+<blockquote>
 <p><a href="https://segmentfault.com/a/1190000005956935" target="_blank" rel="noopener">想知道更详细的解释？戳我~</a></p>
 </blockquote>
 
