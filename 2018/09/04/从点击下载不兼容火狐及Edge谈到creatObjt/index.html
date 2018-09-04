@@ -386,10 +386,10 @@
 <p>自然而言的会怀疑到这个API的浏览器兼容性，然后查了一下，结果如下图所示。我是用的 Firefox 是 62 版本的，所以应该也不存在兼容性问题。<br><img src="http://o9ybnkuir.bkt.clouddn.com/UC20180904_224947.png" alt="compatibility"></p>
 <h2 id="到事件监听"><a href="#到事件监听" class="headerlink" title="到事件监听"></a>到事件监听</h2><p>然后开始怀疑是不是点击事件没有触发。<br>触发一个点击事件的前提：事件绑定在元素上，那么如何将一个点击事件绑定在元素上呢？</p>
 <blockquote>
-<p>以下内容引用自 <a href="https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick" target="_blank" rel="noopener">addEventListener vs onclick</a>   </p>
+<p>以下内容引用自 <a href="https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick" target="_blank" rel="noopener">addEventListener vs onclick</a>         </p>
 </blockquote>
 <ol>
-<li>Event Listeners (addEventListener and IE’s attachEvent)<br>在 IE 9 及以前，需要用 <code>attachEvent</code> 方法来绑定点击事件：<figure class="highlight plain"><figcaption><span>function() &#123;</span><a href="/*">具体函数*/&#125;)```</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">在其他绝大多数浏览器中，则可以用 `addEventListener` 来进行绑定：</span><br><span class="line">```element.addEventListener(&apos;click&apos;, function() &#123; /* 具体函数*/ &#125;, false);</span><br></pre></td></tr></table></figure></li>
+<li>Event Listeners (addEventListener and IE’s attachEvent)<br>在 IE 9 及以前，需要用 <code>attachEvent</code> 方法来绑定点击事件：<br><code>element.attachEvent(&#39;onclick&#39;, function() { /* 具体函数*/})</code><br>在其他绝大多数浏览器中，则可以用 <code>addEventListener</code> 来进行绑定：<br><code>element.addEventListener(&#39;click&#39;, function() { /* 具体函数*/ }, false);</code>        </li>
 </ol>
 
       
