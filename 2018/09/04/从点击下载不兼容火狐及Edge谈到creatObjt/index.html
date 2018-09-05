@@ -89,7 +89,7 @@
 <meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近遇到这样一个问题：点击按钮下载文件的时候，在 Safari 和 Chrome 上都没有问题，在 Firefox 和 Edge 上则无反应。一开始我以为是后者默默的把下载好的文件保存在了浏览器的默认位置导致的，直到昨天产品大佬告诉我默认文件夹并没有对应的文件，这才怀疑可能是在实现过程中有兼容性问题。">
 <meta name="keywords" content="JavaScript,工作,基础,浏览器兼容">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听">
+<meta property="og:title" content="从点击下载不兼容火狐谈起">
 <meta property="og:url" content="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/index.html">
 <meta property="og:site_name" content="Share and Create">
 <meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近遇到这样一个问题：点击按钮下载文件的时候，在 Safari 和 Chrome 上都没有问题，在 Firefox 和 Edge 上则无反应。一开始我以为是后者默默的把下载好的文件保存在了浏览器的默认位置导致的，直到昨天产品大佬告诉我默认文件夹并没有对应的文件，这才怀疑可能是在实现过程中有兼容性问题。">
@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/UC20180904_224947.png">
 <meta property="og:updated_time" content="2018-09-04T16:00:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听">
+<meta name="twitter:title" content="从点击下载不兼容火狐谈起">
 <meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;最近遇到这样一个问题：点击按钮下载文件的时候，在 Safari 和 Chrome 上都没有问题，在 Firefox 和 Edge 上则无反应。一开始我以为是后者默默的把下载好的文件保存在了浏览器的默认位置导致的，直到昨天产品大佬告诉我默认文件夹并没有对应的文件，这才怀疑可能是在实现过程中有兼容性问题。">
 <meta name="twitter:image" content="http://o9ybnkuir.bkt.clouddn.com/UC20180904_224947.png">
 
@@ -122,7 +122,7 @@
 
   <link rel="canonical" href="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/"/>
 
-  <title> 从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听 | Share and Create </title>
+  <title> 从点击下载不兼容火狐谈起 | Share and Create </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -295,7 +295,7 @@
             
             
               
-                从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听
+                从点击下载不兼容火狐谈起
               
             
           </h1>
@@ -357,7 +357,7 @@
 
           
           
-             <span id="/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" class="leancloud_visitors" data-flag-title="从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听">
+             <span id="/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" class="leancloud_visitors" data-flag-title="从点击下载不兼容火狐谈起">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -389,8 +389,17 @@
 <p>以下内容引用自 <a href="https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick" target="_blank" rel="noopener">addEventListener vs onclick</a>         </p>
 </blockquote>
 <ol>
-<li>Event Listeners (addEventListener and IE’s attachEvent)<br>在 IE 9 及以前，需要用 <code>attachEvent</code> 方法来绑定点击事件：<br><code>element.attachEvent(&#39;onclick&#39;, function() { /* 具体函数*/})</code><br>在其他绝大多数浏览器中，则可以用 <code>addEventListener</code> 来进行绑定：<br><code>element.addEventListener(&#39;click&#39;, function() { /* 具体函数*/ }, false);</code>        </li>
+<li>Event Listeners (addEventListener and IE’s attachEvent)<br>在 IE 9 及以前，需要用 <code>attachEvent</code> 方法来绑定点击事件：<figure class="highlight plain"><figcaption><span>function() &#123;</span><a href="/*">具体函数*/&#125;)```       </a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">在其他绝大多数浏览器中，则可以用 `addEventListener` 来进行绑定：</span><br><span class="line">```element.addEventListener(&apos;click&apos;, function() &#123; /* 具体函数*/ &#125;, false);```        </span><br><span class="line">利用这种方式添加事件绑定的时候，理论上可以在同一个元素绑定无数的事件，唯一需要考虑的就是性能问题以及客户端的内存，这些就都和浏览器有关了。</span><br><span class="line">上面的例子中添加的函数都是匿名函数，其实可以先声明一个函数，然后通过函数引用的方式来绑定事件：</span><br><span class="line">    ```javascript</span><br><span class="line">    var myFunctionReference = function() &#123; /* do stuff here*/ &#125;</span><br><span class="line">    element.attachEvent(&apos;onclick&apos;, myFunctionReference);</span><br><span class="line">    element.addEventListener(&apos;click&apos;, myFunctionReference , false);</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>利用  <code>addEventListener</code> 进行绑定的时候需要传第三个参数，这个参数是用来控制事件是否冒泡的。在  <code>attachEvent</code> 方法中没有此参数。     </p>
+<ol start="2">
+<li>Inline events (HTML onclick=”” property and element.onclick)<br>在支持 JavaScript 的浏览器中，我们可以在元素上加上事件监听函数，方法如下：<figure class="highlight plain"><figcaption><span>id</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">虽然大部分有经验的程序员都很少用这种方式，但这种方式确实也可以达到目的，而且简单直接。这种写法的缺点也显而易见：函数必须要非常简单。</span><br><span class="line">另外一种写法是：</span><br><span class="line">```element.onclick = function () &#123; /*do stuff here */ &#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这种写法和上面其实是等价的，不过这样写的话函数的复杂程度就可以大大提高了。<br>利用行间事件的写法有一个很明显的缺点：每一个元素都只能有一个对应的事件，事件是作为元素的属性存储的，这样一来如果有多个同样的事件，那么前者就会被后者覆盖：<br>    <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">'testing'</span>);</span><br><span class="line">element.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert(<span class="string">'did stuff #1'</span>); &#125;;</span><br><span class="line">element.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; alert(<span class="string">'did stuff #2'</span>); &#125;;</span><br></pre></td></tr></table></figure></p>
+<p>上面这段代码执行的时候，只有第二个函数会执行，因为第一个事件被覆盖掉了。</p>
+<h2 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h2><p>上面两个点都没有解决到实际的问题，最后终于在 stackOverflow 上看到了一个问题: <a href="https://stackoverflow.com/questions/30694453/blob-createobjecturl-download-not-working-in-firefox-but-works-when-debugging" target="_blank" rel="noopener">Blob createObjectURL download not working in Firefox (but works when debugging)</a> 利用里面提到的解决方案顺利解决了这个兼容性问题。</p>
 
       
     </div>
@@ -453,12 +462,12 @@
 
         <li class="post-copyright-link">
           <strong>本文标题：</strong>
-          <a href="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" title="从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听">从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听</a>
+          <a href="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" title="从点击下载不兼容火狐谈起">从点击下载不兼容火狐谈起</a>
         </li>
 
         <li class="post-copyright-link">
           <strong>本文链接：</strong>
-          <a href="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" title="从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听">http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/</a>
+          <a href="http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/" title="从点击下载不兼容火狐谈起">http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/</a>
         </li>
 
         <li class="post-copyright-date">
@@ -695,7 +704,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从-window-URL-createObjectURL-blob-说起"><span class="nav-number">2.</span> <span class="nav-text">从 window.URL.createObjectURL(blob) 说起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#到事件监听"><span class="nav-number">3.</span> <span class="nav-text">到事件监听</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从-window-URL-createObjectURL-blob-说起"><span class="nav-number">2.</span> <span class="nav-text">从 window.URL.createObjectURL(blob) 说起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#到事件监听"><span class="nav-number">3.</span> <span class="nav-text">到事件监听</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解决"><span class="nav-number">4.</span> <span class="nav-text">问题解决</span></a></li></ol></div>
             
           </div>
         </section>
@@ -823,7 +832,7 @@
     <script type="text/javascript">
       var disqus_shortname = 'detachmentclub';
       var disqus_identifier = '2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/';
-      var disqus_title = "从点击下载不兼容火狐及Edge谈到createObjectURL以及事件监听";
+      var disqus_title = "从点击下载不兼容火狐谈起";
       var disqus_url = 'http://detachment.club/2018/09/04/从点击下载不兼容火狐及Edge谈到creatObjt/';
 
       function run_disqus_script(disqus_script){
