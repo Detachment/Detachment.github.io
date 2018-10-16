@@ -505,7 +505,7 @@
 <li>less stylesheets → css stylesheets</li>
 <li>等等</li>
 </ul>
-<p>这些处理起来非常简单，如：<br><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">require(<span class="string">"./style.css"</span>)<span class="comment">;</span></span><br><span class="line">require(<span class="string">"./style.less"</span>)<span class="comment">;</span></span><br><span class="line">require(<span class="string">"./template.jade"</span>)<span class="comment">;</span></span><br><span class="line">require(<span class="string">"./image.png"</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure></p>
+<p>这些处理起来非常简单，如：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>(<span class="string">"./style.css"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./style.less"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./template.jade"</span>);</span><br><span class="line"><span class="built_in">require</span>(<span class="string">"./image.png"</span>);</span><br></pre></td></tr></table></figure></p>
 <p>想达到这种效果，需要用到loader，更多阅读 <a href="http://webpack.github.io/docs/using-loaders.html" target="_blank" rel="noopener">loader。</a></p>
 <hr>
 <h3 id="Webpack及安装"><a href="#Webpack及安装" class="headerlink" title="Webpack及安装"></a>Webpack及安装</h3><p><strong>Webpack介绍</strong></p>
@@ -535,7 +535,7 @@
 <p><strong>开始使用</strong>  </p>
 <ul>
 <li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
-<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line">module.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="built_in">module</span>.exports = cats;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
 <p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
 </li>
@@ -1119,7 +1119,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">47</span>
+                <span class="site-state-item-count">48</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
