@@ -1,0 +1,1152 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="前端,基础,CSS,HTML," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="HTML部分简介： HTML 指的是超文本标记语言 (Hyper Text Markup Language)； HTML 不是一种编程语言，而是一种标记语言 (markup language)； 标记语言是一套标记标签 (markup tag)； HTML使用标记标签来描述网页；">
+<meta name="keywords" content="前端,基础,CSS,HTML">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML和css基础知识汇总（长期更新）">
+<meta property="og:url" content="http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/index.html">
+<meta property="og:site_name" content="Share and Create">
+<meta property="og:description" content="HTML部分简介： HTML 指的是超文本标记语言 (Hyper Text Markup Language)； HTML 不是一种编程语言，而是一种标记语言 (markup language)； 标记语言是一套标记标签 (markup tag)； HTML使用标记标签来描述网页；">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.w3school.com.cn/i/ct_boxmodel.gif">
+<meta property="og:updated_time" content="2016-06-30T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML和css基础知识汇总（长期更新）">
+<meta name="twitter:description" content="HTML部分简介： HTML 指的是超文本标记语言 (Hyper Text Markup Language)； HTML 不是一种编程语言，而是一种标记语言 (markup language)； 标记语言是一套标记标签 (markup tag)； HTML使用标记标签来描述网页；">
+<meta name="twitter:image" content="http://www.w3school.com.cn/i/ct_boxmodel.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6298681924009330000,
+      author: '博主大人'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/"/>
+
+  <title> HTML和css基础知识汇总（长期更新） | Share and Create </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?9c979b426e9896831df08fe0c4c24d0e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Share and Create</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HTML和css基础知识汇总（长期更新）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-30T00:00:00+08:00" content="2016-06-30">
+              2016-06-30
+            </time>
+          </span>
+
+	
+  	<span class="post-updated">
+	&nbsp; | &nbsp; 更新于
+	<time itemprop="dateUpdated" datetime="2016-07-01T00:00:00+08:00" content="2016-07-01">
+	  2016-07-01
+	</time>
+ 	 </span>
+	
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/30/HTML和CSS基础知识汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/30/HTML和CSS基础知识汇总/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/06/30/HTML和CSS基础知识汇总/" class="leancloud_visitors" data-flag-title="HTML和css基础知识汇总（长期更新）">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="HTML部分"><a href="#HTML部分" class="headerlink" title="HTML部分"></a>HTML部分</h2><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><ul>
+<li>HTML 指的是超文本标记语言 (Hyper Text Markup Language)；</li>
+<li>HTML 不是一种编程语言，而是一种标记语言 (markup language)；</li>
+<li>标记语言是一套标记标签 (markup tag)；</li>
+<li>HTML使用标记标签来描述网页；</li>
+</ul>
+<a id="more"></a>
+<h3 id="知识点："><a href="#知识点：" class="headerlink" title="知识点："></a>知识点：</h3><ul>
+<li>HTML：Hyper Text Markup Language；</li>
+<li>标签：h1-h6; p; a; img; hr; strong; big; small; em; i; sub; sup; pre; code; kbd; tt; samp; var; address; abbr; acronym; bdo; blockquote; q; del; ins; map; area; table; tr; td; th; caption; thead; tbody; tfoot; dl; dt; dd; span; form; input; select ; option; textarea; fieldset; legend; optgroup; frameset(不与body同用); iframe; frameborder; object; embed; audio; video;</li>
+<li>属性：align; bgcolor; dir；text-decoration; target; name; alt; background; align; rowspan; colspan; cellpadding; cellspacing; frame; raido; checkbox; action; method; selected; rows; cols; label; noresize;</li>
+</ul>
+<blockquote>
+<p>HTML5部分网站上讲的太笼统了，之后在做项目的过程中再做具体的了解，其中canves这个属性被广泛应用；这两天把html和css复习一遍之后开始复习js，同时开始看书+做项目+写博客。按照这种速度的话,下个月底之前应该能够取得很大的进步。</p>
+</blockquote>
+<h2 id="CSS-部分"><a href="#CSS-部分" class="headerlink" title="CSS 部分"></a>CSS 部分</h2><h3 id="简介：-1"><a href="#简介：-1" class="headerlink" title="简介："></a>简介：</h3><ul>
+<li>CSS 指层叠样式表 (Cascading Style Sheets);</li>
+<li>样式定义如何显示 HTML 元素;</li>
+<li>样式通常存储在样式表中;</li>
+<li>把样式添加到HTML4.0中，是为了解决内容与表现分离的问题;</li>
+<li>外部样式表可以极大提高工作效率;</li>
+<li>外部样式表通常存储在 CSS 文件中;</li>
+<li>多个样式定义可层叠为一。</li>
+</ul>
+<h3 id="知识点：-1"><a href="#知识点：-1" class="headerlink" title="知识点："></a>知识点：</h3><ul>
+<li><strong>派生选择器</strong>：也被称为上下文选择器（contextual selector），根据元素在其位置的上下文关系来定义样式，是的标记更简洁；</li>
+<li><strong>id选择器</strong>：用“#”来定义 （注意：id属性只能在每个HTML文档中出现一次）</li>
+<li><strong>类选择器</strong>：以一个“.”显示；</li>
+<li><strong>属性选择器</strong>：以“[属性]”的方式显示；（还有属性和值选择器）– 对于属性值有多重不同的选择方式，具体可参照w3school上的说明；</li>
+<li><strong>背景</strong>：背景色；背景图像（不能继承）；背景重复（background-repeat）；背景定位（background-position–主要是针对当背景是图像的时候使用，如果只出现一个位置信息，则另一个默认为center）；背景关联（background-attachment，可将背景图像固定在可视区域）；</li>
+<li><strong>文本</strong>：缩进文本（text-indent：一般来说，可以为所有块级元素应用text-indent，但无法将该属性应用于行内元素，图像之类的替换元素上也无法应用 text-indent 属性。不过，如果一个块级元素（比如段落）的首行中有一个图像，它会随该行的其余文本移动。如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果。它的值可为<strong>负数或者百分比</strong>。此属性可继承。）；水平对齐（text-align：justify可实现两端对齐——谨慎使用，因为各浏览器增加空间的方式不同造成效果各异；文字间隔（word-spacing）；字母间隔（letter-spacing）；字符转换（text-transform：uppercase、lowercase、capitalize）；文本装饰（text-decoration：underline、overline、line-through及blink；）；空白字符（white-space：pre、nowrap、pre-wrap及pre-line）；文本方向（direction：ltr、ltr；）</li>
+<li><strong>字体</strong>：五种通用字体（font-family）——Serif、Sans-serif、Monospace、Cursive和Fantasy；字体风格（font-style：normal、italic和oblique）；字体变形（font-variant：小型大写字母）；字体加粗（font-weight：bold、bolder、lighter等）；字体大小（font-size：px、em和百分比，其中第一个是静态测量单位，后两者则是相对测量单位）；</li>
+<li><strong>链接</strong>：链接的四种状态（link、visited、hover和active，设置时需要注意顺序问题。通过改变连接访问前后及鼠标是否悬停在链接上的属性设置的不同来达到改变样式的目的）；</li>
+<li><strong>列表</strong>：列表类型（list-style-type）、列表项图像（list-style-image）、列表标志位置（list-style-position）（注意，这些属性一般都是作用在ul或者ol上的，但根据网站上的例子可以知道有时——比如list-style-image也可以施加到list上。）</li>
+<li><strong>表格</strong>：表格边框（border），折叠边框（border-collapse：将表格边框折叠为单一边框），表格文本对齐（水平方向：text-align；垂直对齐方式：vertical-align），表格内边距（padding），表格颜色（background-color）；</li>
+<li><strong>轮廓</strong>：（outline，区别于border，轮廓指的是边缘外框的外围，可以起到突出元素的作用。）</li>
+<li><strong>框模型</strong>：<img src="http://www.w3school.com.cn/i/ct_boxmodel.gif" alt="image">元素框的最内部分是实际的内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距，外边距默认是透明的，因此不会遮挡其后的任何元素。背景应用于由内容和内边距、边框组成的区域。内边距、边框和外边距都是可选的，默认值是零。但是，许多元素将由用户代理样式表设置外边距和内边距。在 CSS 中，width 和 height 指的是内容区域的宽度和高度。增加内边距、边框和外边距不会影响内容区域的尺寸，但是会增加元素框的总尺寸。</li>
+<li><strong>内边距（padding）</strong>：属性定义元素边框与元素内容之间的空白区域。CSSpadding属性定义元素的内边距。padding属性接受长度值或百分比值，<strong>但不允许使用负值</strong>。单位可以有 <a href="https://www.w3.org/Style/Examples/007/units.en.html#units" target="_blank" rel="noopener">EM, PX, PT, CM</a>。如果使用百分比设置的内边距，那么这个百分比的基数是<strong>其父元素的width来计算的</strong>，这一点也同样适用在外边距（而且不管是左右边距还是上下边距）。</li>
+<li><strong>边框（border）</strong>：围绕元素内容和内边距的一条或多条线，允许规定元素边框的样式、宽度和颜色；CSS 规范指出，边框绘制在“元素的背景之上”。这很重要，因为有些边框是“间断的”（例如，点线边框或虚线框），元素的背景应当出现在边框的可见部分之间。CSS2 指出背景只延伸到内边距，而不是边框。后来 CSS2.1 进行了更正：元素的背景是内容、内边距和边框区的背景。边框的样式（border-style：一共有十种，效果各不相同，而且可以分别为不同的边框设置不同的样式）；边框宽度（border-width：可以指定长度或者使用thin，medium或者thick中的任意一个，但是后面这三个关键词的具体宽度可能会根据不同的用户代理有不同的值）。因此，如果希望边框出现，就必须声明一个边框样式。然后设置边框的宽度才有意义。边框的颜色（border-color）：默认的边框颜色是元素本身的前景色。如果没有为边框声明颜色，它将与元素的文本颜色相同。另一方面，如果元素没有任何文本，假设它是一个表格，其中只包含图像，那么该表的边框颜色就是其父元素的文本颜色（因为 color 可以继承）。这个父元素很可能是body、div 或另一个 table。透明边框（transparent）：CSS2引入了边框颜色值transparent。这个值用于创建有宽度的不可见边框。</li>
+<li><strong>外边距（margin）</strong>：围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”。这个属性接受任何长度单位、百分数值甚至负值。margin的默认值是 0，所以如果没有为margin声明一个值，就不会出现外边距。但是，在实际中，浏览器对许多元素已经提供了预定的样式，外边距也不例外。块级元素的垂直相邻外边距会合并，而行内元素实际上不占上下外边距。行内元素的的左右外边距不会合并。同样地，浮动元素的外边距也不会合并。允许指定负的外边距值，不过使用时要小心。</li>
+<li><strong>外边距合并</strong>：当两个垂直外边距相遇时，它们将形成一个外边距。合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。除此之外，父元素与子元素之间，空块元素，也会发生合并，<a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" target="_blank" rel="noopener">具体可参考MDN上的内容</a>。<strong>（这个点可以写一篇博客了。）</strong></li>
+<li><strong>定位和浮动</strong>：1. 一切都为框-块框、行内框或者无名块框；2. css中有三种基本的定位机制——普通流、浮动和绝对定位，默认都为普通流中定位；3. 位置属性（position）：包括static、relative、absolute和fixed。具体情况可以参考<a href="http://www.w3schools.com/css/css_positioning.asp" target="_blank" rel="noopener">w3school上面关于position的内容</a>。<strong>这个相关内容也可以写一篇剪短的博客了，:-D。</strong></li>
+<li><strong>浮动（float）</strong>：浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。<strong>浮动及浮动清除理解起来也有难度啊，搞清楚后也可以写博客了</strong>。<br>(关于浮动的博客已写，但是还是没有弄的太明白，之后再买书看吧）</li>
+<li><strong>元素选择器</strong>：最常见的为元素选择器，在w3c中元素选择器也叫作类型选择器（type selector），类型选择器匹配文档语言元素类型的名称，可以匹配文档树中该元素类型的每一个实例。类型选择其也可适用在XML文档中。</li>
+<li><strong>选择器分组</strong>：可以把具有同样样式的元素放在样式的左边，<strong>并且用逗号隔开</strong>，选择器的数量没有限制，可以有任意多组；如：h1，p，span { corlor：white；}；</li>
+<li><strong>通配符选择器</strong>：css2中引入了一种新的简单选择器，叫做通配符选择器（universal selector），符号为*，可以与任何元素匹配；</li>
+<li><strong>声明分组</strong>：对于同一个元素的不同样式，可以将样式声明在此元素后面，<strong>并用分号隔开</strong>，例如：h1 {corlor：black；background：yellow；font-size：strong；}；</li>
+<li><strong>类选择器</strong>：要应用样式而不考虑具体设计的元素，最常用的方法就是使用类选择器，它允许以一种独立于文档元素的方式来指定样式；使用语法为：.className {porperty: value; };类选择器可结合元素选择器，选择出某一种元素中具有某个类名的个体，然后赋予其属性和值，例如：p.important {corlor：red；}；多类选择器指的是一个元素可以有多个类，类与类之间用空格分隔，例如：<p class="important warning">其中类名无顺序之分，通过把两个类选择器链接在一起，可以选择出同时包含这些类名的元素；</p></li>
+<li><strong>ID选择器</strong>：ID选择器允许一种独立于文档元素的方式来指定样式，例如：#intro {font-size：14px；}指的是ID为intro的元素的字体大小为14px；与类选择器不同的是，ID选择器：1.只能在文档中出现一次；2. 不能结合使用；3. ID能包含更多含义；<strong>需要注意的是：选择器是区分大小写的，因此写的时候务必要注意！</strong></li>
+<li><strong>属性选择器</strong>：属性选择器可以根据元素的属性及属性值来选择元素。属性选择器是在css2中引入的。如：[title] {color:red} （表示：把含有标题的所有元素变成红色）；再如：a[href] {color:red} (表示对有href属性的锚应用属性)；还可以结合起来使用，如：a[href][title] {color:red} (表示将同时具有href和title属性的锚的文本设置成红色）；除此之外，还可以规定具体的属性值，例如：<code>a[href=&quot;http://www.w3school.com.cn/about_us.asp&quot;] {color: red;}</code>（表示只有带有超链接且了解为上述的时候才会变红），而且每个属性选择器都可以对相应的属性赋值；而且需要注意，此时选择器中的属性值和必须完全匹配（注意：如果需要选择不完全匹配，则可以用约等号来选择，如：p[class~=”important”] {color: red;}）；字串匹配属性选择器，在css2完成之后发布，可以匹配属性值以某些字符串开头、结尾或者只是包含的情况，具体见<a href="http://www.w3school.com.cn/css/css_selector_attribute.asp" target="_blank" rel="noopener">字串属性选择器</a>; 特殊属性选择器，如<code>*[lang|=&quot;en&quot;] {color: red;}</code>，表示只选择lang属性等于en或者以en-开头的所有元素；（这种用法常见于匹配语言值）。</li>
+<li><strong>后代选择器（descendant selector）</strong>，又称为包含选择器；比如<code>h1 em {color:red;}</code>，需要注意的是，后代选择器中两个元素之间的层级间隔可以是无限的（区别于后面要讲到的子元素选择器）；</li>
+<li><strong>子元素选择器（Child selector）</strong>：只能选择作为某元素子元素的元素。比如下面的例子：<code>h1 &gt; strong {color:red;}</code>，子结合符为“&gt;”，结合符两边的空格是可选的；</li>
+<li>相邻兄弟选择器（Adjacent sibling selector）：可选择紧接在一个元素后面的元素，且两者有相同的父元素；写法如下：<code>h1 + p {margin-top:50px;}</code>，表示的是“选择紧接在h1元素后面的段落增加边距，并且这两者有相同的父元素”；相邻兄弟选择器作用的对象是“+”号后面的元素，对前一个元素没有影响；</li>
+<li><strong>伪类（Pseudo-classes）</strong>：用于向某些选择器添加特殊的效果；比如超链接中的a:link, a:visited, a:hover, a:active,(注意超链接使用伪类的时候有顺序问题）；:focus 伪类用于引起注意，一般用于<a href="http://www.w3school.com.cn/tiy/t.asp?f=csse_link_focus" target="_blank" rel="noopener">输入框</a>；除此之外，还有:first-child, :lang等伪类；其中:first-child伪类表示用来选择某元素的第一个子元素；</li>
+<li><strong>伪元素（Pseudo-elements）</strong>：用于向某些选择器设置特殊效果；语法为：<code>selector:pseudo-element{property:value;}</code>，主要有<code>:first-line, :first-letter</code>, 在css2中引入了：<code>:before, :after</code>，表示的是在某元素前面（后面）插入新内容（这一点在清除浮动那一章节有重点应用）；</li>
+<li><strong>css水平对齐</strong>：1. 使用margin属性（将左边距和右边距都设置为auto，则左右均等分配可用外边距，达到居中的效果。注意：如果宽度为100%，对齐则没有效果）；2. 利用Position属性（当使用绝对定位属性来定位时，元素将从正常流中删除，从而可能产生交叠元素）；3. 使用float属性进行左右对齐；<strong>注意：使用所有属性进行对齐时都应该声明<code>!DOCTYPE html</code>，否则在IE8及以下版本会在右侧增加17px的外边距（为滚动条预留空间）。</strong></li>
+<li><strong>css尺寸（Dimension）</strong>：尺寸属性允许控制元素的高度和宽度。同样，也允许增加行间距。除了width，height之外，还有max-height，min-height，max-width，min-height，line-height等；且这些尺寸都可以用像素、百分比来设置；</li>
+<li><strong>css分类（Classification）</strong>：css分类属性允许规定如何以及在何处显示元素；有inline，block等，其实就是display属性的值，然后这个值就和css的布局有很大的关联，同样影响布局的还有float以及position，它们之间的关系见我之前写的一篇博客<a href="http://detachment.club/2016/06/27/Float,%20position%20and%20display%20in%20CSS/">Float, Position and Display in CSS</a>;本节还讲到了一个很有意思的属性：cursor，用来实现不同 的光标，使用语法为<code>element {cursor:value; }</code>；</li>
+<li><strong>导航栏</strong>：实现导航栏的关键在于对浮动的理解，其他属性都比较简单，实现过程可见：<a href="http://www.w3school.com.cn/css/css_navbar.asp" target="_blank" rel="noopener">导航条的实现</a>；</li>
+<li><strong>图片库</strong>：其实也不是什么图片库，就是把相同的布局，运用在了几张尺寸一样的图片上罢了。在设定任何css属性之前，都需要认真弄清楚需求，一步一步的将布局分解到每一个<code>div</code>中，然后思考每个<code>div</code>中的布局，最终形成整体布局。</li>
+<li><strong>图像透明</strong>：属性为<code>opacity; filter:alpha(opacity=value)</code>，如果需要用<code>:hover</code>属性来设置鼠标移入之后的效果，那么一定要声明<code>&lt;!DOCTYPE html&gt;</code>，否则不能应用在除了a以外的其他元素；</li>
+<li><strong>css2媒介类型</strong>：媒介类型允许定义以何种媒介来提交文档，文档被显示在显示器、纸媒介或者听觉浏览器上等等；语法为<code>@media class</code>，类别中有screen、print、tv、handheld等等（然后就出现了Bootstrap的自适应？）</li>
+</ul>
+<blockquote>
+<h2 id="注："><a href="#注：" class="headerlink" title="注："></a>注：</h2><h4 id="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"><a href="#本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。" class="headerlink" title="本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"></a>本文内容主要来源为<a href="http://www.w3school.com.cn/index.html" target="_blank" rel="noopener">w3school</a>，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。</h4></blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>赠人玫瑰，手有余香</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay"/>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay"/>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/前端/" rel="tag">#前端</a>
+          
+            <a href="/tags/基础/" rel="tag">#基础</a>
+          
+            <a href="/tags/CSS/" rel="tag">#CSS</a>
+          
+            <a href="/tags/HTML/" rel="tag">#HTML</a>
+          
+        </div>
+      
+
+      
+     <div>    
+      
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Detachment 的个人博客">Detachment</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/" title="HTML和css基础知识汇总（长期更新）">HTML和css基础知识汇总（长期更新）</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/" title="HTML和css基础知识汇总（长期更新）">http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2016年6月30日 - 00时06分
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+        </li>
+      </ul>
+    
+    </div>
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/27/Float, position and display in CSS/" rel="next" title="Float, Position and Display in CSS">
+                <i class="fa fa-chevron-left"></i> Float, Position and Display in CSS
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/02/基于《精通JavaScript开发》课程的复习与总结/" rel="prev" title="【置顶】 《精通JavaScript开发》">
+                【置顶】 《精通JavaScript开发》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Detachment" />
+          <p class="site-author-name" itemprop="name">Detachment</p>
+          <p class="site-description motion-element" itemprop="description">Share and Create</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">25</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">50</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Detachment" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=detachment/bMHO&amp;loc=zh_CN" target="_blank" title="订阅">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  订阅
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/yi-zhao-74" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-venus-double"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zylsy1991@gmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-send"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘末鹏" target="_blank">刘末鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://2ality.com/index.html" title="2ality" target="_blank">2ality</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" title="秘密花园" target="_blank">秘密花园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://es6.ruanyifeng.com/" title="ES6入门" target="_blank">ES6入门</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TomXu/category/338104.html" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://exploringjs.com/es2016-es2017/index.html" title="ES2016 & ES2017" target="_blank">ES2016 & ES2017</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.byvoid.com/" title="BYVoid" target="_blank">BYVoid</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML部分"><span class="nav-number">1.</span> <span class="nav-text">HTML部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介："><span class="nav-number">1.1.</span> <span class="nav-text">简介：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点："><span class="nav-number">1.2.</span> <span class="nav-text">知识点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-部分"><span class="nav-number">2.</span> <span class="nav-text">CSS 部分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介：-1"><span class="nav-number">2.1.</span> <span class="nav-text">简介：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#知识点：-1"><span class="nav-number">2.2.</span> <span class="nav-text">知识点：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注："><span class="nav-number">3.</span> <span class="nav-text">注：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。"><span class="nav-number">3.0.1.</span> <span class="nav-text">本文内容主要来源为w3school，相关知识点都在在此网站找到更详细的说明，本博客仅供复习总结用。</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Detachment</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'detachmentclub';
+      var disqus_identifier = '2016/06/30/HTML和CSS基础知识汇总/';
+      var disqus_title = "HTML和css基础知识汇总（长期更新）";
+      var disqus_url = 'http://detachment.club/2016/06/30/HTML和CSS基础知识汇总/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ygFj1Q6IX8B9DoUmg4JW09bh-gzGzoHsz", "jqxfgq928vjhx41TTDzPdLlq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
