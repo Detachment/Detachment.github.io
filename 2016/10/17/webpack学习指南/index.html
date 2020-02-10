@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -63,23 +63,23 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="前端,工具,Webpack," />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml" />
+  <meta name="keywords" content="前端,工具,Webpack,">
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="http://detachment.club/2016/10/17/webpack学习指南/"/>
+  <link rel="canonical" href="http://detachment.club/2016/10/17/webpack学习指南/">
 
   <title> webpack学习指南 | Share and Create </title>
 </head>
@@ -167,7 +167,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Share and Create</span>
       <span class="logo-line-after"><i></i></span>
@@ -194,7 +194,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -204,7 +204,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -214,7 +214,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             关于
           </a>
@@ -224,7 +224,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -234,7 +234,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -247,7 +247,7 @@
             <a href="#" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -328,7 +328,7 @@
 	
 
           
-            <span class="post-category" >
+            <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -403,7 +403,7 @@
 <li>其他……</li>
 </ul>
 <p><strong> <code>&lt;script&gt;</code> 标签</strong></p>
-<p>如果不利用模块系统的话，通过<code>&lt;script&gt;</code>标签引入如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module1.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module2.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"libraryA.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module3.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>如果不利用模块系统的话，通过<code>&lt;script&gt;</code>标签引入如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module1.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module2.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"libraryA.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"module3.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>这些数据的接口将连接到全局对象中。常见的问题如下：</p>
 <ul>
 <li>在全局对象中产生冲突；</li>
@@ -535,7 +535,7 @@
 <p><strong>开始使用</strong>  </p>
 <ul>
 <li><p>首先用CommonJS语法创建一个模块化的JavaScript项目，名字为<code>cat.js</code>，代码如下：  </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="built_in">module</span>.exports = cats;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cats.js</span></span><br><span class="line"><span class="keyword">var</span> cats = [<span class="string">'dave'</span>, <span class="string">'henry'</span>, <span class="string">'martha'</span>];</span><br><span class="line"><span class="keyword">module</span>.<span class="keyword">exports</span> = cats;</span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// app.js(Entry Point)</span></span><br><span class="line">cats = <span class="built_in">require</span>(<span class="string">'./cats.js'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(cats);</span><br></pre></td></tr></table></figure>
 <p><code>Entry Point</code>是项目接入模块的入口，Webpack也是从这个接口开始检查各个模块之间的依赖关系的。</p>
 </li>
@@ -570,7 +570,7 @@
 <li>安装babel-loader：<br><code>npm install --save-dev babel-loader</code></li>
 <li>新建一个.babelrc文件，这个文件用来配置Babel，使其利用预先设置的语法（es2015）来解析。.babelrc的内容如下：<br><code>{ &quot;presets&quot;: [ &quot;es2015&quot; ] }</code></li>
 <li><p>更改 webpack.config.js 文件，使的所有的 .js 文件都用 babel-loader 来处理：</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">  entry:</span> <span class="string">'./src/app.js'</span><span class="string">,</span></span><br><span class="line"><span class="attr">  output:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">      path:</span> <span class="string">'./bin'</span><span class="string">,</span></span><br><span class="line"><span class="attr">      filename:</span> <span class="string">'app.bundle.js'</span><span class="string">,</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">  module:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">      loaders:</span> <span class="string">[&#123;</span></span><br><span class="line"><span class="attr">          test:</span> <span class="string">/\.js$/,</span></span><br><span class="line"><span class="attr">          exclude:</span> <span class="string">/node_modules/,</span></span><br><span class="line"><span class="attr">          loader:</span> <span class="string">'babel-loader'</span></span><br><span class="line">      <span class="string">&#125;]</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">  <span class="string">module.exports</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line">  <span class="attr">entry:</span> <span class="string">'./src/app.js'</span><span class="string">,</span></span><br><span class="line">  <span class="attr">output:</span> <span class="string">&#123;</span></span><br><span class="line">      <span class="attr">path:</span> <span class="string">'./bin'</span><span class="string">,</span></span><br><span class="line">      <span class="attr">filename:</span> <span class="string">'app.bundle.js'</span><span class="string">,</span></span><br><span class="line">  <span class="string">&#125;,</span></span><br><span class="line">  <span class="attr">module:</span> <span class="string">&#123;</span></span><br><span class="line">      <span class="attr">loaders:</span> <span class="string">[&#123;</span></span><br><span class="line">          <span class="attr">test:</span> <span class="string">/\.js$/,</span></span><br><span class="line">          <span class="attr">exclude:</span> <span class="string">/node_modules/,</span></span><br><span class="line">          <span class="attr">loader:</span> <span class="string">'babel-loader'</span></span><br><span class="line">      <span class="string">&#125;]</span></span><br><span class="line">  <span class="string">&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><em>注意：这里讲node_modules文件排除在外了，因为不排除的话，这些外部的插件库也会被Babel处理，从而减缓编译速度</em>  </p>
 </blockquote>
@@ -772,14 +772,14 @@
 <li><p>拆解 app 以及分离代码<br> 为了将 app 拆解成两个文件，比如app.js 以及 vendor.js， 我们可以在 vendor.js 中利用 <code>require</code> 来引入 vendor 参数中的文件。然后将这个名字传入到 <code>CommonsChunkPlugin</code>中，如下所示：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  entry: &#123;</span><br><span class="line">    app: <span class="string">"./app.js"</span>,</span><br><span class="line">    vendor: [<span class="string">"jquery"</span>, <span class="string">"underscore"</span>, ...],</span><br><span class="line">  &#125;,</span><br><span class="line">  output: &#123;</span><br><span class="line">    filename: <span class="string">"bundle.js"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="comment">/* chunkName= */</span><span class="string">"vendor"</span>, <span class="comment">/* filename= */</span><span class="string">"vendor.bundle.js"</span>)</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>这会将 vendor chunk 中所包含的所有模块从 app chunk 中移除。 <code>bundle.js</code> 中将只会包含所有的 app 代码，不带有任何的依赖，所有的依赖代码都在 <code>vendor.bundle.js</code> 中。<br>在 HTML 文件中，需要先加载 <code>vendor.bundle.js</code> 然后再加载 <code>bundle.js</code>，如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"vendor.bundle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"bundle.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"vendor.bundle.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="bundle.js"&gt;&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>多个入口 chunks<br> 通过<a href="http://webpack.github.io/docs/configuration.html" target="_blank" rel="noopener">配置</a>可以实现多个入口点，这同时会形成多个入口 chunks。入口 chunk 中包含了运行环境，而一个页面中只能包含一个运行环境（当然也会有例外）。</p>
 </li>
 <li><p>运行多个入口点<br> 通过插件 <code>CommonsChunkPlugin</code> 可以将运行环境转移到 commons chunk 中。入口点这时候在初始 chunk 中。虽然只有一个初始 chunk 可以被加载，但是多个入口 chunk 可以被加载。这就说明了在同一个页面中运行多个入口点是可能的。例子如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">"webpack"</span>);</span><br><span class="line">    <span class="built_in">module</span>.exports = &#123;</span><br><span class="line">       entry: &#123; <span class="attr">a</span>: <span class="string">"./a"</span>, <span class="attr">b</span>: <span class="string">"./b"</span> &#125;,</span><br><span class="line">       output: &#123; <span class="attr">filename</span>: <span class="string">"[name].js"</span> &#125;,</span><br><span class="line">       plugins: [ <span class="keyword">new</span> webpack.optimize.CommonsChunkPlugin(<span class="string">"init.js"</span>) ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>引入的时候，按如下顺序：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"init.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"a.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"b.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"init.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="a.js"&gt;&lt;/</span>script&gt;</span><br><span class="line">&lt;script src=<span class="string">"b.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Commons Chunk<br> 插件 <code>CommonsChunkPlugin</code> 可以将多个入口 chunks 的模块转移到一个新的入口文件（也就是 commons chunk）中。运行环境也被转移到了 commons chunk 中。这意味着原来的入口 chunk 现在变成了初始 chunk。了解更多<a href="http://webpack.github.io/docs/list-of-plugins.html" target="_blank" rel="noopener">插件选项。</a></p>
 </li>
@@ -861,7 +861,7 @@
 <li>限制允许存在的 chunk 的数量（比如15个）： <code>--optimize-max-chunks 15  new webpack.optimize.LimitChunkPlugin({maxChunks: 15})</code></li>
 <li>限制允许存在的 chunk 的最小体积（比如 10000）：<code>--optimize-min-chunk-size 10000 new webpack.optimize.MinChunkSizePlugin({minChunkSize: 10000})</code><br>webpack 会通过合并的方式来处理这些 chunk（会优先处理具有重复模块的 chunk）。任何 chunk 都不会被合并到入口 chunk 中，这主要是为了避免影响到初始页面加载的时间。</li>
 </ul>
-<p><strong>单页应用</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;单页应用是一种网页应用，webpack 的设计和优化就是为了这种应用。<br>&nbsp;&nbsp;&nbsp;&nbsp;你可能会将应用分解成很多 chunks， 这些 chunks 会在路由中加载。入口 chunk 中包含了路由和一些库，但是没有其他内容。当用户只通过导航来使用应用的时候，这种方式非常好，但是对于初始页面的加载，你需要两个完整的数据来回：一个是路由数据，一个是当前的页面数据。<br>&nbsp;&nbsp;&nbsp;&nbsp;如果你利用 HTML5 History API 来识别 URL 中的当前页面信息，那么服务器可以根据客户端的代码来判断被请求的页面。为了将往返数据保存起来在服务器中，你可以将内容代码包含在响应中：这可以通过增加 <code>script</code> 标签来达到。浏览器将并行加载所有的 chunks。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"entry-chunk.js"</span> type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"3.chunk.js"</span> type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure></p>
+<p><strong>单页应用</strong><br>&nbsp;&nbsp;&nbsp;&nbsp;单页应用是一种网页应用，webpack 的设计和优化就是为了这种应用。<br>&nbsp;&nbsp;&nbsp;&nbsp;你可能会将应用分解成很多 chunks， 这些 chunks 会在路由中加载。入口 chunk 中包含了路由和一些库，但是没有其他内容。当用户只通过导航来使用应用的时候，这种方式非常好，但是对于初始页面的加载，你需要两个完整的数据来回：一个是路由数据，一个是当前的页面数据。<br>&nbsp;&nbsp;&nbsp;&nbsp;如果你利用 HTML5 History API 来识别 URL 中的当前页面信息，那么服务器可以根据客户端的代码来判断被请求的页面。为了将往返数据保存起来在服务器中，你可以将内容代码包含在响应中：这可以通过增加 <code>script</code> 标签来达到。浏览器将并行加载所有的 chunks。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"entry-chunk.js"</span> type=<span class="string">"text/javascript"</span> charset=<span class="string">"utf-8"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="3.chunk.js" type="text/</span>javascript<span class="string">" charset="</span>utf<span class="number">-8</span><span class="string">"&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;可以从数据中提取 chunk 的文件名（利用 <a href="https://www.npmjs.com/package/stats-webpack-plugin" target="_blank" rel="noopener">stats-webpack-plugin </a>插件可以输出创建的数据）</p>
 <p><strong>多页应用</strong><br>当你在编译一个（真正的）多页应用时，你会希望不能的页面能共享公用代码。实际上利用 webpack 是非常容易实现的：只需要在编译的时候提供多个入口点：<br><code>webpack p1=./page1 p2=./page2 p3=./page3 [name].entry-chunk.js</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        p1: <span class="string">"./page1"</span>,</span><br><span class="line">        p2: <span class="string">"./page2"</span>,</span><br><span class="line">        p3: <span class="string">"./page3"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">"[name].entry.chunk.js"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>这会产生多个入口 chunk：<code>p1.entry.chunk.js</code>, <code>p2.entry.chunk.js</code> 以及 <code>p3.entry.chunk.js</code>。额外的 chunk 将会被共享。<br>如果你的入口 chunks 中有一些模块是一样的，那么可以使用一个很好的插件：<code>CommonsChunkPlugin</code>，它可以识别这些模块然后将它们生成一个 commons chunk。这时候就需要引用两个 <code>script</code> 标签了，一个用于引入 commons chunk，一个用于引入入口 chunk。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> CommonsChunkPlugin = <span class="built_in">require</span>(<span class="string">"webpack/lib/optimize/CommonsChunkPlugin"</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">    entry: &#123;</span><br><span class="line">        p1: <span class="string">"./page1"</span>,</span><br><span class="line">        p2: <span class="string">"./page2"</span>,</span><br><span class="line">        p3: <span class="string">"./page3"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    output: &#123;</span><br><span class="line">        filename: <span class="string">"[name].entry.chunk.js"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    plugins: [</span><br><span class="line">        <span class="keyword">new</span> CommonsChunkPlugin(<span class="string">"commons.chunk.js"</span>)</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -954,12 +954,12 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay">
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay"/>
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay">
         </div>
       
     </div>
@@ -1007,7 +1007,7 @@
 
         <li class="post-copyright-license">
           <strong>版权声明： </strong>
-          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> <br>转载请保留以上声明信息！
         </li>
       </ul>
     
@@ -1082,7 +1082,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -1093,9 +1093,7 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Detachment" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Detachment">
           <p class="site-author-name" itemprop="name">Detachment</p>
           <p class="site-description motion-element" itemprop="description">Share and Create</p>
         </div>
@@ -1255,7 +1253,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2016 - 
   <span itemprop="copyrightYear">2020</span>

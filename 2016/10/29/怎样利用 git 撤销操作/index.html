@@ -6,15 +6,15 @@
 
 
 <html class="theme-next pisces use-motion">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -29,7 +29,7 @@
 
   
   
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -63,23 +63,23 @@
 
 
 
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="git,工具,github," />
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
 
 
-
-
-
-  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml" />
+  <meta name="keywords" content="git,工具,github,">
 
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
 
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <link rel="canonical" href="http://detachment.club/2016/10/29/怎样利用 git 撤销操作/"/>
+  <link rel="canonical" href="http://detachment.club/2016/10/29/怎样利用 git 撤销操作/">
 
   <title> 怎样利用 git 撤销操作 | Share and Create </title>
 </head>
@@ -165,7 +165,7 @@
   
 
   <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
+    <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
       <span class="site-title">Share and Create</span>
       <span class="logo-line-after"><i></i></span>
@@ -192,7 +192,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -202,7 +202,7 @@
         <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
             
             分类
           </a>
@@ -212,7 +212,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
             
             关于
           </a>
@@ -222,7 +222,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -232,7 +232,7 @@
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
             
             标签
           </a>
@@ -245,7 +245,7 @@
             <a href="#" class="popup-trigger">
           
             
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
             
             搜索
           </a>
@@ -326,7 +326,7 @@
 	
 
           
-            <span class="post-category" >
+            <span class="post-category">
               &nbsp; | &nbsp;
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -413,7 +413,7 @@
 <li><code>git reflog</code> 不会被永久保存。Git 内部每隔一段时间就好清理一些无法识别的对象。所以不要指望几个月前的提交记录能够永远在 reflog 中找到。</li>
 <li>你的 <code>reflog</code> 仅仅只能你自己使用。你无法通过这个指令来恢复其他开发者尚未推送的提交。</li>
 </ul>
-<p><img src="https://cloud.githubusercontent.com/assets/2077/6953866/f6b9f054-d891-11e4-8c53-838eff9f40ae.png" alt=""></p>
+<p><img src="https://cloud.githubusercontent.com/assets/2077/6953866/f6b9f054-d891-11e4-8c53-838eff9f40ae.png" alt></p>
 <p>那么，回到正题，怎样通过 <code>git reflog</code> 来达到撤销已撤销的目的呢？这还得根据不同的情况讨论：</p>
 <ul>
 <li>如果你想将项目历史恢复成特定时候的状态，使用 <code>get reset -hard &lt;SHA&gt;</code></li>
@@ -438,20 +438,20 @@
 <h3 id="大量的撤销-恢复操作"><a href="#大量的撤销-恢复操作" class="headerlink" title="大量的撤销/恢复操作"></a>大量的撤销/恢复操作</h3><p><strong>情景</strong>：你从某个方向来开始了一项研究，研究到一半，你发现另一种方法会更好。这时候你已经提交了几次了，而你其实并不完全需要它们。所以你希望其中的一些提交完全消失。</p>
 <p><strong>解决</strong>：<code>git rebase -i &lt;earlier SHA&gt;</code></p>
 <p><strong>原理</strong>：-i 指令将 rebase 指令转入一种可交互模式。rebase 指令的作用前几步和上面都一样，唯一不一样的是在合并提交的时候，它会暂停然后让你选择需要合并的提交。</p>
-<p><code>rebase -i</code> 会打开默认文本编辑器，文本中会列出可合并的提交，如下：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953863/f6b1ab88-d891-11e4-97c1-e0630ac74e74.png" alt=""></p>
+<p><code>rebase -i</code> 会打开默认文本编辑器，文本中会列出可合并的提交，如下：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953863/f6b1ab88-d891-11e4-97c1-e0630ac74e74.png" alt></p>
 <p>前面两列是包含着关键信息：第一个是用来提交操作的指令，第二个是提交操作的 SHA 的值。利用 <code>rebase -i</code> 合并操作的默认指令是 <code>pick</code>。</p>
 <p>对于不想要的提交，你只需要在文本编辑器中删除对应的内容。如上面这张图，如果你不想要错误的提交，那就删除1、3、4这三行。</p>
 <p>如果你想保持提交的内容但是想修改提交的提交信息，那你可以使用 <code>reword</code> 命令。只需要在第一列中替代 <code>pick</code>。虽然立即就改写提交信息听起来很爽，但是实际上并没有用，因为 <code>rebase -i</code> 会将 SHA 后面的信息都无视掉。这个文本只是用来提醒我们这个提交的内容是什么，在执行完 <code>rebase -i</code> 命令之后，就可以改写任意的提交信息了。</p>
-<p>如果你想将两个提交合并，你可以使用 <code>squash</code> 或者 <code>fixup</code> 指令，如下：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953865/f6b605ca-d891-11e4-98cf-d567ca9f4edc.png" alt=""></p>
+<p>如果你想将两个提交合并，你可以使用 <code>squash</code> 或者 <code>fixup</code> 指令，如下：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953865/f6b605ca-d891-11e4-98cf-d567ca9f4edc.png" alt></p>
 <p>这两个指令都会使得对应的提交和它之前的提交结合成一个提交。在上面的例子中，第一个和第二个会结合成一个提交，然后第三个和第四个也会结合成一个提交。</p>
 <p>当使用 <code>squash</code> 时， Git 会让我们给新合并的提交一个新的提交信息；当使用 <code>fixup</code> 的时候，Git 会自动将列表中将合并的提交的最开始的提交信息作为新的提交信息。拿上图为例，前两个合并时需要输入一个新的合并提交的信息，而后两个合并时，会自动将第三个提交信息作为合并后的提交信息。</p>
-<p>当你保存然后关闭文本编辑器的时候， Git就会依次执行编辑器中的内容。如果你希望更改合并的顺序，只需要在文本编辑器中改动。拿上图为例，如果你想合并 <code>af67f82</code> 和 <code>0835fe2</code> ，你只需要这样更换顺序：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953864/f6b4a9d2-d891-11e4-9ac9-10039c031d06.png" alt=""></p>
+<p>当你保存然后关闭文本编辑器的时候， Git就会依次执行编辑器中的内容。如果你希望更改合并的顺序，只需要在文本编辑器中改动。拿上图为例，如果你想合并 <code>af67f82</code> 和 <code>0835fe2</code> ，你只需要这样更换顺序：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953864/f6b4a9d2-d891-11e4-9ac9-10039c031d06.png" alt></p>
 <hr>
 <h3 id="更改早先的提交"><a href="#更改早先的提交" class="headerlink" title="更改早先的提交"></a>更改早先的提交</h3><p><strong>情景</strong>：你突然想起来，如果在之前的一次提交中加入某一个文件效果会更好。这时候你还没有推送这个提交，而这个提交并不是最近的一次，所以不能用 <code>commit --amend</code></p>
 <p><strong>解决</strong>：<code>git commit --squash &lt;SHA of the earlier commit&gt; and git rebase --autosquash -i &lt;even earlier SHA&gt;</code></p>
 <p><strong>原理</strong>：利用 <code>git commit --squash</code> 可以创建一个新的提交并有类似这样的提交信息 <code>squash! Earlier commit</code>(你可以手动输入像这样的提交信息，但是使用 <code>commit --squash</code> 可以让你少打一些字 。)</p>
 <p>你也可以使用 <code>git commit --fixup</code> 指令来操作，利用这个指令不需要手动输入提交信息。这上面这个情境中，利用这个指令更好一些，因为不需要更改提交信息。</p>
-<p>利用 <code>rebase --autosquash -i</code> 指令，然后会打开默认的文本编辑器，而且里面已经包含了提交信息，如下图：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953862/f6a7a1d8-d891-11e4-8784-c32262ff54da.png" alt=""></p>
+<p>利用 <code>rebase --autosquash -i</code> 指令，然后会打开默认的文本编辑器，而且里面已经包含了提交信息，如下图：<br><img src="https://cloud.githubusercontent.com/assets/2077/6953862/f6a7a1d8-d891-11e4-8784-c32262ff54da.png" alt></p>
 <p>当你使用 <code>squash</code> 或者 <code>fixup</code> 指令的时候，你可能不知道你需要合并的提交的 SHA —— 你只记得是一次还是五次之前。这时候操作符 <code>^</code> 和 <code>~</code> 就很方便了。<code>HEAD^</code> 表示 HEAD 之前的一次， <code>HEAD~4</code> 表示的是 HEAD 的前四个提交，也就是倒数第五次提交（因为 HEAD 本身是倒数第一次）。</p>
 <hr>
 <h3 id="停止对已监测文件的监测"><a href="#停止对已监测文件的监测" class="headerlink" title="停止对已监测文件的监测"></a>停止对已监测文件的监测</h3><p><strong>情景</strong>：你最近将 <code>application.log</code> 加入到了仓库中，然后现在每次运行这个程序， Git 就会提示在这个文件中有未处于提交状态的修改。虽然你将 <code>*.log</code> 写入了 <code>.gitignore</code> 文件，但是情况并没有变化。要怎么才能让 git 放弃监测这个文件的变化呢？</p>
@@ -484,12 +484,12 @@
     <div id="QR" style="display: none;">
       
         <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay"/>
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay">
         </div>
       
       
         <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay"/>
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay">
         </div>
       
     </div>
@@ -537,7 +537,7 @@
 
         <li class="post-copyright-license">
           <strong>版权声明： </strong>
-          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> <br>转载请保留以上声明信息！
         </li>
       </ul>
     
@@ -612,7 +612,7 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
@@ -623,9 +623,7 @@
 
       <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="Detachment" />
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Detachment">
           <p class="site-author-name" itemprop="name">Detachment</p>
           <p class="site-description motion-element" itemprop="description">Share and Create</p>
         </div>
@@ -785,7 +783,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
+        <div class="copyright">
   
   &copy;  2016 - 
   <span itemprop="copyrightYear">2020</span>
