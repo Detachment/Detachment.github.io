@@ -1,0 +1,1107 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="博客,置顶,订阅,加密,迁移,排序,版权,打赏,图床,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。">
+<meta name="keywords" content="博客,置顶,订阅,加密,迁移,排序,版权,打赏,图床">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客构建笔记(更新：增加排序功能)">
+<meta property="og:url" content="http://detachment.club/2016/12/28/博客构建笔记/index.html">
+<meta property="og:site_name" content="Share and Create">
+<meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner1.JPG">
+<meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner2.JPG">
+<meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner3.JPG">
+<meta property="og:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner4.JPG">
+<meta property="og:updated_time" content="2018-05-25T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客构建笔记(更新：增加排序功能)">
+<meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。">
+<meta name="twitter:image" content="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner1.JPG">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6298681924009330000,
+      author: '博主大人'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://detachment.club/2016/12/28/博客构建笔记/">
+
+  <title> 博客构建笔记(更新：增加排序功能) | Share and Create </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?9c979b426e9896831df08fe0c4c24d0e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Share and Create</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                博客构建笔记(更新：增加排序功能)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-12-28T00:00:00+08:00" content="2016-12-28">
+              2016-12-28
+            </time>
+          </span>
+
+	
+  	<span class="post-updated">
+	&nbsp; | &nbsp; 更新于
+	<time itemprop="dateUpdated" datetime="2018-05-26T00:00:00+08:00" content="2018-05-26">
+	  2018-05-26
+	</time>
+ 	 </span>
+	
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/博客/" itemprop="url" rel="index">
+                    <span itemprop="name">博客</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/12/28/博客构建笔记/" class="leancloud_visitors" data-flag-title="博客构建笔记(更新：增加排序功能)">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;记录总结学习过程的重要性不言自明。博客正好就是这一过程的体现平台，所以构建并完善这个平台就显得尤为重要了。由于周期性的懒癌发作，所以可惜的是构建此博客的前期并未记录下来，这两天因为开始写年终总结了，所以连续为博客增加了两项功能，至此我认为应该记录一下。</p>
+<a id="more"></a>
+<h2 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h2><h3 id="订阅"><a href="#订阅" class="headerlink" title="订阅"></a>订阅</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;一直都知道很多博客有订阅 rss 的功能，但是从来没有使用过，所以前期构建的时候并没有将这个功能作为博客的核心功能。直到邮件订阅了一些网站之后，只要有更新就会自动推送邮件，并且在邮件中就能看到更新的内容。这才感受到这个功能的便捷性，然后决定我也要给我的博客增加这个功能。<br>&nbsp;&nbsp;&nbsp;&nbsp;经过一番探索，经过以下步骤可以实现 rss 及邮件订阅的功能：</p>
+<ol>
+<li>利用 npm 下载安装 hexo-generator-feed 插件，命令如下：<br><code>$ npm install --save hexo-generator-feed</code></li>
+<li><p>在主题配置文件 <code>_config.yml</code> 中增加以下内容：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#Feed configuration</span></span><br><span class="line"><span class="symbol">plugin:</span></span><br><span class="line">- hexo-generator-feed</span><br><span class="line"></span><br><span class="line"><span class="symbol">feed:</span></span><br><span class="line"><span class="symbol">  type:</span> atom      <span class="comment">// Feed type. (atom/rss2)</span></span><br><span class="line"><span class="symbol">  path:</span> atom.xml  <span class="comment">// Feed path. (Default: atom.xml/rss2.xml)</span></span><br><span class="line"><span class="symbol">  limit:</span> <span class="number">20</span>       <span class="comment">// Maximum number of posts in the feed.</span></span><br><span class="line"><span class="symbol">  hub:</span>            <span class="comment">// URL of the PubSubHubbub hubs (Leave it empty if you don't use it)</span></span><br><span class="line"><span class="symbol">  content:</span> true   <span class="comment">// (optional) set to 'true' to include the contents of the entire post in the feed.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在主题配置文件 <code>_config.yml</code> 中设置 rss 项：<br><code>rss: &quot;/atom.xml&quot;</code></p>
+</li>
+<li>至此，更新部署博客就能看到有 rss 订阅功能了，需要邮件订阅功能则需要从下面一步开始；</li>
+<li>利用 feedbuner 来制作一个feed（如果没有账号可以注册一个或者用谷歌账号登录）：<br><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner1.JPG" alt="第一张图"></li>
+<li>在上图中填入你的博客订阅地址，如下所示：<br><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner2.JPG" alt="第二张图"></li>
+<li>之后直接点击 next 就成功制作了一个feed：<br><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner3.JPG" alt="第三张图"></li>
+<li>制作完之后在种子信息面板开启邮件订阅的功能：<br><img src="http://o9ybnkuir.bkt.clouddn.com/imgs/feedbuner4.JPG" alt="第四张图"></li>
+<li>至此，你已经得到了两种形式的代码了，根据自己的需要使用到自己的网站上，我使用的是超链接的形式。</li>
+<li>时光荏苒，岁月如梭，一年的时间又飞快的离我们而去。与去年情况不同的是，在引入两个强而有力的产品同事后，今年的工作变得更加复杂和具有挑战性了。为了有条理的总结今年这一年的工作情况，下面就按时间顺序一一道来。</li>
+</ol>
+<hr>
+<h3 id="置顶"><a href="#置顶" class="headerlink" title="置顶"></a>置顶</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;这也是一个一直想要的功能，因为很有可能有些博客的重要性比其他的更高，但是由于默认按照时间来排序导致翻页之后才能看到这些文章。正好这两天在捣鼓博客，索性将这个功能也做出来。最开始的时候准备将博客的源码文件捋清楚后自己修改代码，但是打开hexo文件夹一看，打了个哆嗦就把文件夹关了：我是不是傻，为啥不先去搜索一番？<br>&nbsp;&nbsp;&nbsp;&nbsp;果然，一搜就发现有很多人多有这个需求: <a href="https://github.com/iissnan/hexo-theme-next/issues/415" target="_blank" rel="noopener">如何置顶post？</a>。整个帖子看下来的结论是：各种尝试的结果都或多或少有bug，所以此暂时暂时搁置，日后再来开发。不过里面倒是有个链接指出了通用配置方法，这也是目前我所采用的方法。<br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">原文写的比较详细</a>，我也就不再多费口舌了，总的来说就是更改排序规则，并将新的变量（top）增加到post的开头部分。经测试，效果不错。</p>
+<hr>
+<h3 id="加密"><a href="#加密" class="headerlink" title="加密"></a>加密</h3><p>&nbsp;&nbsp;&nbsp;&nbsp;对于某些涉及隐私，或者只希望分享给有限人群的博客，加密功能就非常实用了。之前一直没有将这个功能加上来，因为需求没这么迫切。最近准备开始投简历，里面会涉及一些个人信息，但是又希望公司能够通过博客的形式看到简历，这个功能就必不可少了。通过搜索，找到这个一个帖子，基本能满足需求：  </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://edolphin.site/2016/05/31/encrypt-post/" target="_blank" rel="noopener">加密博客内容，使用密码访问</a>  </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;仔细看了一下这篇博客及对应项目的 GitHub 文档，满足基本需求不成问题，但是有两点不足：第一，官方文档写的不是太好，有些地方不好理解；第二，对于基于 GitHub page 的博客基本无效。然后在 GitHub 上顺藤摸瓜，找出了下面这个项目：   </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/MikeCoder/hexo-blog-encrypt" target="_blank" rel="noopener">hexo-blog-encrypt</a>    </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;文档清晰易懂，开发者响应迅速，最重要的是能够完整加密。如果非要提不足的地方，那就是解密后目录栏不会自动更新。和开发者沟通过，这个需要根据不同的 Hexo 主题进行对应的更改，经过一番尝试后测试失败。由于时间问题，暂时我就不去管它了。<br>&nbsp;&nbsp;&nbsp;&nbsp;所以，如果你也需要为博客设置密码，推荐第二种方式。<br>&nbsp;&nbsp;&nbsp;&nbsp;非常感谢两位开发者做出的探索。</p>
+<hr>
+<h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><pre><code>换电脑后写博客没有以前那么方便了，加上懒癌晚期，一直拖着没有把以前电脑上的资源迁移过来，所以大半年都没有写博客了。昨天晚上不知道哪根筋搭错了，终于决定将很久都没有做的事情完成下。
+看了几篇博客，有些挺难理解的，一步一步尝试做下来总会失败。可能是没有理解其中缘由，也可能是时过境迁，以前的方法不再适用。最终成功的方法来自知乎用户@[skycrown](https://www.zhihu.com/people/skycrown)：[使用hexo，如果换了电脑怎么更新博客？](https://www.zhihu.com/question/21193762)
+</code></pre><blockquote>
+<p>不知道题主是不是换了新电脑，需要在新电脑上进行部署，如果是，可以参考下面的方法：<br>1、从官网<a href="https://link.zhihu.com/?target=https%3A//git-scm.com/" target="_blank" rel="noopener">Git**</a>下载git，在新电脑上安装，因为https速度慢，而且每次都要输入口令，常用的是使用ssh。使用下面方法创建：<br>（1）打开git bash，在用户主目录下运行：ssh-keygen -t rsa -C “<a href="mailto:youremail@example.com" target="_blank" rel="noopener">youremail@example.com</a>“ 把其中的邮件地址换成自己的邮件地址，然后一路回车<br>（2）最后完成后，会在用户主目录下生成.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH key密钥对，id_rsa是私钥，千万不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。<br>（3）登陆GitHub，打开「Settings」-&gt;「SSH and GPG keys」，然后点击「new SSH key」，填上任意Title，在Key文本框里粘贴公钥id_rsa.pub文件的内容（千万不要粘贴成私钥了！），最后点击「Add SSH Key」，你就应该看到已经添加的Key。<br><strong>注意</strong>：不要在git版本库中运行ssh，然后又将它提交，这样就把密码泄露出去了。<br>2、下载<a href="https://link.zhihu.com/?target=https%3A//nodejs.org/" target="_blank" rel="noopener">Node.js**</a>，并安装<br>3、打开git bash客户端，输入 npm install hexo-cli -g，开始安装hexo<br>4、下面就将原来的文件拷贝到新电脑中，但是要注意哪些文件是必须的，哪些文件是可以删除的。<br>（1）讨论下哪些文件是必须拷贝的：首先是之前自己修改的文件，像站点配置_config.yml，theme文件夹里面的主题，以及source里面自己写的博客文件，这些肯定要拷贝的。除此之外，还有三个文件需要有，就是scaffolds文件夹（文章的模板）、package.json（说明使用哪些包）和.gitignore（限定在提交的时候哪些文件可以忽略）。其实，这三个文件不是我们修改的，所以即使丢失了，也没有关系，我们可以建立一个新的文件夹，然后在里面执行hexo init，就会生成这三个文件，我们只需要将它们拷贝过来使用即可。<strong>总结：</strong>_config.yml，theme/，source/，scaffolds/，package.json，.gitignore，是需要拷贝的。<br>（2）再讨论下哪些文件是不必拷贝的，或者说可以删除的：首先是.git文件，无论是在站点根目录下，还是主题目录下的.git文件，都可以删掉。然后是文件夹node_modules（在用npm install会重新生成），public（这个在用hexo g时会重新生成），.deploy_git文件夹（在使用hexo d时也会重新生成），db.json文件。其实上面这些文件也就是.gitignore文件里面记载的可以忽略的内容。<strong>总结：</strong>.git/，node_modules/，public/，.deploy_git/，db.json文件需要删除。<br>5、在git bash中切换目录到新拷贝的文件夹里，使用 npm install 命令，进行模块安装。很明显我们这里没用hexo init初始化，因为有的文件我们已经拷贝生成过来了，所以不必用hexo init去整体初始化，如果不慎在此时用了hexo init，则站点的配置文件_config.yml里面内容会被清空使用默认值，所以这一步一定要慎重，不要用hexo init。<br>6、安装其他的一些必要组件，如果在node_modules里面有的，就不要重复安装了：<br>（1）为了使用hexo d来部署到git上，需要安装<br>npm install hexo-deployer-git –save<br>（2）为了建立RSS订阅，需要安装<br>npm install hexo-generator-feed –save<br>（3）为了建立站点地图，需要安装<br>npm install hexo-generator-sitemap –save<br>插件安装后，有的需要对配置文件_config.yml进行配置，具体怎么配置，可以参考上面插件在github主页上的具体说明<br>7、使用hexo g，然后使用hexo d进行部署，如果都没有出错，就转移成功了！</p>
+</blockquote>
+<hr>
+<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><pre><code>之前已经写过了置顶的功能，逻辑是如果 post 中有 top 字段，那么先比较 top 字段值的大小，然后根据发布时间来进行排序。但是有些文章是在不断修改的，所以我认为按照修改时间来排序是一种更好的策略。对于从来不修改的文章而言，发布时间和更新时间一致，所以都可以满足。
+因为 Next 默认主题是不显示修改时间的，所以如果需要按照修改时间排序，首先得显示修改时间，这个需求可以在这个问题下找到答案：[如何将首页和归档页的博文按照更新时间排序？](https://github.com/iissnan/hexo-theme-next/issues/1895) 在将修改时间添加到配置文件之后，每篇博客开始的时候就需要将 updated 字段加进去，这块有个坑：**date 和 updated 的值不能一样，否则不会显示。**
+修改的策略其实和置顶一致，只需要把 `node_modules/hexo-generator-index/lib/generator.js` 中以下部分的 date 改成 update 就行：
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> pagination = <span class="built_in">require</span>(<span class="string">'hexo-pagination'</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">locals</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = <span class="keyword">this</span>.config;</span><br><span class="line">  <span class="keyword">var</span> posts = locals.posts;</span><br><span class="line">    posts.data = posts.data.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(a.top &amp;&amp; b.top) &#123; <span class="comment">// 两篇文章top都有定义</span></span><br><span class="line">            <span class="keyword">if</span>(a.top == b.top) <span class="keyword">return</span> b.date - a.date; <span class="comment">// 若top值一样则按照文章日期降序排</span></span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">return</span> b.top - a.top; <span class="comment">// 否则按照top值降序排</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(a.top &amp;&amp; !b.top) &#123; <span class="comment">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(!a.top &amp;&amp; b.top) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> b.date - a.date; <span class="comment">// 都没定义按照文章日期降序排</span></span><br><span class="line">    &#125;);</span><br><span class="line">  <span class="keyword">var</span> paginationDir = config.pagination_dir || <span class="string">'page'</span>;</span><br><span class="line">  <span class="keyword">return</span> pagination(<span class="string">''</span>, posts, &#123;</span><br><span class="line">    perPage: config.index_generator.per_page,</span><br><span class="line">    layout: [<span class="string">'index'</span>, <span class="string">'archive'</span>],</span><br><span class="line">    format: paginationDir + <span class="string">'/%d/'</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      __index: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上述代码引用自： <a href="http://www.netcan666.com/2015/11/22/%E8%A7%A3%E5%86%B3Hexo%E7%BD%AE%E9%A1%B6%E9%97%AE%E9%A2%98/" target="_blank" rel="noopener">解决Hexo置顶问题</a></p>
+</blockquote>
+<hr>
+<h3 id="打赏"><a href="#打赏" class="headerlink" title="打赏"></a>打赏</h3><p>略</p>
+<h3 id="版权"><a href="#版权" class="headerlink" title="版权"></a>版权</h3><p>略</p>
+<h3 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h3><p>最近又收到七牛云的邮件了，说是之前的测试域名马上就要到期了，到期后会收回。为了避免到时候所有的图片都看不到，开始准备把图片迁移，有两种方案，其一：绑定自己的域名；其二，找其他图床。本来想着绑定就绑定吧，也没啥影响，然后发现绑定之前必须要备案才行，也就是说你所有的实名信息都需要提交到工信部，这我就不开心了。虽说也不准备做什么违法乱纪的事情，但总是不想处于这种监管的状态的。所以开始找第二种方案。然后发现了 sm.ms 图床，有很好的 api 支持，找到一篇文章有相关记录，里面很详细的记录了整个配置的过程：<a href="https://spencerwoo.com/2018/01/28/SM-MS/" target="_blank" rel="noopener">SM.MS: 一名优秀的图床的艺术之旅。</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>赠人玫瑰，手有余香</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay">
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay">
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag">#博客</a>
+          
+            <a href="/tags/置顶/" rel="tag">#置顶</a>
+          
+            <a href="/tags/订阅/" rel="tag">#订阅</a>
+          
+            <a href="/tags/加密/" rel="tag">#加密</a>
+          
+            <a href="/tags/迁移/" rel="tag">#迁移</a>
+          
+            <a href="/tags/排序/" rel="tag">#排序</a>
+          
+            <a href="/tags/版权/" rel="tag">#版权</a>
+          
+            <a href="/tags/打赏/" rel="tag">#打赏</a>
+          
+            <a href="/tags/图床/" rel="tag">#图床</a>
+          
+        </div>
+      
+
+      
+     <div>    
+      
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Detachment 的个人博客">Detachment</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="http://detachment.club/2016/12/28/博客构建笔记/" title="博客构建笔记(更新：增加排序功能)">博客构建笔记(更新：增加排序功能)</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="http://detachment.club/2016/12/28/博客构建笔记/" title="博客构建笔记(更新：增加排序功能)">http://detachment.club/2016/12/28/博客构建笔记/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2016年12月28日 - 00时12分
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> <br>转载请保留以上声明信息！
+        </li>
+      </ul>
+    
+    </div>
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/27/写在2016年的尾巴/" rel="next" title="写在2016年的尾巴">
+                <i class="fa fa-chevron-left"></i> 写在2016年的尾巴
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/11/从零开始构建 Vue-HackerNews-2.0 项目/" rel="prev" title="从零开始搭建 《vue-hackernews-2.0》">
+                从零开始搭建 《vue-hackernews-2.0》 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Detachment">
+          <p class="site-author-name" itemprop="name">Detachment</p>
+          <p class="site-description motion-element" itemprop="description">Share and Create</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Detachment" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=detachment/bMHO&amp;loc=zh_CN" target="_blank" title="订阅">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  订阅
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/yi-zhao-74" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-venus-double"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zylsy1991@gmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-send"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘末鹏" target="_blank">刘末鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://2ality.com/index.html" title="2ality" target="_blank">2ality</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" title="秘密花园" target="_blank">秘密花园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://es6.ruanyifeng.com/" title="ES6入门" target="_blank">ES6入门</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TomXu/category/338104.html" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://exploringjs.com/es2016-es2017/index.html" title="ES2016 & ES2017" target="_blank">ES2016 & ES2017</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.byvoid.com/" title="BYVoid" target="_blank">BYVoid</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能"><span class="nav-number">2.</span> <span class="nav-text">功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#订阅"><span class="nav-number">2.1.</span> <span class="nav-text">订阅</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#置顶"><span class="nav-number">2.2.</span> <span class="nav-text">置顶</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#加密"><span class="nav-number">2.3.</span> <span class="nav-text">加密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迁移"><span class="nav-number">2.4.</span> <span class="nav-text">迁移</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序"><span class="nav-number">2.5.</span> <span class="nav-text">排序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打赏"><span class="nav-number">2.6.</span> <span class="nav-text">打赏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版权"><span class="nav-number">2.7.</span> <span class="nav-text">版权</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图床"><span class="nav-number">2.8.</span> <span class="nav-text">图床</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Detachment</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ygFj1Q6IX8B9DoUmg4JW09bh-gzGzoHsz", "jqxfgq928vjhx41TTDzPdLlq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,1329 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="基础,TypeScript,笔记,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Share and Create" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TypeScript 基础知识学习，来源为官方文档，用于定期复习巩固。">
+<meta name="keywords" content="基础,TypeScript,笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TypeScript">
+<meta property="og:url" content="http://detachment.club/2019/10/20/TypeScript/index.html">
+<meta property="og:site_name" content="Share and Create">
+<meta property="og:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TypeScript 基础知识学习，来源为官方文档，用于定期复习巩固。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-10-20T16:00:00.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="TypeScript">
+<meta name="twitter:description" content="前言&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;TypeScript 基础知识学习，来源为官方文档，用于定期复习巩固。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6298681924009330000,
+      author: '博主大人'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://detachment.club/2019/10/20/TypeScript/">
+
+  <title> TypeScript | Share and Create </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?9c979b426e9896831df08fe0c4c24d0e";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Share and Create</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                TypeScript
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2019-10-20T00:00:00+08:00" content="2019-10-20">
+              2019-10-20
+            </time>
+          </span>
+
+	
+  	<span class="post-updated">
+	&nbsp; | &nbsp; 更新于
+	<time itemprop="dateUpdated" datetime="2019-10-21T00:00:00+08:00" content="2019-10-21">
+	  2019-10-21
+	</time>
+ 	 </span>
+	
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+
+          
+          
+             <span id="/2019/10/20/TypeScript/" class="leancloud_visitors" data-flag-title="TypeScript">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;TypeScript 基础知识学习，来源为官方文档，用于定期复习巩固。</p>
+<a id="more"></a>
+<hr>
+<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><h3 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h3><h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><ul>
+<li>布尔值</li>
+<li>数字</li>
+<li>字符串</li>
+<li>数组：number[], Array<number></number></li>
+<li>元祖：[string, number]，联合类型</li>
+<li>枚举：enum Color{Red, Green, Black}</li>
+<li>any</li>
+<li>void: 只能赋值为 null 或者 undefined</li>
+<li>null 和 undefined: 如果不打开 –strictNullChecks，null 和 undefined 为所有类型的子类型</li>
+<li>never</li>
+<li>object</li>
+</ul>
+<h4 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h4><p>两种写法，someValue 本身可能不是 string 类型，用户直接断言其为 string 类型：</p>
+<ul>
+<li><code>let strLength: number = (&lt;string&gt;someValue).length</code></li>
+<li><code>let strLength: number = (someValue as string).length</code></li>
+</ul>
+<h3 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h3><h4 id="变量声明-1"><a href="#变量声明-1" class="headerlink" title="变量声明"></a>变量声明</h4><p>关键词：var, let, const</p>
+<h4 id="解构赋值"><a href="#解构赋值" class="headerlink" title="解构赋值"></a>解构赋值</h4><ul>
+<li>解构数组</li>
+<li>解构对象：默认值、重命名、类型</li>
+</ul>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><h4 id="初探"><a href="#初探" class="headerlink" title="初探"></a>初探</h4><ul>
+<li>检查必须存在的属性是否存在</li>
+<li>不检查属性顺序</li>
+</ul>
+<h4 id="可选属性"><a href="#可选属性" class="headerlink" title="可选属性"></a>可选属性</h4><ul>
+<li>可选属性</li>
+</ul>
+<h4 id="只读属性"><a href="#只读属性" class="headerlink" title="只读属性"></a>只读属性</h4><ul>
+<li>只读属性：只读变量用 const，只读属性用 readonly</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Point &#123;</span><br><span class="line">  readonly x: <span class="built_in">number</span>;</span><br><span class="line">  y?: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="额外的属性检查"><a href="#额外的属性检查" class="headerlink" title="额外的属性检查"></a>额外的属性检查</h4><ul>
+<li>对象字面量作为参数传递时会经过额外的属性检查，如果对象字面量中包含目标类型中没有的类型则会报错</li>
+<li>解决办法：类型断言、字符串索引签名、赋值给一个变量</li>
+</ul>
+<h4 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h4><ul>
+<li>形式</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> SearchFunc &#123;</span><br><span class="line">  (source: <span class="built_in">string</span>, subString: <span class="built_in">string</span>): <span class="built_in">boolean</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>参数名不需要匹配，但对应位置的属性需要是兼容的</li>
+</ul>
+<h4 id="可索引的类型"><a href="#可索引的类型" class="headerlink" title="可索引的类型"></a>可索引的类型</h4><ul>
+<li>索引签名，比如下面的 index</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> StringArray &#123;</span><br><span class="line">  [index: <span class="built_in">number</span>]: <span class="built_in">string</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>索引签名有两种：数字和字符串</li>
+<li>可以同时使用两种类型的索引，但是数字索引的返回值必须是字符串索引返回值类型的子类型，因为 js 会把数字索引转化成字符串索引</li>
+</ul>
+<h4 id="类类型"><a href="#类类型" class="headerlink" title="类类型"></a>类类型</h4><p>接口描述了类的公共部分，而不是公共和私有两部分。 它不会帮你检查类是否具有某些私有成员</p>
+<h4 id="类静态部分与实例部分的区别（？云里雾里）"><a href="#类静态部分与实例部分的区别（？云里雾里）" class="headerlink" title="类静态部分与实例部分的区别（？云里雾里）"></a>类静态部分与实例部分的区别（？云里雾里）</h4><h4 id="继承接口"><a href="#继承接口" class="headerlink" title="继承接口"></a>继承接口</h4><ul>
+<li>可继承一个或多个接口</li>
+</ul>
+<h4 id="混合类型"><a href="#混合类型" class="headerlink" title="混合类型"></a>混合类型</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Counter &#123;</span><br><span class="line">  (start: <span class="built_in">number</span>): <span class="built_in">string</span>;</span><br><span class="line">  interval: <span class="built_in">number</span>;</span><br><span class="line">  reset(): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCounter</span>(<span class="params"></span>): <span class="title">Counter</span> </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> counter = &lt;Counter&gt;<span class="function"><span class="keyword">function</span>(<span class="params">start: <span class="built_in">number</span></span>) </span>&#123;&#125;;</span><br><span class="line">  counter.interval = <span class="number">123</span>;</span><br><span class="line">  counter.reset = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">  <span class="keyword">return</span> counter;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> c = getCounter();</span><br><span class="line">c(<span class="number">10</span>);</span><br><span class="line">c.reset();</span><br><span class="line">c.interval = <span class="number">5.0</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="接口继承类（？）"><a href="#接口继承类（？）" class="headerlink" title="接口继承类（？）"></a>接口继承类（？）</h4><h3 id="类"><a href="#类" class="headerlink" title="类"></a>类</h3><h4 id="类-1"><a href="#类-1" class="headerlink" title="类"></a>类</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Greeter &#123;</span><br><span class="line">  greeting: <span class="built_in">string</span>;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params">message: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.greeting = message;</span><br><span class="line">  &#125;</span><br><span class="line">  greet() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Hello, "</span> + <span class="keyword">this</span>.greeting;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> greeter = <span class="keyword">new</span> Greeter(<span class="string">"world"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><ul>
+<li>派生类（子类），基类（超类）</li>
+<li>派生类包含了一个构造函数，它必须调用 super()，它会执行基类的构造函数</li>
+</ul>
+<h4 id="公共，私有与受保护的修饰符"><a href="#公共，私有与受保护的修饰符" class="headerlink" title="公共，私有与受保护的修饰符"></a>公共，私有与受保护的修饰符</h4><ul>
+<li>默认为 public: 在 TypeScript 里，成员都默认为 public</li>
+<li>理解 private：当成员被标记成 private 时，它就不能在声明它的类的外部访问</li>
+<li>当我们比较两种不同的类型时，并不在乎它们从何处而来，如果所有成员的类型都是兼容的，我们就认为它们的类型是兼容的</li>
+<li>如果其中一个类型里包含一个 private 成员，那么只有当另外一个类型中也存在这样一个 private 成员， 并且它们都是来自同一处声明时，我们才认为这两个类型是兼容的。 对于 protected 成员也使用这个规则</li>
+<li>protected 成员在派生类中仍然可以访问</li>
+<li>构造函数也可以被标记成 protected。 这意味着这个类不能在包含它的类外被实例化，但是能被继承</li>
+</ul>
+<h4 id="readonly-修饰符"><a href="#readonly-修饰符" class="headerlink" title="readonly 修饰符"></a>readonly 修饰符</h4><ul>
+<li>使用 readonly 关键字将属性设置为只读的。 只读属性必须在声明时或构造函数里被初始化</li>
+<li>参数属性：参数属性通过给构造函数参数前面添加一个访问限定符来声明（public, private, protected)</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Octopus &#123;</span><br><span class="line">  readonly numberOfLegs: <span class="built_in">number</span> = <span class="number">8</span>;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params">readonly name: <span class="built_in">string</span></span>) &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 不用参数属性表述如下，和上面的类是一样的</span></span><br><span class="line"><span class="keyword">class</span> Octopus &#123;</span><br><span class="line">  readonly name: <span class="built_in">string</span>;</span><br><span class="line">  readonly numberOfLegs: <span class="built_in">number</span> = <span class="number">8</span>;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params">theName: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="keyword">this</span>.name = theName;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="存取器"><a href="#存取器" class="headerlink" title="存取器"></a>存取器</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> passcode = <span class="string">"secret passcode"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> Employee &#123;</span><br><span class="line">  <span class="keyword">private</span> _fullName: <span class="built_in">string</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">get</span> fullName(): <span class="built_in">string</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>._fullName;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">set</span> fullName(newName: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (passcode &amp;&amp; passcode == <span class="string">"secret passcode"</span>) &#123;</span><br><span class="line">      <span class="keyword">this</span>._fullName = newName;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"Error: Unauthorized update of employee!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> employee = <span class="keyword">new</span> Employee();</span><br><span class="line">employee.fullName = <span class="string">"Bob Smith"</span>;</span><br><span class="line"><span class="keyword">if</span> (employee.fullName) &#123;</span><br><span class="line">  alert(employee.fullName);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>TypeScript 支持通过 getters/setters 来截取对对象成员的访问。 它能帮助你有效的控制对对象成员的访问</li>
+<li>存取器要求你将编译器设置为输出 ECMAScript 5 或更高。 不支持降级到 ECMAScript 3</li>
+<li>只带有 get 不带有 set 的存取器自动被推断为 readonly</li>
+</ul>
+<h4 id="静态属性"><a href="#静态属性" class="headerlink" title="静态属性"></a>静态属性</h4><ul>
+<li>存在于类本身上面而不是类的实例上</li>
+<li>实例想要访问这个属性的时候，都要在前面加上类名</li>
+</ul>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><ul>
+<li>抽象类做为其它派生类的基类使用。 它们一般不会直接被实例化。 不同于接口，抽象类可以包含成员的实现细节</li>
+<li>抽象类中的抽象方法不包含具体实现并且必须在派生类中实现</li>
+</ul>
+<h4 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h4><ul>
+<li>构造函数</li>
+<li>把类当接口使用</li>
+</ul>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="为函数定义类型"><a href="#为函数定义类型" class="headerlink" title="为函数定义类型"></a>为函数定义类型</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x: <span class="built_in">number</span>, y: <span class="built_in">number</span></span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myAdd = <span class="function"><span class="keyword">function</span>(<span class="params">x: <span class="built_in">number</span>, y: <span class="built_in">number</span></span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>我们可以给每个参数添加类型之后再为函数本身添加返回值类型。 TypeScript 能够根据返回语句自动推断出返回值类型，因此我们通常省略它<br>完整的写法如下：</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myAdd: <span class="function">(<span class="params">x: <span class="built_in">number</span>, y: <span class="built_in">number</span></span>) =&gt;</span> <span class="built_in">number</span> = <span class="function"><span class="keyword">function</span>(<span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">  x: <span class="built_in">number</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">  y: <span class="built_in">number</span></span></span></span><br><span class="line"><span class="function"><span class="params"></span>): <span class="title">number</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>只要参数类型是匹配的，那么就认为它是有效的函数类型，而不在乎参数名是否正确</li>
+</ul>
+<h4 id="推断类型"><a href="#推断类型" class="headerlink" title="推断类型"></a>推断类型</h4><ul>
+<li>在赋值语句的一边指定了类型但是另一边没有类型的话，TypeScript 编译器会自动识别出类型。这叫做【按上下文归类】</li>
+</ul>
+<h4 id="可选参数和默认参数"><a href="#可选参数和默认参数" class="headerlink" title="可选参数和默认参数"></a>可选参数和默认参数</h4><ul>
+<li>可选参数必须跟在必须参数后面</li>
+<li>带默认值的参数不需要放在必须参数的后面</li>
+</ul>
+<h4 id="剩余参数"><a href="#剩余参数" class="headerlink" title="剩余参数"></a>剩余参数</h4><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">buildName</span>(<span class="params">firstName: <span class="built_in">string</span>, ...restOfName: <span class="built_in">string</span>[]</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> firstName + <span class="string">" "</span> + restOfName.join(<span class="string">" "</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> employeeName = buildName(<span class="string">"Joseph"</span>, <span class="string">"Samuel"</span>, <span class="string">"Lucas"</span>, <span class="string">"MacKinzie"</span>);</span><br></pre></td></tr></table></figure>
+<h4 id="this-需要多复习"><a href="#this-需要多复习" class="headerlink" title="this(?需要多复习)"></a>this(?需要多复习)</h4><ul>
+<li>JavaScript 里，this 的值在函数被调用的时候才会指定</li>
+<li>箭头函数能保存函数创建时的 this 值，而不是调用时的值</li>
+<li>this 参数在回调函数中</li>
+</ul>
+<h4 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h4><ul>
+<li>为同一个函数提供多个函数类型定义来进行函数重载</li>
+<li>它查找重载列表，尝试使用第一个重载定义。 如果匹配的话就使用这个。因此，在定义重载的时候，一定要把最精确的定义放在最前面</li>
+<li>注意，function pickCard(x): any 并不是重载列表的一部分，因此这里只有两个重载：一个是接收对象另一个接收数字。 以其它参数调用 pickCard 会产生错误。</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> suits = [<span class="string">"hearts"</span>, <span class="string">"spades"</span>, <span class="string">"clubs"</span>, <span class="string">"diamonds"</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pickCard</span>(<span class="params">x: &#123; suit: <span class="built_in">string</span>; card: <span class="built_in">number</span> &#125;[]</span>): <span class="title">number</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pickCard</span>(<span class="params">x: <span class="built_in">number</span></span>): </span>&#123; suit: <span class="built_in">string</span>; card: <span class="built_in">number</span> &#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pickCard</span>(<span class="params">x</span>): <span class="title">any</span> </span>&#123;</span><br><span class="line">  <span class="comment">// Check to see if we're working with an object/array</span></span><br><span class="line">  <span class="comment">// if so, they gave us the deck and we'll pick the card</span></span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> x == <span class="string">"object"</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> pickedCard = <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * x.length);</span><br><span class="line">    <span class="keyword">return</span> pickedCard;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// Otherwise just let them pick the card</span></span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> x == <span class="string">"number"</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> pickedSuit = <span class="built_in">Math</span>.floor(x / <span class="number">13</span>);</span><br><span class="line">    <span class="keyword">return</span> &#123; suit: suits[pickedSuit], card: x % <span class="number">13</span> &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myDeck = [</span><br><span class="line">  &#123; suit: <span class="string">"diamonds"</span>, card: <span class="number">2</span> &#125;,</span><br><span class="line">  &#123; suit: <span class="string">"spades"</span>, card: <span class="number">10</span> &#125;,</span><br><span class="line">  &#123; suit: <span class="string">"hearts"</span>, card: <span class="number">4</span> &#125;</span><br><span class="line">];</span><br><span class="line"><span class="keyword">let</span> pickedCard1 = myDeck[pickCard(myDeck)];</span><br><span class="line">alert(<span class="string">"card: "</span> + pickedCard1.card + <span class="string">" of "</span> + pickedCard1.suit);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> pickedCard2 = pickCard(<span class="number">15</span>);</span><br><span class="line">alert(<span class="string">"card: "</span> + pickedCard2.card + <span class="string">" of "</span> + pickedCard2.suit);</span><br></pre></td></tr></table></figure>
+<h3 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h3><h4 id="泛型之-HelloWorld"><a href="#泛型之-HelloWorld" class="headerlink" title="泛型之 HelloWorld"></a>泛型之 HelloWorld</h4><ul>
+<li>类型变量：只用于表示类型而不是值</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>泛型函数</li>
+</ul>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用方法：<ul>
+<li>传入所有参数：<code>let output = identity&lt;string&gt;(&quot;myString&quot;)</code></li>
+<li>使用类型推论：<code>let output = identity(&quot;myString&quot;);</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="使用泛型变量"><a href="#使用泛型变量" class="headerlink" title="使用泛型变量"></a>使用泛型变量</h4><ul>
+<li>我们把泛型变量 T 当做类型的一部分使用，而不是整个类型，增加了灵活性。下面的例子中 T 表示的就是数组中元素的类型而非入参的类型。</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loggingIdentity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T[]</span>): <span class="title">T</span>[] </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arg.length); <span class="comment">// Array has a .length, so no more error</span></span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="泛型类型"><a href="#泛型类型" class="headerlink" title="泛型类型"></a>泛型类型</h4><ul>
+<li>可以使用不同的泛型参数名，只要在数量上和使用方式上能对应上就可以。通用用 T 表示</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myIdentity: &lt;U&gt;<span class="function">(<span class="params">arg: U</span>) =&gt;</span> U = identity;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以使用带有调用签名的对象字面量来定义泛型函数:</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myIdentity: &#123; &lt;T&gt;(arg: T): T &#125; = identity;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>可以将泛型参数当作整个接口的一个参数，接口里的其它成员也能知道这个参数的类型</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> GenericIdentityFn&lt;T&gt; &#123;</span><br><span class="line">  (arg: T): T;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">identity</span>&lt;<span class="title">T</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myIdentity: GenericIdentityFn&lt;<span class="built_in">number</span>&gt; = identity;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>除了泛型接口，我们还可以创建泛型类。 注意，无法创建泛型枚举和泛型命名空间（？）</li>
+</ul>
+<h4 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h4><ul>
+<li>泛型类指的是实例部分的类型，所以类的静态属性不能使用这个泛型类型</li>
+</ul>
+<h4 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h4><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> Lengthwise &#123;</span><br><span class="line">  length: <span class="built_in">number</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">loggingIdentity</span>&lt;<span class="title">T</span> <span class="title">extends</span> <span class="title">Lengthwise</span>&gt;(<span class="params">arg: T</span>): <span class="title">T</span> </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arg.length); <span class="comment">// Now we know it has a .length property, so no more error</span></span><br><span class="line">  <span class="keyword">return</span> arg;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在泛型约束中使用类型参数（？）</li>
+<li>在泛型中使用类类型（？有点迷糊）</li>
+</ul>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><h4 id="枚举-1"><a href="#枚举-1" class="headerlink" title="枚举"></a>枚举</h4><ul>
+<li>数字枚举：不带初始化器的枚举应该被放在第一的位置，或者被放在使用了数字常量或其它常量初始化了的枚举后面</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Direction &#123;</span><br><span class="line">  Up,</span><br><span class="line">  Down,</span><br><span class="line">  Left,</span><br><span class="line">  Right</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>字符串枚举：在一个字符串枚举里，每个成员都必须用字符串字面量，或另外一个字符串枚举成员进行初始化</li>
+<li>异构枚举：枚举可以混合字符串和数字成员，但不建议这样做；</li>
+<li>计算的和常量成员</li>
+<li>联合枚举与枚举成员的类型<ul>
+<li>枚举类型本身变成了每个枚举成员的联合：可以避免一些低级错误</li>
+<li>枚举成员成为了类型</li>
+</ul>
+</li>
+<li>运行时的枚举</li>
+<li>反向映射：从枚举值到枚举名字。不会为字符串枚举成员生成反向映射</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Enum &#123;</span><br><span class="line">  A</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = Enum.A;</span><br><span class="line"><span class="keyword">let</span> nameOfA = Enum[a]; <span class="comment">// "A"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cosnt 枚举: 常量枚举只能使用常量枚举表达式，并且不同于常规的枚举，它们在编译阶段会被删除。之所以可以这么做是因为，常量枚举不允许包含计算成员</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">enum</span> Enum &#123;</span><br><span class="line">  A = <span class="number">1</span>,</span><br><span class="line">  B = A * <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>外部枚举</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">declare</span> <span class="keyword">enum</span> Enum &#123;</span><br><span class="line">  A = <span class="number">1</span>,</span><br><span class="line">  B,</span><br><span class="line">  C = <span class="number">2</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h3><h4 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h4><ul>
+<li>TypeScript 里，在有些没有明确指出类型的地方，类型推论会帮助提供类型</li>
+<li>这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时</li>
+</ul>
+<h4 id="最佳通用类型"><a href="#最佳通用类型" class="headerlink" title="最佳通用类型"></a>最佳通用类型</h4><ul>
+<li>当需要从几个表达式中推断类型时候，会使用这些表达式的类型来推断出一个最合适的通用类型</li>
+</ul>
+<h4 id="上下文类型"><a href="#上下文类型" class="headerlink" title="上下文类型"></a>上下文类型</h4><h3 id="类型兼容性"><a href="#类型兼容性" class="headerlink" title="类型兼容性"></a>类型兼容性</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><ul>
+<li>TypeScript 里的类型兼容性是基于结构子类型的</li>
+</ul>
+<h4 id="基础-1"><a href="#基础-1" class="headerlink" title="基础"></a>基础</h4><ul>
+<li>基本规则：如果 x 要兼容 y，那么 y 至少具有与 x 相同的属性</li>
+</ul>
+<h4 id="比较两个函数"><a href="#比较两个函数" class="headerlink" title="比较两个函数"></a>比较两个函数</h4><ul>
+<li>比较参数和返回值</li>
+</ul>
+<h4 id="函数参数双向协变"><a href="#函数参数双向协变" class="headerlink" title="函数参数双向协变"></a>函数参数双向协变</h4><h4 id="可选参数及剩余参数"><a href="#可选参数及剩余参数" class="headerlink" title="可选参数及剩余参数"></a>可选参数及剩余参数</h4><h4 id="枚举-2"><a href="#枚举-2" class="headerlink" title="枚举"></a>枚举</h4><ul>
+<li>枚举类型与数字类型兼容，并且数字类型与枚举类型兼容。不同枚举类型之间是不兼容的</li>
+</ul>
+<h4 id="类-2"><a href="#类-2" class="headerlink" title="类"></a>类</h4><ul>
+<li>类与对象字面量和接口差不多，但有一点不同：类有静态部分和实例部分的类型。 比较两个类类型的对象时，只有实例的成员会被比较</li>
+<li>类的私有成员和受保护成员会影响兼容性</li>
+</ul>
+<h4 id="泛型-1"><a href="#泛型-1" class="headerlink" title="泛型"></a>泛型</h4><h4 id="高级主题"><a href="#高级主题" class="headerlink" title="高级主题"></a>高级主题</h4><ul>
+<li>在 TypeScript 里，有两种兼容性：子类型和赋值。它们的不同点在于，赋值扩展了子类型兼容性，增加了一些规则，允许和 any 来回赋值，以及 enum 和对应数字值之间的来回赋值。</li>
+</ul>
+<h3 id="高级类型"><a href="#高级类型" class="headerlink" title="高级类型"></a>高级类型</h3><h4 id="交叉类型（Intersection-Types）"><a href="#交叉类型（Intersection-Types）" class="headerlink" title="交叉类型（Intersection Types）"></a>交叉类型（Intersection Types）</h4><ul>
+<li>交叉类型是将多个类型合并为一个类型，它包含了所需的所有类型的特性</li>
+</ul>
+<h4 id="联合类型（Union-Types）"><a href="#联合类型（Union-Types）" class="headerlink" title="联合类型（Union Types）"></a>联合类型（Union Types）</h4><ul>
+<li>联合类型表示一个值可以是几种类型之一</li>
+<li>如果一个值是联合类型，我们只能访问此联合类型的所有类型里共有的成员</li>
+</ul>
+<h4 id="类型保护与区分类型"><a href="#类型保护与区分类型" class="headerlink" title="类型保护与区分类型"></a>类型保护与区分类型</h4><ul>
+<li>类型保护就是一些表达式，它们会在运行时检查以确保在某个作用域里的类型</li>
+<li>要定义一个类型保护，我们只要简单地定义一个函数，它的返回值是一个 类型谓词：pet is Fish 就是类型谓词。 谓词为 parameterName is Type 这种形式， parameterName 必须是来自于当前函数签名里的一个参数名</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">isFish</span>(<span class="params">pet: Fish | Bird</span>): <span class="title">pet</span> <span class="title">is</span> <span class="title">Fish</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (&lt;Fish&gt;pet).swim !== <span class="literal">undefined</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>typeof 类型保护</li>
+<li>instanceof 类型保护</li>
+</ul>
+<h4 id="可以为-null-的类型"><a href="#可以为-null-的类型" class="headerlink" title="可以为 null 的类型"></a>可以为 null 的类型</h4><ul>
+<li>默认情况下，类型检查器认为 null 与 undefined 可以赋值给任何类型</li>
+<li>–strictNullChecks 标记可以解决此错误</li>
+<li>可选参数和可选属性：使用了 –strictNullChecks，可选参数会被自动地加上 | undefined（不会加 null 类型）</li>
+<li>类型保护和类型断言：如果编译器不能够去除 null 或 undefined，你可以使用类型断言手动去除。 语法是添加 !后缀： identifier!从 identifier 的类型里去除了 null 和 undefined</li>
+</ul>
+<h4 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h4><ul>
+<li>起别名不会新建一个类型，它创建了一个新名字来引用那个类型</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Name = <span class="built_in">string</span>;</span><br><span class="line"><span class="keyword">type</span> NameResolver = <span class="function"><span class="params">()</span> =&gt;</span> <span class="built_in">string</span>;</span><br><span class="line"><span class="keyword">type</span> NameOrResolver = Name | NameResolver;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getName</span>(<span class="params">n: NameOrResolver</span>): <span class="title">Name</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> n === <span class="string">"string"</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> n;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> n();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>类型别名也可以是泛型</li>
+<li>可以使用类型别名来在属性里引用自己</li>
+<li>类型别名不能出现在声明右侧的任何地方(?)</li>
+<li>接口 vs. 类型别名：<ul>
+<li>其一，接口创建了一个新的名字，可以在其它任何地方使用。 类型别名并不创建新名字—比如，错误信息就不会使用别名</li>
+<li>另一个重要区别是类型别名不能被 extends 和 implements（自己也不能 extends 和 implements 其它类型）</li>
+<li>另一方面，如果你无法通过接口来描述一个类型并且需要使用联合类型或元组类型，这时通常会使用类型别名（？不太理解）</li>
+</ul>
+</li>
+</ul>
+<h4 id="字符串字面量类型"><a href="#字符串字面量类型" class="headerlink" title="字符串字面量类型"></a>字符串字面量类型</h4><ul>
+<li>在实际应用中，字符串字面量类型可以与联合类型，类型保护和类型别名很好的配合。 通过结合使用这些特性，你可以实现类似枚举类型的字符串</li>
+</ul>
+<h4 id="数字字面量类型"><a href="#数字字面量类型" class="headerlink" title="数字字面量类型"></a>数字字面量类型</h4><h4 id="枚举成员类型"><a href="#枚举成员类型" class="headerlink" title="枚举成员类型"></a>枚举成员类型</h4><h4 id="可辨识联合（Discriminated-Unions）"><a href="#可辨识联合（Discriminated-Unions）" class="headerlink" title="可辨识联合（Discriminated Unions）"></a>可辨识联合（Discriminated Unions）</h4><ul>
+<li>可以合并单例类型，联合类型，类型保护和类型别名来创建一个叫做 可辨识联合的高级模式，它也称做 标签联合或 代数数据类型。</li>
+</ul>
+<h3 id="Symbols"><a href="#Symbols" class="headerlink" title="Symbols"></a>Symbols</h3><h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><ul>
+<li>symbol 的值是通过 Symbol 构造函数创建的</li>
+<li>像字符串一样，symbols 也可以被用做对象属性的键</li>
+<li>Symbols 也可以与计算出的属性名声明相结合来声明对象的属性和类成员</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> getClassNameSymbol = Symbol();</span><br><span class="line"><span class="keyword">class</span> C &#123;</span><br><span class="line">  [getClassNameSymbol]() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">"C"</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> c = <span class="keyword">new</span> C();</span><br><span class="line"><span class="keyword">let</span> className = c[getClassNameSymbol](); <span class="comment">// "C"</span></span><br></pre></td></tr></table></figure>
+<h4 id="众所周知的-Symbols"><a href="#众所周知的-Symbols" class="headerlink" title="众所周知的 Symbols"></a>众所周知的 Symbols</h4><p>介绍了一些 Symbols 的通用方法</p>
+<h3 id="迭代器和生成器"><a href="#迭代器和生成器" class="headerlink" title="迭代器和生成器"></a>迭代器和生成器</h3><h4 id="可迭代性"><a href="#可迭代性" class="headerlink" title="可迭代性"></a>可迭代性</h4><ul>
+<li>当一个对象实现了 Symbol.iterator 属性时，我们认为它是可迭代的</li>
+<li>for..of 语句：会遍历可迭代的对象，调用对象上的 Symbol.iterator 方法（for..in 迭代的是对象的键的列表，而 for..of 则迭代对象的键对应的值）</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> list = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> list) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="comment">// "0", "1", "2",</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i of list) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i); <span class="comment">// "4", "5", "6"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>内置对象 Map 和 Set 已经实现了 Symbol.iterator</li>
+</ul>
+<h3 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h3><h4 id="介绍-2"><a href="#介绍-2" class="headerlink" title="介绍"></a>介绍</h4><h4 id="导出"><a href="#导出" class="headerlink" title="导出"></a>导出</h4><ul>
+<li>导出声明</li>
+<li>导出语句</li>
+<li>重新导出</li>
+</ul>
+<h4 id="导入"><a href="#导入" class="headerlink" title="导入"></a>导入</h4><h4 id="默认导出"><a href="#默认导出" class="headerlink" title="默认导出"></a>默认导出</h4><ul>
+<li>export = 和 import = require()</li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>赠人玫瑰，手有余香</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechat.jpg" alt="Detachment WeChat Pay">
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.jpg" alt="Detachment Alipay">
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/基础/" rel="tag">#基础</a>
+          
+            <a href="/tags/TypeScript/" rel="tag">#TypeScript</a>
+          
+            <a href="/tags/笔记/" rel="tag">#笔记</a>
+          
+        </div>
+      
+
+      
+     <div>    
+      
+      <ul class="post-copyright">
+         <li class="post-copyright-link">
+          <strong>本文作者：</strong>
+          <a href="/" title="欢迎访问 Detachment 的个人博客">Detachment</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文标题：</strong>
+          <a href="http://detachment.club/2019/10/20/TypeScript/" title="TypeScript">TypeScript</a>
+        </li>
+
+        <li class="post-copyright-link">
+          <strong>本文链接：</strong>
+          <a href="http://detachment.club/2019/10/20/TypeScript/" title="TypeScript">http://detachment.club/2019/10/20/TypeScript/</a>
+        </li>
+
+        <li class="post-copyright-date">
+            <strong>发布时间：</strong>2019年10月20日 - 00时10分
+        </li>  
+
+        <li class="post-copyright-license">
+          <strong>版权声明： </strong>
+          本文由 Detachment 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> <br>转载请保留以上声明信息！
+        </li>
+      </ul>
+    
+    </div>
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/07/2018/" rel="next" title="2018">
+                <i class="fa fa-chevron-left"></i> 2018
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/30/2019/" rel="prev" title="2019">
+                2019 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="Detachment">
+          <p class="site-author-name" itemprop="name">Detachment</p>
+          <p class="site-description motion-element" itemprop="description">Share and Create</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Detachment" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://feedburner.google.com/fb/a/mailverify?uri=detachment/bMHO&amp;loc=zh_CN" target="_blank" title="订阅">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  订阅
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/yi-zhao-74" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-venus-double"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="mailto:zylsy1991@gmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-send"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://mindhacks.cn/" title="刘末鹏" target="_blank">刘末鹏</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhangxinxu.com/wordpress/" title="张鑫旭" target="_blank">张鑫旭</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://ruanyifeng.com/blog/" title="阮一峰" target="_blank">阮一峰</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://2ality.com/index.html" title="2ality" target="_blank">2ality</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://bonsaiden.github.io/JavaScript-Garden/zh/" title="秘密花园" target="_blank">秘密花园</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://es6.ruanyifeng.com/" title="ES6入门" target="_blank">ES6入门</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/TomXu/category/338104.html" title="汤姆大叔" target="_blank">汤姆大叔</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://exploringjs.com/es2016-es2017/index.html" title="ES2016 & ES2017" target="_blank">ES2016 & ES2017</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.byvoid.com/" title="BYVoid" target="_blank">BYVoid</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要内容"><span class="nav-number">2.</span> <span class="nav-text">主要内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本类型"><span class="nav-number">2.1.</span> <span class="nav-text">基本类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类型"><span class="nav-number">2.1.1.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型断言"><span class="nav-number">2.1.2.</span> <span class="nav-text">类型断言</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量声明"><span class="nav-number">2.2.</span> <span class="nav-text">变量声明</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量声明-1"><span class="nav-number">2.2.1.</span> <span class="nav-text">变量声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解构赋值"><span class="nav-number">2.2.2.</span> <span class="nav-text">解构赋值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接口"><span class="nav-number">2.3.</span> <span class="nav-text">接口</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#初探"><span class="nav-number">2.3.1.</span> <span class="nav-text">初探</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可选属性"><span class="nav-number">2.3.2.</span> <span class="nav-text">可选属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#只读属性"><span class="nav-number">2.3.3.</span> <span class="nav-text">只读属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#额外的属性检查"><span class="nav-number">2.3.4.</span> <span class="nav-text">额外的属性检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数类型"><span class="nav-number">2.3.5.</span> <span class="nav-text">函数类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可索引的类型"><span class="nav-number">2.3.6.</span> <span class="nav-text">可索引的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类类型"><span class="nav-number">2.3.7.</span> <span class="nav-text">类类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类静态部分与实例部分的区别（？云里雾里）"><span class="nav-number">2.3.8.</span> <span class="nav-text">类静态部分与实例部分的区别（？云里雾里）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承接口"><span class="nav-number">2.3.9.</span> <span class="nav-text">继承接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#混合类型"><span class="nav-number">2.3.10.</span> <span class="nav-text">混合类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接口继承类（？）"><span class="nav-number">2.3.11.</span> <span class="nav-text">接口继承类（？）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类"><span class="nav-number">2.4.</span> <span class="nav-text">类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#类-1"><span class="nav-number">2.4.1.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">2.4.2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公共，私有与受保护的修饰符"><span class="nav-number">2.4.3.</span> <span class="nav-text">公共，私有与受保护的修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#readonly-修饰符"><span class="nav-number">2.4.4.</span> <span class="nav-text">readonly 修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#存取器"><span class="nav-number">2.4.5.</span> <span class="nav-text">存取器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#静态属性"><span class="nav-number">2.4.6.</span> <span class="nav-text">静态属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#抽象类"><span class="nav-number">2.4.7.</span> <span class="nav-text">抽象类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级技巧"><span class="nav-number">2.4.8.</span> <span class="nav-text">高级技巧</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">2.5.</span> <span class="nav-text">函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为函数定义类型"><span class="nav-number">2.5.1.</span> <span class="nav-text">为函数定义类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推断类型"><span class="nav-number">2.5.2.</span> <span class="nav-text">推断类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可选参数和默认参数"><span class="nav-number">2.5.3.</span> <span class="nav-text">可选参数和默认参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#剩余参数"><span class="nav-number">2.5.4.</span> <span class="nav-text">剩余参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#this-需要多复习"><span class="nav-number">2.5.5.</span> <span class="nav-text">this(?需要多复习)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#重载"><span class="nav-number">2.5.6.</span> <span class="nav-text">重载</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型"><span class="nav-number">2.6.</span> <span class="nav-text">泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型之-HelloWorld"><span class="nav-number">2.6.1.</span> <span class="nav-text">泛型之 HelloWorld</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用泛型变量"><span class="nav-number">2.6.2.</span> <span class="nav-text">使用泛型变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类型"><span class="nav-number">2.6.3.</span> <span class="nav-text">泛型类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类"><span class="nav-number">2.6.4.</span> <span class="nav-text">泛型类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型约束"><span class="nav-number">2.6.5.</span> <span class="nav-text">泛型约束</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举"><span class="nav-number">2.7.</span> <span class="nav-text">枚举</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#枚举-1"><span class="nav-number">2.7.1.</span> <span class="nav-text">枚举</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型推论"><span class="nav-number">2.8.</span> <span class="nav-text">类型推论</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基础"><span class="nav-number">2.8.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳通用类型"><span class="nav-number">2.8.2.</span> <span class="nav-text">最佳通用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上下文类型"><span class="nav-number">2.8.3.</span> <span class="nav-text">上下文类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型兼容性"><span class="nav-number">2.9.</span> <span class="nav-text">类型兼容性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍"><span class="nav-number">2.9.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础-1"><span class="nav-number">2.9.2.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较两个函数"><span class="nav-number">2.9.3.</span> <span class="nav-text">比较两个函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数参数双向协变"><span class="nav-number">2.9.4.</span> <span class="nav-text">函数参数双向协变</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可选参数及剩余参数"><span class="nav-number">2.9.5.</span> <span class="nav-text">可选参数及剩余参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#枚举-2"><span class="nav-number">2.9.6.</span> <span class="nav-text">枚举</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类-2"><span class="nav-number">2.9.7.</span> <span class="nav-text">类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型-1"><span class="nav-number">2.9.8.</span> <span class="nav-text">泛型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级主题"><span class="nav-number">2.9.9.</span> <span class="nav-text">高级主题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高级类型"><span class="nav-number">2.10.</span> <span class="nav-text">高级类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#交叉类型（Intersection-Types）"><span class="nav-number">2.10.1.</span> <span class="nav-text">交叉类型（Intersection Types）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#联合类型（Union-Types）"><span class="nav-number">2.10.2.</span> <span class="nav-text">联合类型（Union Types）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型保护与区分类型"><span class="nav-number">2.10.3.</span> <span class="nav-text">类型保护与区分类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可以为-null-的类型"><span class="nav-number">2.10.4.</span> <span class="nav-text">可以为 null 的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型别名"><span class="nav-number">2.10.5.</span> <span class="nav-text">类型别名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串字面量类型"><span class="nav-number">2.10.6.</span> <span class="nav-text">字符串字面量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数字字面量类型"><span class="nav-number">2.10.7.</span> <span class="nav-text">数字字面量类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#枚举成员类型"><span class="nav-number">2.10.8.</span> <span class="nav-text">枚举成员类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可辨识联合（Discriminated-Unions）"><span class="nav-number">2.10.9.</span> <span class="nav-text">可辨识联合（Discriminated Unions）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symbols"><span class="nav-number">2.11.</span> <span class="nav-text">Symbols</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍-1"><span class="nav-number">2.11.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#众所周知的-Symbols"><span class="nav-number">2.11.2.</span> <span class="nav-text">众所周知的 Symbols</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代器和生成器"><span class="nav-number">2.12.</span> <span class="nav-text">迭代器和生成器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可迭代性"><span class="nav-number">2.12.1.</span> <span class="nav-text">可迭代性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模块"><span class="nav-number">2.13.</span> <span class="nav-text">模块</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#介绍-2"><span class="nav-number">2.13.1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导出"><span class="nav-number">2.13.2.</span> <span class="nav-text">导出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#导入"><span class="nav-number">2.13.3.</span> <span class="nav-text">导入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#默认导出"><span class="nav-number">2.13.4.</span> <span class="nav-text">默认导出</span></a></li></ol></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Detachment</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("ygFj1Q6IX8B9DoUmg4JW09bh-gzGzoHsz", "jqxfgq928vjhx41TTDzPdLlq");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>
